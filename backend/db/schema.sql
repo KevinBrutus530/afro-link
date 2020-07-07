@@ -5,6 +5,7 @@ CREATE DATABASE afro_link;
 
 DROP TABLE IF EXISTS businesses;
 DROP TABLE IF EXISTS owners;
+DROP TABLE IF EXISTS categories;
 DROP TABLE IF EXISTS contacts;
 DROP TABLE IF EXISTS addresses;
 DROP TABLE IF EXISTS reviews;
@@ -14,7 +15,6 @@ CREATE TABLE businesses
 (
   id serial PRIMARY KEY,
   biz_name varchar,
-  category varchar,
   hours varchar
 );
 
@@ -24,6 +24,13 @@ CREATE TABLE owners
   owner_id int REFERENCES businesses(id),
   photo varchar,
   content varchar
+);
+
+CREATE TABLE categories
+(
+  id serial PRIMARY KEY,
+  category_id int REFERENCES businesses(id),
+  category text
 );
 
 CREATE TABLE contacts 
@@ -56,5 +63,5 @@ CREATE TABLE reviews
   zip int
  );
 
- INSERT INTO businesses(biz_name, category, hours)
-VALUES('Brutus Biz','beauty','9am-5pm')
+ INSERT INTO businesses(biz_name, hours)
+VALUES('Brutus Biz','9am-5pm')

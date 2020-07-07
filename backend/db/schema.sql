@@ -26,11 +26,16 @@ CREATE TABLE owners
   content varchar
 );
 
-CREATE TABLE categories
-(
-  id serial PRIMARY KEY,
-  category_id int REFERENCES businesses(id),
-  category text
+CREATE TABLE types (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100)
+);
+
+CREATE TABLE categories (
+    id SERIAL PRIMARY KEY,
+    bus_id INT REFERENCES businesses(id),
+    type_id INT REFERENCES types(id),
+    CONSTRAINT UC_Categor UNIQUE (bus_id, type_id)
 );
 
 CREATE TABLE contacts 

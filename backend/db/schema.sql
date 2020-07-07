@@ -9,6 +9,7 @@ DROP TABLE IF EXISTS categories;
 DROP TABLE IF EXISTS contacts;
 DROP TABLE IF EXISTS addresses;
 DROP TABLE IF EXISTS reviews;
+DROP TABLE IF EXISTS types;
 
 
 CREATE TABLE businesses  

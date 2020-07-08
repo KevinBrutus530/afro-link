@@ -2,7 +2,7 @@ const businesses = require("express").Router();
 
 const { getAllBusiness, getSingleBusiness , createBusiness, editBusiness, deleteBusiness } = require("../queries/businesses");
 
-businesses.get("/", getAllBusiness)
+businesses.get("/", getAllBusiness);
 
 businesses.get("/:id", getSingleBusiness);
 

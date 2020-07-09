@@ -6,10 +6,10 @@ categories.get("/", getAllCategories)
 
 categories.get("/:id", getSingleCategory);
 
-categories.post("/", createCategory);
+// categories.post("/", createCategory);
 
-businesses.patch("/:id", editCategory);
+// businesses.patch("/:id", editCategory);
 
-businesses.delete("/:id", deleteCategory);
+// businesses.delete("/:id", deleteCategory);
 
 module.exports= businesses;

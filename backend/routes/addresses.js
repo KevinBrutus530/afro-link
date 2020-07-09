@@ -2,6 +2,7 @@ const addresses = require("express").Router();
 
 const { getSingleAddress , createAddress, editAddress, deleteAddress } = require("../queries/addresses");
 
+
 addresses.get("/:id", getSingleAddress)
 
 addresses.post("/", createAddress)

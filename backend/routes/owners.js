@@ -1,9 +1,9 @@
 const owners = require("express").Router();
 
-const { getSingleOwners , createOwner, editOwner, deleteOwner } = require("../queries/businesses");
+const { getSingleOwner , createOwner, editOwner, deleteOwner } = require("../queries/businesses");
 
 
-owners.get("/:id", getSingleOwners);
+owners.get("/:id", getSingleOwner);
 
 owners.post("/", createOwner);
 

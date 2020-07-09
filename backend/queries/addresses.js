@@ -18,14 +18,14 @@ const getAllReviews = async (req, res, next) => {
   }
 };
 
-const getSingleReview = async (req, res, next) => {
-  let reviewId = req.params.id;
+const getSingleAddress = async (req, res, next) => {
+  let addressId = req.params.id;
   try {
-    let review = await db.any(`SELECT * FROM reviews WHERE id=${reviewId}`);
+    let review = await db.any(`SELECT * FROM addresses WHERE id=${addressId}`);
     res.status(200).json({
       status: "success",
-      message: "single review",
-      payload: review
+      message: "single Address",
+      payload: address
     });
   } catch (err) {
     res.status(400).json({
@@ -37,17 +37,14 @@ const getSingleReview = async (req, res, next) => {
   }
 };
 
-const deleteReview = async (req, res, next) => {
+const deleteAddress = async (req, res, next) => {
   try {
-    let { reviewId } = req.params.id;
-    let review = await db.none(
-      "DELETE FROM reviews WHERE id=$1 RETURNING *",
-      [reviewId]
-    );
+    let { addressId } = req.params.id;
+    let address = await db.none("DELETE FROM addresses WHERE id=$1 RETURNING *",[addressId]);
     res.status(200).json({
       status: "success",
-      message: "deleted review",
-      payload: review
+      message: "deleted address",
+      payload: address
     });
   } catch (err) {
     res.status(400).json({
@@ -59,14 +56,14 @@ const deleteReview = async (req, res, next) => {
   }
 };
 
-const createReview = async (req, res, next) => {
+const createAddress = async (req, res, next) => {
   try {
-    let review = await db.one(`
-            INSERT INTO reviews (review_id, text, name, ratings, zip) VALUES ('${req.body.review_id}', '${req.body.text}', '${req.body.name}', '${req.body.ratings}', '${req.body.zip}') RETURNING *`);
+    let address = await db.one(`
+            INSERT INTO addresses (address_id, street, city, state, zip, website) VALUES ('${req.body.address_id}', '${req.body.street}', '${req.body.city}', '${req.body.state}', '${req.body.zip}', '${req.body.website}') RETURNING *`);
     res.status(200).json({
       status: "success",
       message: "created review",
-      payload: review
+      payload: address
     });
   } catch (err) {
     res.status(400).json({
@@ -78,18 +75,18 @@ const createReview = async (req, res, next) => {
   }
 };
 
-const editReview = async (req, res, next) => {
+const editAddress = async (req, res, next) => {
   try {
-    let { review_id, text, name, ratings, zip } = req.body;
-    let { reviewId } = req.params;
-    let review = await db.one(
+    let { address_id, street, city, state, zip, website } = req.body;
+    let { addressId } = req.params;
+    let address = await db.one(
       "UPDATE reviews SET review_id=$1, text=$2 name=$3, ratings=$4, zip=$5 WHERE id=$5",
-      [review_id, text, name, ratings, zip, reviewId]
+      [address_id, street, city, state, zip, website, addressId]
     );
     res.status(200).json({
       status: "success",
-      message: "updated review",
-      payload: review
+      message: "updated address",
+      payload: address
     });
   } catch (err) {
     res.status(400).json({
@@ -101,10 +98,4 @@ const editReview = async (req, res, next) => {
   }
 };
 
-module.exports = {
-  getAllReviews,
-  getSingleReview,
-  createReview,
-  editReview,
-  deleteReview
-};
+module.exports = { getSingleAddress , createAddress, editAddress, deleteAddress };

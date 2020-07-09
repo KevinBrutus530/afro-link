@@ -22,27 +22,26 @@ CREATE TABLE businesses
 CREATE TABLE owners 
 (
   id serial PRIMARY KEY,
-  owner_id int REFERENCES businesses(id),
-  photo varchar,
-  content varchar
+  owner_id int REFERENCES businesses(id) ON DELETE CASCADE,
+  owner_name varchar DEFAULT 'UNKNOWN'
 );
 
 CREATE TABLE types (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(100)
+    type_name VARCHAR(100)
 );
 
 CREATE TABLE categories (
     id SERIAL PRIMARY KEY,
-    bus_id INT REFERENCES businesses(id),
+    biz_id INT REFERENCES businesses(id) ON DELETE CASCADE,
     type_id INT REFERENCES types(id),
-    CONSTRAINT UC_Categor UNIQUE (bus_id, type_id)
+    CONSTRAINT UC_Categor UNIQUE (biz_id, type_id)
 );
 
 CREATE TABLE contacts 
 (
   id serial PRIMARY KEY,
-  contact_id int REFERENCES businesses(id),
+  contact_id int REFERENCES businesses(id) ON DELETE CASCADE,
   phone varchar,
   email varchar,
   social_media varchar
@@ -51,7 +50,7 @@ CREATE TABLE contacts
 CREATE TABLE addresses 
 (
   id serial PRIMARY KEY,
-  address_id int REFERENCES businesses(id),
+  address_id int REFERENCES businesses(id) ON DELETE CASCADE,
   street varchar,
   city varchar,
   state varchar,
@@ -62,7 +61,7 @@ CREATE TABLE addresses
 CREATE TABLE reviews 
 (
   id serial PRIMARY KEY,
-  review_id int REFERENCES businesses(id),
+  review_id int REFERENCES businesses(id) ON DELETE CASCADE,
   text varchar,
   name varchar,
   ratings int,

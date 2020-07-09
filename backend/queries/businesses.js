@@ -40,7 +40,7 @@ const getAllBusiness = async (req, res, next) => {
 const deleteBusiness = async (req, res, next) => {
     try {
         let {businessId} = req.params.id;
-        let business = await db.none("DELETE FROM businesses WHERE id=$1", businessId);
+        let business = await db.none("DELETE FROM businesses WHERE id=$1 RETURNING *", businessId);
         res.status(200).json({
             status: "success",
             message: "deleted business",
@@ -62,7 +62,7 @@ const createBusiness = async (req, res, next) => {
         INSERT INTO businesses (biz_name, hours) VALUES ('${req.body.biz_name}', '${req.body.hours}') RETURNING *`);
         res.status(200).json({
             status: "success",
-            message: "deleted business",
+            message: "added business",
             payload: business
         });
     } catch (err){
@@ -79,7 +79,7 @@ const editBusiness = async (req, res, next) => {
     try {
         let {bizName, hours} = req.body;
         let {businessId} = req.params;
-        let business = await db.one(`UPDATE businesses SET biz_name=$1, hours=$2 WHERE id=$3`, [bizName, hours, businessId]);
+        let business = await db.one("UPDATE businesses SET biz_name=$1, hours=$2 WHERE id=$3", [bizName, hours, businessId]);
         res.status(200).json({
             status: "success",
             message: "updated business",

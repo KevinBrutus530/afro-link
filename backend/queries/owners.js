@@ -64,14 +64,14 @@ const editOwner = async (req, res, next) => {
   try {
     let { ownerid, ownername } = req.body;
     let { ownerId } = req.params;
-    let review = await db.one(
+    let owner = await db.one(
       "UPDATE owners SET owner_id=$1, owner_name=$2 WHERE id=$3",
       [ownerid, ownername, ownerId]
     );
     res.status(200).json({
       status: "success",
       message: "updated owner",
-      payload: business
+      payload: owner
     });
   } catch (err) {
     res.status(400).json({

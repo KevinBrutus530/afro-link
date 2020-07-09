@@ -62,7 +62,7 @@ const deleteReview = async (req, res, next) => {
 const createReview = async (req, res, next) => {
   try {
     let review = await db.one(`
-            INSERT INTO businesses (review_id, text, name, ratings, zip) VALUES ('${req.body.review_id}', '${req.body.text}', '${req.body.name}', '${req.body.ratings}', '${req.body.zip}') RETURNING *`);
+            INSERT INTO reviews (review_id, text, name, ratings, zip) VALUES ('${req.body.review_id}', '${req.body.text}', '${req.body.name}', '${req.body.ratings}', '${req.body.zip}') RETURNING *`);
     res.status(200).json({
       status: "success",
       message: "created review",
@@ -83,7 +83,7 @@ const editReview = async (req, res, next) => {
     let { review_id, text, name, ratings, zip } = req.body;
     let { reviewId } = req.params;
     let review = await db.one(
-      "UPDATE reviews SET review_id=$1, text=$2 name=$3, ratings=$4, zip=$5 WHERE id=$3",
+      "UPDATE reviews SET review_id=$1, text=$2 name=$3, ratings=$4, zip=$5 WHERE id=$5",
       [review_id, text, name, ratings, zip, reviewId]
     );
     res.status(200).json({

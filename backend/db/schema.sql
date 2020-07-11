@@ -67,5 +67,3 @@ CREATE TABLE reviews
   ratings int
  );
 
---  INSERT INTO businesses(biz_name, hours)
--- VALUES('Brutus Biz','9am-5pm')

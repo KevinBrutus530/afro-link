@@ -1,628 +1,6 @@
 
 \c afro_link;
 
-INSERT INTO businesses(biz_name,hours) VALUES ('228 Grant Street Candle Co.','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('AphroChic','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('The Black Home','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Black Pepper Paperie Co.','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Bolé Road Textiles','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Clare','Mon - Fri, 9am - 9pm 
-Sat - Sun, 9am - 5pm');
-INSERT INTO businesses(biz_name,hours) VALUES ('Claude Home','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Effortless Composition','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Goodee','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Ilé Ilà','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Jungalow','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Lichen','Sat - Sun, 12pm - 5pm
-Mon, Closed or By Appointment
-Tue, Closed or By Appointment
-Wed, 12pm - 5pm
-Thur, Closed or By Appointment
-Fri, Closed or By Appointment');
-INSERT INTO businesses(biz_name,hours) VALUES ('Linoto','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Lit Bklyn','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Malene B','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Marie Burgos Collection','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Natty Garden','All Week, 10am - 6pm');
-INSERT INTO businesses(biz_name,hours) VALUES ('Peace & Riot','Tue - Fri, 11am - 6pm 
-Sat, 10am - 7pm 
-Sun, 11am - 6pm');
-INSERT INTO businesses(biz_name,hours) VALUES ('Pottery by Osa','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Robin Wilson Home','Available during weekday business hours, but we are typically off-site focused on client projects');
-INSERT INTO businesses(biz_name,hours) VALUES ('Rochelle Porter','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('See Line Ceramics','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Sheila Bridges','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('SustainAble Home Goods','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Tackussanu Senegal','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Tactile Matter','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('xN Studio','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Yowie','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Elias Williams','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Elliot Jerome Brown Jr','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('JOIRI MINAYA','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Groana Melendez','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('MIRANDA BARNES','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Bold Xchange','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Celsious','Tue - Fri, 11am - 7pm
-Sat - Mon, 8am - 4pm');
-INSERT INTO businesses(biz_name,hours) VALUES ('Custom Collaborative',"hours not avaiable");
-INSERT INTO businesses(biz_name,hours) VALUES ('Manual','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Marché Rue Dix','Mon - Sat, 12pm - 9pm, 
-Sun, 11am - 8pm');
-INSERT INTO businesses(biz_name,hours) VALUES ('Neighborhood Fiber Co.',"hours not avaiable");
-INSERT INTO businesses(biz_name,hours) VALUES ('Reparations Club','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('String Thing Studio',"hours not avaiable");
-INSERT INTO businesses(biz_name,hours) VALUES ('BeautyStat Cosmetics','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Beneath Your Mask','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('BLK + GRN','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Briogeo','available at birchbox.com');
-INSERT INTO businesses(biz_name,hours) VALUES ('Golde','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Hanahana Beauty','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Haus Urban','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Highbrow Hippie','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('The Honey Pot','available at drug stores');
-INSERT INTO businesses(biz_name,hours) VALUES ('Hyper Skin','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Lauren Napier Beauty','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('OUI The People','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Pat McGrath Labs','available at sephora.com');
-INSERT INTO businesses(biz_name,hours) VALUES ('People of Color Beauty','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Unsun','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Uoma Beauty','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Zambo Aroma','7 days, 1pm - 9pm');
-INSERT INTO businesses(biz_name,hours) VALUES ('Ailey Extension','7 days, 8am – 11pm');
-INSERT INTO businesses(biz_name,hours) VALUES ('Black Girls Run','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Body Space Fitness',"hours not avaiable");
-INSERT INTO businesses(biz_name,hours) VALUES ('Grillz and Granola','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('HealHaus','Mon-Fri,   7am – 7:30pm
-Sat-Sun,   8am – 7:30pm');
-INSERT INTO businesses(biz_name,hours) VALUES ('Iconoclast Fitness','Mon - Fri, 6am – 9pm
-Sat - Sun 8am – 2pm');
-INSERT INTO businesses(biz_name,hours) VALUES ('The Underbelly','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Mind Body Soul','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Cafe con Libros','Tues-Fri, 9am - 1pm
-Sat & Sun, 9am - 3pm');
-INSERT INTO businesses(biz_name,hours) VALUES ('Frugal Bookstore','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Harriett’s Bookshop','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('For Keeps Books','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Fulton Street Books and Coffee','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('The Lit. Bar',"hours not avaiable");
-INSERT INTO businesses(biz_name,hours) VALUES ('Loving Me Books','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Mahogany Books','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Semicolon Bookstore and Gallery','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Sister’s Uptown Bookstore','Wed, Fri 1PM - 5PM,
-Sat, 1PM - 5PM,
-Sun, Closed');
-INSERT INTO businesses(biz_name,hours) VALUES ('Source of Knowledge','temporarily closed');
-INSERT INTO businesses(biz_name,hours) VALUES ('Anya Lust','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Baby Phat','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('BedStuyFly',"hours not avaiable");
-INSERT INTO businesses(biz_name,hours) VALUES ('BLK MKT Vintage','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Brooklyn Circus',"hours not avaiable");
-INSERT INTO businesses(biz_name,hours) VALUES ('Brother Vellies',"hours not avaiable");
-INSERT INTO businesses(biz_name,hours) VALUES ('Cameron Tea','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Castamira','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('CBAAF','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Christopher John Rogers','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Cool and Casual Studios','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Cushnie','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Diop','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Edas','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Flat Fifteen','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Gizmo Vintage Honey','Wed-Sun 12 -6');
-INSERT INTO businesses(biz_name,hours) VALUES ('Golden Girly','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('House of Aama','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('KAI','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Kenneth Ize','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Kutula by Africana','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('LaQuan Smith','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Local European','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Madame Matovu Vintage',"hours not avaiable");
-INSERT INTO businesses(biz_name,hours) VALUES ('Maki Oh','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Moshood Creations',"hours not avaiable");
-INSERT INTO businesses(biz_name,hours) VALUES ('Nandi Naya','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Nude Barre','available at mulberry-grand.com');
-INSERT INTO businesses(biz_name,hours) VALUES ('Octave Jewelry','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Oma the Label','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Onion Cut & Sewn','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Orange Culture',"hours not avaiable");
-INSERT INTO businesses(biz_name,hours) VALUES ('Peju Obasa',"hours not avaiable");
-INSERT INTO businesses(biz_name,hours) VALUES ('Post-Imperial',"hours not avaiable");
-INSERT INTO businesses(biz_name,hours) VALUES ('Rebecca Allen','visit by appt');
-INSERT INTO businesses(biz_name,hours) VALUES ('Riot Swim',"hours not avaiable");
-INSERT INTO businesses(biz_name,hours) VALUES ('Sincerely, Tommy','8am — 6pm daily, 
-8am — 4pm
-5pm — 10pm daily');
-INSERT INTO businesses(biz_name,hours) VALUES ('The Sixes','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Slashed by Tia','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Small Needs','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('T.A.',"hours not avaiable");
-INSERT INTO businesses(biz_name,hours) VALUES ('Telfar','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('TLZ L’FEMME','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Tree Fairfax','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Victor Glemaud','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Wales Bonner','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Yam','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Zou Xou Shoes','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('C.L.U.E','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('A Dozen Cousins','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Alibi Lounge',"hours not avaiable");
-INSERT INTO businesses(biz_name,hours) VALUES ('Alvin & Friends','Mon, CLOSED
-Tue, Wed, Sun, 5pm - 9pm
-Thu, 5pm - 10pm
-Fri, Sat 5pm - 11pm
-BAR open until 1am
-OPEN for BRUNCH Sat 11:30am - 2pm
-OPEN for BRUNCH Sun 11:30am - 3:30pm');
-INSERT INTO businesses(biz_name,hours) VALUES ('Basbaas Foods','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Benyam','Mon, CLOSED
-Tue, CLOSED
-Wed, 4pm – 9pm
-Thu, 4pm – 9pm
-Fri, 12pm – 9pm
-Sat, 12pm – 9pm
-Sun, 12pm – 8pm"');
-INSERT INTO businesses(biz_name,hours) VALUES ('Blu The Baker','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('BLVD Bistro','Thu - Fri, 12pm - 6pm
-Sat - Sun, 10am – 6pm
-Mon - Wed, CLOSED');
-INSERT INTO businesses(biz_name,hours) VALUES ('Blk & Bold','available at target.com');
-INSERT INTO businesses(biz_name,hours) VALUES ('Brooklyn Chop House',"hours not avaiable");
-INSERT INTO businesses(biz_name,hours) VALUES ('Brooklyn Tea','7 days, 8am- 6pm');
-INSERT INTO businesses(biz_name,hours) VALUES ('Casa Del Toro','Mon-Thu, 5pm - 11pm
-Fri-Sat, 5pm - 1am
-Sun, 5pm - 10pm');
-INSERT INTO businesses(biz_name,hours) VALUES ('Charles’ Pan Fried Chicken','Mon - Sun, 1 - 10pm');
-INSERT INTO businesses(biz_name,hours) VALUES ('Chocolat',"hours not avaiable");
-INSERT INTO businesses(biz_name,hours) VALUES ('Cremas Absalon','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Global Village Cuisine','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Harlem Hops','7 days, 2pm – 8pm');
-INSERT INTO businesses(biz_name,hours) VALUES ('Harvest And Revel','catering service');
-INSERT INTO businesses(biz_name,hours) VALUES ('Jolo''s Kitchen','Weekdays 11:30am - 8pm, Weekends 1pm - 8pm');
-INSERT INTO businesses(biz_name,hours) VALUES ('Jones Bar-B-Q','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Juices for Life (Castle Hill – Bronx)',"hours not avaiable");
-INSERT INTO businesses(biz_name,hours) VALUES ('Justice of the Pies','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Lillie’s of Charleston','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Lolo''s Seafood Shack','Mon, CLOSED, 
-Tue - Sun, 12pm - 9pm');
-INSERT INTO businesses(biz_name,hours) VALUES ('Maison Noir Wines','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Mikey Likes It East Village','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Nature Sings','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Negril Village NYC','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('On The Hunt','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Pastry Art by Evelyn R. Cooke','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Pepe''s Place','Mon - Tues, CLOSED
-Wed - Sun 1pm - 8pm');
-INSERT INTO businesses(biz_name,hours) VALUES ('Red Bay Coffee','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Ripe Kitchen & Bar','Tue - Thu, 4pm - 11:30pm 
-Fri - Sat, 4pm - 12:30am 
-Sun, 4pm - 10:30pm 
-Mon, CLOSED');
-INSERT INTO businesses(biz_name,hours) VALUES ('Roc N Ramen','7 days, 12pm - 8pm');
-INSERT INTO businesses(biz_name,hours) VALUES ('Salut Nutrition','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Seasoned Vegan','Wed, Thu, Fri, 5pm - 10pm 
-Sat, 1pm - 10pm
-Sun, 4pm -9pm 
-Mon, Tue, CLOSED');
-INSERT INTO businesses(biz_name,hours) VALUES ('The Sip','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Sol Cacao','available in specialty food stores');
-INSERT INTO businesses(biz_name,hours) VALUES ('Sol Sips','Wed - Sat, 12pm - 7pm, 
-Mon, Tues, Sun, CLOSED');
-INSERT INTO businesses(biz_name,hours) VALUES ('Whetstone Magazine','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Tings Jamaican Jerk Chicken','available at Chelsea Market, 
-Main Concourse,
-Mon-Sun, 11:00 AM - 8:30 PM');
-INSERT INTO businesses(biz_name,hours) VALUES ('Zafa Wines','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Black Tech Pipeline','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('I DON’T DO CLUBS(IDDC)','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Cafe con Libros','Tues-Fri, 9am - 1pm
-Sat & Sun, 9am - 3pm');
-INSERT INTO businesses(biz_name,hours) VALUES ('Frugal Bookstore','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Harriett’s Bookshop','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('For Keeps Books','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Fulton Street Books and Coffee','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('The Lit. Bar',"hours not avaiable");
-INSERT INTO businesses(biz_name,hours) VALUES ('Loving Me Books','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Mahogany Books','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Semicolon Bookstore and Gallery','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Sister’s Uptown Bookstore','Wed, Fri 1PM - 5PM,
-Sat, 1PM - 5PM,
-Sun, Closed');
-INSERT INTO businesses(biz_name,hours) VALUES ('Source of Knowledge','temporarily closed');
-INSERT INTO businesses(biz_name,hours) VALUES ('Anya Lust','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Baby Phat','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('BedStuyFly',"hours not avaiable");
-INSERT INTO businesses(biz_name,hours) VALUES ('BLK MKT Vintage','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Brooklyn Circus',"hours not avaiable");
-INSERT INTO businesses(biz_name,hours) VALUES ('Brother Vellies',"hours not avaiable");
-INSERT INTO businesses(biz_name,hours) VALUES ('Cameron Tea','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Castamira','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('CBAAF','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Christopher John Rogers','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Cool and Casual Studios','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Cushnie','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Diop','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Edas','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Flat Fifteen','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Gizmo Vintage Honey','Wed-Sun 12 -6');
-INSERT INTO businesses(biz_name,hours) VALUES ('Golden Girly','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('House of Aama','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('KAI','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Kenneth Ize','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Kutula by Africana','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('LaQuan Smith','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Local European','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Madame Matovu Vintage',"hours not avaiable");
-INSERT INTO businesses(biz_name,hours) VALUES ('Maki Oh','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Moshood Creations',"hours not avaiable");
-INSERT INTO businesses(biz_name,hours) VALUES ('Nandi Naya','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Nude Barre','available at mulberry-grand.com');
-INSERT INTO businesses(biz_name,hours) VALUES ('Octave Jewelry','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Oma the Label','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Onion Cut & Sewn','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Orange Culture',"hours not avaiable");
-INSERT INTO businesses(biz_name,hours) VALUES ('Peju Obasa',"hours not avaiable");
-INSERT INTO businesses(biz_name,hours) VALUES ('Post-Imperial',"hours not avaiable");
-INSERT INTO businesses(biz_name,hours) VALUES ('Rebecca Allen','visit by appt');
-INSERT INTO businesses(biz_name,hours) VALUES ('Riot Swim',"hours not avaiable");
-INSERT INTO businesses(biz_name,hours) VALUES ('Sincerely, Tommy','8am — 6pm daily, 
-8am — 4pm
-5pm — 10pm daily');
-INSERT INTO businesses(biz_name,hours) VALUES ('The Sixes','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Slashed by Tia','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Small Needs','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('T.A.',"hours not avaiable");
-INSERT INTO businesses(biz_name,hours) VALUES ('Telfar','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('TLZ L’FEMME','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Tree Fairfax','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Victor Glemaud','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Wales Bonner','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Yam','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Zou Xou Shoes','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('C.L.U.E','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('A Dozen Cousins','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Alibi Lounge',"hours not avaiable");
-INSERT INTO businesses(biz_name,hours) VALUES ('Alvin & Friends','Mon, CLOSED
-Tue, Wed, Sun, 5pm - 9pm
-Thu, 5pm - 10pm
-Fri, Sat 5pm - 11pm
-BAR open until 1am
-OPEN for BRUNCH Sat 11:30am - 2pm
-OPEN for BRUNCH Sun 11:30am - 3:30pm');
-INSERT INTO businesses(biz_name,hours) VALUES ('Basbaas Foods','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Benyam','Mon, CLOSED
-Tue, CLOSED
-Wed, 4pm – 9pm
-Thu, 4pm – 9pm
-Fri, 12pm – 9pm
-Sat, 12pm – 9pm
-Sun, 12pm – 8pm"');
-INSERT INTO businesses(biz_name,hours) VALUES ('Blu The Baker','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('BLVD Bistro','Thu - Fri, 12pm - 6pm
-Sat - Sun, 10am – 6pm
-Mon - Wed, CLOSED');
-INSERT INTO businesses(biz_name,hours) VALUES ('Blk & Bold','available at target.com');
-INSERT INTO businesses(biz_name,hours) VALUES ('Brooklyn Chop House',"hours not avaiable");
-INSERT INTO businesses(biz_name,hours) VALUES ('Brooklyn Tea','7 days, 8am- 6pm');
-INSERT INTO businesses(biz_name,hours) VALUES ('Casa Del Toro','Mon-Thu, 5pm - 11pm
-Fri-Sat, 5pm - 1am
-Sun, 5pm - 10pm');
-INSERT INTO businesses(biz_name,hours) VALUES ('Charles’ Pan Fried Chicken','Mon - Sun, 1 - 10pm');
-INSERT INTO businesses(biz_name,hours) VALUES ('Chocolat',"hours not avaiable");
-INSERT INTO businesses(biz_name,hours) VALUES ('Cremas Absalon','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Global Village Cuisine','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Harlem Hops','7 days, 2pm – 8pm');
-INSERT INTO businesses(biz_name,hours) VALUES ('Harvest And Revel','catering service');
-INSERT INTO businesses(biz_name,hours) VALUES ('Jolo''s Kitchen','Weekdays 11:30am - 8pm, Weekends 1pm - 8pm');
-INSERT INTO businesses(biz_name,hours) VALUES ('Jones Bar-B-Q','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Juices for Life (Castle Hill – Bronx)',"hours not avaiable");
-INSERT INTO businesses(biz_name,hours) VALUES ('Justice of the Pies','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Lillie’s of Charleston','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Lolo''s Seafood Shack','Mon, CLOSED, 
-Tue - Sun, 12pm - 9pm');
-INSERT INTO businesses(biz_name,hours) VALUES ('Maison Noir Wines','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Mikey Likes It East Village','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Nature Sings','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Negril Village NYC','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('On The Hunt','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Pastry Art by Evelyn R. Cooke','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Pepe''s Place','Mon - Tues, CLOSED
-Wed - Sun 1pm - 8pm');
-INSERT INTO businesses(biz_name,hours) VALUES ('Red Bay Coffee','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Ripe Kitchen & Bar','Tue - Thu, 4pm - 11:30pm 
-Fri - Sat, 4pm - 12:30am 
-Sun, 4pm - 10:30pm 
-Mon, CLOSED');
-INSERT INTO businesses(biz_name,hours) VALUES ('Roc N Ramen','7 days, 12pm - 8pm');
-INSERT INTO businesses(biz_name,hours) VALUES ('Salut Nutrition','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Seasoned Vegan','Wed, Thu, Fri, 5pm - 10pm 
-Sat, 1pm - 10pm
-Sun, 4pm -9pm 
-Mon, Tue, CLOSED');
-INSERT INTO businesses(biz_name,hours) VALUES ('The Sip','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Sol Cacao','available in specialty food stores');
-INSERT INTO businesses(biz_name,hours) VALUES ('Sol Sips','Wed - Sat, 12pm - 7pm, 
-Mon, Tues, Sun, CLOSED');
-INSERT INTO businesses(biz_name,hours) VALUES ('Whetstone Magazine','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Tings Jamaican Jerk Chicken','available at Chelsea Market, 
-Main Concourse,
-Mon-Sun, 11:00 AM - 8:30 PM');
-INSERT INTO businesses(biz_name,hours) VALUES ('Zafa Wines','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Black Tech Pipeline','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('I DON’T DO CLUBS(IDDC)','online business');
-
-INSERT INTO owners(owner_id,owner_name) VALUES (1,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (2,'Jeanine Hays and Bryan Mason');
-INSERT INTO owners(owner_id,owner_name) VALUES (3,'Neffi Walker');
-INSERT INTO owners(owner_id,owner_name) VALUES (4,'Hadiya Williams');
-INSERT INTO owners(owner_id,owner_name) VALUES (5,'Hana Getachew');
-INSERT INTO owners(owner_id,owner_name) VALUES (6,'Nicole Gibbons');
-INSERT INTO owners(owner_id,owner_name) VALUES (7,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (8,'Brittiny Terry');
-INSERT INTO owners(owner_id,owner_name) VALUES (9,'Byron and Dexter Peart');
-INSERT INTO owners(owner_id,owner_name) VALUES (10,'Tosin Oshinowo');
-INSERT INTO owners(owner_id,owner_name) VALUES (11,'Justina Blakeney');
-INSERT INTO owners(owner_id,owner_name) VALUES (12,'Ed Be & Jared Blake');
-INSERT INTO owners(owner_id,owner_name) VALUES (13,'Jason Evege');
-INSERT INTO owners(owner_id,owner_name) VALUES (14,'Denequa Williams');
-INSERT INTO owners(owner_id,owner_name) VALUES (15,'Malene Barnett');
-INSERT INTO owners(owner_id,owner_name) VALUES (16,'Marie Burgos');
-INSERT INTO owners(owner_id,owner_name) VALUES (17,'Joel Mahfood');
-INSERT INTO owners(owner_id,owner_name) VALUES (18,'Achuziam Maha-Sanchez');
-INSERT INTO owners(owner_id,owner_name) VALUES (19,'Osa Atoe');
-INSERT INTO owners(owner_id,owner_name) VALUES (20,'Robin Wilson');
-INSERT INTO owners(owner_id,owner_name) VALUES (21,'Rochelle Porter');
-INSERT INTO owners(owner_id,owner_name) VALUES (22,'Nikita Richardson');
-INSERT INTO owners(owner_id,owner_name) VALUES (23,'Sheila Bridges');
-INSERT INTO owners(owner_id,owner_name) VALUES (24,'LaToya Tucciarone');
-INSERT INTO owners(owner_id,owner_name) VALUES (25,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (26,'Kenesha Sneed');
-INSERT INTO owners(owner_id,owner_name) VALUES (27,'Nasozi Kakembo');
-INSERT INTO owners(owner_id,owner_name) VALUES (28,'Shannon Maldonado');
-INSERT INTO owners(owner_id,owner_name) VALUES (29,'Elias Williams');
-INSERT INTO owners(owner_id,owner_name) VALUES (30,'Elliot Jerome Brown Jr');
-INSERT INTO owners(owner_id,owner_name) VALUES (31,'Joiri Minaya');
-INSERT INTO owners(owner_id,owner_name) VALUES (32,'Groana Melendez');
-INSERT INTO owners(owner_id,owner_name) VALUES (33,'Miranda Barnes');
-INSERT INTO owners(owner_id,owner_name) VALUES (34,'Danielle Deavens and Doug Spencer');
-INSERT INTO owners(owner_id,owner_name) VALUES (35,'Corinna and Theresa Williams');
-INSERT INTO owners(owner_id,owner_name) VALUES (36,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (37,'Malcolm Dia');
-INSERT INTO owners(owner_id,owner_name) VALUES (38,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (39,'Karida Collins');
-INSERT INTO owners(owner_id,owner_name) VALUES (40,'Jazzi McGilbert');
-INSERT INTO owners(owner_id,owner_name) VALUES (41,'Felicia Eve');
-INSERT INTO owners(owner_id,owner_name) VALUES (42,'Ron Robinson');
-INSERT INTO owners(owner_id,owner_name) VALUES (43,'Dana Jackson');
-INSERT INTO owners(owner_id,owner_name) VALUES (44,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (45,'Nancy Twine');
-INSERT INTO owners(owner_id,owner_name) VALUES (46,'Trinity Mouzon Wofford');
-INSERT INTO owners(owner_id,owner_name) VALUES (47,'Abena Boamah-Acheampong');
-INSERT INTO owners(owner_id,owner_name) VALUES (48,'Hassan Sayyed');
-INSERT INTO owners(owner_id,owner_name) VALUES (49,'Myka Harris and Kadi Lee');
-INSERT INTO owners(owner_id,owner_name) VALUES (50,'Bea Dixon');
-INSERT INTO owners(owner_id,owner_name) VALUES (51,'Desiree Verdejo');
-INSERT INTO owners(owner_id,owner_name) VALUES (52,'Lauren Napier');
-INSERT INTO owners(owner_id,owner_name) VALUES (53,'Karen Young');
-INSERT INTO owners(owner_id,owner_name) VALUES (54,'Pat McGrath');
-INSERT INTO owners(owner_id,owner_name) VALUES (55,'Jacqueline Carrington');
-INSERT INTO owners(owner_id,owner_name) VALUES (56,'Katonya Breaux');
-INSERT INTO owners(owner_id,owner_name) VALUES (57,'Sharon Chuter,');
-INSERT INTO owners(owner_id,owner_name) VALUES (58,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (59,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (60,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (61,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (62,'Chavonne Hodges');
-INSERT INTO owners(owner_id,owner_name) VALUES (63,'Darian Hall and Elisa Shankle');
-INSERT INTO owners(owner_id,owner_name) VALUES (64,'Ngo Okafor');
-INSERT INTO owners(owner_id,owner_name) VALUES (65,'Jessamyn Stanley');
-INSERT INTO owners(owner_id,owner_name) VALUES (66,'Andrea Marie');
-INSERT INTO owners(owner_id,owner_name) VALUES (67,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (68,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (69,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (70,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (71,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (72,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (73,'Angela Nesbitt');
-INSERT INTO owners(owner_id,owner_name) VALUES (74,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (75,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (76,'Janifer Wilson and daughter Kori');
-INSERT INTO owners(owner_id,owner_name) VALUES (77,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (78,'Krystle Kotara');
-INSERT INTO owners(owner_id,owner_name) VALUES (79,'Kimora Lee Simmons');
-INSERT INTO owners(owner_id,owner_name) VALUES (80,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (81,'Jannah Handy and Kiyanna Stewart');
-INSERT INTO owners(owner_id,owner_name) VALUES (82,'Ouigi Theodore');
-INSERT INTO owners(owner_id,owner_name) VALUES (83,'Aurora James');
-INSERT INTO owners(owner_id,owner_name) VALUES (84,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (85,'Chantel Davis');
-INSERT INTO owners(owner_id,owner_name) VALUES (86,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (87,'Christopher John Rogers');
-INSERT INTO owners(owner_id,owner_name) VALUES (88,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (89,'Carly Cushnie');
-INSERT INTO owners(owner_id,owner_name) VALUES (90,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (91,'Sade Mims');
-INSERT INTO owners(owner_id,owner_name) VALUES (92,'Francesca Kappo');
-INSERT INTO owners(owner_id,owner_name) VALUES (93,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (94,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (95,'Rebecca Henry and Akua Shabaka');
-INSERT INTO owners(owner_id,owner_name) VALUES (96,'Fisayo Longe');
-INSERT INTO owners(owner_id,owner_name) VALUES (97,'Kenneth Ize');
-INSERT INTO owners(owner_id,owner_name) VALUES (98,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (99,'LaQuan Smith');
-INSERT INTO owners(owner_id,owner_name) VALUES (100,'Alexandra Bunch');
-INSERT INTO owners(owner_id,owner_name) VALUES (101,'Rosemary Matovu');
-INSERT INTO owners(owner_id,owner_name) VALUES (102,'Maki Osakwe');
-INSERT INTO owners(owner_id,owner_name) VALUES (103,'Moshood Afariogun');
-INSERT INTO owners(owner_id,owner_name) VALUES (104,'Hleziphansi Zita');
-INSERT INTO owners(owner_id,owner_name) VALUES (105,'Erin Carpenter');
-INSERT INTO owners(owner_id,owner_name) VALUES (106,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (107,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (108,'Whitney Mero');
-INSERT INTO owners(owner_id,owner_name) VALUES (109,'Adebayo Oke-Lawal');
-INSERT INTO owners(owner_id,owner_name) VALUES (110,'Peju Obasa');
-INSERT INTO owners(owner_id,owner_name) VALUES (111,'Niyi Okuboyejo');
-INSERT INTO owners(owner_id,owner_name) VALUES (112,'Rebecca Allen');
-INSERT INTO owners(owner_id,owner_name) VALUES (113,'Monti Landers');
-INSERT INTO owners(owner_id,owner_name) VALUES (114,'Kai Avent-deLeon');
-INSERT INTO owners(owner_id,owner_name) VALUES (115,'Franci Girard');
-INSERT INTO owners(owner_id,owner_name) VALUES (116,'Tia Adeola');
-INSERT INTO owners(owner_id,owner_name) VALUES (117,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (118,'Telsha Anderson');
-INSERT INTO owners(owner_id,owner_name) VALUES (119,'Telfar Clemens');
-INSERT INTO owners(owner_id,owner_name) VALUES (120,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (121,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (122,'Victor Glemaud');
-INSERT INTO owners(owner_id,owner_name) VALUES (123,'Wales Bonner');
-INSERT INTO owners(owner_id,owner_name) VALUES (124,'Morgan Thomas');
-INSERT INTO owners(owner_id,owner_name) VALUES (125,'Katherine Theobalds');
-INSERT INTO owners(owner_id,owner_name) VALUES (126,'Anthony Telesford');
-INSERT INTO owners(owner_id,owner_name) VALUES (127,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (128,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (129,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (130,'Hawa Hassan');
-INSERT INTO owners(owner_id,owner_name) VALUES (131,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (132,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (133,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (134,'Pernell Cezar and Rod Johnson');
-INSERT INTO owners(owner_id,owner_name) VALUES (135,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (136,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (137,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (138,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (139,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (140,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (141,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (142,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (143,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (144,'Marc A. Moise (Jolo)');
-INSERT INTO owners(owner_id,owner_name) VALUES (145,'Deborah “Little” Jones and Mary “Shorty” Jones');
-INSERT INTO owners(owner_id,owner_name) VALUES (146,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (147,'Maya-Camille Broussard');
-INSERT INTO owners(owner_id,owner_name) VALUES (148,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (149,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (150,'André Hueston Mack');
-INSERT INTO owners(owner_id,owner_name) VALUES (151,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (152,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (153,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (154,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (155,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (156,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (157,'Keba Konte');
-INSERT INTO owners(owner_id,owner_name) VALUES (158,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (159,'Chef Wayne Carrington');
-INSERT INTO owners(owner_id,owner_name) VALUES (160,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (161,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (162,'Catherine Carter and Erica Davis');
-INSERT INTO owners(owner_id,owner_name) VALUES (163,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (164,'Francesca Chaney');
-INSERT INTO owners(owner_id,owner_name) VALUES (165,'Stephen Satterfield');
-INSERT INTO owners(owner_id,owner_name) VALUES (166,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (167,'Krista Scruggs');
-INSERT INTO owners(owner_id,owner_name) VALUES (168,'Pariss Athena');
-INSERT INTO owners(owner_id,owner_name) VALUES (169,'Genese Jamilah');
-INSERT INTO owners(owner_id,owner_name) VALUES (170,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (171,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (172,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (173,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (174,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (175,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (176,'Angela Nesbitt');
-INSERT INTO owners(owner_id,owner_name) VALUES (177,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (178,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (179,'Janifer Wilson and daughter Kori');
-INSERT INTO owners(owner_id,owner_name) VALUES (180,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (181,'Krystle Kotara');
-INSERT INTO owners(owner_id,owner_name) VALUES (182,'Kimora Lee Simmons');
-INSERT INTO owners(owner_id,owner_name) VALUES (183,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (184,'Jannah Handy and Kiyanna Stewart');
-INSERT INTO owners(owner_id,owner_name) VALUES (185,'Ouigi Theodore');
-INSERT INTO owners(owner_id,owner_name) VALUES (186,'Aurora James');
-INSERT INTO owners(owner_id,owner_name) VALUES (187,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (188,'Chantel Davis');
-INSERT INTO owners(owner_id,owner_name) VALUES (189,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (190,'Christopher John Rogers');
-INSERT INTO owners(owner_id,owner_name) VALUES (191,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (192,'Carly Cushnie');
-INSERT INTO owners(owner_id,owner_name) VALUES (193,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (194,'Sade Mims');
-INSERT INTO owners(owner_id,owner_name) VALUES (195,'Francesca Kappo');
-INSERT INTO owners(owner_id,owner_name) VALUES (196,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (197,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (198,'Rebecca Henry and Akua Shabaka');
-INSERT INTO owners(owner_id,owner_name) VALUES (199,'Fisayo Longe');
-INSERT INTO owners(owner_id,owner_name) VALUES (200,'Kenneth Ize');
-INSERT INTO owners(owner_id,owner_name) VALUES (201,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (202,'LaQuan Smith');
-INSERT INTO owners(owner_id,owner_name) VALUES (203,'Alexandra Bunch');
-INSERT INTO owners(owner_id,owner_name) VALUES (204,'Rosemary Matovu');
-INSERT INTO owners(owner_id,owner_name) VALUES (205,'Maki Osakwe');
-INSERT INTO owners(owner_id,owner_name) VALUES (206,'Moshood Afariogun');
-INSERT INTO owners(owner_id,owner_name) VALUES (207,'Hleziphansi Zita');
-INSERT INTO owners(owner_id,owner_name) VALUES (208,'Erin Carpenter');
-INSERT INTO owners(owner_id,owner_name) VALUES (209,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (210,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (211,'Whitney Mero');
-INSERT INTO owners(owner_id,owner_name) VALUES (212,'Adebayo Oke-Lawal');
-INSERT INTO owners(owner_id,owner_name) VALUES (213,'Peju Obasa');
-INSERT INTO owners(owner_id,owner_name) VALUES (214,'Niyi Okuboyejo');
-INSERT INTO owners(owner_id,owner_name) VALUES (215,'Rebecca Allen');
-INSERT INTO owners(owner_id,owner_name) VALUES (216,'Monti Landers');
-INSERT INTO owners(owner_id,owner_name) VALUES (217,'Kai Avent-deLeon');
-INSERT INTO owners(owner_id,owner_name) VALUES (218,'Franci Girard');
-INSERT INTO owners(owner_id,owner_name) VALUES (219,'Tia Adeola');
-INSERT INTO owners(owner_id,owner_name) VALUES (220,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (221,'Telsha Anderson');
-INSERT INTO owners(owner_id,owner_name) VALUES (222,'Telfar Clemens');
-INSERT INTO owners(owner_id,owner_name) VALUES (223,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (224,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (225,'Victor Glemaud');
-INSERT INTO owners(owner_id,owner_name) VALUES (226,'Wales Bonner');
-INSERT INTO owners(owner_id,owner_name) VALUES (227,'Morgan Thomas');
-INSERT INTO owners(owner_id,owner_name) VALUES (228,'Katherine Theobalds');
-INSERT INTO owners(owner_id,owner_name) VALUES (229,'Anthony Telesford');
-INSERT INTO owners(owner_id,owner_name) VALUES (230,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (231,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (232,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (233,'Hawa Hassan');
-INSERT INTO owners(owner_id,owner_name) VALUES (234,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (235,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (236,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (237,'Pernell Cezar and Rod Johnson');
-INSERT INTO owners(owner_id,owner_name) VALUES (238,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (239,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (240,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (241,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (242,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (243,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (244,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (245,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (246,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (247,'Marc A. Moise (Jolo)');
-INSERT INTO owners(owner_id,owner_name) VALUES (248,'Deborah “Little” Jones and Mary “Shorty” Jones');
-INSERT INTO owners(owner_id,owner_name) VALUES (249,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (250,'Maya-Camille Broussard');
-INSERT INTO owners(owner_id,owner_name) VALUES (251,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (252,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (253,'André Hueston Mack');
-INSERT INTO owners(owner_id,owner_name) VALUES (254,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (255,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (256,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (257,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (258,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (259,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (260,'Keba Konte');
-INSERT INTO owners(owner_id,owner_name) VALUES (261,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (262,'Chef Wayne Carrington');
-INSERT INTO owners(owner_id,owner_name) VALUES (263,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (264,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (265,'Catherine Carter and Erica Davis');
-INSERT INTO owners(owner_id,owner_name) VALUES (266,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (267,'Francesca Chaney');
-INSERT INTO owners(owner_id,owner_name) VALUES (268,'Stephen Satterfield');
-INSERT INTO owners(owner_id,owner_name) VALUES (269,NULL);
-INSERT INTO owners(owner_id,owner_name) VALUES (270,'Krista Scruggs');
-INSERT INTO owners(owner_id,owner_name) VALUES (271,'Pariss Athena');
-INSERT INTO owners(owner_id,owner_name) VALUES (272,'Genese Jamilah');
-
 INSERT INTO types(type_name) VALUES ('home decor');
 INSERT INTO types(type_name) VALUES ('arts and culture');
 INSERT INTO types(type_name) VALUES ('gift and beyond');
@@ -633,824 +11,902 @@ INSERT INTO types(type_name) VALUES ('clothes and accs');
 INSERT INTO types(type_name) VALUES ('food and drink');
 INSERT INTO types(type_name) VALUES ('education and career');
 
-INSERT INTO categories(biz_id,type_id) VALUES (1,1);
-INSERT INTO categories(biz_id,type_id) VALUES (2,1);
-INSERT INTO categories(biz_id,type_id) VALUES (3,1);
-INSERT INTO categories(biz_id,type_id) VALUES (4,1);
-INSERT INTO categories(biz_id,type_id) VALUES (5,1);
-INSERT INTO categories(biz_id,type_id) VALUES (6,1);
-INSERT INTO categories(biz_id,type_id) VALUES (7,1);
-INSERT INTO categories(biz_id,type_id) VALUES (8,1);
-INSERT INTO categories(biz_id,type_id) VALUES (9,1);
-INSERT INTO categories(biz_id,type_id) VALUES (10,1);
-INSERT INTO categories(biz_id,type_id) VALUES (11,1);
-INSERT INTO categories(biz_id,type_id) VALUES (12,1);
-INSERT INTO categories(biz_id,type_id) VALUES (13,1);
-INSERT INTO categories(biz_id,type_id) VALUES (14,1);
-INSERT INTO categories(biz_id,type_id) VALUES (15,1);
-INSERT INTO categories(biz_id,type_id) VALUES (16,1);
-INSERT INTO categories(biz_id,type_id) VALUES (17,1);
-INSERT INTO categories(biz_id,type_id) VALUES (18,1);
-INSERT INTO categories(biz_id,type_id) VALUES (19,1);
-INSERT INTO categories(biz_id,type_id) VALUES (20,1);
-INSERT INTO categories(biz_id,type_id) VALUES (21,1);
-INSERT INTO categories(biz_id,type_id) VALUES (22,1);
-INSERT INTO categories(biz_id,type_id) VALUES (23,1);
-INSERT INTO categories(biz_id,type_id) VALUES (24,1);
-INSERT INTO categories(biz_id,type_id) VALUES (25,1);
-INSERT INTO categories(biz_id,type_id) VALUES (26,1);
-INSERT INTO categories(biz_id,type_id) VALUES (27,1);
-INSERT INTO categories(biz_id,type_id) VALUES (28,1);
-INSERT INTO categories(biz_id,type_id) VALUES (29,2);
-INSERT INTO categories(biz_id,type_id) VALUES (30,2);
-INSERT INTO categories(biz_id,type_id) VALUES (31,2);
-INSERT INTO categories(biz_id,type_id) VALUES (32,2);
-INSERT INTO categories(biz_id,type_id) VALUES (33,2);
-INSERT INTO categories(biz_id,type_id) VALUES (34,3);
-INSERT INTO categories(biz_id,type_id) VALUES (35,3);
-INSERT INTO categories(biz_id,type_id) VALUES (36,3);
-INSERT INTO categories(biz_id,type_id) VALUES (37,3);
-INSERT INTO categories(biz_id,type_id) VALUES (38,3);
-INSERT INTO categories(biz_id,type_id) VALUES (39,3);
-INSERT INTO categories(biz_id,type_id) VALUES (40,3);
-INSERT INTO categories(biz_id,type_id) VALUES (41,3);
-INSERT INTO categories(biz_id,type_id) VALUES (42,4);
-INSERT INTO categories(biz_id,type_id) VALUES (43,4);
-INSERT INTO categories(biz_id,type_id) VALUES (44,4);
-INSERT INTO categories(biz_id,type_id) VALUES (45,4);
-INSERT INTO categories(biz_id,type_id) VALUES (46,4);
-INSERT INTO categories(biz_id,type_id) VALUES (47,4);
-INSERT INTO categories(biz_id,type_id) VALUES (48,4);
-INSERT INTO categories(biz_id,type_id) VALUES (49,4);
-INSERT INTO categories(biz_id,type_id) VALUES (50,4);
-INSERT INTO categories(biz_id,type_id) VALUES (51,4);
-INSERT INTO categories(biz_id,type_id) VALUES (52,4);
-INSERT INTO categories(biz_id,type_id) VALUES (53,4);
-INSERT INTO categories(biz_id,type_id) VALUES (54,4);
-INSERT INTO categories(biz_id,type_id) VALUES (55,4);
-INSERT INTO categories(biz_id,type_id) VALUES (56,4);
-INSERT INTO categories(biz_id,type_id) VALUES (57,4);
-INSERT INTO categories(biz_id,type_id) VALUES (58,4);
-INSERT INTO categories(biz_id,type_id) VALUES (59,5);
-INSERT INTO categories(biz_id,type_id) VALUES (60,5);
-INSERT INTO categories(biz_id,type_id) VALUES (61,5);
-INSERT INTO categories(biz_id,type_id) VALUES (62,5);
-INSERT INTO categories(biz_id,type_id) VALUES (63,5);
-INSERT INTO categories(biz_id,type_id) VALUES (64,5);
-INSERT INTO categories(biz_id,type_id) VALUES (65,5);
-INSERT INTO categories(biz_id,type_id) VALUES (66,5);
-INSERT INTO categories(biz_id,type_id) VALUES (67,5);
-INSERT INTO categories(biz_id,type_id) VALUES (68,5);
-INSERT INTO categories(biz_id,type_id) VALUES (69,5);
-INSERT INTO categories(biz_id,type_id) VALUES (70,5);
-INSERT INTO categories(biz_id,type_id) VALUES (71,5);
-INSERT INTO categories(biz_id,type_id) VALUES (72,5);
-INSERT INTO categories(biz_id,type_id) VALUES (73,5);
-INSERT INTO categories(biz_id,type_id) VALUES (74,5);
-INSERT INTO categories(biz_id,type_id) VALUES (75,5);
-INSERT INTO categories(biz_id,type_id) VALUES (76,5);
-INSERT INTO categories(biz_id,type_id) VALUES (77,5);
-INSERT INTO categories(biz_id,type_id) VALUES (78,5);
-INSERT INTO categories(biz_id,type_id) VALUES (79,5);
-INSERT INTO categories(biz_id,type_id) VALUES (80,5);
-INSERT INTO categories(biz_id,type_id) VALUES (81,5);
-INSERT INTO categories(biz_id,type_id) VALUES (82,5);
-INSERT INTO categories(biz_id,type_id) VALUES (83,5);
-INSERT INTO categories(biz_id,type_id) VALUES (84,5);
-INSERT INTO categories(biz_id,type_id) VALUES (85,5);
-INSERT INTO categories(biz_id,type_id) VALUES (86,5);
-INSERT INTO categories(biz_id,type_id) VALUES (87,5);
-INSERT INTO categories(biz_id,type_id) VALUES (88,5);
-INSERT INTO categories(biz_id,type_id) VALUES (89,5);
-INSERT INTO categories(biz_id,type_id) VALUES (90,5);
-INSERT INTO categories(biz_id,type_id) VALUES (91,5);
-INSERT INTO categories(biz_id,type_id) VALUES (92,5);
-INSERT INTO categories(biz_id,type_id) VALUES (93,5);
-INSERT INTO categories(biz_id,type_id) VALUES (94,5);
-INSERT INTO categories(biz_id,type_id) VALUES (95,5);
-INSERT INTO categories(biz_id,type_id) VALUES (96,5);
-INSERT INTO categories(biz_id,type_id) VALUES (97,5);
-INSERT INTO categories(biz_id,type_id) VALUES (98,5);
-INSERT INTO categories(biz_id,type_id) VALUES (99,5);
-INSERT INTO categories(biz_id,type_id) VALUES (100,5);
-INSERT INTO categories(biz_id,type_id) VALUES (101,5);
-INSERT INTO categories(biz_id,type_id) VALUES (102,5);
-INSERT INTO categories(biz_id,type_id) VALUES (103,5);
-INSERT INTO categories(biz_id,type_id) VALUES (104,5);
-INSERT INTO categories(biz_id,type_id) VALUES (105,5);
-INSERT INTO categories(biz_id,type_id) VALUES (106,5);
-INSERT INTO categories(biz_id,type_id) VALUES (107,5);
-INSERT INTO categories(biz_id,type_id) VALUES (108,5);
-INSERT INTO categories(biz_id,type_id) VALUES (109,5);
-INSERT INTO categories(biz_id,type_id) VALUES (110,5);
-INSERT INTO categories(biz_id,type_id) VALUES (111,5);
-INSERT INTO categories(biz_id,type_id) VALUES (112,5);
-INSERT INTO categories(biz_id,type_id) VALUES (113,5);
-INSERT INTO categories(biz_id,type_id) VALUES (114,5);
-INSERT INTO categories(biz_id,type_id) VALUES (115,5);
-INSERT INTO categories(biz_id,type_id) VALUES (116,5);
-INSERT INTO categories(biz_id,type_id) VALUES (117,5);
-INSERT INTO categories(biz_id,type_id) VALUES (118,5);
-INSERT INTO categories(biz_id,type_id) VALUES (119,5);
-INSERT INTO categories(biz_id,type_id) VALUES (120,5);
-INSERT INTO categories(biz_id,type_id) VALUES (121,5);
-INSERT INTO categories(biz_id,type_id) VALUES (122,5);
-INSERT INTO categories(biz_id,type_id) VALUES (123,5);
-INSERT INTO categories(biz_id,type_id) VALUES (124,5);
-INSERT INTO categories(biz_id,type_id) VALUES (125,5);
-INSERT INTO categories(biz_id,type_id) VALUES (126,5);
-INSERT INTO categories(biz_id,type_id) VALUES (127,5);
-INSERT INTO categories(biz_id,type_id) VALUES (128,5);
-INSERT INTO categories(biz_id,type_id) VALUES (129,5);
-INSERT INTO categories(biz_id,type_id) VALUES (130,5);
-INSERT INTO categories(biz_id,type_id) VALUES (131,5);
-INSERT INTO categories(biz_id,type_id) VALUES (132,5);
-INSERT INTO categories(biz_id,type_id) VALUES (133,5);
-INSERT INTO categories(biz_id,type_id) VALUES (134,5);
-INSERT INTO categories(biz_id,type_id) VALUES (135,5);
-INSERT INTO categories(biz_id,type_id) VALUES (136,5);
-INSERT INTO categories(biz_id,type_id) VALUES (137,5);
-INSERT INTO categories(biz_id,type_id) VALUES (138,5);
-INSERT INTO categories(biz_id,type_id) VALUES (139,5);
-INSERT INTO categories(biz_id,type_id) VALUES (140,5);
-INSERT INTO categories(biz_id,type_id) VALUES (141,5);
-INSERT INTO categories(biz_id,type_id) VALUES (142,5);
-INSERT INTO categories(biz_id,type_id) VALUES (143,5);
-INSERT INTO categories(biz_id,type_id) VALUES (144,5);
-INSERT INTO categories(biz_id,type_id) VALUES (145,5);
-INSERT INTO categories(biz_id,type_id) VALUES (146,5);
-INSERT INTO categories(biz_id,type_id) VALUES (147,5);
-INSERT INTO categories(biz_id,type_id) VALUES (148,5);
-INSERT INTO categories(biz_id,type_id) VALUES (149,5);
-INSERT INTO categories(biz_id,type_id) VALUES (150,5);
-INSERT INTO categories(biz_id,type_id) VALUES (151,5);
-INSERT INTO categories(biz_id,type_id) VALUES (152,5);
-INSERT INTO categories(biz_id,type_id) VALUES (153,5);
-INSERT INTO categories(biz_id,type_id) VALUES (154,5);
-INSERT INTO categories(biz_id,type_id) VALUES (155,5);
-INSERT INTO categories(biz_id,type_id) VALUES (156,5);
-INSERT INTO categories(biz_id,type_id) VALUES (157,5);
-INSERT INTO categories(biz_id,type_id) VALUES (158,5);
-INSERT INTO categories(biz_id,type_id) VALUES (159,5);
-INSERT INTO categories(biz_id,type_id) VALUES (160,5);
-INSERT INTO categories(biz_id,type_id) VALUES (161,5);
-INSERT INTO categories(biz_id,type_id) VALUES (162,5);
-INSERT INTO categories(biz_id,type_id) VALUES (163,5);
-INSERT INTO categories(biz_id,type_id) VALUES (164,5);
-INSERT INTO categories(biz_id,type_id) VALUES (165,5);
-INSERT INTO categories(biz_id,type_id) VALUES (166,5);
-INSERT INTO categories(biz_id,type_id) VALUES (167,5);
-INSERT INTO categories(biz_id,type_id) VALUES (168,5);
-INSERT INTO categories(biz_id,type_id) VALUES (169,5);
-INSERT INTO categories(biz_id,type_id) VALUES (170,6);
-INSERT INTO categories(biz_id,type_id) VALUES (171,6);
-INSERT INTO categories(biz_id,type_id) VALUES (172,6);
-INSERT INTO categories(biz_id,type_id) VALUES (173,6);
-INSERT INTO categories(biz_id,type_id) VALUES (174,6);
-INSERT INTO categories(biz_id,type_id) VALUES (175,6);
-INSERT INTO categories(biz_id,type_id) VALUES (176,6);
-INSERT INTO categories(biz_id,type_id) VALUES (177,6);
-INSERT INTO categories(biz_id,type_id) VALUES (178,6);
-INSERT INTO categories(biz_id,type_id) VALUES (179,6);
-INSERT INTO categories(biz_id,type_id) VALUES (180,6);
-INSERT INTO categories(biz_id,type_id) VALUES (181,7);
-INSERT INTO categories(biz_id,type_id) VALUES (182,7);
-INSERT INTO categories(biz_id,type_id) VALUES (183,7);
-INSERT INTO categories(biz_id,type_id) VALUES (184,7);
-INSERT INTO categories(biz_id,type_id) VALUES (185,7);
-INSERT INTO categories(biz_id,type_id) VALUES (186,7);
-INSERT INTO categories(biz_id,type_id) VALUES (187,7);
-INSERT INTO categories(biz_id,type_id) VALUES (188,7);
-INSERT INTO categories(biz_id,type_id) VALUES (189,7);
-INSERT INTO categories(biz_id,type_id) VALUES (190,7);
-INSERT INTO categories(biz_id,type_id) VALUES (191,7);
-INSERT INTO categories(biz_id,type_id) VALUES (192,7);
-INSERT INTO categories(biz_id,type_id) VALUES (193,7);
-INSERT INTO categories(biz_id,type_id) VALUES (194,7);
-INSERT INTO categories(biz_id,type_id) VALUES (195,7);
-INSERT INTO categories(biz_id,type_id) VALUES (196,7);
-INSERT INTO categories(biz_id,type_id) VALUES (197,7);
-INSERT INTO categories(biz_id,type_id) VALUES (198,7);
-INSERT INTO categories(biz_id,type_id) VALUES (199,7);
-INSERT INTO categories(biz_id,type_id) VALUES (200,7);
-INSERT INTO categories(biz_id,type_id) VALUES (201,7);
-INSERT INTO categories(biz_id,type_id) VALUES (202,7);
-INSERT INTO categories(biz_id,type_id) VALUES (203,7);
-INSERT INTO categories(biz_id,type_id) VALUES (204,7);
-INSERT INTO categories(biz_id,type_id) VALUES (205,7);
-INSERT INTO categories(biz_id,type_id) VALUES (206,7);
-INSERT INTO categories(biz_id,type_id) VALUES (207,7);
-INSERT INTO categories(biz_id,type_id) VALUES (208,7);
-INSERT INTO categories(biz_id,type_id) VALUES (209,7);
-INSERT INTO categories(biz_id,type_id) VALUES (210,7);
-INSERT INTO categories(biz_id,type_id) VALUES (211,7);
-INSERT INTO categories(biz_id,type_id) VALUES (212,7);
-INSERT INTO categories(biz_id,type_id) VALUES (213,7);
-INSERT INTO categories(biz_id,type_id) VALUES (214,7);
-INSERT INTO categories(biz_id,type_id) VALUES (215,7);
-INSERT INTO categories(biz_id,type_id) VALUES (216,7);
-INSERT INTO categories(biz_id,type_id) VALUES (217,7);
-INSERT INTO categories(biz_id,type_id) VALUES (218,7);
-INSERT INTO categories(biz_id,type_id) VALUES (219,7);
-INSERT INTO categories(biz_id,type_id) VALUES (220,7);
-INSERT INTO categories(biz_id,type_id) VALUES (221,7);
-INSERT INTO categories(biz_id,type_id) VALUES (222,7);
-INSERT INTO categories(biz_id,type_id) VALUES (223,7);
-INSERT INTO categories(biz_id,type_id) VALUES (224,7);
-INSERT INTO categories(biz_id,type_id) VALUES (225,7);
-INSERT INTO categories(biz_id,type_id) VALUES (226,7);
-INSERT INTO categories(biz_id,type_id) VALUES (227,7);
-INSERT INTO categories(biz_id,type_id) VALUES (228,7);
-INSERT INTO categories(biz_id,type_id) VALUES (229,7);
-INSERT INTO categories(biz_id,type_id) VALUES (230,8);
-INSERT INTO categories(biz_id,type_id) VALUES (231,8);
-INSERT INTO categories(biz_id,type_id) VALUES (232,8);
-INSERT INTO categories(biz_id,type_id) VALUES (233,8);
-INSERT INTO categories(biz_id,type_id) VALUES (234,8);
-INSERT INTO categories(biz_id,type_id) VALUES (235,8);
-INSERT INTO categories(biz_id,type_id) VALUES (236,8);
-INSERT INTO categories(biz_id,type_id) VALUES (237,8);
-INSERT INTO categories(biz_id,type_id) VALUES (238,8);
-INSERT INTO categories(biz_id,type_id) VALUES (239,8);
-INSERT INTO categories(biz_id,type_id) VALUES (240,8);
-INSERT INTO categories(biz_id,type_id) VALUES (241,8);
-INSERT INTO categories(biz_id,type_id) VALUES (242,8);
-INSERT INTO categories(biz_id,type_id) VALUES (243,8);
-INSERT INTO categories(biz_id,type_id) VALUES (244,8);
-INSERT INTO categories(biz_id,type_id) VALUES (245,8);
-INSERT INTO categories(biz_id,type_id) VALUES (246,8);
-INSERT INTO categories(biz_id,type_id) VALUES (247,8);
-INSERT INTO categories(biz_id,type_id) VALUES (248,8);
-INSERT INTO categories(biz_id,type_id) VALUES (249,8);
-INSERT INTO categories(biz_id,type_id) VALUES (250,8);
-INSERT INTO categories(biz_id,type_id) VALUES (251,8);
-INSERT INTO categories(biz_id,type_id) VALUES (252,8);
-INSERT INTO categories(biz_id,type_id) VALUES (253,8);
-INSERT INTO categories(biz_id,type_id) VALUES (254,8);
-INSERT INTO categories(biz_id,type_id) VALUES (255,8);
-INSERT INTO categories(biz_id,type_id) VALUES (256,8);
-INSERT INTO categories(biz_id,type_id) VALUES (257,8);
-INSERT INTO categories(biz_id,type_id) VALUES (258,8);
-INSERT INTO categories(biz_id,type_id) VALUES (259,8);
-INSERT INTO categories(biz_id,type_id) VALUES (260,8);
-INSERT INTO categories(biz_id,type_id) VALUES (261,8);
-INSERT INTO categories(biz_id,type_id) VALUES (262,8);
-INSERT INTO categories(biz_id,type_id) VALUES (263,8);
-INSERT INTO categories(biz_id,type_id) VALUES (264,8);
-INSERT INTO categories(biz_id,type_id) VALUES (265,8);
-INSERT INTO categories(biz_id,type_id) VALUES (266,8);
-INSERT INTO categories(biz_id,type_id) VALUES (267,8);
-INSERT INTO categories(biz_id,type_id) VALUES (268,8);
-INSERT INTO categories(biz_id,type_id) VALUES (269,8);
-INSERT INTO categories(biz_id,type_id) VALUES (270,8);
-INSERT INTO categories(biz_id,type_id) VALUES (271,9);
-INSERT INTO categories(biz_id,type_id) VALUES (272,9);
+INSERT INTO businesses(biz_name,hours) VALUES
+ ('228 Grant Street Candle Co.','online business')
+,('AphroChic','online business')
+,('The Black Home','online business')
+,('Black Pepper Paperie Co.','online business')
+,('Bolé Road Textiles','online business')
+,('Clare','Mon - Fri, 9am - 9pm 
+Sat - Sun, 9am - 5pm')
+,('Claude Home','online business')
+,('Effortless Composition','online business')
+,('Goodee','online business')
+,('Ilé Ilà','online business')
+,('Jungalow','online business')
+,('Lichen','Sat - Sun, 12pm - 5pm
+Mon, Closed or By Appointment
+Tue, Closed or By Appointment
+Wed, 12pm - 5pm
+Thur, Closed or By Appointment
+Fri, Closed or By Appointment')
+,('Linoto','online business')
+,('Lit Bklyn','online business')
+,('Malene B','online business')
+,('Marie Burgos Collection','online business')
+,('Natty Garden','All Week, 10am - 6pm')
+,('Peace & Riot','Tue - Fri, 11am - 6pm 
+Sat, 10am - 7pm 
+Sun, 11am - 6pm')
+,('Pottery by Osa','online business')
+,('Robin Wilson Home','Available during weekday business hours, but we are typically off-site focused on client projects')
+,('Rochelle Porter','online business')
+,('See Line Ceramics','online business')
+,('Sheila Bridges','online business')
+,('SustainAble Home Goods','online business')
+,('Tackussanu Senegal','online business')
+,('Tactile Matter','online business')
+,('xN Studio','online business')
+,('Yowie','online business')
+,('Elias Williams','online business')
+,('Elliot Jerome Brown Jr','online business')
+,('JOIRI MINAYA','online business')
+,('Groana Melendez','online business')
+,('MIRANDA BARNES','online business')
+,('Bold Xchange','online business')
+,('Celsious','Tue - Fri, 11am - 7pm
+Sat - Mon, 8am - 4pm')
+,('Custom Collaborative','')
+,('Manual','online business')
+,('Marché Rue Dix','Mon - Sat, 12pm - 9pm, 
+Sun, 11am - 8pm')
+,('Neighborhood Fiber Co.','')
+,('Reparations Club','online business')
+,('String Thing Studio','')
+,('BeautyStat Cosmetics','online business')
+,('Beneath Your Mask','online business')
+,('BLK + GRN','online business')
+,('Briogeo','available at birchbox.com')
+,('Golde','online business')
+,('Hanahana Beauty','online business')
+,('Haus Urban','online business')
+,('Highbrow Hippie','online business')
+,('The Honey Pot','available at drug stores')
+,('Hyper Skin','online business')
+,('Lauren Napier Beauty','online business')
+,('OUI The People','online business')
+,('Pat McGrath Labs','available at sephora.com')
+,('People of Color Beauty','online business')
+,('Unsun','online business')
+,('Uoma Beauty','online business')
+,('Zambo Aroma','7 days, 1pm - 9pm')
+,('Ailey Extension','7 days, 8am – 11pm')
+,('Black Girls Run','online business')
+,('Body Space Fitness','')
+,('Grillz and Granola','online business')
+,('HealHaus','Mon-Fri,   7am – 7:30pm
+Sat-Sun,   8am – 7:30pm')
+,('Iconoclast Fitness','Mon - Fri, 6am – 9pm
+Sat - Sun 8am – 2pm')
+,('The Underbelly','online business')
+,('Mind Body Soul','online business')
+,('Cafe con Libros','Tues-Fri, 9am - 1pm
+Sat & Sun, 9am - 3pm')
+,('Frugal Bookstore','online business')
+,('Harriett’s Bookshop','online business')
+,('For Keeps Books','online business')
+,('Fulton Street Books and Coffee','online business')
+,('The Lit. Bar','')
+,('Loving Me Books','online business')
+,('Mahogany Books','online business')
+,('Semicolon Bookstore and Gallery','online business')
+,('Sister’s Uptown Bookstore','Wed, Fri 1PM - 5PM,
+Sat, 1PM - 5PM,
+Sun, Closed')
+,('Source of Knowledge','temporarily closed')
+,('Anya Lust','online business')
+,('Baby Phat','online business')
+,('BedStuyFly','')
+,('BLK MKT Vintage','online business')
+,('Brooklyn Circus','')
+,('Brother Vellies','')
+,('Cameron Tea','online business')
+,('Castamira','online business')
+,('CBAAF','online business')
+,('Christopher John Rogers','online business')
+,('Cool and Casual Studios','online business')
+,('Cushnie','online business')
+,('Diop','online business')
+,('Edas','online business')
+,('Flat Fifteen','online business')
+,('Gizmo Vintage Honey','Wed-Sun 12 -6')
+,('Golden Girly','online business')
+,('House of Aama','online business')
+,('KAI','online business')
+,('Kenneth Ize','online business')
+,('Kutula by Africana','online business')
+,('LaQuan Smith','online business')
+,('Local European','online business')
+,('Madame Matovu Vintage','')
+,('Maki Oh','online business')
+,('Moshood Creations','')
+,('Nandi Naya','online business')
+,('Nude Barre','available at mulberry-grand.com')
+,('Octave Jewelry','online business')
+,('Oma the Label','online business')
+,('Onion Cut & Sewn','online business')
+,('Orange Culture','')
+,('Peju Obasa','')
+,('Post-Imperial','')
+,('Rebecca Allen','visit by appt')
+,('Riot Swim','')
+,('Sincerely, Tommy','8am — 6pm daily, 
+8am — 4pm
+5pm — 10pm daily')
+,('The Sixes','online business')
+,('Slashed by Tia','online business')
+,('Small Needs','online business')
+,('T.A.','')
+,('Telfar','online business')
+,('TLZ L’FEMME','online business')
+,('Tree Fairfax','online business')
+,('Victor Glemaud','online business')
+,('Wales Bonner','online business')
+,('Yam','online business')
+,('Zou Xou Shoes','online business')
+,('C.L.U.E','online business')
+,('A Dozen Cousins','online business')
+,('Alibi Lounge','')
+,('Alvin & Friends','Mon, CLOSED
+Tue, Wed, Sun, 5pm - 9pm
+Thu, 5pm - 10pm
+Fri, Sat 5pm - 11pm
+BAR open until 1am
+OPEN for BRUNCH Sat 11:30am - 2pm
+OPEN for BRUNCH Sun 11:30am - 3:30pm')
+,('Basbaas Foods','online business')
+,('Benyam','Mon, CLOSED
+Tue, CLOSED
+Wed, 4pm – 9pm
+Thu, 4pm – 9pm
+Fri, 12pm – 9pm
+Sat, 12pm – 9pm
+Sun, 12pm – 8pm"')
+,('Blu The Baker','online business')
+,('BLVD Bistro','Thu - Fri, 12pm - 6pm
+Sat - Sun, 10am – 6pm
+Mon - Wed, CLOSED')
+,('Blk & Bold','available at target.com')
+,('Brooklyn Chop House','')
+,('Brooklyn Tea','7 days, 8am- 6pm')
+,('Casa Del Toro','Mon-Thu, 5pm - 11pm
+Fri-Sat, 5pm - 1am
+Sun, 5pm - 10pm')
+,('Charles’ Pan Fried Chicken','Mon - Sun, 1 - 10pm')
+,('Chocolat','')
+,('Cremas Absalon','online business')
+,('Global Village Cuisine','online business')
+,('Harlem Hops','7 days, 2pm – 8pm')
+,('Harvest And Revel','catering service')
+,('Jolo''s Kitchen','Weekdays 11:30am - 8pm, Weekends 1pm - 8pm')
+,('Jones Bar-B-Q','online business')
+,('Juices for Life (Castle Hill – Bronx)','')
+,('Justice of the Pies','online business')
+,('Lillie’s of Charleston','online business')
+,('Lolo''s Seafood Shack','Mon, CLOSED, 
+Tue - Sun, 12pm - 9pm')
+,('Maison Noir Wines','online business')
+,('Mikey Likes It East Village','online business')
+,('Nature Sings','online business')
+,('Negril Village NYC','online business')
+,('On The Hunt','online business')
+,('Pastry Art by Evelyn R. Cooke','online business')
+,('Pepe''s Place','Mon - Tues, CLOSED
+Wed - Sun 1pm - 8pm')
+,('Red Bay Coffee','online business')
+,('Ripe Kitchen & Bar','Tue - Thu, 4pm - 11:30pm 
+Fri - Sat, 4pm - 12:30am 
+Sun, 4pm - 10:30pm 
+Mon, CLOSED')
+,('Roc N Ramen','7 days, 12pm - 8pm')
+,('Salut Nutrition','online business')
+,('Seasoned Vegan','Wed, Thu, Fri, 5pm - 10pm 
+Sat, 1pm - 10pm
+Sun, 4pm -9pm 
+Mon, Tue, CLOSED')
+,('The Sip','online business')
+,('Sol Cacao','available in specialty food stores')
+,('Sol Sips','Wed - Sat, 12pm - 7pm, 
+Mon, Tues, Sun, CLOSED')
+,('Whetstone Magazine','online business')
+,('Tings Jamaican Jerk Chicken','available at Chelsea Market, 
+Main Concourse,
+Mon-Sun, 11:00 AM - 8:30 PM')
+,('Zafa Wines','online business')
+,('Black Tech Pipeline','online business')
+,('I DON’T DO CLUBS(IDDC)','online business');
 
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (1,NULL,NULL,'https://www.instagram.com/228grantstreet/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (2,NULL,NULL,'https://www.instagram.com/aphrochic/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (3,NULL,NULL,'https://www.instagram.com/theblackhomedesign/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (4,NULL,NULL,'https://www.instagram.com/blackpepperpaperieco/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (5,'6468203794',NULL,'https://www.instagram.com/boleroadtextiles/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (6,NULL,NULL,'https://www.instagram.com/clarepaint/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (7,NULL,NULL,'https://www.instagram.com/claudehome/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (8,NULL,NULL,'https://www.instagram.com/effortlesscomposition/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (9,NULL,NULL,'https://www.instagram.com/goodeeworld/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (10,NULL,NULL,'https://www.instagram.com/ile.ila/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (11,NULL,NULL,'https://www.instagram.com/thejungalow/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (12,NULL,NULL,'https://www.instagram.com/lichennyc/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (13,'8889546686',NULL,'https://www.instagram.com/linotodotcom/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (14,NULL,NULL,'https://www.instagram.com/litbklyn/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (15,NULL,NULL,'https://www.instagram.com/maleneblifestyle/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (16,'9173539149',NULL,'https://www.instagram.com/marieburgos.design/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (17,'7184838833',NULL,'https://www.instagram.com/nattygarden/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (18,NULL,NULL,'https://www.instagram.com/peaceandriot/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (19,NULL,NULL,'https://www.instagram.com/potterybyosa/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (20,'8008303874',NULL,'https://www.instagram.com/robinwilsonhome/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (21,NULL,NULL,'https://www.instagram.com/roporterdesign/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (22,NULL,NULL,'https://www.instagram.com/seelineceramics/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (23,'2126786872',NULL,'https://www.instagram.com/harlemtoilegirl/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (24,NULL,NULL,'https://www.instagram.com/sustainablehomegoods/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (25,'7707276794',NULL,'https://www.instagram.com/tackussanu_senegal/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (26,NULL,NULL,'https://www.instagram.com/tactilematter/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (27,NULL,NULL,'https://www.instagram.com/xnstudio_/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (28,NULL,NULL,'https://www.instagram.com/helloyowie/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (29,NULL,'info@eliaswilliams.com','https://www.instagram.com/elias.williams/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (30,NULL,'elliottbrownjr@gmail.com','https://www.instagram.com/elliottjeromebrownjr/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (31,NULL,'joiriminaya@gmail.com','https://www.instagram.com/joiriminaya/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (32,'6465044762','contact@groanamelendez.com','https://www.instagram.com/groana/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (33,NULL,'mirandaRbarnes@gmail.com','https://www.instagram.com/mirandabarnes/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (34,NULL,NULL,'https://www.instagram.com/bold_xchange/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (35,NULL,NULL,'https://www.instagram.com/celsious_social/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (36,'6465968005','info@customcollaborative.org','https://www.instagram.com/customcolab/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (37,NULL,NULL,'https://www.instagram.com/manual_nyc/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (38,'3474145436','marcheruedix@gmailcom','https://www.instagram.com/marcheruedix/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (39,NULL,NULL,'https://www.instagram.com/neighborhoodfiberco/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (40,'3235910012',NULL,'https://www.instagram.com/reparations.club/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (41,'9293376130','E. hello@stringthingstudio.com','https://www.instagram.com/stringthingstudio/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (42,NULL,NULL,'https://www.instagram.com/beautystat/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (43,NULL,NULL,'https://www.instagram.com/beneathyourmask/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (44,NULL,NULL,'https://www.instagram.com/blkandgrn/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (45,NULL,NULL,'https://www.instagram.com/briogeo/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (46,NULL,NULL,'https://www.instagram.com/golde/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (47,NULL,NULL,'https://www.instagram.com/hanahana_beauty/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (48,NULL,NULL,'https://www.instagram.com/hausurban/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (49,NULL,NULL,'https://www.instagram.com/highbrowhippie/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (50,NULL,NULL,'https://www.instagram.com/thehoneypotco/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (51,NULL,NULL,'https://www.instagram.com/gethyperskin/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (52,NULL,NULL,'https://www.instagram.com/laurennapierbeauty/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (53,NULL,NULL,'https://www.instagram.com/ouithepeople/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (54,NULL,NULL,'https://www.instagram.com/patmcgrathreal/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (55,NULL,NULL,'https://www.instagram.com/peopleofcolorbeauty/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (56,NULL,NULL,'https://www.instagram.com/unsuncosmetics/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (57,NULL,NULL,'https://www.instagram.com/uomabeauty/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (58,'3473468707',NULL,'https://www.instagram.com/zamboaroma/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (59,'2124059000',NULL,'https://www.instagram.com/aileyextension/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (60,NULL,NULL,'https://www.instagram.com/officialblackgirlsrun/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (61,'6466844912',NULL,'https://www.instagram.com/bodyspacenyc/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (62,NULL,NULL,'https://www.instagram.com/grillzandgranola/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (63,'3474137774',NULL,'https://www.instagram.com/healhaus/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (64,'6465984806',NULL,'https://www.instagram.com/iconoclastnyc/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (65,NULL,NULL,'https://www.instagram.com/theunderbellyyoga/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (66,NULL,NULL,'https://www.instagram.com/andreamindbodysoul/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (67,'3474602838','info@cafeconlibrosbk.com','https://www.instagram.com/cafeconlibros_bk/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (68,NULL,NULL,'https://www.instagram.com/frugalbooks/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (69,NULL,NULL,'https://www.instagram.com/harrietts_bookshop/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (70,NULL,NULL,'https://www.instagram.com/forkeepsbooks/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (71,NULL,NULL,'https://www.instagram.com/fultonstreet918/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (72,NULL,NULL,'https://www.instagram.com/thelitbar/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (73,NULL,NULL,'https://www.instagram.com/lovingmebooks/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (74,NULL,NULL,'https://www.instagram.com/mahoganybooks/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (75,NULL,NULL,'https://www.instagram.com/semicolonchi/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (76,'2128623680','info@sistersuptownbookstore.com','https://www.instagram.com/sistersuptown/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (77,NULL,NULL,'https://www.instagram.com/sourceofknowledge/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (78,NULL,NULL,'https://www.instagram.com/anya_lust/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (79,NULL,NULL,'https://www.instagram.com/babyphat/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (80,'7185763183,
-3474069927',NULL,'https://www.instagram.com/bedstuyfly/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (81,NULL,NULL,'https://www.instagram.com/blkmktvintage/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (82,NULL,'ny@thebkcircus.com','https://www.instagram.com/thebkcircus/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (83,'7183893809',NULL,'https://www.instagram.com/brothervellies/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (84,NULL,NULL,'https://www.instagram.com/camerontea.jpg/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (85,NULL,NULL,'https://www.instagram.com/casamiraofficial/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (86,NULL,NULL,'https://www.instagram.com/comebackasaflower/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (87,NULL,NULL,'https://www.instagram.com/christopherjohnrogers/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (88,NULL,NULL,'https://www.instagram.com/casualstudios/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (89,NULL,NULL,'https://www.instagram.com/cushnie/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (90,NULL,NULL,'https://www.instagram.com/weardiop/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (91,NULL,NULL,'https://www.instagram.com/__edas/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (92,NULL,NULL,'https://www.instagram.com/flat.fifteen/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (93,NULL,NULL,'https://www.instagram.com/gizmo_vintage_honey/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (94,NULL,NULL,'https://www.instagram.com/goldengirlyshop/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (95,NULL,NULL,'https://www.instagram.com/houseofaama/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (96,NULL,NULL,'https://www.instagram.com/kaicollective/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (97,NULL,NULL,'https://www.instagram.com/kennethize/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (98,NULL,NULL,'https://www.instagram.com/kutula/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (99,NULL,NULL,'https://www.instagram.com/laquan_smith/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (100,NULL,NULL,'https://www.instagram.com/localeuropean/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (101,'2122552811',NULL,'https://www.instagram.com/madamematovu/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (102,NULL,NULL,'https://www.instagram.com/maki.oh/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (103,'7182439433',NULL,'https://www.instagram.com/moshoodofficial/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (104,NULL,NULL,'https://www.instagram.com/nandi.naya/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (105,NULL,NULL,'https://www.instagram.com/nudebarre/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (106,NULL,NULL,'https://www.instagram.com/octave_jewelry/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (107,NULL,NULL,'https://www.instagram.com/omathelabel/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (108,NULL,NULL,'https://www.instagram.com/ovonion/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (109,NULL,NULL,'https://www.instagram.com/orangecultureng/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (110,NULL,NULL,'https://www.instagram.com/pejuobasa/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (111,NULL,NULL,'https://www.instagram.com/postimperial/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (112,NULL,NULL,'https://www.instagram.com/rebeccaallenny/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (113,NULL,NULL,'https://www.instagram.com/riotswim/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (114,NULL,'info@sincerelytommy.com','https://www.instagram.com/sincerelytommy_/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (115,NULL,NULL,'https://www.instagram.com/thesixesnyc/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (116,NULL,NULL,'https://www.instagram.com/slashedbytia/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (117,NULL,NULL,'https://www.instagram.com/smallneeds/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (118,NULL,NULL,'https://www.instagram.com/t.a.newyork/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (119,NULL,NULL,'https://www.instagram.com/telfarglobal/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (120,NULL,NULL,'https://www.instagram.com/tlzlfemme/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (121,NULL,NULL,'https://www.instagram.com/treefairfax/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (122,NULL,NULL,'https://www.instagram.com/glemaud/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (123,NULL,NULL,'https://www.instagram.com/walesbonner/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (124,NULL,NULL,'https://www.instagram.com/yam_nyc/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (125,NULL,NULL,'https://www.instagram.com/zouxoushoes/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (126,NULL,NULL,'https://www.instagram.com/clueclothing/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (127,NULL,NULL,'https://www.instagram.com/adozencousins/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (128,'9174727789',NULL,'https://www.instagram.com/alibiharlem/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (129,'9146546549','info@alvinandfriendsrestaurant.com','https://www.instagram.com/alvinandfriends/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (130,NULL,NULL,'https://www.instagram.com/basbaassauce/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (131,'2125107353','BeniamCuisine@gmail.com','https://www.instagram.com/benyam_cuisine/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (132,NULL,NULL,'https://www.instagram.com/blu_thebaker/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (133,'2126786200','info@boulevardbistrony.com','https://www.instagram.com/blvdbistro/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (134,NULL,NULL,'https://www.instagram.com/blkandbold/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (135,'2126191200','info@brooklynchophouse.com','https://www.instagram.com/brooklynchophouse/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (136,'3472404281',NULL,'https://www.instagram.com/brooklyntea/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (137,'2125860811','info@casadeltorony.com','https://www.instagram.com/casadeltorony/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (138,'2122811800',NULL,'https://www.facebook.com/charlespanfried/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (139,'2122224545',NULL,'https://www.instagram.com/chocolatharlem/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (140,NULL,NULL,'https://www.instagram.com/cremasabsalon/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (141,NULL,NULL,'https://www.instagram.com/globalvillagecuisine/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (142,'6469983444',NULL,'https://www.instagram.com/harlemhops/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (143,NULL,NULL,'https://www.instagram.com/harvestandrevel/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (144,'9143552527','JolosKitchen10@gmail.com','https://www.instagram.com/jolokitchen/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (145,NULL,NULL,'https://www.instagram.com/jonesbbqkc/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (146,'3472819844',NULL,'https://www.instagram.com/juicesforlife/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (147,NULL,NULL,'https://www.instagram.com/justiceofthepies/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (148,NULL,NULL,'https://www.instagram.com/lilliesofchas/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (149,'6466493356',NULL,'https://www.instagram.com/lolosshacks/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (150,NULL,NULL,'https://www.instagram.com/maisonnoirwines/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (151,NULL,NULL,'https://www.instagram.com/MikeyLikesItIceCream/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (152,NULL,NULL,'https://www.instagram.com/naturesingsnyc/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (153,'2124772804',NULL,'https://www.instagram.com/negrilvillagenyc/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (154,NULL,NULL,'https://www.instagram.com/Onthehunt2006/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (155,NULL,NULL,'https://www.instagram.com/_evcooks/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (156,'9146327373',NULL,'https://www.instagram.com/pepes_place/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (157,NULL,NULL,'https://www.instagram.com/redbaycoffee/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (158,'9146657689','info@riperestaurant.com','https://www.instagram.com/ripekitchenbar/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (159,'9143652267',NULL,'https://www.instagram.com/rocnramen/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (160,NULL,NULL,'https://www.instagram.com/salutnutrition/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (161,'2122220092',NULL,'https://www.instagram.com/seasonedvegan/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (162,NULL,NULL,'https://www.instagram.com/theofficialsipsociety/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (163,NULL,NULL,'https://www.instagram.com/solcacao/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (164,'7186830482',NULL,'https://www.instagram.com/solsipsnyc/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (165,NULL,NULL,'https://www.instagram.com/whetstonemagazine/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (166,'6469280095',NULL,'https://www.instagram.com/tingsjamaicanjerkchicken/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (167,NULL,NULL,'https://www.instagram.com/zafawines/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (168,NULL,'Pariss@BlackTechPipeline.com','https://www.instagram.com/btpipeline/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (169,NULL,NULL,'https://www.instagram.com/idontdoclubs/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (170,'3474602838','info@cafeconlibrosbk.com','https://www.instagram.com/cafeconlibros_bk/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (171,NULL,NULL,'https://www.instagram.com/frugalbooks/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (172,NULL,NULL,'https://www.instagram.com/harrietts_bookshop/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (173,NULL,NULL,'https://www.instagram.com/forkeepsbooks/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (174,NULL,NULL,'https://www.instagram.com/fultonstreet918/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (175,NULL,NULL,'https://www.instagram.com/thelitbar/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (176,NULL,NULL,'https://www.instagram.com/lovingmebooks/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (177,NULL,NULL,'https://www.instagram.com/mahoganybooks/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (178,NULL,NULL,'https://www.instagram.com/semicolonchi/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (179,'2128623680','info@sistersuptownbookstore.com','https://www.instagram.com/sistersuptown/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (180,NULL,NULL,'https://www.instagram.com/sourceofknowledge/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (181,NULL,NULL,'https://www.instagram.com/anya_lust/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (182,NULL,NULL,'https://www.instagram.com/babyphat/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (183,'7185763183,
-3474069927',NULL,'https://www.instagram.com/bedstuyfly/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (184,NULL,NULL,'https://www.instagram.com/blkmktvintage/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (185,NULL,'ny@thebkcircus.com','https://www.instagram.com/thebkcircus/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (186,'7183893809',NULL,'https://www.instagram.com/brothervellies/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (187,NULL,NULL,'https://www.instagram.com/camerontea.jpg/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (188,NULL,NULL,'https://www.instagram.com/casamiraofficial/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (189,NULL,NULL,'https://www.instagram.com/comebackasaflower/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (190,NULL,NULL,'https://www.instagram.com/christopherjohnrogers/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (191,NULL,NULL,'https://www.instagram.com/casualstudios/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (192,NULL,NULL,'https://www.instagram.com/cushnie/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (193,NULL,NULL,'https://www.instagram.com/weardiop/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (194,NULL,NULL,'https://www.instagram.com/__edas/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (195,NULL,NULL,'https://www.instagram.com/flat.fifteen/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (196,NULL,NULL,'https://www.instagram.com/gizmo_vintage_honey/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (197,NULL,NULL,'https://www.instagram.com/goldengirlyshop/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (198,NULL,NULL,'https://www.instagram.com/houseofaama/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (199,NULL,NULL,'https://www.instagram.com/kaicollective/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (200,NULL,NULL,'https://www.instagram.com/kennethize/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (201,NULL,NULL,'https://www.instagram.com/kutula/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (202,NULL,NULL,'https://www.instagram.com/laquan_smith/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (203,NULL,NULL,'https://www.instagram.com/localeuropean/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (204,'2122552811',NULL,'https://www.instagram.com/madamematovu/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (205,NULL,NULL,'https://www.instagram.com/maki.oh/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (206,'7182439433',NULL,'https://www.instagram.com/moshoodofficial/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (207,NULL,NULL,'https://www.instagram.com/nandi.naya/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (208,NULL,NULL,'https://www.instagram.com/nudebarre/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (209,NULL,NULL,'https://www.instagram.com/octave_jewelry/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (210,NULL,NULL,'https://www.instagram.com/omathelabel/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (211,NULL,NULL,'https://www.instagram.com/ovonion/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (212,NULL,NULL,'https://www.instagram.com/orangecultureng/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (213,NULL,NULL,'https://www.instagram.com/pejuobasa/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (214,NULL,NULL,'https://www.instagram.com/postimperial/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (215,NULL,NULL,'https://www.instagram.com/rebeccaallenny/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (216,NULL,NULL,'https://www.instagram.com/riotswim/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (217,NULL,'info@sincerelytommy.com','https://www.instagram.com/sincerelytommy_/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (218,NULL,NULL,'https://www.instagram.com/thesixesnyc/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (219,NULL,NULL,'https://www.instagram.com/slashedbytia/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (220,NULL,NULL,'https://www.instagram.com/smallneeds/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (221,NULL,NULL,'https://www.instagram.com/t.a.newyork/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (222,NULL,NULL,'https://www.instagram.com/telfarglobal/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (223,NULL,NULL,'https://www.instagram.com/tlzlfemme/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (224,NULL,NULL,'https://www.instagram.com/treefairfax/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (225,NULL,NULL,'https://www.instagram.com/glemaud/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (226,NULL,NULL,'https://www.instagram.com/walesbonner/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (227,NULL,NULL,'https://www.instagram.com/yam_nyc/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (228,NULL,NULL,'https://www.instagram.com/zouxoushoes/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (229,NULL,NULL,'https://www.instagram.com/clueclothing/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (230,NULL,NULL,'https://www.instagram.com/adozencousins/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (231,'9174727789',NULL,'https://www.instagram.com/alibiharlem/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (232,'9146546549','info@alvinandfriendsrestaurant.com','https://www.instagram.com/alvinandfriends/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (233,NULL,NULL,'https://www.instagram.com/basbaassauce/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (234,'2125107353','BeniamCuisine@gmail.com','https://www.instagram.com/benyam_cuisine/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (235,NULL,NULL,'https://www.instagram.com/blu_thebaker/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (236,'2126786200','info@boulevardbistrony.com','https://www.instagram.com/blvdbistro/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (237,NULL,NULL,'https://www.instagram.com/blkandbold/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (238,'2126191200','info@brooklynchophouse.com','https://www.instagram.com/brooklynchophouse/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (239,'3472404281',NULL,'https://www.instagram.com/brooklyntea/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (240,'2125860811','info@casadeltorony.com','https://www.instagram.com/casadeltorony/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (241,'2122811800',NULL,'https://www.facebook.com/charlespanfried/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (242,'2122224545',NULL,'https://www.instagram.com/chocolatharlem/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (243,NULL,NULL,'https://www.instagram.com/cremasabsalon/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (244,NULL,NULL,'https://www.instagram.com/globalvillagecuisine/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (245,'6469983444',NULL,'https://www.instagram.com/harlemhops/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (246,NULL,NULL,'https://www.instagram.com/harvestandrevel/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (247,'9143552527','JolosKitchen10@gmail.com','https://www.instagram.com/jolokitchen/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (248,NULL,NULL,'https://www.instagram.com/jonesbbqkc/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (249,'3472819844',NULL,'https://www.instagram.com/juicesforlife/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (250,NULL,NULL,'https://www.instagram.com/justiceofthepies/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (251,NULL,NULL,'https://www.instagram.com/lilliesofchas/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (252,'6466493356',NULL,'https://www.instagram.com/lolosshacks/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (253,NULL,NULL,'https://www.instagram.com/maisonnoirwines/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (254,NULL,NULL,'https://www.instagram.com/MikeyLikesItIceCream/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (255,NULL,NULL,'https://www.instagram.com/naturesingsnyc/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (256,'2124772804',NULL,'https://www.instagram.com/negrilvillagenyc/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (257,NULL,NULL,'https://www.instagram.com/Onthehunt2006/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (258,NULL,NULL,'https://www.instagram.com/_evcooks/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (259,'9146327373',NULL,'https://www.instagram.com/pepes_place/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (260,NULL,NULL,'https://www.instagram.com/redbaycoffee/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (261,'9146657689','info@riperestaurant.com','https://www.instagram.com/ripekitchenbar/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (262,'9143652267',NULL,'https://www.instagram.com/rocnramen/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (263,NULL,NULL,'https://www.instagram.com/salutnutrition/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (264,'2122220092',NULL,'https://www.instagram.com/seasonedvegan/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (265,NULL,NULL,'https://www.instagram.com/theofficialsipsociety/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (266,NULL,NULL,'https://www.instagram.com/solcacao/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (267,'7186830482',NULL,'https://www.instagram.com/solsipsnyc/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (268,NULL,NULL,'https://www.instagram.com/whetstonemagazine/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (269,'6469280095',NULL,'https://www.instagram.com/tingsjamaicanjerkchicken/?hl=en');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (270,NULL,NULL,'https://www.instagram.com/zafawines/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (271,NULL,'Pariss@BlackTechPipeline.com','https://www.instagram.com/btpipeline/');
-INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (272,NULL,NULL,'https://www.instagram.com/idontdoclubs/');
+INSERT INTO owners(owner_id,owner_name) VALUES
+ (1,NULL)
+,(2,'Jeanine Hays and Bryan Mason')
+,(3,'Neffi Walker')
+,(4,'Hadiya Williams')
+,(5,'Hana Getachew')
+,(6,'Nicole Gibbons')
+,(7,NULL)
+,(8,'Brittiny Terry')
+,(9,'Byron and Dexter Peart')
+,(10,'Tosin Oshinowo')
+,(11,'Justina Blakeney')
+,(12,'Ed Be & Jared Blake')
+,(13,'Jason Evege')
+,(14,'Denequa Williams')
+,(15,'Malene Barnett')
+,(16,'Marie Burgos')
+,(17,'Joel Mahfood')
+,(18,'Achuziam Maha-Sanchez')
+,(19,'Osa Atoe')
+,(20,'Robin Wilson')
+,(21,'Rochelle Porter')
+,(22,'Nikita Richardson')
+,(23,'Sheila Bridges')
+,(24,'LaToya Tucciarone')
+,(25,NULL)
+,(26,'Kenesha Sneed')
+,(27,'Nasozi Kakembo')
+,(28,'Shannon Maldonado')
+,(29,'Elias Williams')
+,(30,'Elliot Jerome Brown Jr')
+,(31,'Joiri Minaya')
+,(32,'Groana Melendez')
+,(33,'Miranda Barnes')
+,(34,'Danielle Deavens and Doug Spencer')
+,(35,'Corinna and Theresa Williams')
+,(36,NULL)
+,(37,'Malcolm Dia')
+,(38,NULL)
+,(39,'Karida Collins')
+,(40,'Jazzi McGilbert')
+,(41,'Felicia Eve')
+,(42,'Ron Robinson')
+,(43,'Dana Jackson')
+,(44,NULL)
+,(45,'Nancy Twine')
+,(46,'Trinity Mouzon Wofford')
+,(47,'Abena Boamah-Acheampong')
+,(48,'Hassan Sayyed')
+,(49,'Myka Harris and Kadi Lee')
+,(50,'Bea Dixon')
+,(51,'Desiree Verdejo')
+,(52,'Lauren Napier')
+,(53,'Karen Young')
+,(54,'Pat McGrath')
+,(55,'Jacqueline Carrington')
+,(56,'Katonya Breaux')
+,(57,'Sharon Chuter,')
+,(58,NULL)
+,(59,NULL)
+,(60,NULL)
+,(61,NULL)
+,(62,'Chavonne Hodges')
+,(63,'Darian Hall and Elisa Shankle')
+,(64,'Ngo Okafor')
+,(65,'Jessamyn Stanley')
+,(66,'Andrea Marie')
+,(67,NULL)
+,(68,NULL)
+,(69,NULL)
+,(70,NULL)
+,(71,NULL)
+,(72,NULL)
+,(73,'Angela Nesbitt')
+,(74,NULL)
+,(75,NULL)
+,(76,'Janifer Wilson and daughter Kori')
+,(77,NULL)
+,(78,'Krystle Kotara')
+,(79,'Kimora Lee Simmons')
+,(80,NULL)
+,(81,'Jannah Handy and Kiyanna Stewart')
+,(82,'Ouigi Theodore')
+,(83,'Aurora James')
+,(84,NULL)
+,(85,'Chantel Davis')
+,(86,NULL)
+,(87,'Christopher John Rogers')
+,(88,NULL)
+,(89,'Carly Cushnie')
+,(90,NULL)
+,(91,'Sade Mims')
+,(92,'Francesca Kappo')
+,(93,NULL)
+,(94,NULL)
+,(95,'Rebecca Henry and Akua Shabaka')
+,(96,'Fisayo Longe')
+,(97,'Kenneth Ize')
+,(98,NULL)
+,(99,'LaQuan Smith')
+,(100,'Alexandra Bunch')
+,(101,'Rosemary Matovu')
+,(102,'Maki Osakwe')
+,(103,'Moshood Afariogun')
+,(104,'Hleziphansi Zita')
+,(105,'Erin Carpenter')
+,(106,NULL)
+,(107,NULL)
+,(108,'Whitney Mero')
+,(109,'Adebayo Oke-Lawal')
+,(110,'Peju Obasa')
+,(111,'Niyi Okuboyejo')
+,(112,'Rebecca Allen')
+,(113,'Monti Landers')
+,(114,'Kai Avent-deLeon')
+,(115,'Franci Girard')
+,(116,'Tia Adeola')
+,(117,NULL)
+,(118,'Telsha Anderson')
+,(119,'Telfar Clemens')
+,(120,NULL)
+,(121,NULL)
+,(122,'Victor Glemaud')
+,(123,'Wales Bonner')
+,(124,'Morgan Thomas')
+,(125,'Katherine Theobalds')
+,(126,'Anthony Telesford')
+,(127,NULL)
+,(128,NULL)
+,(129,NULL)
+,(130,'Hawa Hassan')
+,(131,NULL)
+,(132,NULL)
+,(133,NULL)
+,(134,'Pernell Cezar and Rod Johnson')
+,(135,NULL)
+,(136,NULL)
+,(137,NULL)
+,(138,NULL)
+,(139,NULL)
+,(140,NULL)
+,(141,NULL)
+,(142,NULL)
+,(143,NULL)
+,(144,'Marc A. Moise (Jolo)')
+,(145,'Deborah “Little” Jones and Mary “Shorty” Jones')
+,(146,NULL)
+,(147,'Maya-Camille Broussard')
+,(148,NULL)
+,(149,NULL)
+,(150,'André Hueston Mack')
+,(151,NULL)
+,(152,NULL)
+,(153,NULL)
+,(154,NULL)
+,(155,NULL)
+,(156,NULL)
+,(157,'Keba Konte')
+,(158,NULL)
+,(159,'Chef Wayne Carrington')
+,(160,NULL)
+,(161,NULL)
+,(162,'Catherine Carter and Erica Davis')
+,(163,NULL)
+,(164,'Francesca Chaney')
+,(165,'Stephen Satterfield')
+,(166,NULL)
+,(167,'Krista Scruggs')
+,(168,'Pariss Athena')
+,(169,'Genese Jamilah');
 
+INSERT INTO categories(biz_id,type_id) VALUES
+ (1,1)
+,(2,1)
+,(3,1)
+,(4,1)
+,(5,1)
+,(6,1)
+,(7,1)
+,(8,1)
+,(9,1)
+,(10,1)
+,(11,1)
+,(12,1)
+,(13,1)
+,(14,1)
+,(15,1)
+,(16,1)
+,(17,1)
+,(18,1)
+,(19,1)
+,(20,1)
+,(21,1)
+,(22,1)
+,(23,1)
+,(24,1)
+,(25,1)
+,(26,1)
+,(27,1)
+,(28,1)
+,(29,2)
+,(30,2)
+,(31,2)
+,(32,2)
+,(33,2)
+,(34,3)
+,(35,3)
+,(36,3)
+,(37,3)
+,(38,3)
+,(39,3)
+,(40,3)
+,(41,3)
+,(42,4)
+,(43,4)
+,(44,4)
+,(45,4)
+,(46,4)
+,(47,4)
+,(48,4)
+,(49,4)
+,(50,4)
+,(51,4)
+,(52,4)
+,(53,4)
+,(54,4)
+,(55,4)
+,(56,4)
+,(57,4)
+,(58,4)
+,(59,5)
+,(60,5)
+,(61,5)
+,(62,5)
+,(63,5)
+,(64,5)
+,(65,5)
+,(66,5)
+,(67,6)
+,(68,6)
+,(69,6)
+,(70,6)
+,(71,6)
+,(72,6)
+,(73,6)
+,(74,6)
+,(75,6)
+,(76,6)
+,(77,6)
+,(78,7)
+,(79,7)
+,(80,7)
+,(81,7)
+,(82,7)
+,(83,7)
+,(84,7)
+,(85,7)
+,(86,7)
+,(87,7)
+,(88,7)
+,(89,7)
+,(90,7)
+,(91,7)
+,(92,7)
+,(93,7)
+,(94,7)
+,(95,7)
+,(96,7)
+,(97,7)
+,(98,7)
+,(99,7)
+,(100,7)
+,(101,7)
+,(102,7)
+,(103,7)
+,(104,7)
+,(105,7)
+,(106,7)
+,(107,7)
+,(108,7)
+,(109,7)
+,(110,7)
+,(111,7)
+,(112,7)
+,(113,7)
+,(114,7)
+,(115,7)
+,(116,7)
+,(117,7)
+,(118,7)
+,(119,7)
+,(120,7)
+,(121,7)
+,(122,7)
+,(123,7)
+,(124,7)
+,(125,7)
+,(126,7)
+,(127,8)
+,(128,8)
+,(129,8)
+,(130,8)
+,(131,8)
+,(132,8)
+,(133,8)
+,(134,8)
+,(135,8)
+,(136,8)
+,(137,8)
+,(138,8)
+,(139,8)
+,(140,8)
+,(141,8)
+,(142,8)
+,(143,8)
+,(144,8)
+,(145,8)
+,(146,8)
+,(147,8)
+,(148,8)
+,(149,8)
+,(150,8)
+,(151,8)
+,(152,8)
+,(153,8)
+,(154,8)
+,(155,8)
+,(156,8)
+,(157,8)
+,(158,8)
+,(159,8)
+,(160,8)
+,(161,8)
+,(162,8)
+,(163,8)
+,(164,8)
+,(165,8)
+,(166,8)
+,(167,8)
+,(168,9)
+,(169,9);
 
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (1,NULL,NULL,NULL,NULL,'https://www.228grantstreet.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (2,NULL,NULL,NULL,NULL,'https://www.aphrochic.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (3,'623 Eagle Rock Ave Suite 124','West Orange','NJ','7052','https://www.theblackhome.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (4,NULL,NULL,NULL,NULL,'https://shopbppco.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (5,NULL,NULL,NULL,NULL,'https://boleroadtextiles.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (6,NULL,NULL,NULL,NULL,'https://www.clare.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (7,NULL,NULL,NULL,NULL,'https://www.claudehome.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (8,NULL,NULL,NULL,NULL,'https://effortlesscomposition.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (9,NULL,NULL,NULL,NULL,'https://www.goodeeworld.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (10,NULL,NULL,NULL,NULL,'https://www.ile-ila.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (11,NULL,NULL,NULL,NULL,'https://www.jungalow.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (12,'98 Moore Street','Brooklyn','NY','11206','https://www.lichennyc.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (13,'3199 Albany Post Rd, Suite 215','Buchanan','NY','10511','https://www.linoto.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (14,NULL,NULL,NULL,NULL,'https://www.litbklyn.co/get-lit');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (15,NULL,NULL,NULL,NULL,'https://malenebarnett.com/shop');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (16,NULL,NULL,NULL,NULL,'https://www.marieburgosdesignthestore.com/marie-burgos-collection-modern-furniture-home-decor');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (17,'636 Washington Ave','Brooklyn','NY','11238','https://www.nattygarden.com/all-products');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (18,NULL,NULL,NULL,NULL,'http://www.peaceandriot.com/shop');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (19,NULL,NULL,NULL,NULL,'https://www.potterybyosa.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (20,'230 Park Avenue, 3rd fl-WEST','New York','NY','10169','https://robinwilsonhome.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (21,NULL,NULL,NULL,NULL,'http://www.rochelleporter.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (22,NULL,NULL,NULL,NULL,'https://seelineceramics.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (23,NULL,NULL,NULL,NULL,'https://www.sheilabridges.com/shop/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (24,NULL,NULL,NULL,NULL,'https://yoursustainablehome.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (25,'675 Ponce De Leon Ave NE N215','Atlanta','GA','30308','https://tackussanusenegal.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (26,NULL,NULL,NULL,NULL,'https://www.tactilematter.com/shop');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (27,NULL,NULL,NULL,NULL,'http://www.osxnasozi.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (28,NULL,NULL,NULL,NULL,'https://www.shopyowie.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (29,NULL,'New York','NY',NULL,'https://www.eliaswilliams.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (30,NULL,'New York','NY',NULL,'https://elliottjeromebrownjr.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (31,NULL,'New York','NY',NULL,'http://www.joiriminaya.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (32,NULL,'New York','NY',NULL,'http://www.groanamelendez.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (33,NULL,'New York','NY',NULL,'https://www.mirandabarnes.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (34,NULL,NULL,NULL,NULL,'https://boldxchange.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (35,'115 North 7th Street','Brooklyn','NY','11249','https://celsious.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (36,'The Riverside Church, 91 Claremont Ave','New York','NY','10027','https://www.customcollaborative.org/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (37,NULL,NULL,NULL,NULL,'https://manualphoto.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (38,'1453 BEDFORD AVE','Brooklyn','NY','11216','https://www.marcheruedix.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (39,NULL,NULL,NULL,NULL,'https://neighborhoodfiberco.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (40,'4636 West Washington Blvd.','Los Angeles','CA','90016','https://rep.club/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (41,'54 7th Ave','Brooklyn','NY','11217','https://www.stringthingstudio.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (42,NULL,NULL,NULL,NULL,'http://beautystatcosmetics.com');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (43,NULL,NULL,NULL,NULL,'http://beneathyourmask.com');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (44,NULL,NULL,NULL,NULL,'http://blkgrn.com');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (45,NULL,NULL,NULL,NULL,'http://briogeohair.com');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (46,NULL,NULL,NULL,NULL,'http://golde.co');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (47,NULL,NULL,NULL,NULL,'http://hanahanabeauty.com');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (48,NULL,NULL,NULL,NULL,'http://hausurban.com');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (49,NULL,NULL,NULL,NULL,'http://highbrowhippie.com');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (50,NULL,NULL,NULL,NULL,'http://thehoneypot.co');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (51,NULL,NULL,NULL,NULL,'http://gethyperskin.com');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (52,NULL,NULL,NULL,NULL,'http://laurennapier.com');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (53,NULL,NULL,NULL,NULL,'http://ouithepeople.com');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (54,NULL,NULL,NULL,NULL,'https://www.patmcgrath.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (55,NULL,NULL,NULL,NULL,'https://www.peopleofcolorbeauty.com');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (56,NULL,NULL,NULL,NULL,'https://unsuncosmetics.com');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (57,NULL,NULL,NULL,NULL,'https://uomabeauty.com');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (58,'3848 White Plains Rd','Bronx','NY','10467','https://zamboaroma.com');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (59,'405 W 55th Street','New York','NY','10019','https://www.aileyextension.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (60,NULL,NULL,NULL,NULL,'https://blackgirlsrun.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (61,'47 W 14th St. 5th Floor','New York','NY','10011','https://www.bodyspacefitness.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (62,NULL,NULL,NULL,NULL,'https://www.grillzandgranola.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (63,'1082 Fulton Street','New York','NY','11238','https://www.healhaus.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (64,'210 5th Ave 5th Floor','New York','NY','10010','https://iconoclastfitness.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (65,NULL,NULL,NULL,NULL,'https://browse.theunderbelly.com/browse');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (66,NULL,'Bronx','NY',NULL,'https://www.facebook.com/AndreaMindBodySoul/?ref=page_internal');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (67,'724 Prospect Pl','Brooklyn','NY','11216','https://cafeconlibrosbk.com');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (68,NULL,NULL,NULL,NULL,'https://frugalbookstore.net');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (69,NULL,NULL,NULL,NULL,'https://harriettsbookshop.com');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (70,NULL,NULL,NULL,NULL,'https://forkeepsbooks.com');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (71,NULL,NULL,NULL,NULL,'https://fultonstreet918.com');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (72,'131 Alexander Ave','Bronx','NY','10454','https://bookshop.org/shop/thelitbar');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (73,NULL,NULL,NULL,NULL,'https://www.lovingmebooks.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (74,NULL,NULL,NULL,NULL,'https://www.mahoganybooks.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (75,NULL,NULL,NULL,NULL,'https://bookshop.org/shop/Semicolonchi');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (76,'1942 Amsterdam Ave','New York','NY','10032','https://sistersuptownbookstore.com');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (77,NULL,NULL,NULL,NULL,'https://www.instagram.com/sourceofknowledge/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (78,NULL,NULL,NULL,NULL,'https://anyalust.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (79,NULL,NULL,NULL,NULL,'https://babyphat.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (80,'287 Ralph Avenue','Brooklyn','NY','11233','https://www.bedstuyfly.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (81,NULL,NULL,NULL,NULL,'https://www.blkmktvintage.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (82,'150 Nevins St','Brooklyn','NY','11217','https://thebkcircus.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (83,'71 Franklin Street','Brooklyn','NY','11222','https://brothervellies.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (84,NULL,NULL,NULL,NULL,'https://www.instagram.com/camerontea.jpg/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (85,NULL,NULL,NULL,NULL,'https://www.castamira.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (86,NULL,NULL,NULL,NULL,'https://www.cbaaf.org/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (87,NULL,NULL,NULL,NULL,'https://www.instagram.com/christopherjohnrogers/?hl=en');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (88,NULL,NULL,NULL,NULL,'https://www.coolandcasualstudios.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (89,NULL,NULL,NULL,NULL,'https://www.cushnie.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (90,NULL,NULL,NULL,NULL,'https://weardiop.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (91,NULL,NULL,NULL,NULL,'https://edas.store/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (92,NULL,NULL,NULL,NULL,'https://flatfifteen.co.uk/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (93,'438 Marcus Garvey Blvd','Brooklyn','NY','11216','https://www.instagram.com/gizmo_vintage_honey/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (94,NULL,NULL,NULL,NULL,'https://www.depop.com/goldengirlyshop/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (95,NULL,NULL,NULL,NULL,'https://houseofaama.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (96,NULL,NULL,NULL,NULL,'https://kaicollective.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (97,NULL,NULL,NULL,NULL,'https://www.instagram.com/kennethize/?hl=en');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (98,NULL,NULL,NULL,NULL,'https://shopkutula.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (99,NULL,NULL,NULL,NULL,'https://laquansmith.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (100,NULL,NULL,NULL,NULL,'https://localeuropean.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (101,'240 West 10th Street','New York','NY','10014','https://www.instagram.com/madamematovu/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (102,NULL,NULL,NULL,NULL,'https://www.makioh.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (103,'1360 Fulton St','Brooklyn','NY','11216','https://afrikanspirit.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (104,NULL,NULL,NULL,NULL,'http://www.nandinayanyc.com/shop');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (105,NULL,NULL,NULL,NULL,'https://nudebarre.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (106,NULL,NULL,NULL,NULL,'https://octavejewelry.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (107,NULL,NULL,NULL,NULL,'https://www.omathelabel.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (108,NULL,NULL,NULL,NULL,'https://www.whitneymero.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (109,NULL,NULL,NULL,NULL,'https://orangeculture.com.ng/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (110,NULL,NULL,NULL,NULL,'https://www.pejuobasa.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (111,NULL,NULL,NULL,NULL,'https://post-imperial.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (112,NULL,NULL,NULL,NULL,'https://rebecca-allen.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (113,NULL,NULL,NULL,NULL,'https://www.riotswim.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (114,'343 Tompkins Ave','Brooklyn','NY','11216','https://sincerelytommy.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (115,NULL,NULL,NULL,NULL,'https://www.thesixes.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (116,NULL,NULL,NULL,NULL,'https://www.slashedbytia.net/shop');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (117,NULL,NULL,NULL,NULL,'Etsy: https://www.etsy.com/shop/RetroRhapsody');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (118,'332 W 13th St','New York','NY','10014','https://shop-ta.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (119,NULL,NULL,NULL,NULL,'http://www.telfar.net/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (120,NULL,NULL,NULL,NULL,'https://www.tlzlf.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (121,NULL,NULL,NULL,NULL,'https://treefairfax.com/shop');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (122,NULL,NULL,NULL,NULL,'https://www.glemaud.com/pages/home');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (123,NULL,NULL,NULL,NULL,'https://walesbonner.net/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (124,NULL,NULL,NULL,NULL,'https://www.yamnyc.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (125,NULL,NULL,NULL,NULL,'https://www.zouxou.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (126,NULL,NULL,NULL,NULL,'https://clueclothings.com');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (127,NULL,NULL,NULL,NULL,'https://adozencousins.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (128,'2376 Adam Clayton Powell Jr Blvd','New York','NY','10030','https://www.instagram.com/alibiharlem/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (129,'14 Memorial Hwy','New Rochelle','NY','10801','alvinandfriendsrestaurant.com');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (130,NULL,NULL,NULL,NULL,'https://basbaassauce.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (131,'2795 Frederick Douglas Blvd','New York','NY','10039','http://benyamcuisine.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (132,NULL,NULL,NULL,NULL,'https://www.instagram.com/blu_thebaker/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (133,'2149 Frederick Douglass Blvd','New York','NY','10026','https://www.boulevardbistrony.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (134,NULL,NULL,NULL,NULL,'https://blkandbold.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (135,'150 Nassau St','New York','NY','10038','https://www.brooklynchophouse.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (136,'524 Nostrand Ave','Brooklyn','NY','11216','https://brooklyntea.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (137,'626B 10th ave,','New York','NY','10036','https://www.casadeltorony.com/home');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (138,'2461 Frederick Douglass Blvd','New York','NY','10027','https://www.theinfatuation.com/new-york/reviews/charles-pan-fried-chicken');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (139,'2223 Frederick Douglass Blvd','New York','NY','10026','https://www.chocolatharlem.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (140,NULL,NULL,NULL,NULL,'https://charlene-absalon-llc.square.site/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (141,NULL,NULL,NULL,NULL,'https://globalvillagecuisine.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (142,'2268 Adam Clayton Powell Jr Blvd','New York ','NY','10030','https://harlemhops.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (143,NULL,NULL,NULL,NULL,'http://harvestandrevel.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (144,'49 Lawton St','New Rochelle','NY','10801','jolosrestaurants.com');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (145,NULL,NULL,NULL,NULL,'https://www.jonesbbqkc.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (146,'1026 Castle Hill Ave','Bronx','NY','10472','http://juicesforlife.nyc/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (147,NULL,NULL,NULL,NULL,'https://www.justiceofthepies.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (148,NULL,NULL,NULL,NULL,'https://www.lilliesofcharleston.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (149,'303 West 116th Street','New York','NY','10026','https://lolosseafoodshack.com/#about');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (150,NULL,NULL,NULL,NULL,'https://maisonnoirwines.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (151,NULL,NULL,NULL,NULL,'https://mikeylikesiticecream.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (152,NULL,NULL,NULL,NULL,'https://www.etsy.com/shop/naturesingsnyc/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (153,'70 West 3rd St','New York','NY','10012','http://negrilnyc.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (154,NULL,NULL,NULL,NULL,'https://www.instagram.com/Onthehunt2006/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (155,NULL,NULL,NULL,NULL,'http://www.shopevelyncooke.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (156,'560 North Ave','New Rochelle','NY','10801','www.pepesplace.com');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (157,NULL,NULL,NULL,NULL,'https://www.redbaycoffee.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (158,'151 W Sandford Boulevard','Mount Vernon','NY','10550','http://riperestaurant.com');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (159,'19 Anderson St','New Rochelle','NY','10801','rocnramen914.com');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (160,NULL,NULL,NULL,NULL,'https://salutnutrition.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (161,'55 ST. NICHOLAS AVENUE ','New York','NY','10026','https://www.seasonedvegan.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (162,NULL,NULL,NULL,NULL,'https://www.thesipsociety.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (163,NULL,NULL,NULL,NULL,'https://www.solcacao.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (164,'203 Wilson Ave','Brooklyn','NY','11237','https://www.solsipsnyc.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (165,NULL,NULL,NULL,NULL,'https://www.whetstonemagazine.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (166,'75 9th Ave','New York','NY','10011','https://www.chelseamarket.com/directory-all/tings');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (167,NULL,NULL,NULL,NULL,'https://zafawines.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (168,NULL,NULL,NULL,NULL,'https://www.blacktechpipeline.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (169,NULL,NULL,NULL,NULL,'https://idontdoclubs.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (170,'724 Prospect Pl','Brooklyn','NY','11216','https://cafeconlibrosbk.com');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (171,NULL,NULL,NULL,NULL,'https://frugalbookstore.net');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (172,NULL,NULL,NULL,NULL,'https://harriettsbookshop.com');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (173,NULL,NULL,NULL,NULL,'https://forkeepsbooks.com');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (174,NULL,NULL,NULL,NULL,'https://fultonstreet918.com');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (175,'131 Alexander Ave','Bronx','NY','10454','https://bookshop.org/shop/thelitbar');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (176,NULL,NULL,NULL,NULL,'https://www.lovingmebooks.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (177,NULL,NULL,NULL,NULL,'https://www.mahoganybooks.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (178,NULL,NULL,NULL,NULL,'https://bookshop.org/shop/Semicolonchi');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (179,'1942 Amsterdam Ave','New York','NY','10032','https://sistersuptownbookstore.com');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (180,NULL,NULL,NULL,NULL,'https://www.instagram.com/sourceofknowledge/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (181,NULL,NULL,NULL,NULL,'https://anyalust.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (182,NULL,NULL,NULL,NULL,'https://babyphat.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (183,'287 Ralph Avenue','Brooklyn','NY','11233','https://www.bedstuyfly.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (184,NULL,NULL,NULL,NULL,'https://www.blkmktvintage.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (185,'150 Nevins St','Brooklyn','NY','11217','https://thebkcircus.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (186,'71 Franklin Street','Brooklyn','NY','11222','https://brothervellies.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (187,NULL,NULL,NULL,NULL,'https://www.instagram.com/camerontea.jpg/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (188,NULL,NULL,NULL,NULL,'https://www.castamira.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (189,NULL,NULL,NULL,NULL,'https://www.cbaaf.org/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (190,NULL,NULL,NULL,NULL,'https://www.instagram.com/christopherjohnrogers/?hl=en');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (191,NULL,NULL,NULL,NULL,'https://www.coolandcasualstudios.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (192,NULL,NULL,NULL,NULL,'https://www.cushnie.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (193,NULL,NULL,NULL,NULL,'https://weardiop.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (194,NULL,NULL,NULL,NULL,'https://edas.store/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (195,NULL,NULL,NULL,NULL,'https://flatfifteen.co.uk/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (196,'438 Marcus Garvey Blvd','Brooklyn','NY','11216','https://www.instagram.com/gizmo_vintage_honey/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (197,NULL,NULL,NULL,NULL,'https://www.depop.com/goldengirlyshop/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (198,NULL,NULL,NULL,NULL,'https://houseofaama.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (199,NULL,NULL,NULL,NULL,'https://kaicollective.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (200,NULL,NULL,NULL,NULL,'https://www.instagram.com/kennethize/?hl=en');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (201,NULL,NULL,NULL,NULL,'https://shopkutula.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (202,NULL,NULL,NULL,NULL,'https://laquansmith.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (203,NULL,NULL,NULL,NULL,'https://localeuropean.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (204,'240 West 10th Street','New York','NY','10014','https://www.instagram.com/madamematovu/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (205,NULL,NULL,NULL,NULL,'https://www.makioh.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (206,'1360 Fulton St','Brooklyn','NY','11216','https://afrikanspirit.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (207,NULL,NULL,NULL,NULL,'http://www.nandinayanyc.com/shop');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (208,NULL,NULL,NULL,NULL,'https://nudebarre.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (209,NULL,NULL,NULL,NULL,'https://octavejewelry.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (210,NULL,NULL,NULL,NULL,'https://www.omathelabel.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (211,NULL,NULL,NULL,NULL,'https://www.whitneymero.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (212,NULL,NULL,NULL,NULL,'https://orangeculture.com.ng/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (213,NULL,NULL,NULL,NULL,'https://www.pejuobasa.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (214,NULL,NULL,NULL,NULL,'https://post-imperial.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (215,NULL,NULL,NULL,NULL,'https://rebecca-allen.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (216,NULL,NULL,NULL,NULL,'https://www.riotswim.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (217,'343 Tompkins Ave','Brooklyn','NY','11216','https://sincerelytommy.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (218,NULL,NULL,NULL,NULL,'https://www.thesixes.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (219,NULL,NULL,NULL,NULL,'https://www.slashedbytia.net/shop');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (220,NULL,NULL,NULL,NULL,'Etsy: https://www.etsy.com/shop/RetroRhapsody');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (221,'332 W 13th St','New York','NY','10014','https://shop-ta.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (222,NULL,NULL,NULL,NULL,'http://www.telfar.net/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (223,NULL,NULL,NULL,NULL,'https://www.tlzlf.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (224,NULL,NULL,NULL,NULL,'https://treefairfax.com/shop');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (225,NULL,NULL,NULL,NULL,'https://www.glemaud.com/pages/home');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (226,NULL,NULL,NULL,NULL,'https://walesbonner.net/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (227,NULL,NULL,NULL,NULL,'https://www.yamnyc.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (228,NULL,NULL,NULL,NULL,'https://www.zouxou.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (229,NULL,NULL,NULL,NULL,'https://clueclothings.com');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (230,NULL,NULL,NULL,NULL,'https://adozencousins.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (231,'2376 Adam Clayton Powell Jr Blvd','New York','NY','10030','https://www.instagram.com/alibiharlem/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (232,'14 Memorial Hwy','New Rochelle','NY','10801','alvinandfriendsrestaurant.com');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (233,NULL,NULL,NULL,NULL,'https://basbaassauce.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (234,'2795 Frederick Douglas Blvd','New York','NY','10039','http://benyamcuisine.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (235,NULL,NULL,NULL,NULL,'https://www.instagram.com/blu_thebaker/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (236,'2149 Frederick Douglass Blvd','New York','NY','10026','https://www.boulevardbistrony.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (237,NULL,NULL,NULL,NULL,'https://blkandbold.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (238,'150 Nassau St','New York','NY','10038','https://www.brooklynchophouse.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (239,'524 Nostrand Ave','Brooklyn','NY','11216','https://brooklyntea.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (240,'626B 10th ave,','New York','NY','10036','https://www.casadeltorony.com/home');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (241,'2461 Frederick Douglass Blvd','New York','NY','10027','https://www.theinfatuation.com/new-york/reviews/charles-pan-fried-chicken');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (242,'2223 Frederick Douglass Blvd','New York','NY','10026','https://www.chocolatharlem.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (243,NULL,NULL,NULL,NULL,'https://charlene-absalon-llc.square.site/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (244,NULL,NULL,NULL,NULL,'https://globalvillagecuisine.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (245,'2268 Adam Clayton Powell Jr Blvd','New York ','NY','10030','https://harlemhops.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (246,NULL,NULL,NULL,NULL,'http://harvestandrevel.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (247,'49 Lawton St','New Rochelle','NY','10801','jolosrestaurants.com');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (248,NULL,NULL,NULL,NULL,'https://www.jonesbbqkc.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (249,'1026 Castle Hill Ave','Bronx','NY','10472','http://juicesforlife.nyc/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (250,NULL,NULL,NULL,NULL,'https://www.justiceofthepies.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (251,NULL,NULL,NULL,NULL,'https://www.lilliesofcharleston.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (252,'303 West 116th Street','New York','NY','10026','https://lolosseafoodshack.com/#about');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (253,NULL,NULL,NULL,NULL,'https://maisonnoirwines.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (254,NULL,NULL,NULL,NULL,'https://mikeylikesiticecream.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (255,NULL,NULL,NULL,NULL,'https://www.etsy.com/shop/naturesingsnyc/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (256,'70 West 3rd St','New York','NY','10012','http://negrilnyc.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (257,NULL,NULL,NULL,NULL,'https://www.instagram.com/Onthehunt2006/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (258,NULL,NULL,NULL,NULL,'http://www.shopevelyncooke.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (259,'560 North Ave','New Rochelle','NY','10801','www.pepesplace.com');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (260,NULL,NULL,NULL,NULL,'https://www.redbaycoffee.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (261,'151 W Sandford Boulevard','Mount Vernon','NY','10550','http://riperestaurant.com');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (262,'19 Anderson St','New Rochelle','NY','10801','rocnramen914.com');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (263,NULL,NULL,NULL,NULL,'https://salutnutrition.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (264,'55 ST. NICHOLAS AVENUE ','New York','NY','10026','https://www.seasonedvegan.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (265,NULL,NULL,NULL,NULL,'https://www.thesipsociety.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (266,NULL,NULL,NULL,NULL,'https://www.solcacao.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (267,'203 Wilson Ave','Brooklyn','NY','11237','https://www.solsipsnyc.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (268,NULL,NULL,NULL,NULL,'https://www.whetstonemagazine.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (269,'75 9th Ave','New York','NY','10011','https://www.chelseamarket.com/directory-all/tings');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (270,NULL,NULL,NULL,NULL,'https://zafawines.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (271,NULL,NULL,NULL,NULL,'https://www.blacktechpipeline.com/');
-INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (272,NULL,NULL,NULL,NULL,'https://idontdoclubs.com/');
+INSERT INTO contacts(contact_id,phone,email,social_media) VALUES
+ (1,NULL,NULL,'https://www.instagram.com/228grantstreet/')
+,(2,NULL,NULL,'https://www.instagram.com/aphrochic/?hl=en')
+,(3,NULL,NULL,'https://www.instagram.com/theblackhomedesign/?hl=en')
+,(4,NULL,NULL,'https://www.instagram.com/blackpepperpaperieco/')
+,(5,'6468203794',NULL,'https://www.instagram.com/boleroadtextiles/?hl=en')
+,(6,NULL,NULL,'https://www.instagram.com/clarepaint/?hl=en')
+,(7,NULL,NULL,'https://www.instagram.com/claudehome/')
+,(8,NULL,NULL,'https://www.instagram.com/effortlesscomposition/')
+,(9,NULL,NULL,'https://www.instagram.com/goodeeworld/?hl=en')
+,(10,NULL,NULL,'https://www.instagram.com/ile.ila/?hl=en')
+,(11,NULL,NULL,'https://www.instagram.com/thejungalow/?hl=en')
+,(12,NULL,NULL,'https://www.instagram.com/lichennyc/?hl=en')
+,(13,'8889546686',NULL,'https://www.instagram.com/linotodotcom/?hl=en')
+,(14,NULL,NULL,'https://www.instagram.com/litbklyn/?hl=en')
+,(15,NULL,NULL,'https://www.instagram.com/maleneblifestyle/?hl=en')
+,(16,'9173539149',NULL,'https://www.instagram.com/marieburgos.design/?hl=en')
+,(17,'7184838833',NULL,'https://www.instagram.com/nattygarden/?hl=en')
+,(18,NULL,NULL,'https://www.instagram.com/peaceandriot/')
+,(19,NULL,NULL,'https://www.instagram.com/potterybyosa/?hl=en')
+,(20,'8008303874',NULL,'https://www.instagram.com/robinwilsonhome/?hl=en')
+,(21,NULL,NULL,'https://www.instagram.com/roporterdesign/?hl=en')
+,(22,NULL,NULL,'https://www.instagram.com/seelineceramics/')
+,(23,'2126786872',NULL,'https://www.instagram.com/harlemtoilegirl/?hl=en')
+,(24,NULL,NULL,'https://www.instagram.com/sustainablehomegoods/?hl=en')
+,(25,'7707276794',NULL,'https://www.instagram.com/tackussanu_senegal/')
+,(26,NULL,NULL,'https://www.instagram.com/tactilematter/?hl=en')
+,(27,NULL,NULL,'https://www.instagram.com/xnstudio_/?hl=en')
+,(28,NULL,NULL,'https://www.instagram.com/helloyowie/')
+,(29,NULL,'info@eliaswilliams.com','https://www.instagram.com/elias.williams/')
+,(30,NULL,'elliottbrownjr@gmail.com','https://www.instagram.com/elliottjeromebrownjr/')
+,(31,NULL,'joiriminaya@gmail.com','https://www.instagram.com/joiriminaya/')
+,(32,'6465044762','contact@groanamelendez.com','https://www.instagram.com/groana/')
+,(33,NULL,'mirandaRbarnes@gmail.com','https://www.instagram.com/mirandabarnes/?hl=en')
+,(34,NULL,NULL,'https://www.instagram.com/bold_xchange/?hl=en')
+,(35,NULL,NULL,'https://www.instagram.com/celsious_social/?hl=en')
+,(36,'6465968005','info@customcollaborative.org','https://www.instagram.com/customcolab/?hl=en')
+,(37,NULL,NULL,'https://www.instagram.com/manual_nyc/?hl=en')
+,(38,'3474145436','marcheruedix@gmailcom','https://www.instagram.com/marcheruedix/?hl=en')
+,(39,NULL,NULL,'https://www.instagram.com/neighborhoodfiberco/?hl=en')
+,(40,'3235910012',NULL,'https://www.instagram.com/reparations.club/?hl=en')
+,(41,'9293376130','E. hello@stringthingstudio.com','https://www.instagram.com/stringthingstudio/?hl=en')
+,(42,NULL,NULL,'https://www.instagram.com/beautystat/?hl=en')
+,(43,NULL,NULL,'https://www.instagram.com/beneathyourmask/')
+,(44,NULL,NULL,'https://www.instagram.com/blkandgrn/')
+,(45,NULL,NULL,'https://www.instagram.com/briogeo/?hl=en')
+,(46,NULL,NULL,'https://www.instagram.com/golde/?hl=en')
+,(47,NULL,NULL,'https://www.instagram.com/hanahana_beauty/?hl=en')
+,(48,NULL,NULL,'https://www.instagram.com/hausurban/?hl=en')
+,(49,NULL,NULL,'https://www.instagram.com/highbrowhippie/?hl=en')
+,(50,NULL,NULL,'https://www.instagram.com/thehoneypotco/?hl=en')
+,(51,NULL,NULL,'https://www.instagram.com/gethyperskin/?hl=en')
+,(52,NULL,NULL,'https://www.instagram.com/laurennapierbeauty/?hl=en')
+,(53,NULL,NULL,'https://www.instagram.com/ouithepeople/?hl=en')
+,(54,NULL,NULL,'https://www.instagram.com/patmcgrathreal/?hl=en')
+,(55,NULL,NULL,'https://www.instagram.com/peopleofcolorbeauty/?hl=en')
+,(56,NULL,NULL,'https://www.instagram.com/unsuncosmetics/?hl=en')
+,(57,NULL,NULL,'https://www.instagram.com/uomabeauty/')
+,(58,'3473468707',NULL,'https://www.instagram.com/zamboaroma/')
+,(59,'2124059000',NULL,'https://www.instagram.com/aileyextension/?hl=en')
+,(60,NULL,NULL,'https://www.instagram.com/officialblackgirlsrun/?hl=en')
+,(61,'6466844912',NULL,'https://www.instagram.com/bodyspacenyc/?hl=en')
+,(62,NULL,NULL,'https://www.instagram.com/grillzandgranola/?hl=en')
+,(63,'3474137774',NULL,'https://www.instagram.com/healhaus/?hl=en')
+,(64,'6465984806',NULL,'https://www.instagram.com/iconoclastnyc/?hl=en')
+,(65,NULL,NULL,'https://www.instagram.com/theunderbellyyoga/?hl=en')
+,(66,NULL,NULL,'https://www.instagram.com/andreamindbodysoul/')
+,(67,'3474602838','info@cafeconlibrosbk.com','https://www.instagram.com/cafeconlibros_bk/?hl=en')
+,(68,NULL,NULL,'https://www.instagram.com/frugalbooks/?hl=en')
+,(69,NULL,NULL,'https://www.instagram.com/harrietts_bookshop/?hl=en')
+,(70,NULL,NULL,'https://www.instagram.com/forkeepsbooks/?hl=en')
+,(71,NULL,NULL,'https://www.instagram.com/fultonstreet918/')
+,(72,NULL,NULL,'https://www.instagram.com/thelitbar/?hl=en')
+,(73,NULL,NULL,'https://www.instagram.com/lovingmebooks/')
+,(74,NULL,NULL,'https://www.instagram.com/mahoganybooks/')
+,(75,NULL,NULL,'https://www.instagram.com/semicolonchi/')
+,(76,'2128623680','info@sistersuptownbookstore.com','https://www.instagram.com/sistersuptown/')
+,(77,NULL,NULL,'https://www.instagram.com/sourceofknowledge/')
+,(78,NULL,NULL,'https://www.instagram.com/anya_lust/?hl=en')
+,(79,NULL,NULL,'https://www.instagram.com/babyphat/?hl=en')
+,(80,'7185763183,
+3474069927',NULL,'https://www.instagram.com/bedstuyfly/?hl=en')
+,(81,NULL,NULL,'https://www.instagram.com/blkmktvintage/?hl=en')
+,(82,NULL,'ny@thebkcircus.com','https://www.instagram.com/thebkcircus/?hl=en')
+,(83,'7183893809',NULL,'https://www.instagram.com/brothervellies/?hl=en')
+,(84,NULL,NULL,'https://www.instagram.com/camerontea.jpg/')
+,(85,NULL,NULL,'https://www.instagram.com/casamiraofficial/?hl=en')
+,(86,NULL,NULL,'https://www.instagram.com/comebackasaflower/?hl=en')
+,(87,NULL,NULL,'https://www.instagram.com/christopherjohnrogers/?hl=en')
+,(88,NULL,NULL,'https://www.instagram.com/casualstudios/?hl=en')
+,(89,NULL,NULL,'https://www.instagram.com/cushnie/')
+,(90,NULL,NULL,'https://www.instagram.com/weardiop/?hl=en')
+,(91,NULL,NULL,'https://www.instagram.com/__edas/?hl=en')
+,(92,NULL,NULL,'https://www.instagram.com/flat.fifteen/')
+,(93,NULL,NULL,'https://www.instagram.com/gizmo_vintage_honey/')
+,(94,NULL,NULL,'https://www.instagram.com/goldengirlyshop/')
+,(95,NULL,NULL,'https://www.instagram.com/houseofaama/?hl=en')
+,(96,NULL,NULL,'https://www.instagram.com/kaicollective/?hl=en')
+,(97,NULL,NULL,'https://www.instagram.com/kennethize/')
+,(98,NULL,NULL,'https://www.instagram.com/kutula/?hl=en')
+,(99,NULL,NULL,'https://www.instagram.com/laquan_smith/?hl=en')
+,(100,NULL,NULL,'https://www.instagram.com/localeuropean/?hl=en')
+,(101,'2122552811',NULL,'https://www.instagram.com/madamematovu/')
+,(102,NULL,NULL,'https://www.instagram.com/maki.oh/?hl=en')
+,(103,'7182439433',NULL,'https://www.instagram.com/moshoodofficial/?hl=en')
+,(104,NULL,NULL,'https://www.instagram.com/nandi.naya/?hl=en')
+,(105,NULL,NULL,'https://www.instagram.com/nudebarre/?hl=en')
+,(106,NULL,NULL,'https://www.instagram.com/octave_jewelry/?hl=en')
+,(107,NULL,NULL,'https://www.instagram.com/omathelabel/?hl=en')
+,(108,NULL,NULL,'https://www.instagram.com/ovonion/?hl=en')
+,(109,NULL,NULL,'https://www.instagram.com/orangecultureng/?hl=en')
+,(110,NULL,NULL,'https://www.instagram.com/pejuobasa/?hl=en')
+,(111,NULL,NULL,'https://www.instagram.com/postimperial/?hl=en')
+,(112,NULL,NULL,'https://www.instagram.com/rebeccaallenny/?hl=en')
+,(113,NULL,NULL,'https://www.instagram.com/riotswim/?hl=en')
+,(114,NULL,'info@sincerelytommy.com','https://www.instagram.com/sincerelytommy_/?hl=en')
+,(115,NULL,NULL,'https://www.instagram.com/thesixesnyc/?hl=en')
+,(116,NULL,NULL,'https://www.instagram.com/slashedbytia/?hl=en')
+,(117,NULL,NULL,'https://www.instagram.com/smallneeds/?hl=en')
+,(118,NULL,NULL,'https://www.instagram.com/t.a.newyork/')
+,(119,NULL,NULL,'https://www.instagram.com/telfarglobal/?hl=en')
+,(120,NULL,NULL,'https://www.instagram.com/tlzlfemme/?hl=en')
+,(121,NULL,NULL,'https://www.instagram.com/treefairfax/?hl=en')
+,(122,NULL,NULL,'https://www.instagram.com/glemaud/?hl=en')
+,(123,NULL,NULL,'https://www.instagram.com/walesbonner/?hl=en')
+,(124,NULL,NULL,'https://www.instagram.com/yam_nyc/?hl=en')
+,(125,NULL,NULL,'https://www.instagram.com/zouxoushoes/?hl=en')
+,(126,NULL,NULL,'https://www.instagram.com/clueclothing/')
+,(127,NULL,NULL,'https://www.instagram.com/adozencousins/?hl=en')
+,(128,'9174727789',NULL,'https://www.instagram.com/alibiharlem/')
+,(129,'9146546549','info@alvinandfriendsrestaurant.com','https://www.instagram.com/alvinandfriends/?hl=en')
+,(130,NULL,NULL,'https://www.instagram.com/basbaassauce/?hl=en')
+,(131,'2125107353','BeniamCuisine@gmail.com','https://www.instagram.com/benyam_cuisine/')
+,(132,NULL,NULL,'https://www.instagram.com/blu_thebaker/')
+,(133,'2126786200','info@boulevardbistrony.com','https://www.instagram.com/blvdbistro/')
+,(134,NULL,NULL,'https://www.instagram.com/blkandbold/?hl=en')
+,(135,'2126191200','info@brooklynchophouse.com','https://www.instagram.com/brooklynchophouse/')
+,(136,'3472404281',NULL,'https://www.instagram.com/brooklyntea/?hl=en')
+,(137,'2125860811','info@casadeltorony.com','https://www.instagram.com/casadeltorony/?hl=en')
+,(138,'2122811800',NULL,'https://www.facebook.com/charlespanfried/')
+,(139,'2122224545',NULL,'https://www.instagram.com/chocolatharlem/')
+,(140,NULL,NULL,'https://www.instagram.com/cremasabsalon/?hl=en')
+,(141,NULL,NULL,'https://www.instagram.com/globalvillagecuisine/?hl=en')
+,(142,'6469983444',NULL,'https://www.instagram.com/harlemhops/')
+,(143,NULL,NULL,'https://www.instagram.com/harvestandrevel/?hl=en')
+,(144,'9143552527','JolosKitchen10@gmail.com','https://www.instagram.com/jolokitchen/')
+,(145,NULL,NULL,'https://www.instagram.com/jonesbbqkc/?hl=en')
+,(146,'3472819844',NULL,'https://www.instagram.com/juicesforlife/?hl=en')
+,(147,NULL,NULL,'https://www.instagram.com/justiceofthepies/?hl=en')
+,(148,NULL,NULL,'https://www.instagram.com/lilliesofchas/')
+,(149,'6466493356',NULL,'https://www.instagram.com/lolosshacks/')
+,(150,NULL,NULL,'https://www.instagram.com/maisonnoirwines/?hl=en')
+,(151,NULL,NULL,'https://www.instagram.com/MikeyLikesItIceCream/')
+,(152,NULL,NULL,'https://www.instagram.com/naturesingsnyc/')
+,(153,'2124772804',NULL,'https://www.instagram.com/negrilvillagenyc/?hl=en')
+,(154,NULL,NULL,'https://www.instagram.com/Onthehunt2006/')
+,(155,NULL,NULL,'https://www.instagram.com/_evcooks/?hl=en')
+,(156,'9146327373',NULL,'https://www.instagram.com/pepes_place/')
+,(157,NULL,NULL,'https://www.instagram.com/redbaycoffee/?hl=en')
+,(158,'9146657689','info@riperestaurant.com','https://www.instagram.com/ripekitchenbar/')
+,(159,'9143652267',NULL,'https://www.instagram.com/rocnramen/')
+,(160,NULL,NULL,'https://www.instagram.com/salutnutrition/?hl=en')
+,(161,'2122220092',NULL,'https://www.instagram.com/seasonedvegan/?hl=en')
+,(162,NULL,NULL,'https://www.instagram.com/theofficialsipsociety/')
+,(163,NULL,NULL,'https://www.instagram.com/solcacao/')
+,(164,'7186830482',NULL,'https://www.instagram.com/solsipsnyc/?hl=en')
+,(165,NULL,NULL,'https://www.instagram.com/whetstonemagazine/?hl=en')
+,(166,'6469280095',NULL,'https://www.instagram.com/tingsjamaicanjerkchicken/?hl=en')
+,(167,NULL,NULL,'https://www.instagram.com/zafawines/')
+,(168,NULL,'Pariss@BlackTechPipeline.com','https://www.instagram.com/btpipeline/')
+,(169,NULL,NULL,'https://www.instagram.com/idontdoclubs/');
+
+INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES
+ (1,NULL,NULL,NULL,NULL,'https://www.228grantstreet.com/')
+,(2,NULL,NULL,NULL,NULL,'https://www.aphrochic.com/')
+,(3,'623 Eagle Rock Ave Suite 124','West Orange','NJ','7052','https://www.theblackhome.com/')
+,(4,NULL,NULL,NULL,NULL,'https://shopbppco.com/')
+,(5,NULL,NULL,NULL,NULL,'https://boleroadtextiles.com/')
+,(6,NULL,NULL,NULL,NULL,'https://www.clare.com/')
+,(7,NULL,NULL,NULL,NULL,'https://www.claudehome.com/')
+,(8,NULL,NULL,NULL,NULL,'https://effortlesscomposition.com/')
+,(9,NULL,NULL,NULL,NULL,'https://www.goodeeworld.com/')
+,(10,NULL,NULL,NULL,NULL,'https://www.ile-ila.com/')
+,(11,NULL,NULL,NULL,NULL,'https://www.jungalow.com/')
+,(12,'98 Moore Street','Brooklyn','NY','11206','https://www.lichennyc.com/')
+,(13,'3199 Albany Post Rd, Suite 215','Buchanan','NY','10511','https://www.linoto.com/')
+,(14,NULL,NULL,NULL,NULL,'https://www.litbklyn.co/get-lit')
+,(15,NULL,NULL,NULL,NULL,'https://malenebarnett.com/shop')
+,(16,NULL,NULL,NULL,NULL,'https://www.marieburgosdesignthestore.com/marie-burgos-collection-modern-furniture-home-decor')
+,(17,'636 Washington Ave','Brooklyn','NY','11238','https://www.nattygarden.com/all-products')
+,(18,NULL,NULL,NULL,NULL,'http://www.peaceandriot.com/shop')
+,(19,NULL,NULL,NULL,NULL,'https://www.potterybyosa.com/')
+,(20,'230 Park Avenue, 3rd fl-WEST','New York','NY','10169','https://robinwilsonhome.com/')
+,(21,NULL,NULL,NULL,NULL,'http://www.rochelleporter.com/')
+,(22,NULL,NULL,NULL,NULL,'https://seelineceramics.com/')
+,(23,NULL,NULL,NULL,NULL,'https://www.sheilabridges.com/shop/')
+,(24,NULL,NULL,NULL,NULL,'https://yoursustainablehome.com/')
+,(25,'675 Ponce De Leon Ave NE N215','Atlanta','GA','30308','https://tackussanusenegal.com/')
+,(26,NULL,NULL,NULL,NULL,'https://www.tactilematter.com/shop')
+,(27,NULL,NULL,NULL,NULL,'http://www.osxnasozi.com/')
+,(28,NULL,NULL,NULL,NULL,'https://www.shopyowie.com/')
+,(29,NULL,'New York','NY',NULL,'https://www.eliaswilliams.com/')
+,(30,NULL,'New York','NY',NULL,'https://elliottjeromebrownjr.com/')
+,(31,NULL,'New York','NY',NULL,'http://www.joiriminaya.com/')
+,(32,NULL,'New York','NY',NULL,'http://www.groanamelendez.com/')
+,(33,NULL,'New York','NY',NULL,'https://www.mirandabarnes.com/')
+,(34,NULL,NULL,NULL,NULL,'https://boldxchange.com/')
+,(35,'115 North 7th Street','Brooklyn','NY','11249','https://celsious.com/')
+,(36,'The Riverside Church, 91 Claremont Ave','New York','NY','10027','https://www.customcollaborative.org/')
+,(37,NULL,NULL,NULL,NULL,'https://manualphoto.com/')
+,(38,'1453 BEDFORD AVE','Brooklyn','NY','11216','https://www.marcheruedix.com/')
+,(39,NULL,NULL,NULL,NULL,'https://neighborhoodfiberco.com/')
+,(40,'4636 West Washington Blvd.','Los Angeles','CA','90016','https://rep.club/')
+,(41,'54 7th Ave','Brooklyn','NY','11217','https://www.stringthingstudio.com/')
+,(42,NULL,NULL,NULL,NULL,'http://beautystatcosmetics.com')
+,(43,NULL,NULL,NULL,NULL,'http://beneathyourmask.com')
+,(44,NULL,NULL,NULL,NULL,'http://blkgrn.com')
+,(45,NULL,NULL,NULL,NULL,'http://briogeohair.com')
+,(46,NULL,NULL,NULL,NULL,'http://golde.co')
+,(47,NULL,NULL,NULL,NULL,'http://hanahanabeauty.com')
+,(48,NULL,NULL,NULL,NULL,'http://hausurban.com')
+,(49,NULL,NULL,NULL,NULL,'http://highbrowhippie.com')
+,(50,NULL,NULL,NULL,NULL,'http://thehoneypot.co')
+,(51,NULL,NULL,NULL,NULL,'http://gethyperskin.com')
+,(52,NULL,NULL,NULL,NULL,'http://laurennapier.com')
+,(53,NULL,NULL,NULL,NULL,'http://ouithepeople.com')
+,(54,NULL,NULL,NULL,NULL,'https://www.patmcgrath.com/')
+,(55,NULL,NULL,NULL,NULL,'https://www.peopleofcolorbeauty.com')
+,(56,NULL,NULL,NULL,NULL,'https://unsuncosmetics.com')
+,(57,NULL,NULL,NULL,NULL,'https://uomabeauty.com')
+,(58,'3848 White Plains Rd','Bronx','NY','10467','https://zamboaroma.com')
+,(59,'405 W 55th Street','New York','NY','10019','https://www.aileyextension.com/')
+,(60,NULL,NULL,NULL,NULL,'https://blackgirlsrun.com/')
+,(61,'47 W 14th St. 5th Floor','New York','NY','10011','https://www.bodyspacefitness.com/')
+,(62,NULL,NULL,NULL,NULL,'https://www.grillzandgranola.com/')
+,(63,'1082 Fulton Street','New York','NY','11238','https://www.healhaus.com/')
+,(64,'210 5th Ave 5th Floor','New York','NY','10010','https://iconoclastfitness.com/')
+,(65,NULL,NULL,NULL,NULL,'https://browse.theunderbelly.com/browse')
+,(66,NULL,'Bronx','NY',NULL,'https://www.facebook.com/AndreaMindBodySoul/?ref=page_internal')
+,(67,'724 Prospect Pl','Brooklyn','NY','11216','https://cafeconlibrosbk.com')
+,(68,NULL,NULL,NULL,NULL,'https://frugalbookstore.net')
+,(69,NULL,NULL,NULL,NULL,'https://harriettsbookshop.com')
+,(70,NULL,NULL,NULL,NULL,'https://forkeepsbooks.com')
+,(71,NULL,NULL,NULL,NULL,'https://fultonstreet918.com')
+,(72,'131 Alexander Ave','Bronx','NY','10454','https://bookshop.org/shop/thelitbar')
+,(73,NULL,NULL,NULL,NULL,'https://www.lovingmebooks.com/')
+,(74,NULL,NULL,NULL,NULL,'https://www.mahoganybooks.com/')
+,(75,NULL,NULL,NULL,NULL,'https://bookshop.org/shop/Semicolonchi')
+,(76,'1942 Amsterdam Ave','New York','NY','10032','https://sistersuptownbookstore.com')
+,(77,NULL,NULL,NULL,NULL,'https://www.instagram.com/sourceofknowledge/')
+,(78,NULL,NULL,NULL,NULL,'https://anyalust.com/')
+,(79,NULL,NULL,NULL,NULL,'https://babyphat.com/')
+,(80,'287 Ralph Avenue','Brooklyn','NY','11233','https://www.bedstuyfly.com/')
+,(81,NULL,NULL,NULL,NULL,'https://www.blkmktvintage.com/')
+,(82,'150 Nevins St','Brooklyn','NY','11217','https://thebkcircus.com/')
+,(83,'71 Franklin Street','Brooklyn','NY','11222','https://brothervellies.com/')
+,(84,NULL,NULL,NULL,NULL,'https://www.instagram.com/camerontea.jpg/')
+,(85,NULL,NULL,NULL,NULL,'https://www.castamira.com/')
+,(86,NULL,NULL,NULL,NULL,'https://www.cbaaf.org/')
+,(87,NULL,NULL,NULL,NULL,'https://www.instagram.com/christopherjohnrogers/?hl=en')
+,(88,NULL,NULL,NULL,NULL,'https://www.coolandcasualstudios.com/')
+,(89,NULL,NULL,NULL,NULL,'https://www.cushnie.com/')
+,(90,NULL,NULL,NULL,NULL,'https://weardiop.com/')
+,(91,NULL,NULL,NULL,NULL,'https://edas.store/')
+,(92,NULL,NULL,NULL,NULL,'https://flatfifteen.co.uk/')
+,(93,'438 Marcus Garvey Blvd','Brooklyn','NY','11216','https://www.instagram.com/gizmo_vintage_honey/')
+,(94,NULL,NULL,NULL,NULL,'https://www.depop.com/goldengirlyshop/')
+,(95,NULL,NULL,NULL,NULL,'https://houseofaama.com/')
+,(96,NULL,NULL,NULL,NULL,'https://kaicollective.com/')
+,(97,NULL,NULL,NULL,NULL,'https://www.instagram.com/kennethize/?hl=en')
+,(98,NULL,NULL,NULL,NULL,'https://shopkutula.com/')
+,(99,NULL,NULL,NULL,NULL,'https://laquansmith.com/')
+,(100,NULL,NULL,NULL,NULL,'https://localeuropean.com/')
+,(101,'240 West 10th Street','New York','NY','10014','https://www.instagram.com/madamematovu/')
+,(102,NULL,NULL,NULL,NULL,'https://www.makioh.com/')
+,(103,'1360 Fulton St','Brooklyn','NY','11216','https://afrikanspirit.com/')
+,(104,NULL,NULL,NULL,NULL,'http://www.nandinayanyc.com/shop')
+,(105,NULL,NULL,NULL,NULL,'https://nudebarre.com/')
+,(106,NULL,NULL,NULL,NULL,'https://octavejewelry.com/')
+,(107,NULL,NULL,NULL,NULL,'https://www.omathelabel.com/')
+,(108,NULL,NULL,NULL,NULL,'https://www.whitneymero.com/')
+,(109,NULL,NULL,NULL,NULL,'https://orangeculture.com.ng/')
+,(110,NULL,NULL,NULL,NULL,'https://www.pejuobasa.com/')
+,(111,NULL,NULL,NULL,NULL,'https://post-imperial.com/')
+,(112,NULL,NULL,NULL,NULL,'https://rebecca-allen.com/')
+,(113,NULL,NULL,NULL,NULL,'https://www.riotswim.com/')
+,(114,'343 Tompkins Ave','Brooklyn','NY','11216','https://sincerelytommy.com/')
+,(115,NULL,NULL,NULL,NULL,'https://www.thesixes.com/')
+,(116,NULL,NULL,NULL,NULL,'https://www.slashedbytia.net/shop')
+,(117,NULL,NULL,NULL,NULL,'Etsy: https://www.etsy.com/shop/RetroRhapsody')
+,(118,'332 W 13th St','New York','NY','10014','https://shop-ta.com/')
+,(119,NULL,NULL,NULL,NULL,'http://www.telfar.net/')
+,(120,NULL,NULL,NULL,NULL,'https://www.tlzlf.com/')
+,(121,NULL,NULL,NULL,NULL,'https://treefairfax.com/shop')
+,(122,NULL,NULL,NULL,NULL,'https://www.glemaud.com/pages/home')
+,(123,NULL,NULL,NULL,NULL,'https://walesbonner.net/')
+,(124,NULL,NULL,NULL,NULL,'https://www.yamnyc.com/')
+,(125,NULL,NULL,NULL,NULL,'https://www.zouxou.com/')
+,(126,NULL,NULL,NULL,NULL,'https://clueclothings.com')
+,(127,NULL,NULL,NULL,NULL,'https://adozencousins.com/')
+,(128,'2376 Adam Clayton Powell Jr Blvd','New York','NY','10030','https://www.instagram.com/alibiharlem/')
+,(129,'14 Memorial Hwy','New Rochelle','NY','10801','alvinandfriendsrestaurant.com')
+,(130,NULL,NULL,NULL,NULL,'https://basbaassauce.com/')
+,(131,'2795 Frederick Douglas Blvd','New York','NY','10039','http://benyamcuisine.com/')
+,(132,NULL,NULL,NULL,NULL,'https://www.instagram.com/blu_thebaker/')
+,(133,'2149 Frederick Douglass Blvd','New York','NY','10026','https://www.boulevardbistrony.com/')
+,(134,NULL,NULL,NULL,NULL,'https://blkandbold.com/')
+,(135,'150 Nassau St','New York','NY','10038','https://www.brooklynchophouse.com/')
+,(136,'524 Nostrand Ave','Brooklyn','NY','11216','https://brooklyntea.com/')
+,(137,'626B 10th ave,','New York','NY','10036','https://www.casadeltorony.com/home')
+,(138,'2461 Frederick Douglass Blvd','New York','NY','10027','https://www.theinfatuation.com/new-york/reviews/charles-pan-fried-chicken')
+,(139,'2223 Frederick Douglass Blvd','New York','NY','10026','https://www.chocolatharlem.com/')
+,(140,NULL,NULL,NULL,NULL,'https://charlene-absalon-llc.square.site/')
+,(141,NULL,NULL,NULL,NULL,'https://globalvillagecuisine.com/')
+,(142,'2268 Adam Clayton Powell Jr Blvd','New York ','NY','10030','https://harlemhops.com/')
+,(143,NULL,NULL,NULL,NULL,'http://harvestandrevel.com/')
+,(144,'49 Lawton St','New Rochelle','NY','10801','jolosrestaurants.com')
+,(145,NULL,NULL,NULL,NULL,'https://www.jonesbbqkc.com/')
+,(146,'1026 Castle Hill Ave','Bronx','NY','10472','http://juicesforlife.nyc/')
+,(147,NULL,NULL,NULL,NULL,'https://www.justiceofthepies.com/')
+,(148,NULL,NULL,NULL,NULL,'https://www.lilliesofcharleston.com/')
+,(149,'303 West 116th Street','New York','NY','10026','https://lolosseafoodshack.com/#about')
+,(150,NULL,NULL,NULL,NULL,'https://maisonnoirwines.com/')
+,(151,NULL,NULL,NULL,NULL,'https://mikeylikesiticecream.com/')
+,(152,NULL,NULL,NULL,NULL,'https://www.etsy.com/shop/naturesingsnyc/')
+,(153,'70 West 3rd St','New York','NY','10012','http://negrilnyc.com/')
+,(154,NULL,NULL,NULL,NULL,'https://www.instagram.com/Onthehunt2006/')
+,(155,NULL,NULL,NULL,NULL,'http://www.shopevelyncooke.com/')
+,(156,'560 North Ave','New Rochelle','NY','10801','www.pepesplace.com')
+,(157,NULL,NULL,NULL,NULL,'https://www.redbaycoffee.com/')
+,(158,'151 W Sandford Boulevard','Mount Vernon','NY','10550','http://riperestaurant.com')
+,(159,'19 Anderson St','New Rochelle','NY','10801','rocnramen914.com')
+,(160,NULL,NULL,NULL,NULL,'https://salutnutrition.com/')
+,(161,'55 ST. NICHOLAS AVENUE','New York','NY','10026','https://www.seasonedvegan.com/')
+,(162,NULL,NULL,NULL,NULL,'https://www.thesipsociety.com/')
+,(163,NULL,NULL,NULL,NULL,'https://www.solcacao.com/')
+,(164,'203 Wilson Ave','Brooklyn','NY','11237','https://www.solsipsnyc.com/')
+,(165,NULL,NULL,NULL,NULL,'https://www.whetstonemagazine.com/')
+,(166,'75 9th Ave','New York','NY','10011','https://www.chelseamarket.com/directory-all/tings')
+,(167,NULL,NULL,NULL,NULL,'https://zafawines.com/')
+,(168,NULL,NULL,NULL,NULL,'https://www.blacktechpipeline.com/')
+,(169,NULL,NULL,NULL,NULL,'https://idontdoclubs.com/');

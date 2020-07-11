@@ -1,15 +1,17 @@
 
 \c afro_link;
 
-INSERT INTO types(type_name) VALUES ('home decor');
-INSERT INTO types(type_name) VALUES ('arts and culture');
-INSERT INTO types(type_name) VALUES ('gift and beyond');
-INSERT INTO types(type_name) VALUES ('beauty');
-INSERT INTO types(type_name) VALUES ('health and fitness');
-INSERT INTO types(type_name) VALUES ('bookstore');
-INSERT INTO types(type_name) VALUES ('clothes and accs');
-INSERT INTO types(type_name) VALUES ('food and drink');
-INSERT INTO types(type_name) VALUES ('education and career');
+INSERT INTO types(type_name) VALUES
+ ('home decor'),
+ ('arts and culture'),
+ ('gift and beyond'),
+ ('beauty'),
+ ('health and fitness'),
+ ('bookstore'),
+ ('clothes and accs'),
+ ('food and drink'),
+ ('education and career');
+ 
 
 INSERT INTO businesses(biz_name,hours) VALUES
  ('228 Grant Street Candle Co.','online business')

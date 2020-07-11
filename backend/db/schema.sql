@@ -64,9 +64,8 @@ CREATE TABLE reviews
   review_id int REFERENCES businesses(id) ON DELETE CASCADE,
   text varchar,
   name varchar,
-  ratings int,
-  zip int
+  ratings int
  );
 
- INSERT INTO businesses(biz_name, hours)
-VALUES('Brutus Biz','9am-5pm')
+--  INSERT INTO businesses(biz_name, hours)
+-- VALUES('Brutus Biz','9am-5pm')

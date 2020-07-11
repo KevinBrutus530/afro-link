@@ -157,6 +157,88 @@ INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (26,NULL,
 INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (27,NULL,NULL,NULL,NULL,'http://www.osxnasozi.com/');
 INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (28,NULL,NULL,NULL,NULL,'https://www.shopyowie.com/');
 
-INSERT INTO reviews (review_id, text, name, ratings, zip) VALUES (
-    1,
-)
+INSERT INTO reviews (review_id, text, name, ratings) VALUES (
+    1, 'good', 'maria', 5
+);
+
+INSERT INTO businesses(biz_name,hours) VALUES ('Elias Williams','online business');
+INSERT INTO businesses(biz_name,hours) VALUES ('Elliot Jerome Brown Jr','online business');
+INSERT INTO businesses(biz_name,hours) VALUES ('JOIRI MINAYA','online business');
+INSERT INTO businesses(biz_name,hours) VALUES ('Groana Melendez','online business');
+INSERT INTO businesses(biz_name,hours) VALUES ('MIRANDA BARNES','online business');
+
+INSERT INTO owners(owner_id,owner_name) VALUES (29,'Elias Williams');
+INSERT INTO owners(owner_id,owner_name) VALUES (30,'Elliot Jerome Brown Jr');
+INSERT INTO owners(owner_id,owner_name) VALUES (31,'Joiri Minaya');
+INSERT INTO owners(owner_id,owner_name) VALUES (32,'Groana Melendez');
+INSERT INTO owners(owner_id,owner_name) VALUES (33,'Miranda Barnes');
+
+INSERT INTO types(type_name) VALUES ('arts_and_culture');
+
+INSERT INTO categories(biz_id,type_id) VALUES (29,2);
+INSERT INTO categories(biz_id,type_id) VALUES (30,2);
+INSERT INTO categories(biz_id,type_id) VALUES (31,2);
+INSERT INTO categories(biz_id,type_id) VALUES (32,2);
+INSERT INTO categories(biz_id,type_id) VALUES (33,2);
+
+INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (29,NULL,'info@eliaswilliams.com','https://www.instagram.com/elias.williams/');
+INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (30,NULL,'elliottbrownjr@gmail.com','https://www.instagram.com/elliottjeromebrownjr/');
+INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (31,NULL,'joiriminaya@gmail.com','https://www.instagram.com/joiriminaya/');
+INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (32,6465044762,'contact@groanamelendez.com','https://www.instagram.com/groana/');
+INSERT INTO contacts(contact_id,phone,email,social_media) VALUES (33,NULL,'mirandaRbarnes@gmail.com','https://www.instagram.com/mirandabarnes/?hl=en');
+
+INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (29,NULL,'New York','NY',NULL,'https://www.eliaswilliams.com/');
+INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (30,NULL,'New York','NY',NULL,'https://elliottjeromebrownjr.com/');
+INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (31,NULL,'New York','NY',NULL,'http://www.joiriminaya.com/');
+INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (32,NULL,'New York','NY',NULL,'http://www.groanamelendez.com/');
+INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES (33,NULL,'New York','NY',NULL,'https://www.mirandabarnes.com/');
+
+INSERT INTO businesses(biz_name,hours) VALUES ('Bold Xchange','online business');
+INSERT INTO businesses(biz_name,hours) VALUES ('Celsious','Tue - Fri, 11am - 7pm
+Sat - Mon, 8am - 4pm');
+INSERT INTO businesses(biz_name,hours) VALUES ('Custom Collaborative',NULL);
+INSERT INTO businesses(biz_name,hours) VALUES ('Manual','online business');
+INSERT INTO businesses(biz_name,hours) VALUES ('Marché Rue Dix','Mon - Sat, 12pm - 9pm, 
+Sun, 11am - 8pm');
+INSERT INTO businesses(biz_name,hours) VALUES ('Neighborhood Fiber Co.',NULL);
+INSERT INTO businesses(biz_name,hours) VALUES ('Reparations Club','online business');
+INSERT INTO businesses(biz_name,hours) VALUES ('String Thing Studio',NULL);
+
+INSERT INTO owners(owner_id,owner_name) VALUES (34,'Danielle Deavens and Doug Spencer');
+INSERT INTO owners(owner_id,owner_name) VALUES (35,'Corinna and Theresa Williams');
+INSERT INTO owners(owner_id,owner_name) VALUES (36,'');
+INSERT INTO owners(owner_id,owner_name) VALUES (37,'Malcolm Dia');
+INSERT INTO owners(owner_id,owner_name) VALUES (38,'');
+INSERT INTO owners(owner_id,owner_name) VALUES (39,'Karida Collins');
+INSERT INTO owners(owner_id,owner_name) VALUES (40,'Jazzi McGilbert');
+INSERT INTO owners(owner_id,owner_name) VALUES (41,'Felicia Eve');
+
+INSERT INTO types(type_name) VALUES ('gifts_and_beyond');
+
+INSERT INTO categories(biz_id,type_id) VALUES (34,3);
+INSERT INTO categories(biz_id,type_id) VALUES (35,3);
+INSERT INTO categories(biz_id,type_id) VALUES (36,3);
+INSERT INTO categories(biz_id,type_id) VALUES (37,3);
+INSERT INTO categories(biz_id,type_id) VALUES (38,3);
+INSERT INTO categories(biz_id,type_id) VALUES (39,3);
+INSERT INTO categories(biz_id,type_id) VALUES (40,3);
+INSERT INTO categories(biz_id,type_id) VALUES (41,3);
+
+INSERT INTO contacts(phone,email,social_media) VALUES (NULL,NULL,'https://www.instagram.com/bold_xchange/?hl=en');
+INSERT INTO contacts(phone,email,social_media) VALUES (NULL,NULL,'https://www.instagram.com/celsious_social/?hl=en');
+INSERT INTO contacts(phone,email,social_media) VALUES (6465968005,'info@customcollaborative.org','https://www.instagram.com/customcolab/?hl=en');
+INSERT INTO contacts(phone,email,social_media) VALUES (NULL,NULL,'https://www.instagram.com/manual_nyc/?hl=en');
+INSERT INTO contacts(phone,email,social_media) VALUES (3474145436,'marcheruedix@gmailcom','https://www.instagram.com/marcheruedix/?hl=en');
+INSERT INTO contacts(phone,email,social_media) VALUES (NULL,NULL,'https://www.instagram.com/neighborhoodfiberco/?hl=en');
+INSERT INTO contacts(phone,email,social_media) VALUES (3235910012,NULL,'https://www.instagram.com/reparations.club/?hl=en');
+INSERT INTO contacts(phone,email,social_media) VALUES (9293376130,'E. hello@stringthingstudio.com','https://www.instagram.com/stringthingstudio/?hl=en');
+
+INSERT INTO addresses(street,city,state,zip,website) VALUES (NULL,NULL,NULL,NULL,'https://boldxchange.com/');
+INSERT INTO addresses(street,city,state,zip,website) VALUES ('115 North 7th Street','Brooklyn','NY',11249,'https://celsious.com/');
+INSERT INTO addresses(street,city,state,zip,website) VALUES ('The Riverside Church, 91 Claremont Ave','New York','NY',10027,'https://www.customcollaborative.org/');
+INSERT INTO addresses(street,city,state,zip,website) VALUES (NULL,NULL,NULL,NULL,'https://manualphoto.com/');
+INSERT INTO addresses(street,city,state,zip,website) VALUES ('1453 BEDFORD AVE','Brooklyn','NY',11216,'https://www.marcheruedix.com/');
+INSERT INTO addresses(street,city,state,zip,website) VALUES (NULL,NULL,NULL,NULL,'https://neighborhoodfiberco.com/');
+INSERT INTO addresses(street,city,state,zip,website) VALUES ('4636 West Washington Blvd.','Los Angeles','CA',90016,'https://rep.club/');
+INSERT INTO addresses(street,city,state,zip,website) VALUES ('54 7th Ave','Brooklyn','NY',11217,'https://www.stringthingstudio.com/');
+

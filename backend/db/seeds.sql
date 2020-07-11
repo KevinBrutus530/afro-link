@@ -45,13 +45,13 @@ INSERT INTO businesses(biz_name,hours) VALUES ('MIRANDA BARNES','online business
 INSERT INTO businesses(biz_name,hours) VALUES ('Bold Xchange','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('Celsious','Tue - Fri, 11am - 7pm
 Sat - Mon, 8am - 4pm');
-INSERT INTO businesses(biz_name,hours) VALUES ('Custom Collaborative',NULL);
+INSERT INTO businesses(biz_name,hours) VALUES ('Custom Collaborative',"hours not avaiable");
 INSERT INTO businesses(biz_name,hours) VALUES ('Manual','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('Marché Rue Dix','Mon - Sat, 12pm - 9pm, 
 Sun, 11am - 8pm');
-INSERT INTO businesses(biz_name,hours) VALUES ('Neighborhood Fiber Co.',NULL);
+INSERT INTO businesses(biz_name,hours) VALUES ('Neighborhood Fiber Co.',"hours not avaiable");
 INSERT INTO businesses(biz_name,hours) VALUES ('Reparations Club','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('String Thing Studio',NULL);
+INSERT INTO businesses(biz_name,hours) VALUES ('String Thing Studio',"hours not avaiable");
 INSERT INTO businesses(biz_name,hours) VALUES ('BeautyStat Cosmetics','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('Beneath Your Mask','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('BLK + GRN','online business');
@@ -71,7 +71,7 @@ INSERT INTO businesses(biz_name,hours) VALUES ('Uoma Beauty','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('Zambo Aroma','7 days, 1pm - 9pm');
 INSERT INTO businesses(biz_name,hours) VALUES ('Ailey Extension','7 days, 8am – 11pm');
 INSERT INTO businesses(biz_name,hours) VALUES ('Black Girls Run','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Body Space Fitness',NULL);
+INSERT INTO businesses(biz_name,hours) VALUES ('Body Space Fitness',"hours not avaiable");
 INSERT INTO businesses(biz_name,hours) VALUES ('Grillz and Granola','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('HealHaus','Mon-Fri,   7am – 7:30pm
 Sat-Sun,   8am – 7:30pm');
@@ -85,7 +85,7 @@ INSERT INTO businesses(biz_name,hours) VALUES ('Frugal Bookstore','online busine
 INSERT INTO businesses(biz_name,hours) VALUES ('Harriett’s Bookshop','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('For Keeps Books','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('Fulton Street Books and Coffee','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('The Lit. Bar',NULL);
+INSERT INTO businesses(biz_name,hours) VALUES ('The Lit. Bar',"hours not avaiable");
 INSERT INTO businesses(biz_name,hours) VALUES ('Loving Me Books','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('Mahogany Books','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('Semicolon Bookstore and Gallery','online business');
@@ -95,10 +95,10 @@ Sun, Closed');
 INSERT INTO businesses(biz_name,hours) VALUES ('Source of Knowledge','temporarily closed');
 INSERT INTO businesses(biz_name,hours) VALUES ('Anya Lust','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('Baby Phat','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('BedStuyFly',NULL);
+INSERT INTO businesses(biz_name,hours) VALUES ('BedStuyFly',"hours not avaiable");
 INSERT INTO businesses(biz_name,hours) VALUES ('BLK MKT Vintage','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Brooklyn Circus',NULL);
-INSERT INTO businesses(biz_name,hours) VALUES ('Brother Vellies',NULL);
+INSERT INTO businesses(biz_name,hours) VALUES ('Brooklyn Circus',"hours not avaiable");
+INSERT INTO businesses(biz_name,hours) VALUES ('Brother Vellies',"hours not avaiable");
 INSERT INTO businesses(biz_name,hours) VALUES ('Cameron Tea','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('Castamira','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('CBAAF','online business');
@@ -116,26 +116,26 @@ INSERT INTO businesses(biz_name,hours) VALUES ('Kenneth Ize','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('Kutula by Africana','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('LaQuan Smith','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('Local European','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Madame Matovu Vintage',NULL);
+INSERT INTO businesses(biz_name,hours) VALUES ('Madame Matovu Vintage',"hours not avaiable");
 INSERT INTO businesses(biz_name,hours) VALUES ('Maki Oh','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Moshood Creations',NULL);
+INSERT INTO businesses(biz_name,hours) VALUES ('Moshood Creations',"hours not avaiable");
 INSERT INTO businesses(biz_name,hours) VALUES ('Nandi Naya','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('Nude Barre','available at mulberry-grand.com');
 INSERT INTO businesses(biz_name,hours) VALUES ('Octave Jewelry','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('Oma the Label','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('Onion Cut & Sewn','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Orange Culture',NULL);
-INSERT INTO businesses(biz_name,hours) VALUES ('Peju Obasa',NULL);
-INSERT INTO businesses(biz_name,hours) VALUES ('Post-Imperial',NULL);
+INSERT INTO businesses(biz_name,hours) VALUES ('Orange Culture',"hours not avaiable");
+INSERT INTO businesses(biz_name,hours) VALUES ('Peju Obasa',"hours not avaiable");
+INSERT INTO businesses(biz_name,hours) VALUES ('Post-Imperial',"hours not avaiable");
 INSERT INTO businesses(biz_name,hours) VALUES ('Rebecca Allen','visit by appt');
-INSERT INTO businesses(biz_name,hours) VALUES ('Riot Swim',NULL);
+INSERT INTO businesses(biz_name,hours) VALUES ('Riot Swim',"hours not avaiable");
 INSERT INTO businesses(biz_name,hours) VALUES ('Sincerely, Tommy','8am — 6pm daily, 
 8am — 4pm
 5pm — 10pm daily');
 INSERT INTO businesses(biz_name,hours) VALUES ('The Sixes','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('Slashed by Tia','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('Small Needs','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('T.A.',NULL);
+INSERT INTO businesses(biz_name,hours) VALUES ('T.A.',"hours not avaiable");
 INSERT INTO businesses(biz_name,hours) VALUES ('Telfar','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('TLZ L’FEMME','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('Tree Fairfax','online business');
@@ -145,7 +145,7 @@ INSERT INTO businesses(biz_name,hours) VALUES ('Yam','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('Zou Xou Shoes','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('C.L.U.E','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('A Dozen Cousins','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Alibi Lounge',NULL);
+INSERT INTO businesses(biz_name,hours) VALUES ('Alibi Lounge',"hours not avaiable");
 INSERT INTO businesses(biz_name,hours) VALUES ('Alvin & Friends','Mon, CLOSED
 Tue, Wed, Sun, 5pm - 9pm
 Thu, 5pm - 10pm
@@ -166,20 +166,20 @@ INSERT INTO businesses(biz_name,hours) VALUES ('BLVD Bistro','Thu - Fri, 12pm - 
 Sat - Sun, 10am – 6pm
 Mon - Wed, CLOSED');
 INSERT INTO businesses(biz_name,hours) VALUES ('Blk & Bold','available at target.com');
-INSERT INTO businesses(biz_name,hours) VALUES ('Brooklyn Chop House',NULL);
+INSERT INTO businesses(biz_name,hours) VALUES ('Brooklyn Chop House',"hours not avaiable");
 INSERT INTO businesses(biz_name,hours) VALUES ('Brooklyn Tea','7 days, 8am- 6pm');
 INSERT INTO businesses(biz_name,hours) VALUES ('Casa Del Toro','Mon-Thu, 5pm - 11pm
 Fri-Sat, 5pm - 1am
 Sun, 5pm - 10pm');
 INSERT INTO businesses(biz_name,hours) VALUES ('Charles’ Pan Fried Chicken','Mon - Sun, 1 - 10pm');
-INSERT INTO businesses(biz_name,hours) VALUES ('Chocolat',NULL);
+INSERT INTO businesses(biz_name,hours) VALUES ('Chocolat',"hours not avaiable");
 INSERT INTO businesses(biz_name,hours) VALUES ('Cremas Absalon','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('Global Village Cuisine','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('Harlem Hops','7 days, 2pm – 8pm');
 INSERT INTO businesses(biz_name,hours) VALUES ('Harvest And Revel','catering service');
 INSERT INTO businesses(biz_name,hours) VALUES ('Jolo''s Kitchen','Weekdays 11:30am - 8pm, Weekends 1pm - 8pm');
 INSERT INTO businesses(biz_name,hours) VALUES ('Jones Bar-B-Q','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Juices for Life (Castle Hill – Bronx)',NULL);
+INSERT INTO businesses(biz_name,hours) VALUES ('Juices for Life (Castle Hill – Bronx)',"hours not avaiable");
 INSERT INTO businesses(biz_name,hours) VALUES ('Justice of the Pies','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('Lillie’s of Charleston','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('Lolo''s Seafood Shack','Mon, CLOSED, 
@@ -220,7 +220,7 @@ INSERT INTO businesses(biz_name,hours) VALUES ('Frugal Bookstore','online busine
 INSERT INTO businesses(biz_name,hours) VALUES ('Harriett’s Bookshop','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('For Keeps Books','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('Fulton Street Books and Coffee','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('The Lit. Bar',NULL);
+INSERT INTO businesses(biz_name,hours) VALUES ('The Lit. Bar',"hours not avaiable");
 INSERT INTO businesses(biz_name,hours) VALUES ('Loving Me Books','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('Mahogany Books','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('Semicolon Bookstore and Gallery','online business');
@@ -230,10 +230,10 @@ Sun, Closed');
 INSERT INTO businesses(biz_name,hours) VALUES ('Source of Knowledge','temporarily closed');
 INSERT INTO businesses(biz_name,hours) VALUES ('Anya Lust','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('Baby Phat','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('BedStuyFly',NULL);
+INSERT INTO businesses(biz_name,hours) VALUES ('BedStuyFly',"hours not avaiable");
 INSERT INTO businesses(biz_name,hours) VALUES ('BLK MKT Vintage','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Brooklyn Circus',NULL);
-INSERT INTO businesses(biz_name,hours) VALUES ('Brother Vellies',NULL);
+INSERT INTO businesses(biz_name,hours) VALUES ('Brooklyn Circus',"hours not avaiable");
+INSERT INTO businesses(biz_name,hours) VALUES ('Brother Vellies',"hours not avaiable");
 INSERT INTO businesses(biz_name,hours) VALUES ('Cameron Tea','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('Castamira','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('CBAAF','online business');
@@ -251,26 +251,26 @@ INSERT INTO businesses(biz_name,hours) VALUES ('Kenneth Ize','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('Kutula by Africana','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('LaQuan Smith','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('Local European','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Madame Matovu Vintage',NULL);
+INSERT INTO businesses(biz_name,hours) VALUES ('Madame Matovu Vintage',"hours not avaiable");
 INSERT INTO businesses(biz_name,hours) VALUES ('Maki Oh','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Moshood Creations',NULL);
+INSERT INTO businesses(biz_name,hours) VALUES ('Moshood Creations',"hours not avaiable");
 INSERT INTO businesses(biz_name,hours) VALUES ('Nandi Naya','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('Nude Barre','available at mulberry-grand.com');
 INSERT INTO businesses(biz_name,hours) VALUES ('Octave Jewelry','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('Oma the Label','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('Onion Cut & Sewn','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Orange Culture',NULL);
-INSERT INTO businesses(biz_name,hours) VALUES ('Peju Obasa',NULL);
-INSERT INTO businesses(biz_name,hours) VALUES ('Post-Imperial',NULL);
+INSERT INTO businesses(biz_name,hours) VALUES ('Orange Culture',"hours not avaiable");
+INSERT INTO businesses(biz_name,hours) VALUES ('Peju Obasa',"hours not avaiable");
+INSERT INTO businesses(biz_name,hours) VALUES ('Post-Imperial',"hours not avaiable");
 INSERT INTO businesses(biz_name,hours) VALUES ('Rebecca Allen','visit by appt');
-INSERT INTO businesses(biz_name,hours) VALUES ('Riot Swim',NULL);
+INSERT INTO businesses(biz_name,hours) VALUES ('Riot Swim',"hours not avaiable");
 INSERT INTO businesses(biz_name,hours) VALUES ('Sincerely, Tommy','8am — 6pm daily, 
 8am — 4pm
 5pm — 10pm daily');
 INSERT INTO businesses(biz_name,hours) VALUES ('The Sixes','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('Slashed by Tia','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('Small Needs','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('T.A.',NULL);
+INSERT INTO businesses(biz_name,hours) VALUES ('T.A.',"hours not avaiable");
 INSERT INTO businesses(biz_name,hours) VALUES ('Telfar','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('TLZ L’FEMME','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('Tree Fairfax','online business');
@@ -280,7 +280,7 @@ INSERT INTO businesses(biz_name,hours) VALUES ('Yam','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('Zou Xou Shoes','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('C.L.U.E','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('A Dozen Cousins','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Alibi Lounge',NULL);
+INSERT INTO businesses(biz_name,hours) VALUES ('Alibi Lounge',"hours not avaiable");
 INSERT INTO businesses(biz_name,hours) VALUES ('Alvin & Friends','Mon, CLOSED
 Tue, Wed, Sun, 5pm - 9pm
 Thu, 5pm - 10pm
@@ -301,20 +301,20 @@ INSERT INTO businesses(biz_name,hours) VALUES ('BLVD Bistro','Thu - Fri, 12pm - 
 Sat - Sun, 10am – 6pm
 Mon - Wed, CLOSED');
 INSERT INTO businesses(biz_name,hours) VALUES ('Blk & Bold','available at target.com');
-INSERT INTO businesses(biz_name,hours) VALUES ('Brooklyn Chop House',NULL);
+INSERT INTO businesses(biz_name,hours) VALUES ('Brooklyn Chop House',"hours not avaiable");
 INSERT INTO businesses(biz_name,hours) VALUES ('Brooklyn Tea','7 days, 8am- 6pm');
 INSERT INTO businesses(biz_name,hours) VALUES ('Casa Del Toro','Mon-Thu, 5pm - 11pm
 Fri-Sat, 5pm - 1am
 Sun, 5pm - 10pm');
 INSERT INTO businesses(biz_name,hours) VALUES ('Charles’ Pan Fried Chicken','Mon - Sun, 1 - 10pm');
-INSERT INTO businesses(biz_name,hours) VALUES ('Chocolat',NULL);
+INSERT INTO businesses(biz_name,hours) VALUES ('Chocolat',"hours not avaiable");
 INSERT INTO businesses(biz_name,hours) VALUES ('Cremas Absalon','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('Global Village Cuisine','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('Harlem Hops','7 days, 2pm – 8pm');
 INSERT INTO businesses(biz_name,hours) VALUES ('Harvest And Revel','catering service');
 INSERT INTO businesses(biz_name,hours) VALUES ('Jolo''s Kitchen','Weekdays 11:30am - 8pm, Weekends 1pm - 8pm');
 INSERT INTO businesses(biz_name,hours) VALUES ('Jones Bar-B-Q','online business');
-INSERT INTO businesses(biz_name,hours) VALUES ('Juices for Life (Castle Hill – Bronx)',NULL);
+INSERT INTO businesses(biz_name,hours) VALUES ('Juices for Life (Castle Hill – Bronx)',"hours not avaiable");
 INSERT INTO businesses(biz_name,hours) VALUES ('Justice of the Pies','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('Lillie’s of Charleston','online business');
 INSERT INTO businesses(biz_name,hours) VALUES ('Lolo''s Seafood Shack','Mon, CLOSED, 

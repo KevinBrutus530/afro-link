@@ -79,11 +79,10 @@ const createBusiness = async (req, res, next) => {
 
 const editBusiness = async (req, res, next) => {
   try {
-    let { bizName, hours } = req.body;
-    let { businessId } = req.params;
+    let { biz_name, hours } = req.body;
+    let id = req.params.id;
     let business = await db.one(
-      "UPDATE businesses SET biz_name=$1, hours=$2 WHERE id=$3",
-      [bizName, hours, businessId]
+      `UPDATE businesses SET biz_name='${biz_name}', hours='${hours}' WHERE id='${id}' RETURNING *`
     );
     res.status(200).json({
       status: "success",
@@ -93,7 +92,7 @@ const editBusiness = async (req, res, next) => {
   } catch (err) {
     res.status(400).json({
       status: "Error",
-      message: "Error",
+      message: "Big Error",
       payload: err
     });
     next();

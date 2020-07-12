@@ -4,7 +4,7 @@ const { getAllBusiness, getSingleBusiness , createBusiness, editBusiness, delete
 
 businesses.get("/", getAllBusiness);
 
-businesses.get("/:id", getSingleBusiness);
+businesses.get("/:businessId", getSingleBusiness);
 
 businesses.post("/", createBusiness);
 

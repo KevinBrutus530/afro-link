@@ -19,7 +19,6 @@ const getAllCategories = async (req, res, next) => {
   };
 
 const getSingleCategory = async (req, res, next) => {
-  // let categoryId = req.params.id;
   try {
     let category = await db.one(`SELECT * FROM categories WHERE id=${req.params.id}`);
     res.status(200).json({

@@ -1,9 +1,8 @@
 const db = require("../db/index");
 
 const getSingleOwner = async (req, res, next) => {
-  let ownerId = req.params.id;
   try {
-    let owner = await db.any(`SELECT * FROM owners WHERE id=${ownerId}`);
+    let owner = await db.one(`SELECT * FROM owners WHERE id =${req.params.id}`);
     res.status(200).json({
       status: "success",
       message: "single owner",
@@ -21,10 +20,10 @@ const getSingleOwner = async (req, res, next) => {
 
 const deleteOwner = async (req, res, next) => {
   try {
-    let { ownerId } = req.params.id;
+    let { id } = req.params;
     let owner = await db.none(
-      "DELETE FROM owners WHERE id=$1 RETURNING *",
-      ownerId
+      "DELETE FROM owners WHERE id =$1",
+      id
     );
     res.status(200).json({
       status: "success",
@@ -43,8 +42,8 @@ const deleteOwner = async (req, res, next) => {
 
 const createOwner = async (req, res, next) => {
   try {
-    let owner = await db.one(`
-            INSERT INTO owners (owner_id, text, name, ratings, zip) VALUES ('${req.body.review_id}', '${req.body.text}', '${req.body.name}', '${req.body.ratings}', '${req.body.zip}') RETURNING *`);
+    let { owner_id, text, name, ratings, zip } = req.body
+    let owner = await db.one("INSERT INTO owners (owner_id, text, name, ratings, zip) VALUES ($1, $2, $3, $4, $5,$6)", [owner_id, text, name, ratings, zip]);
     res.status(200).json({
       status: "success",
       message: "created owner",

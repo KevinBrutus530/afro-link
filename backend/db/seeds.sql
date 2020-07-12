@@ -1,4 +1,3 @@
-
 \c afro_link;
 
 INSERT INTO types(type_name) VALUES
@@ -12,7 +11,6 @@ INSERT INTO types(type_name) VALUES
  ('food and drink'),
  ('education and career');
  
-
 INSERT INTO businesses(biz_name,hours) VALUES
  ('228 Grant Street Candle Co.','online business')
 ,('AphroChic','online business')

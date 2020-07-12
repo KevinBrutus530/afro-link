@@ -1,22 +1,22 @@
 const db = require("../db/index");
 
-const getAllReviews = async (req, res, next) => {
-  try {
-    let review = await db.one("SELECT * FROM reviews");
-    res.status(200).json({
-      status: "success",
-      message: "recieved all reviews",
-      payload: review
-    });
-  } catch (err) {
-    res.status(400).json({
-      status: "Error",
-      message: "Couldn't get reviews",
-      payload: err
-    });
-    next();
-  }
-};
+// const getAllReviews = async (req, res, next) => {
+//   try {
+//     let review = await db.one("SELECT * FROM reviews");
+//     res.status(200).json({
+//       status: "success",
+//       message: "recieved all reviews",
+//       payload: review
+//     });
+//   } catch (err) {
+//     res.status(400).json({
+//       status: "Error",
+//       message: "Couldn't get reviews",
+//       payload: err
+//     });
+//     next();
+//   }
+// };
 
 const getSingleAddress = async (req, res, next) => {
   let addressId = req.params.id;

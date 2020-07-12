@@ -1,6 +1,6 @@
 const categories = require("express").Router();
 
-const { getAllCategories, getSingleCategory, createCategory, editCategory, deleteCategory } = require("../queries/businesses");
+const { getAllCategories, getSingleCategory } = require("../queries/categories");
 
 categories.get("/", getAllCategories)
 
@@ -12,4 +12,4 @@ categories.get("/:id", getSingleCategory);
 
 // businesses.delete("/:id", deleteCategory);
 
-module.exports= businesses;
+module.exports= categories;

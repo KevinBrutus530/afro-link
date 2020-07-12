@@ -1,6 +1,6 @@
 const contacts = require("express").Router();
 
-const { getSingleContact , createContact, editContact, deleteContact } = require("../queries/businesses");
+const { getSingleContact , createContact, editContact, deleteContact } = require("../queries/contacts");
 
 
 contacts.get("/:id", getSingleContact);

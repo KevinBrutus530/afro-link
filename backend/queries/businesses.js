@@ -3,8 +3,8 @@ const db = require("../db/index");
 const getSingleBusiness = async (req, res, next) => {
   try {
     let { id } = req.params;
-    let business = await db.any(
-      `SELECT * FROM businesses WHERE id= $1`, [id]
+    let business = await db.one(
+      `SELECT * FROM businesses WHERE id= $1`, id
     );
     res.status(200).json({
       status: "success",

@@ -1,9 +1,8 @@
 const db = require("../db/index");
 
 const getSingleContact = async (req, res, next) => {
-    let contactId = req.params.id;
     try {
-      let review = await db.any(`SELECT * FROM contacts WHERE id=${contactId}`);
+      let contact = await db.one(`SELECT * FROM contacts WHERE id =${req.params.id}`);
       res.status(200).json({
         status: "success",
         message: "single contact",
@@ -21,10 +20,10 @@ const getSingleContact = async (req, res, next) => {
   
   const deleteContact = async (req, res, next) => {
     try {
-      let { contactId } = req.params.id;
+      let { id } = req.params.id;
       let contact = await db.none(
-        "DELETE FROM contacts WHERE id=$1 RETURNING *",
-        [contactId]
+        "DELETE FROM contact WHERE id = $1",
+        [id]
       );
       res.status(200).json({
         status: "success",
@@ -43,8 +42,8 @@ const getSingleContact = async (req, res, next) => {
   
   const createContact = async (req, res, next) => {
     try {
-      let contact = await db.one(`
-              INSERT INTO contacts (contact_id, phone, email, social_media) VALUES ('${req.body.contact_id}', '${req.body.phone}', '${req.body.email}', '${req.body.social_media}') RETURNING *`);
+      let { contact_id, phone, email, social_media } = req.body
+      let contact = await db.one("INSERT INTO contacts (contact_id, phone, email, social_media) VALUES ($1,$2,$3,$4,$5,$6) RETURNING *", [contact_id, phone, email, social_media]);
       res.status(200).json({
         status: "success",
         message: "created contact",

@@ -61,11 +61,11 @@ const createOwner = async (req, res, next) => {
 
 const editOwner = async (req, res, next) => {
   try {
-    let { ownerid, ownername } = req.body;
+    let { owner_id, owner_name } = req.body;
     let { id } = req.params;
     let owner = await db.one(
       "UPDATE owners SET owner_id=$1, owner_name=$2 WHERE id=$3",
-      [ownerid, ownername, ownerId]
+      [owner_id, owner_name, id]
     );
     res.status(200).json({
       status: "success",

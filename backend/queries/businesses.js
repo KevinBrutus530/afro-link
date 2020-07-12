@@ -58,6 +58,27 @@ const deleteBusiness = async (req, res, next) => {
   }
 };
 
+const getSearchForBusiness = async (req, res, next) => {
+  try{
+    let business = await db.any(`SELECT businesses.id, businesses.biz_name, businesses.hours, addresses.address_id, addresses.street, addresses.city, addresses.state, addresses.zip, addresses.website,
+                                contacts.contact_id, contacts.phone, contacts.email, contacts.social_media, categories.biz_id, categories.type_id, types.type_name FROM businesses RIGHT JOIN addresses ON addresses.address_id=businesses.id 
+                                JOIN contacts ON addresses.address_id = contacts.contact_id JOIN categories ON addresses.address_id=categories.biz_id JOIN types ON categories.type_id=types.id WHERE types.type_name LIKE '%${req.params.search}%'`)
+      res.status(200).json({
+        status: "success",
+        message: "found businesses",
+        payload: business
+
+      })
+  } catch(err){
+    res.status(400).json({
+      status: "Error",
+      message: "Error",
+      payload: err
+    });
+    next();
+  }
+}
+
 const createBusiness = async (req, res, next) => {
   try {
     let {biz_name, hours} = req.body
@@ -102,6 +123,7 @@ const editBusiness = async (req, res, next) => {
 module.exports = {
   getAllBusiness,
   getSingleBusiness,
+  getSearchForBusiness,
   createBusiness,
   editBusiness,
   deleteBusiness

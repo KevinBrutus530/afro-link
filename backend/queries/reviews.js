@@ -2,7 +2,7 @@ const db = require("../db/index");
 
 const getAllReviews = async (req, res, next) => {
   try {
-    let review = await db.one("SELECT * FROM reviews");
+    let review = await db.any("SELECT * FROM reviews");
     res.status(200).json({
       status: "success",
       message: "recieved all reviews",
@@ -19,9 +19,9 @@ const getAllReviews = async (req, res, next) => {
 };
 
 const getSingleReview = async (req, res, next) => {
-  let reviewId = req.params.id;
+  // let reviewId = req.params.id;
   try {
-    let review = await db.any(`SELECT * FROM reviews WHERE id=${reviewId}`);
+    let review = await db.one(`SELECT * FROM reviews WHERE id=${req.params.id}`);
     res.status(200).json({
       status: "success",
       message: "single review",

@@ -1,5 +1,25 @@
 const db = require("../db/index");
 
+const getAllBusiness = async (req, res, next) => {
+  try {
+    let business = await db.any(
+      "SELECT * FROM businesses"
+      );
+    res.status(200).json({
+      status: "success",
+      message: "all businesses",
+      payload: business
+    });
+  } catch (err) {
+    res.status(400).json({
+      status: "Error",
+      message: "Error",
+      payload: err
+    });
+    next();
+  }
+};
+
 const getSingleBusiness = async (req, res, next) => {
   try {
     let business = await db.one(
@@ -20,35 +40,13 @@ const getSingleBusiness = async (req, res, next) => {
   }
 };
 
-const getAllBusiness = async (req, res, next) => {
-  try {
-    let business = await db.any("SELECT * FROM businesses");
-    res.status(200).json({
-      status: "success",
-      message: "all businesses",
-      payload: business
-    });
-  } catch (err) {
-    res.status(400).json({
-      status: "Error",
-      message: "Error",
-      payload: err
-    });
-    next();
-  }
-};
-
 const deleteBusiness = async (req, res, next) => {
   try {
-    let { businessId } = req.params.id;
-    let business = await db.none(
-      "DELETE FROM businesses WHERE id=$1 RETURNING *",
-      businessId
-    );
+    let { id } = req.params
+    await db.none("DELETE FROM businesses WHERE id=$1", id);
     res.status(200).json({
       status: "success",
-      message: "deleted business",
-      payload: business
+      message: "deleted business"
     });
   } catch (err) {
     res.status(400).json({
@@ -62,8 +60,8 @@ const deleteBusiness = async (req, res, next) => {
 
 const createBusiness = async (req, res, next) => {
   try {
-    let business = await db.one(`
-        INSERT INTO businesses (biz_name, hours) VALUES ('${req.body.biz_name}', '${req.body.hours}') RETURNING *`);
+    let {biz_name, hours} = req.body
+    let business = await db.one("INSERT INTO businesses (biz_name, hours) VALUES ($1,$2) RETURNING *", [biz_name,hours]);
     res.status(200).json({
       status: "success",
       message: "added business",
@@ -81,11 +79,10 @@ const createBusiness = async (req, res, next) => {
 
 const editBusiness = async (req, res, next) => {
   try {
-    let { bizName, hours } = req.body;
-    let { businessId } = req.params;
+    let { biz_name, hours } = req.body;
+    let id = req.params.id;
     let business = await db.one(
-      "UPDATE businesses SET biz_name=$1, hours=$2 WHERE id=$3",
-      [bizName, hours, businessId]
+      `UPDATE businesses SET biz_name='${biz_name}', hours='${hours}' WHERE id='${id}' RETURNING *`
     );
     res.status(200).json({
       status: "success",
@@ -95,7 +92,7 @@ const editBusiness = async (req, res, next) => {
   } catch (err) {
     res.status(400).json({
       status: "Error",
-      message: "Error",
+      message: "Big Error",
       payload: err
     });
     next();

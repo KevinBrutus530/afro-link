@@ -2,7 +2,7 @@ const db = require("../db/index");
 
 const getAllCategories = async (req, res, next) => {
     try {
-      let category = await db.one("SELECT * FROM categories");
+      let category = await db.any("SELECT * FROM categories");
       res.status(200).json({
         status: "success",
         message: "recieved all categories",
@@ -11,7 +11,7 @@ const getAllCategories = async (req, res, next) => {
     } catch (err) {
       res.status(400).json({
         status: "Error",
-        message: "Couldn't get reviews",
+        message: "Couldn't get categories",
         payload: err
       });
       next();
@@ -19,9 +19,9 @@ const getAllCategories = async (req, res, next) => {
   };
 
 const getSingleCategory = async (req, res, next) => {
-  let categoryId = req.params.id;
+  // let categoryId = req.params.id;
   try {
-    let category = await db.any(`SELECT * FROM categories WHERE id=${categoryId}`);
+    let category = await db.one(`SELECT * FROM categories WHERE id=${req.params.id}`);
     res.status(200).json({
       status: "success",
       message: "single category",

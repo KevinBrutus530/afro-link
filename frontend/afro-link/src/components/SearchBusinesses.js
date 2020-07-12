@@ -15,7 +15,7 @@ const SearchBusinessForm = () => {
     // const [search, setSearch] = useState([]);
 
     const handleSearch = () => {
-        e.preventDefault();
+        // e.preventDefault();
     }
 
     return (

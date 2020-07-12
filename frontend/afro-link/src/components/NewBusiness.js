@@ -4,19 +4,15 @@ import {getAPI} from "../util/getAPI"
 import axios from "axios"
 import Modal from "react-bootstrap/Modal"
 import Button from 'react-bootstrap/Button';
-import ModalDialog from 'react-bootstrap/ModalDialog'
-import ModalHeader from 'react-bootstrap/ModalHeader'
-import ModalTitle from 'react-bootstrap/ModalTitle'
-import ModalBody from 'react-bootstrap/ModalBody'
-import ModalFooter from 'react-bootstrap/ModalFooter'
 
 const NewBusiness =()=> {
 
   const API = getAPI();
-  const [modalShow, setModalShow] = React.useState(false);
+  const [modalShow, setModalShow] = useState(false);
 
     const biz_name = useInput("")
-    const hours = useInput("")
+    const [hours, setHours]= useState("Online Store 24/7")
+    // const hours = useInput("")
     const owner_name = useInput("")
     const type_name = useInput("") //add  new function let owner/user create one
     const phone = useInput("")
@@ -34,7 +30,7 @@ const NewBusiness =()=> {
       try {
         let newBiz = await axios.post(`${API}/businesses`, {
           biz_name: biz_name.value,
-          hours: hours.value,
+          hours: hours,
         });
         if(newBiz.data.status==="success"){
           console.log(newBiz.data.payload) 
@@ -57,8 +53,43 @@ const NewBusiness =()=> {
               Business Hour
             </Modal.Title>
           </Modal.Header>
-          <Modal.Body>
+          <Modal.Body onSubmit={(e)=>{debugger}}>
             <h4>available hour</h4>
+            <div class="container">
+    <div class="row">
+        <div class='col-sm-6'>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker3'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-time"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker3').datetimepicker({
+                    format: 'LT'
+                });
+            });
+        </script>
+    </div>
+</div>
+            {/* <label for="Mon">Monday:</label>
+            <input type="time" id="Mon" name="Mon"></input>
+            <label for="Tue">Tuesday:</label>
+            <input type="time" id="Tue" name="Tue"></input>
+            <label for="Wed">Wednesday:</label>
+            <input type="time" id="Wed" name="Wed"></input>
+            <label for="Thur">Thursday:</label>
+            <input type="time" id="Thur" name="Thur"></input>
+            <label for="Fri">Friday:</label>
+            <input type="time" id="Fri" name="Fri"></input>
+            <label for="Sat">Saturday:</label>
+            <input type="time" id="Sat" name="Sat"></input>
+            <label for="Sun">Sunday:</label>
+            <input type="time" id="Sun" name="Sun"></input> */}
             <p>
               Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
               dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
@@ -66,15 +97,19 @@ const NewBusiness =()=> {
             </p>
           </Modal.Body>
           <Modal.Footer>
-            <Button onClick={props.onHide}>Close</Button>
+            <Button onClick={props.onHide}>Submit Time</Button>
           </Modal.Footer>
         </Modal>
       );
     }
 
     const handleHours = (e)=>{
-      debugger
-      setModalShow(true)
+      // debugger
+      if(e.currentTarget.selectedIndex===0){
+        setHours(e.currentTarget.value)
+      }else{
+        setModalShow(true)
+      }
     }
 
         return (
@@ -84,9 +119,9 @@ const NewBusiness =()=> {
               <input type="text" placeholder="Business Name" required {...biz_name} />
 
               <label>Hour of Service: </label>
-              <select onChange={()=>handleHours()} >
+              <select onChange={(e)=>handleHours(e)} >
                 <option defaultValue="1">Online Store 24/7</option>
-                <option defaultValue="2">add businesses hours</option>
+                <option defaultValue="2" >add businesses hours</option>
               </select>
 
               <label>Owner Name: </label>

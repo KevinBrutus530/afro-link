@@ -1,9 +1,11 @@
 import React from 'react'
 import {useInput} from "../util/useInput"
-// import {getAPI} from "../util/getAPI"
+import {getAPI} from "../util/getAPI"
 import axios from "axios"
 
 const NewBusiness =()=> {
+
+  const API = getAPI();
 
     const biz_name = useInput("")
     const hours = useInput("")
@@ -18,7 +20,17 @@ const NewBusiness =()=> {
     const zip = useInput("")
     const website = useInput("")
 
-    const handleNewBiz =(e)=>{
+    const handleNewBiz = async (e)=>{
+      try {
+        debugger
+        let neeBiz = await axios.post(`${API}/businesses`, {
+          biz_name: biz_name.value,
+          hours: hours.value,
+        });
+        console.log(neeBiz.data)
+      } catch (error) {
+        
+      }
         return null
     }
 
@@ -28,10 +40,10 @@ const NewBusiness =()=> {
               <label>Business Name: </label>
               <input type="text" placeholder="Business Name" {...biz_name} />
 
-              <label>Hour: </label>
+              <label>Hour of Service: </label>
               <input type="text" placeholder="Business Hours" {...hours} />
 
-              <label>Business Owner: </label>
+              <label>Owner Name: </label>
               <input type="text" placeholder="Owner Name" {...owner_name} />
 
               <label>Types Name: </label>
@@ -47,37 +59,39 @@ const NewBusiness =()=> {
               <input type="email" placeholder="Email Address" {...email} />
               <label>Social Media: </label>
               <input type="text" placeholder="Ins/Facebook" {...social_media} />
-              <table>
-                <tr>
-                  <td class="label">Street address</td>
-                  <td class="slimField">
-                    <input class="field" id="street_number" {...street}/>
-                  </td>
-                  <td class="wideField" colspan="2">
-                    <input class="field" id="route" />
-                  </td>
-                </tr>
-                <tr>
-                  <td class="label">City</td>
-                  <td class="wideField" colspan="3">
-                    <input class="field" id="locality" {...city}/>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="label">State</td>
-                  <td class="slimField">
+              <label>Store Page: </label>
+              <input type="text" placeholder="Online Website" {...website} />
+              <div>
+                <div>
+                  <span className="label">Street address</span>
+                  <span className="slimField">
+                    <input className="field" id="street_number" {...street}/>
+                  </span>
+                  <span className="wideField" colSpan="2">
+                    <input className="field" id="route" />
+                  </span>
+                </div>
+                <div>
+                  <span className="label">City</span>
+                  <span className="wideField" colSpan="3">
+                    <input className="field" id="locality" {...city}/>
+                  </span>
+                </div>
+                <div>
+                  <span className="label">State</span>
+                  <span className="slimField">
                     <input
-                      class="field"
+                      className="field"
                       id="administrative_area_level_1"
                        {...state}
                     />
-                  </td>
-                  <td class="label">Zip code</td>
-                  <td class="wideField">
-                    <input class="field" id="postal_code" {...zip}/>
-                  </td>
-                </tr>
-              </table>
+                  </span>
+                  <span className="label">Zip code</span>
+                  <span className="wideField">
+                    <input className="field" id="postal_code" {...zip}/>
+                  </span>
+                </div>
+              </div>
 
               <button type="submit">
                 <span>Create Business</span>

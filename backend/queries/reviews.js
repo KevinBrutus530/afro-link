@@ -19,7 +19,6 @@ const getAllReviews = async (req, res, next) => {
 };
 
 const getSingleReview = async (req, res, next) => {
-  // let reviewId = req.params.id;
   try {
     let review = await db.one(`SELECT * FROM reviews WHERE id=${req.params.id}`);
     res.status(200).json({
@@ -39,10 +38,9 @@ const getSingleReview = async (req, res, next) => {
 
 const deleteReview = async (req, res, next) => {
   try {
-    let { reviewId } = req.params.id;
-    let review = await db.none(
-      "DELETE FROM reviews WHERE id=$1 RETURNING *",
-      [reviewId]
+    let { id } = req.params;
+    let review = await db.none("DELETE FROM reviews WHERE id=$1",
+      [id]
     );
     res.status(200).json({
       status: "success",
@@ -61,8 +59,8 @@ const deleteReview = async (req, res, next) => {
 
 const createReview = async (req, res, next) => {
   try {
-    let review = await db.one(`
-            INSERT INTO reviews (review_id, text, name, ratings, zip) VALUES ('${req.body.review_id}', '${req.body.text}', '${req.body.name}', '${req.body.ratings}', '${req.body.zip}') RETURNING *`);
+    let { review_id, text, name, ratings, zip } = req.body
+    let review = await db.one("INSERT INTO reviews (review_id, text, name, ratings) VALUES ($1,$2, $3, $4) RETURNING *", [review_id, text, name, ratings, zip]);
     res.status(200).json({
       status: "success",
       message: "created review",

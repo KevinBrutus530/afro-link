@@ -42,8 +42,8 @@ const deleteOwner = async (req, res, next) => {
 
 const createOwner = async (req, res, next) => {
   try {
-    let { owner_id, text, name, ratings, zip } = req.body
-    let owner = await db.one("INSERT INTO owners (owner_id, text, name, ratings, zip) VALUES ($1, $2, $3, $4, $5,$6)", [owner_id, text, name, ratings, zip]);
+    let { owner_id, name } = req.body
+    let owner = await db.one("INSERT INTO owners (owner_id, owner_name) VALUES ($1,$2) RETURNING *", [owner_id, name]);
     res.status(200).json({
       status: "success",
       message: "created owner",
@@ -61,11 +61,11 @@ const createOwner = async (req, res, next) => {
 
 const editOwner = async (req, res, next) => {
   try {
-    let { ownerid, ownername } = req.body;
-    let { ownerId } = req.params;
+    let { owner_id, owner_name } = req.body;
+    let { id } = req.params;
     let owner = await db.one(
       "UPDATE owners SET owner_id=$1, owner_name=$2 WHERE id=$3",
-      [ownerid, ownername, ownerId]
+      [owner_id, owner_name, id]
     );
     res.status(200).json({
       status: "success",

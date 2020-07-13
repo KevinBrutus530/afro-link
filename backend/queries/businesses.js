@@ -3,7 +3,7 @@ const db = require("../db/index");
 const getAllBusiness = async (req, res, next) => {
   try {
     let business = await db.any(
-      "SELECT businesses.id, businesses.biz_name, businesses.hours, addresses.street, addresses.city, addresses.state, addresses.zip, addresses.website, contacts.phone, contacts.email, contacts.social_media, types.type_name FROM contacts RIGHT JOIN addresses ON addresses.address_id=contact_id JOIN businesses  ON businesses.id=addresses.address_id JOIN categories ON categories.biz_id=addresses.address_id JOIN types ON types.id=categories.type_id"
+      "SELECT businesses.id, businesses.biz_name, businesses.hours, addresses.street, addresses.city, addresses.state, addresses.zip, addresses.website, contacts.phone, contacts.email, contacts.social_media, types.type_name, owners.owner_name FROM contacts RIGHT JOIN addresses ON addresses.address_id=contact_id JOIN owners ON owners.owner_id=addresses.address_id JOIN businesses  ON businesses.id=owners.owner_id JOIN categories ON categories.biz_id=addresses.address_id JOIN types ON types.id=categories.type_id"
       );
     res.status(200).json({
       status: "success",
@@ -25,7 +25,7 @@ const getAllBusiness = async (req, res, next) => {
 const getSingleBusiness = async (req, res, next) => {
   try {
     let business = await db.one(
-      `SELECT businesses.id, businesses.biz_name, businesses.hours, addresses.street, addresses.city, addresses.state, addresses.zip, addresses.website, contacts.phone, contacts.email, contacts.social_media, types.type_name FROM contacts RIGHT JOIN addresses ON addresses.address_id=contact_id JOIN businesses  ON businesses.id=addresses.address_id JOIN categories ON categories.biz_id=addresses.address_id JOIN types ON types.id=categories.type_id WHERE businesses.id= ${req.params.id}`
+      `SELECT businesses.id, businesses.biz_name, businesses.hours, addresses.street, addresses.city, addresses.state, addresses.zip, addresses.website, contacts.phone, contacts.email, contacts.social_media, types.type_name, owners.owner_name FROM contacts RIGHT JOIN addresses ON addresses.address_id=contact_id JOIN owners ON owners.owner_id=addresses.address_id JOIN businesses  ON businesses.id=owners.owner_id JOIN categories ON categories.biz_id=addresses.address_id JOIN types ON types.id=categories.type_id WHERE businesses.id =${req.params.id}`
     );
     res.status(200).json({
       status: "success",

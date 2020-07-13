@@ -1,0 +1,37 @@
+/* colors
+/* SCSS HEX */
+/* $tea-green: #bbd8b3ff;
+$orange-yellow: #f3b61fff;
+$citron: #a29f15ff;
+$rosewood: #510d0aff;
+$black-chocolate: #191102ff; */
+
+.logoHeader {
+  width: auto;
+  height: 13em;
+}
+
+.headerNav {
+  display: flex;
+  justify-content: space-between;
+  /* border-bottom: 2px solid #bbd8b3ff; */
+  box-shadow: 3px 10px 15px #f3b61fff;
+  height: 9.5em;
+  text-align: center;
+  width: 101%;
+  position: sticky;
+  top: 0;
+  background-color: #f3b61fff;
+  background-image: url("https://i.ya-webdesign.com/images/african-border-png-6.png"),
+    linear-gradient(
+      180deg,
+      rgb(34, 22, 1) 14%,
+      rgba(42, 155, 11, 0.56) 46%,
+      rgb(209, 25, 15, 1) 75%,
+      #510d0aff 105%
+    );
+
+  background-position: center;
+  background-size: 200vw;
+  background-repeat: repeat, no-repeat;
+}

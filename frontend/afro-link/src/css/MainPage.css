@@ -1,0 +1,20 @@
+.mainPageContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+  padding: 2em;
+  color: whitesmoke;
+  font-family: "MuseoModerno", cursive;
+}
+
+.searchBiz {
+  border: 1px goldenrod solid;
+  border-radius: 25px;
+  margin: 1em;
+}
+
+.addBiz {
+  border: 1px goldenrod solid;
+  border-radius: 25px;
+  margin: 1em;
+}

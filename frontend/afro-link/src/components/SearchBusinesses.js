@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {useInput} from "../util/useInput";
+// import {useInput} from "../util/useInput";
 import axios from 'axios';
 
 // this app is looking to promote bob in NYC
@@ -12,7 +12,7 @@ import axios from 'axios';
 
 const SearchBusinessForm = () => {
     // const location = useInput("");
-    // const category = useInput("");
+    const [category, setCategory] = useState("");
     const [ businessTypes, setBusinessTypes ] = useState([]) 
     // const [search, setSearch] = useState([]);
 
@@ -29,19 +29,23 @@ const SearchBusinessForm = () => {
         fetchData()
     },[])
 
-    const handleSearch = () => {
-        debugger
-        // e.preventDefault();
+    const handleSearch = (e) => {
+        e.preventDefault();
+    }
+
+    const handleType = (e) => {
+        setCategory(e.target.value)
     }
 
     const types = businessTypes.map((type, i) => {
-        return <option value={i} key={i}>{type.type_name}</option>
+        return <option value={type.type_name} key={i}>{type.type_name}</option>
     })
 
     return (
         <div>
             <form onSubmit={handleSearch}>
-                <select>
+                <select value={category} onChange={handleType}>
+                <option value="">Select Business Type</option>
                     {types}
                 </select>
                 {/* <input type="text" placeholder="What you looking for?" {...location}/> */}

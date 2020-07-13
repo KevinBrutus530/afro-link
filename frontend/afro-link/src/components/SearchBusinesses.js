@@ -1,5 +1,6 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {useInput} from "../util/useInput";
+import axios from 'axios';
 
 // this app is looking to promote bob in NYC
 // users look for businesses by category
@@ -11,26 +12,37 @@ import {useInput} from "../util/useInput";
 
 const SearchBusinessForm = () => {
     // const location = useInput("");
-    const category = useInput("");
+    // const category = useInput("");
+    const [ businessTypes, setBusinessTypes ] = useState([]) 
     // const [search, setSearch] = useState([]);
 
+    useEffect(() => {
+        const fetchData = async () => {
+            try{
+                let res = await axios.get("http://localhost:3000/categories/");
+                setBusinessTypes(res.data.payload);
+            } catch (err) {
+                console.log(err);
+                setBusinessTypes([]);
+            }
+        }
+        fetchData()
+    },[])
+
     const handleSearch = () => {
+        debugger
         // e.preventDefault();
     }
+
+    const types = businessTypes.map((type, i) => {
+        return <option value={i} key={i}>{type.type_name}</option>
+    })
 
     return (
         <div>
             <form onSubmit={handleSearch}>
                 <select>
-                    <option>Food & Drink</option>
-                    <option>Arts & Culture</option>
-                    <option>Education & Career</option>
-                    <option>Gifts & Beyond</option>
-                    <option>Beauty</option>
-                    <option>Health & Fitness</option>
-                    <option>Bookstore</option>
-                    <option>Home Decor</option>
-                    <option>Clothing & Accessories</option>
+                    {types}
                 </select>
                 {/* <input type="text" placeholder="What you looking for?" {...location}/> */}
                 <button type="submit">Connect</button>

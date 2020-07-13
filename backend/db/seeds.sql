@@ -3,7 +3,7 @@
 INSERT INTO types(type_name) VALUES
  ('Home Decor'),
  ('Arts & Culture'),
- ('Gifts & beyond'),
+ ('Gifts & Beyond'),
  ('Beauty'),
  ('Health & Fitness'),
  ('Literature'),

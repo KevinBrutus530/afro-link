@@ -4,7 +4,6 @@ import {getAPI} from "../util/getAPI"
 import axios from "axios"
 import Modal from "react-bootstrap/Modal"
 import Button from 'react-bootstrap/Button';
-// var TimePicker = require('basic-react-timepicker');
 
 const NewBusiness =()=> {
 
@@ -56,20 +55,26 @@ const NewBusiness =()=> {
           </Modal.Header>
           <Modal.Body onSubmit={(e)=>{debugger}}>
             <h4>available hour</h4>
-            {/* <TimePicker beginLimit="3:00PM" endLimit="6:00PM"/> */}
             <label for="Mon">Monday:</label>
+            <input type="time" id="Mon" name="Mon" value="2:30PM"></input>
             <input type="time" id="Mon" name="Mon" ></input>
             <label for="Tue">Tuesday:</label>
             <input type="time" id="Tue" name="Tue"></input>
+            <input type="time" id="Tue" name="Tue"></input>
             <label for="Wed">Wednesday:</label>
             <input type="time" id="Wed" name="Wed"></input>
-            <label for="Thur">Thursday:</label>
-            <input type="time" id="Thur" name="Thur"></input>
+            <input type="time" id="Wed" name="Wed"></input>
+            <label for="Thu">Thursday:</label>
+            <input type="time" id="Thu" name="Thu"></input>
+            <input type="time" id="Thu" name="Thu"></input>
             <label for="Fri">Friday:</label>
+            <input type="time" id="Fri" name="Fri"></input>
             <input type="time" id="Fri" name="Fri"></input>
             <label for="Sat">Saturday:</label>
             <input type="time" id="Sat" name="Sat"></input>
+            <input type="time" id="Sat" name="Sat"></input>
             <label for="Sun">Sunday:</label>
+            <input type="time" id="Sun" name="Sun"></input>
             <input type="time" id="Sun" name="Sun"></input>
           </Modal.Body>
           <Modal.Footer>

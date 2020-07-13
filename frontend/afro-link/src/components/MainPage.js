@@ -6,13 +6,13 @@ const MainPage = () => {
   return (
     <div className="mainPageContainer">
       <div className="searchBiz">
-        Search Business
+        <h1 className="headingMain">Search Black-owned Businesses</h1>
         <SearchBusinessForm />
       </div>
       <div className="addBiz">
-        Add Business
+       <h1 className="headingMain"> Add Your Own Business</h1>
         <br />
-        <button>Click Here to Add Your Business</button>
+          <button>Click Here to Add Your Business</button>
       </div>
     </div>
   );

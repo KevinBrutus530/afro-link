@@ -7,14 +7,60 @@
   font-family: "MuseoModerno", cursive;
 }
 
+.headingMain {
+  padding: 1em;
+  font-weight: bolder;
+  text-shadow: 1px 2px 2px #f3b61fff;
+}
+
 .searchBiz {
   border: 1px goldenrod solid;
   border-radius: 25px;
   margin: 1em;
+  background-image: url("https://www.transparenttextures.com/patterns/dark-geometric.png"), url("../images/girlsSearchingOnline.jpg");
+  background-size: cover;
+  background-repeat: repeat, no-repeat;
+  background-position: center;
+  height: 32em;
+  width: auto;
+  box-shadow: 1px 3px 5px #f3b61fff;
+   animation-duration: 2s;
+  animation-name: slideIn;
+  transition: transform 2s;
+}
+
+.searchBiz:hover {
+  transform: translateY(10px);
 }
 
 .addBiz {
   border: 1px goldenrod solid;
   border-radius: 25px;
   margin: 1em;
+    background-image: url("https://www.transparenttextures.com/patterns/dark-geometric.png"), url("../images/coupleOpenSign.jpg");
+  background-size: cover;
+  background-repeat: repeat, no-repeat;
+  background-position: center;
+  height: 32em;
+  width: auto;
+  box-shadow: 1px 3px 5px  #f3b61fff;
+  animation-duration: 2s;
+  animation-name: slideIn;
+  transition: transform 2s;
+}
+
+.addBiz:hover {
+  transform: translateY(10px);
+}
+
+@keyframes slideIn {
+  from {
+    margin-right: 100%;
+    width: 150%; 
+  }
+
+  to {
+    margin-right: 0%;
+    width: 100%;
+  }
 }

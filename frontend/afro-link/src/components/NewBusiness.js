@@ -9,10 +9,10 @@ const NewBusiness =()=> {
 
   const API = getAPI();
   const [modalShow, setModalShow] = useState(false);
-
-    const biz_name = useInput("")
-    const [hours, setHours]= useState("Online Store 24/7")
-    // const hours = useInput("")
+  
+  const biz_name = useInput("")
+  const [hours, setHours]= useState("Online Store 24/7")
+  const workingHours = useInput("")
     const owner_name = useInput("")
     const type_name = useInput("") //add  new function let owner/user create one
     const phone = useInput("")
@@ -40,7 +40,26 @@ const NewBusiness =()=> {
         alert(error.status)
       }
     }
+
+  // let time = {Mon:"close",Tue:"close",Wed:"close",Thu:"close",Fri:"close",Sat:"close",Sun:"close"}
+  let time = {Mon:"close",Tue:"close",Wed:"close",Thu:"close",Fri:"close",Sat:"close",Sun:"close"}
+
+    const handleInput=(e)=>{
+      if(time[e.currentTarget.name]=="close"){
+        console.log("hitFirst")
+        time[e.currentTarget.name]={open:"",close:""}
+        time[e.currentTarget.name][e.currentTarget.id]=e.currentTarget.value
+      }else{
+        console.log("hitSecond")
+        console.log(time[e.currentTarget.name][e.currentTarget.id])
+        time[e.currentTarget.name][e.currentTarget.id]=e.currentTarget.value
+      }
+      console.log(time)//undefined
+      console.log(hours)
+    }
+    
     const HourTable= (props)=> {
+      // debugger
       return (
         <Modal
           {...props}
@@ -53,33 +72,36 @@ const NewBusiness =()=> {
               Business Hour
             </Modal.Title>
           </Modal.Header>
-          <Modal.Body onSubmit={(e)=>{debugger}}>
-            <h4>available hour</h4>
-            <label for="Mon">Monday:</label>
-            <input type="time" id="Mon" name="Mon" value="2:30PM"></input>
-            <input type="time" id="Mon" name="Mon" ></input>
-            <label for="Tue">Tuesday:</label>
-            <input type="time" id="Tue" name="Tue"></input>
-            <input type="time" id="Tue" name="Tue"></input>
-            <label for="Wed">Wednesday:</label>
-            <input type="time" id="Wed" name="Wed"></input>
-            <input type="time" id="Wed" name="Wed"></input>
-            <label for="Thu">Thursday:</label>
-            <input type="time" id="Thu" name="Thu"></input>
-            <input type="time" id="Thu" name="Thu"></input>
-            <label for="Fri">Friday:</label>
-            <input type="time" id="Fri" name="Fri"></input>
-            <input type="time" id="Fri" name="Fri"></input>
-            <label for="Sat">Saturday:</label>
-            <input type="time" id="Sat" name="Sat"></input>
-            <input type="time" id="Sat" name="Sat"></input>
-            <label for="Sun">Sunday:</label>
-            <input type="time" id="Sun" name="Sun"></input>
-            <input type="time" id="Sun" name="Sun"></input>
+          <Modal.Body >
+          <form>
+            <h5>select available hour or leave blank for close day</h5>
+            <label>Monday:</label>
+            <input type="time" id="open" name="Mon" onChange={(e)=>{handleInput(e)}} ></input>
+            <input type="time" id="close" name="Mon" onChange={(e)=>{handleInput(e)}} ></input>
+            <label>Tuesday:</label>
+            <input type="time" id="open" name="Tue" onChange={(e)=>{handleInput(e)}}></input>
+            <input type="time" id="close" name="Tue" onChange={(e)=>{handleInput(e)}}></input>
+            <label>Wednesday:</label>
+            <input type="time" id="open" name="Wed" onChange={(e)=>{handleInput(e)}}></input>
+            <input type="time" id="close" name="Wed" onChange={(e)=>{handleInput(e)}}></input>
+            <label>Thursday:</label>
+            <input type="time" id="open" name="Thu" onChange={(e)=>{handleInput(e)}}></input>
+            <input type="time" id="close" name="Thu" onChange={(e)=>{handleInput(e)}}></input>
+            <label>Friday:</label>
+            <input type="time" id="open" name="Fri" onChange={(e)=>{handleInput(e)}}></input>
+            <input type="time" id="close" name="Fri" onChange={(e)=>{handleInput(e)}}></input>
+            <label>Saturday:</label>
+            <input type="time" id="open" name="Sat" onChange={(e)=>{handleInput(e)}}></input>
+            <input type="time" id="close" name="Sat" onChange={(e)=>{handleInput(e)}}></input>
+            <label>Sunday:</label>
+            <input type="time" id="open" name="Sun" onChange={(e)=>{handleInput(e)}}></input>
+            <input type="time" id="close" name="Sun" onChange={(e)=>{handleInput(e)}}></input>
+          </form>
+            <Modal.Footer>
+            </Modal.Footer>
+            <Button onClick={()=>{props.onHide();props.setTime()}}>Submit Time
+            </Button>
           </Modal.Body>
-          <Modal.Footer>
-            <Button onClick={props.onHide}>Submit Time</Button>
-          </Modal.Footer>
         </Modal>
       );
     }
@@ -92,7 +114,7 @@ const NewBusiness =()=> {
         setModalShow(true)
       }
     }
-
+      console.log(hours)
         return (
           <div>
             <form className="newBusiness" onSubmit={handleNewBiz}>
@@ -163,6 +185,7 @@ const NewBusiness =()=> {
                 <HourTable
                   show={modalShow}
                   onHide={() => setModalShow(false)}
+                  setTime={()=>{setHours(JSON.stringify(time))}}
                 />
               </>
             </form>

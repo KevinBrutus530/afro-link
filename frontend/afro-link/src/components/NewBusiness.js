@@ -4,6 +4,7 @@ import {getAPI} from "../util/getAPI"
 import axios from "axios"
 import Modal from "react-bootstrap/Modal"
 import Button from 'react-bootstrap/Button';
+// var TimePicker = require('basic-react-timepicker');
 
 const NewBusiness =()=> {
 
@@ -55,29 +56,9 @@ const NewBusiness =()=> {
           </Modal.Header>
           <Modal.Body onSubmit={(e)=>{debugger}}>
             <h4>available hour</h4>
-            <div class="container">
-    <div class="row">
-        <div class='col-sm-6'>
-            <div class="form-group">
-                <div class='input-group date' id='datetimepicker3'>
-                    <input type='text' class="form-control" />
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-time"></span>
-                    </span>
-                </div>
-            </div>
-        </div>
-        <script type="text/javascript">
-            $(function () {
-                $('#datetimepicker3').datetimepicker({
-                    format: 'LT'
-                });
-            });
-        </script>
-    </div>
-</div>
-            {/* <label for="Mon">Monday:</label>
-            <input type="time" id="Mon" name="Mon"></input>
+            {/* <TimePicker beginLimit="3:00PM" endLimit="6:00PM"/> */}
+            <label for="Mon">Monday:</label>
+            <input type="time" id="Mon" name="Mon" ></input>
             <label for="Tue">Tuesday:</label>
             <input type="time" id="Tue" name="Tue"></input>
             <label for="Wed">Wednesday:</label>
@@ -89,12 +70,7 @@ const NewBusiness =()=> {
             <label for="Sat">Saturday:</label>
             <input type="time" id="Sat" name="Sat"></input>
             <label for="Sun">Sunday:</label>
-            <input type="time" id="Sun" name="Sun"></input> */}
-            <p>
-              Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-              dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-              consectetur ac, vestibulum at eros.
-            </p>
+            <input type="time" id="Sun" name="Sun"></input>
           </Modal.Body>
           <Modal.Footer>
             <Button onClick={props.onHide}>Submit Time</Button>
@@ -123,6 +99,7 @@ const NewBusiness =()=> {
                 <option defaultValue="1">Online Store 24/7</option>
                 <option defaultValue="2" >add businesses hours</option>
               </select>
+              {/* <TimePicker beginLimit="3:00PM" endLimit="6:00PM"/> */}
 
               <label>Owner Name: </label>
               <input type="text" placeholder="Owner Name" {...owner_name} />

@@ -2,7 +2,7 @@ const db = require("../db/index");
 
 const getAllCategories = async (req, res, next) => {
     try {
-      let category = await db.any("SELECT * FROM categories");
+      let category = await db.any("SELECT * FROM types");
       res.status(200).json({
         status: "success",
         message: "recieved all categories",
@@ -20,7 +20,7 @@ const getAllCategories = async (req, res, next) => {
 
 const getSingleCategory = async (req, res, next) => {
   try {
-    let category = await db.one(`SELECT * FROM categories WHERE id=${req.params.id}`);
+    let category = await db.one(`SELECT businesses.id, businesses.biz_name, businesses.hours, categories.biz_id, categories.type_id, types.id, types.type_name FROM businesses RIGHT JOIN categories ON categories.biz_id=businesses.id JOIN types ON categories.type_id=types.id WHERE types.id = ${req.params.id}`);
     res.status(200).json({
       status: "success",
       message: "single category",

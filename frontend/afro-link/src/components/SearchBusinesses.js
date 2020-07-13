@@ -34,7 +34,6 @@ const SearchBusinessForm = () => {
     }
 
     const handleType = (e) => {
-        debugger
         setCategory(e.target.value)
     }
 

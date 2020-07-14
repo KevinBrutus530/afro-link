@@ -12,63 +12,69 @@ $black-chocolate: #191102ff; */
   margin: auto;
   padding: 2em;
   color: whitesmoke;
-  /* font-family: "MuseoModerno", cursive; */
-  font-family: Nineteenth;
+  font-family: Righteous;
 }
 
 .headingMain {
+  display: flex;
+  margin: auto;
+  justify-content: space-around;
   padding: 1em;
-  font-weight: 900;
-  font-size: 52pt;
-  background: -webkit-linear-gradient(45deg, #510d0aff, #f3b61fff, #510d0aff);
+  font-weight: 600;
+  font-size: 50pt;
   -webkit-background-clip: text;
+  background-color: rgba(247, 192, 54, 0.70);
   -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1.5px rgba(81, 14, 10, 0.897);
+  /* letter-spacing: 0.0025px; */
 }
 
 .searchBiz {
-  border: 1px goldenrod solid;
-  border-radius: 20px;
+  border: 1px goldenrod ridge;
+  border-radius: 15px;
   margin: 1em;
-  background-image: url("https://www.transparenttextures.com/patterns/dark-geometric.png"), url("../images/girlsSearchingOnline.jpg");
+  background-image: url("https://www.transparenttextures.com/patterns/white-carbonfiber.png"),
+    url("../images/girlsSearchingOnline.jpg");
   background-size: cover;
   background-repeat: repeat, no-repeat;
   background-position: center;
   height: 32em;
   width: auto;
-  box-shadow: 1px 3px 5px #f3b61fff;
-   animation-duration: 2s;
+  box-shadow: 4px 4px 10px #191102ff;
+  animation-duration: 2s;
   animation-name: slideIn;
   transition: transform 1s;
 }
 
 .searchBiz:hover {
-  transform: scale(1.05,1.05);
+  transform: scale(1.05, 1.05);
 }
 
 .addBiz {
-  border: 1px goldenrod solid;
-  border-radius: 20px;
+  border: 1px goldenrod ridge;
+  border-radius: 15px;
   margin: 1em;
-    background-image: url("https://www.transparenttextures.com/patterns/dark-geometric.png"), url("../images/coupleOpenSign.jpg");
+  background-image: url("https://www.transparenttextures.com/patterns/graphcoders-lil-fiber.png"),
+    url("../images/coupleOpenSign.jpg");
   background-size: cover;
   background-repeat: repeat, no-repeat;
   background-position: center;
   height: 32em;
   width: auto;
-  box-shadow: 1px 3px 5px  #f3b61fff;
+  box-shadow: 4px 4px 10px #191102ff;
   animation-duration: 2s;
   animation-name: slideIn;
   transition: transform 1s;
 }
 
 .addBiz:hover {
-  transform: scale(1.05,1.05);
+  transform: scale(1.05, 1.05);
 }
 
 @keyframes slideIn {
   from {
     margin-right: 100%;
-    width: 150%; 
+    width: 150%;
   }
 
   to {
@@ -88,24 +94,20 @@ $black-chocolate: #191102ff; */
   font-weight: 900;
   font-size: 20pt;
   text-shadow: 1px 2px 2px #191102ff;
-  box-shadow: 1px 3px 5px #191102ff; 
+  box-shadow: 1px 3px 5px #191102ff;
   height: auto;
-  width:20em;
-  /* padding: 15px; */
+  width: 20em;
   text-align: center;
-   /* background-color: #f3b61fff; */
   background-image: url("https://www.transparenttextures.com/patterns/dark-geometric.png");
-background-color: black;
+  background-color: black;
   background-position: center;
   background-size: contain;
   background-repeat: repeat;
- 
 }
 
 .addBizBtn:active {
   position: relative;
   top: 2px;
-  
 }
 
 .addBizBtn:focus {

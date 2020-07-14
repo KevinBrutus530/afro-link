@@ -1,0 +1,50 @@
+/* colors
+/* SCSS HEX */
+/* $tea-green: #bbd8b3ff;
+$orange-yellow: #f3b61fff;
+$citron: #a29f15ff;
+$rosewood: #510d0aff;
+$black-chocolate: #191102ff; */
+
+.selectBiz {
+  display: flex;
+  margin: auto;
+  justify-content: space-evenly;
+  font-family: Nineteenth;
+}
+
+.selectBizForm {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+
+.selectBizForm > :focus {
+  outline: none;
+}
+
+.selectBizBar {
+  text-align-last: center;
+  border: none;
+  border-radius: 25px;
+  width: 16em;
+  height: auto;
+  /* padding: 0.5em; */
+  margin-right: 5px;
+  color: #191102ff;
+  font-size: 18pt;
+  font-weight: 900;
+  box-shadow: 1px 3px 5px #191102ff;
+  background-color: rgba(243, 183, 31, 0.849);
+  cursor: pointer;
+}
+
+.selectBizBar > option {
+  text-justify: center;
+  color: #191102ff;
+  font-size: larger;
+}
+
+#connect {
+  width: 5em;
+}

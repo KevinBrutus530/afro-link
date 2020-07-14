@@ -3,7 +3,7 @@ const db = require("../db/index");
 const getAllBusiness = async (req, res, next) => {
   try {
     let business = await db.any(
-      "SELECT * FROM businesses"
+      "SELECT businesses.id, businesses.biz_name, businesses.hours, addresses.street, addresses.city, addresses.state, addresses.zip, addresses.website, contacts.phone, contacts.email, contacts.social_media, types.type_name, owners.owner_name FROM contacts RIGHT JOIN addresses ON addresses.address_id=contact_id JOIN owners ON owners.owner_id=addresses.address_id JOIN businesses  ON businesses.id=owners.owner_id JOIN categories ON categories.biz_id=addresses.address_id JOIN types ON types.id=categories.type_id"
       );
     res.status(200).json({
       status: "success",
@@ -20,10 +20,12 @@ const getAllBusiness = async (req, res, next) => {
   }
 };
 
+
+
 const getSingleBusiness = async (req, res, next) => {
   try {
     let business = await db.one(
-      `SELECT * FROM businesses WHERE id = ${req.params.id}`
+      `SELECT businesses.id, businesses.biz_name, businesses.hours, addresses.street, addresses.city, addresses.state, addresses.zip, addresses.website, contacts.phone, contacts.email, contacts.social_media, types.type_name, owners.owner_name FROM contacts RIGHT JOIN addresses ON addresses.address_id=contact_id JOIN owners ON owners.owner_id=addresses.address_id JOIN businesses  ON businesses.id=owners.owner_id JOIN categories ON categories.biz_id=addresses.address_id JOIN types ON types.id=categories.type_id WHERE businesses.id =${req.params.id}`
     );
     res.status(200).json({
       status: "success",
@@ -60,9 +62,9 @@ const deleteBusiness = async (req, res, next) => {
 
 const getSearchForBusiness = async (req, res, next) => {
   try{
-    let business = await db.any(`SELECT businesses.id, businesses.biz_name, businesses.hours, addresses.address_id, addresses.street, addresses.city, addresses.state, addresses.zip, addresses.website,
-                                contacts.contact_id, contacts.phone, contacts.email, contacts.social_media, categories.biz_id, categories.type_id, types.type_name FROM businesses RIGHT JOIN addresses ON addresses.address_id=businesses.id 
-                                JOIN contacts ON addresses.address_id = contacts.contact_id JOIN categories ON addresses.address_id=categories.biz_id JOIN types ON categories.type_id=types.id WHERE types.type_name LIKE '%${req.params.search}%'`)
+    let searchBiz = req.body.type_name
+    console.log(searchBiz)
+    let business = await db.any(`SELECT businesses.id, businesses.biz_name, businesses.hours, owners.owner_name, types.type_name,contacts.phone, contacts.email, contacts.social_media, addresses.street, addresses.city, addresses.state, addresses.zip, addresses.website FROM businesses RIGHT JOIN contacts ON contacts.contact_id=businesses.id JOIN addresses ON addresses.address_id=contacts.contact_id JOIN owners ON contacts.contact_id=owners.owner_id JOIN categories ON categories.biz_id=owners.owner_id JOIN types ON types.id=categories.type_id WHERE types.type_name LIKE '%${searchBiz}%'`)
       res.status(200).json({
         status: "success",
         message: "found businesses",

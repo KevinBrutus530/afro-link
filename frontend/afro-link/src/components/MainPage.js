@@ -1,20 +1,21 @@
-import React from 'react';
-import SearchBusinessForm from './SearchBusinesses';
+import React from "react";
+import SearchBusinessForm from "./SearchBusinesses";
+import "../css/MainPage.css";
 
 const MainPage = () => {
-    return (
-        <div>
-            <div className="search">
-                Search Business
-                <SearchBusinessForm />
-            </div>
-            <div className="add">
-                Add Business
-                <br/>
-                <button>Click Here to Add Your Business</button>
-            </div>
-        </div>
-    )
-}
+  return (
+    <div className="mainPageContainer">
+      <div className="searchBiz">
+        Search Business
+        <SearchBusinessForm />
+      </div>
+      <div className="addBiz">
+        Add Business
+        <br />
+        <button>Click Here to Add Your Business</button>
+      </div>
+    </div>
+  );
+};
 
-export default MainPage
+export default MainPage;

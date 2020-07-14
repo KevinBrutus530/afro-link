@@ -1,15 +1,15 @@
 \c afro_link;
 
 INSERT INTO types(type_name) VALUES
- ('home decor'),
- ('arts and culture'),
- ('gift and beyond'),
- ('beauty'),
- ('health and fitness'),
- ('bookstore'),
- ('clothes and accs'),
- ('food and drink'),
- ('education and career');
+ ('Home Decor'),
+ ('Arts & Culture'),
+ ('Gifts & Beyond'),
+ ('Beauty'),
+ ('Health & Fitness'),
+ ('Literature'),
+ ('Clothing & Accessories'),
+ ('Food & Drink'),
+ ('Education & Career');
  
 INSERT INTO businesses(biz_name,hours) VALUES
  ('228 Grant Street Candle Co.','online business')

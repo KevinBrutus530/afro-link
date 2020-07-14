@@ -1,13 +1,21 @@
-import React from 'react'
+import React from "react";
+import { NavLink } from "react-router-dom";
+import logo from "../images/circleLogoYellow.png";
+import "../css/Header.css";
 
-const Header =()=> {
+const Header = () => {
+  return (
+    <div>
+      <nav className="headerNav">
+        {" "}
+        <p>
+          <NavLink exact to="/">
+            <img className="logoHeader" src={logo} alt="logo" />
+          </NavLink>
+        </p>
+      </nav>
+    </div>
+  );
+};
 
-        return (
-            <div>
-                <p>logo here</p>
-            </div>
-        )
-    }
-
-
-export default Header
+export default Header;

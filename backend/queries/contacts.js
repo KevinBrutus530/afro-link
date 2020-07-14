@@ -2,7 +2,7 @@ const db = require("../db/index");
 
 const getSingleContact = async (req, res, next) => {
     try {
-      let contact = await db.one(`SELECT * FROM contacts WHERE id =${req.params.id}`);
+      let contact = await db.one(`SELECT addresses.address_id, addresses.street, addresses.city, addresses.state, addresses.zip, addresses.website, businesses.biz_name, businesses.hours, contacts.phone, contacts.email, contacts.social_media FROM contacts RIGHT JOIN addresses ON addresses.address_id=contact_id JOIN businesses  ON businesses.id=addresses.address_id WHERE businesses.id =${req.params.id}`);
       res.status(200).json({
         status: "success",
         message: "single contact",
@@ -43,7 +43,7 @@ const getSingleContact = async (req, res, next) => {
   const createContact = async (req, res, next) => {
     try {
       let { contact_id, phone, email, social_media } = req.body
-      let contact = await db.one("INSERT INTO contacts (contact_id, phone, email, social_media) VALUES ($1,$2,$3,$4,$5,$6) RETURNING *", [contact_id, phone, email, social_media]);
+      let contact = await db.one("INSERT INTO contacts (contact_id, phone, email, social_media) VALUES ($1, $2, $3, $4) RETURNING *", [contact_id, phone, email, social_media]);
       res.status(200).json({
         status: "success",
         message: "created contact",

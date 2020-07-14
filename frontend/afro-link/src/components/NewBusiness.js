@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState,useEffect} from 'react'
 import {useInput} from "../util/useInput"
 import {getAPI} from "../util/getAPI"
 import axios from "axios"
@@ -10,9 +10,9 @@ const NewBusiness =()=> {
   const API = getAPI();
   const [modalShow, setModalShow] = useState(false);
   
-  const biz_name = useInput("")
-  const [hours, setHours]= useState("Online Store 24/7")
-  const workingHours = useInput("")
+    const biz_name = useInput("")
+    const [hours, setHours]= useState("Online Store 24/7")
+    let time = {Mon:"close",Tue:"close",Wed:"close",Thu:"close",Fri:"close",Sat:"close",Sun:"close"}
     const owner_name = useInput("")
     const type_name = useInput("") //add  new function let owner/user create one
     const phone = useInput("")
@@ -23,7 +23,28 @@ const NewBusiness =()=> {
     const state = useInput("")
     const zip = useInput("")
     const website = useInput("")
+    // const [category, setCategory] = useState("");
+    const [ businessTypes, setBusinessTypes ] = useState([]) 
     
+    useEffect(() => {
+      const fetchData = async () => {
+        
+        try{
+          let res = await axios.get("http://localhost:3000/categories/");
+              debugger
+              setBusinessTypes(res.data.payload);
+          } catch (err) {
+              console.log(err);
+              setBusinessTypes([]);
+          }
+      }
+      fetchData()
+  },[])
+
+const types = businessTypes.map((type,i) => {
+  debugger
+  return <option value={type.id} key={i}>{type.type_name}</option>
+})
 
     const handleNewBiz = async (e)=>{
       e.preventDefault()
@@ -42,20 +63,14 @@ const NewBusiness =()=> {
     }
 
   // let time = {Mon:"close",Tue:"close",Wed:"close",Thu:"close",Fri:"close",Sat:"close",Sun:"close"}
-  let time = {Mon:"close",Tue:"close",Wed:"close",Thu:"close",Fri:"close",Sat:"close",Sun:"close"}
 
     const handleInput=(e)=>{
       if(time[e.currentTarget.name]=="close"){
-        console.log("hitFirst")
         time[e.currentTarget.name]={open:"",close:""}
         time[e.currentTarget.name][e.currentTarget.id]=e.currentTarget.value
       }else{
-        console.log("hitSecond")
-        console.log(time[e.currentTarget.name][e.currentTarget.id])
         time[e.currentTarget.name][e.currentTarget.id]=e.currentTarget.value
       }
-      console.log(time)//undefined
-      console.log(hours)
     }
     
     const HourTable= (props)=> {
@@ -114,7 +129,6 @@ const NewBusiness =()=> {
         setModalShow(true)
       }
     }
-      console.log(hours)
         return (
           <div>
             <form className="newBusiness" onSubmit={handleNewBiz}>
@@ -126,16 +140,14 @@ const NewBusiness =()=> {
                 <option defaultValue="1">Online Store 24/7</option>
                 <option defaultValue="2" >add businesses hours</option>
               </select>
-              {/* <TimePicker beginLimit="3:00PM" endLimit="6:00PM"/> */}
-
               <label>Owner Name: </label>
               <input type="text" placeholder="Owner Name" {...owner_name} />
 
               <label>Types Name: </label>
-              <select name="Types Name" {...type_name}>
-                <option value="1">1</option>
-                <option value="2">2</option>
-              </select>
+              <select name = "Type Name" {...type_name}>
+                <option value="">Select Business Type</option>
+                    {types}
+                </select>
 
               <label>Contact Number: </label>
               <input type="number" placeholder="Contact Number" {...phone} />

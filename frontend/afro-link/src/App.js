@@ -1,24 +1,25 @@
-import React from 'react';
-import {Route,Switch} from "react-router-dom";
-import Header from "./components/Header"
-import NewBusiness from "./components/NewBusiness"
-import MainPage from "./components/MainPage"
+import React from "react";
+import { Route, Switch } from "react-router-dom";
+import Header from "./components/Header";
+import NewBusiness from "./components/NewBusiness";
+import MainPage from "./components/MainPage";
+import "./App.css";
 
 // import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 
 function App() {
   return (
     <div className="App">
-    <Header />
+      <Header />
 
-    <Switch>
-      <Route exact path="/" component={MainPage}/> //testing
-      <Route exact path="/newBusiness" component={NewBusiness}/> //testing
-      {/* <Route exact path="/" component={Home}/> */}
-      {/* <Route exact path="/NewBusiness" component={NewBusiness}/> */}
-      {/* <Route exact path="/Search" component={Search}/> */}
-      {/* <Route exact path="/Results" component={Results}/> */}
-    </Switch>
+      <Switch>
+        <Route exact path="/" component={MainPage} /> //testing
+        <Route exact path="/newBusiness" component={NewBusiness} /> //testing
+        {/* <Route exact path="/" component={Home}/> */}
+        {/* <Route exact path="/NewBusiness" component={NewBusiness}/> */}
+        {/* <Route exact path="/Search" component={Search}/> */}
+        {/* <Route exact path="/Results" component={Results}/> */}
+      </Switch>
     </div>
   );
 }

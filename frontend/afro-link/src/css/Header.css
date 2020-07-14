@@ -9,12 +9,16 @@ $black-chocolate: #191102ff; */
 .logoHeader {
   width: auto;
   height: 13em;
+  transition: transform 2s;
+}
+
+.logoHeader:hover {
+  transform: translatey(5px);
 }
 
 .headerNav {
   display: flex;
   justify-content: space-between;
-  /* border-bottom: 2px solid #bbd8b3ff; */
   box-shadow: 3px 10px 15px #f3b61fff;
   height: 9.5em;
   text-align: center;

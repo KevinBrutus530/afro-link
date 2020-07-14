@@ -38,7 +38,7 @@ const SearchBusinessForm = () => {
     }
 
     const types = businessTypes.map((type, i) => {
-        return <option value={type.type_name} key={i}>{type.type_name}</option>
+        return <option value={type.id} key={i}>{type.type_name}</option>
     })
 
     return (

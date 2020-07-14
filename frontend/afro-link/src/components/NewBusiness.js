@@ -1,19 +1,18 @@
-import React, {useState} from 'react'
+import React, {useState,useEffect} from 'react'
 import {useInput} from "../util/useInput"
 import {getAPI} from "../util/getAPI"
 import axios from "axios"
 import Modal from "react-bootstrap/Modal"
 import Button from 'react-bootstrap/Button';
-// var TimePicker = require('basic-react-timepicker');
 
 const NewBusiness =()=> {
 
   const API = getAPI();
   const [modalShow, setModalShow] = useState(false);
-
+  
     const biz_name = useInput("")
     const [hours, setHours]= useState("Online Store 24/7")
-    // const hours = useInput("")
+    let time = {Mon:"close",Tue:"close",Wed:"close",Thu:"close",Fri:"close",Sat:"close",Sun:"close"}
     const owner_name = useInput("")
     const type_name = useInput("") //add  new function let owner/user create one
     const phone = useInput("")
@@ -24,7 +23,28 @@ const NewBusiness =()=> {
     const state = useInput("")
     const zip = useInput("")
     const website = useInput("")
+    // const [category, setCategory] = useState("");
+    const [ businessTypes, setBusinessTypes ] = useState([]) 
     
+    useEffect(() => {
+      const fetchData = async () => {
+        
+        try{
+          let res = await axios.get("http://localhost:3000/categories/");
+              debugger
+              setBusinessTypes(res.data.payload);
+          } catch (err) {
+              console.log(err);
+              setBusinessTypes([]);
+          }
+      }
+      fetchData()
+  },[])
+
+const types = businessTypes.map((type,i) => {
+  debugger
+  return <option value={type.id} key={i}>{type.type_name}</option>
+})
 
     const handleNewBiz = async (e)=>{
       e.preventDefault()
@@ -41,7 +61,20 @@ const NewBusiness =()=> {
         alert(error.status)
       }
     }
+
+  // let time = {Mon:"close",Tue:"close",Wed:"close",Thu:"close",Fri:"close",Sat:"close",Sun:"close"}
+
+    const handleInput=(e)=>{
+      if(time[e.currentTarget.name]=="close"){
+        time[e.currentTarget.name]={open:"",close:""}
+        time[e.currentTarget.name][e.currentTarget.id]=e.currentTarget.value
+      }else{
+        time[e.currentTarget.name][e.currentTarget.id]=e.currentTarget.value
+      }
+    }
+    
     const HourTable= (props)=> {
+      // debugger
       return (
         <Modal
           {...props}
@@ -54,27 +87,36 @@ const NewBusiness =()=> {
               Business Hour
             </Modal.Title>
           </Modal.Header>
-          <Modal.Body onSubmit={(e)=>{debugger}}>
-            <h4>available hour</h4>
-            {/* <TimePicker beginLimit="3:00PM" endLimit="6:00PM"/> */}
-            <label for="Mon">Monday:</label>
-            <input type="time" id="Mon" name="Mon" ></input>
-            <label for="Tue">Tuesday:</label>
-            <input type="time" id="Tue" name="Tue"></input>
-            <label for="Wed">Wednesday:</label>
-            <input type="time" id="Wed" name="Wed"></input>
-            <label for="Thur">Thursday:</label>
-            <input type="time" id="Thur" name="Thur"></input>
-            <label for="Fri">Friday:</label>
-            <input type="time" id="Fri" name="Fri"></input>
-            <label for="Sat">Saturday:</label>
-            <input type="time" id="Sat" name="Sat"></input>
-            <label for="Sun">Sunday:</label>
-            <input type="time" id="Sun" name="Sun"></input>
+          <Modal.Body >
+          <form>
+            <h5>select available hour or leave blank for close day</h5>
+            <label>Monday:</label>
+            <input type="time" id="open" name="Mon" onChange={(e)=>{handleInput(e)}} ></input>
+            <input type="time" id="close" name="Mon" onChange={(e)=>{handleInput(e)}} ></input>
+            <label>Tuesday:</label>
+            <input type="time" id="open" name="Tue" onChange={(e)=>{handleInput(e)}}></input>
+            <input type="time" id="close" name="Tue" onChange={(e)=>{handleInput(e)}}></input>
+            <label>Wednesday:</label>
+            <input type="time" id="open" name="Wed" onChange={(e)=>{handleInput(e)}}></input>
+            <input type="time" id="close" name="Wed" onChange={(e)=>{handleInput(e)}}></input>
+            <label>Thursday:</label>
+            <input type="time" id="open" name="Thu" onChange={(e)=>{handleInput(e)}}></input>
+            <input type="time" id="close" name="Thu" onChange={(e)=>{handleInput(e)}}></input>
+            <label>Friday:</label>
+            <input type="time" id="open" name="Fri" onChange={(e)=>{handleInput(e)}}></input>
+            <input type="time" id="close" name="Fri" onChange={(e)=>{handleInput(e)}}></input>
+            <label>Saturday:</label>
+            <input type="time" id="open" name="Sat" onChange={(e)=>{handleInput(e)}}></input>
+            <input type="time" id="close" name="Sat" onChange={(e)=>{handleInput(e)}}></input>
+            <label>Sunday:</label>
+            <input type="time" id="open" name="Sun" onChange={(e)=>{handleInput(e)}}></input>
+            <input type="time" id="close" name="Sun" onChange={(e)=>{handleInput(e)}}></input>
+          </form>
+            <Modal.Footer>
+            </Modal.Footer>
+            <Button onClick={()=>{props.onHide();props.setTime()}}>Submit Time
+            </Button>
           </Modal.Body>
-          <Modal.Footer>
-            <Button onClick={props.onHide}>Submit Time</Button>
-          </Modal.Footer>
         </Modal>
       );
     }
@@ -87,7 +129,6 @@ const NewBusiness =()=> {
         setModalShow(true)
       }
     }
-
         return (
           <div>
             <form className="newBusiness" onSubmit={handleNewBiz}>
@@ -99,16 +140,14 @@ const NewBusiness =()=> {
                 <option defaultValue="1">Online Store 24/7</option>
                 <option defaultValue="2" >add businesses hours</option>
               </select>
-              {/* <TimePicker beginLimit="3:00PM" endLimit="6:00PM"/> */}
-
               <label>Owner Name: </label>
               <input type="text" placeholder="Owner Name" {...owner_name} />
 
               <label>Types Name: </label>
-              <select name="Types Name" {...type_name}>
-                <option value="1">1</option>
-                <option value="2">2</option>
-              </select>
+              <select name = "Type Name" {...type_name}>
+                <option value="">Select Business Type</option>
+                    {types}
+                </select>
 
               <label>Contact Number: </label>
               <input type="number" placeholder="Contact Number" {...phone} />
@@ -158,6 +197,7 @@ const NewBusiness =()=> {
                 <HourTable
                   show={modalShow}
                   onHide={() => setModalShow(false)}
+                  setTime={()=>{setHours(JSON.stringify(time))}}
                 />
               </>
             </form>

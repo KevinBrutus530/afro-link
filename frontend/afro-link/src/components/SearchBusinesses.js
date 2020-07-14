@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 
 const SearchBusinessForm = () => {
@@ -31,6 +31,7 @@ const SearchBusinessForm = () => {
     })
 
     return (
+
         <div>
             <form onSubmit={() => businessRedirect(category)}>
                 <select value={category} onChange={handleType}>

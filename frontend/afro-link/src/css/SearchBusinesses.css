@@ -10,7 +10,7 @@ $black-chocolate: #191102ff; */
   display: flex;
   margin: auto;
   justify-content: space-evenly;
-  font-family: Nineteenth;
+  font-family: "Candal", sans-serif;
 }
 
 .selectBizForm {
@@ -24,27 +24,30 @@ $black-chocolate: #191102ff; */
 }
 
 .selectBizBar {
+  display: flex;
+  justify-content: space-around;
   text-align-last: center;
   border: none;
   border-radius: 25px;
   width: 16em;
   height: auto;
-  /* padding: 0.5em; */
-  margin-right: 5px;
+  padding: 0.5em;
+  margin-right: 10px;
   color: #191102ff;
-  font-size: 18pt;
-  font-weight: 900;
-  box-shadow: 1px 3px 5px #191102ff;
+  font-size: 12pt;
+  font-weight: lighter;
+  box-shadow: 1px 3px 6px #191102ff;
+  text-shadow: 2px 1px 2px rgba(233, 201, 121, 0.746);
   background-color: rgba(243, 183, 31, 0.849);
   cursor: pointer;
 }
 
 .selectBizBar > option {
-  text-justify: center;
+  text-align-last: center;
   color: #191102ff;
   font-size: larger;
 }
 
 #connect {
-  width: 5em;
+  width: 7em;
 }

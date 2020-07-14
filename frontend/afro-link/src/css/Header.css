@@ -15,7 +15,7 @@ $black-chocolate: #191102ff; */
 }
 
 .logoHeader:hover {
-  transform: translate(-5px, -5px);
+  transform: translatey(-10px);
 }
 
 .headerNav {
@@ -28,13 +28,16 @@ $black-chocolate: #191102ff; */
   position: sticky;
   top: 0;
   background-color: #f3b61fff;
-  background-image: url("https://i.ya-webdesign.com/images/african-border-png-6.png"),url("https://www.transparenttextures.com/patterns/diagmonds.png"), 
+  background-image: url("https://i.ya-webdesign.com/images/african-border-png-6.png"),
+    url("https://www.transparenttextures.com/patterns/diagmonds.png"),
     linear-gradient(
       180deg,
       rgb(34, 22, 1) 14%,
       rgba(42, 155, 11, 0.56) 46%,
+      #f3b61fff 60%,
       rgb(209, 25, 15, 1) 75%,
-      #510d0aff 105%
+      rgb(81, 18, 10) 95%,
+      rgb(34, 22, 1) 104%
     );
 
   background-position: center;

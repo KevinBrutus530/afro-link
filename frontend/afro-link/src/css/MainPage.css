@@ -11,22 +11,23 @@ $black-chocolate: #191102ff; */
   grid-template-columns: 1fr 1fr;
   margin: auto;
   padding: 2em;
-  color: whitesmoke;
-  font-family: Righteous;
+  /* color: whitesmoke; */
+  font-family: "Bungee", cursive;
+  /* font-family: "Monoton", cursive; */
+  text-align: center;
 }
 
 .headingMain {
   display: flex;
   margin: auto;
   justify-content: space-around;
-  padding: 1em;
-  font-weight: 600;
-  font-size: 50pt;
-  -webkit-background-clip: text;
-  background-color: rgba(247, 192, 54, 0.70);
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1.5px rgba(81, 14, 10, 0.897);
-  /* letter-spacing: 0.0025px; */
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-weight: 570;
+  font-size: 44pt;
+  text-shadow: 1px 3px 5px #191102ff;
+  color: rgba(104, 17, 13, 0.842);
+  -webkit-text-stroke: 2px rgba(243, 183, 31, 0.863);
 }
 
 .searchBiz {
@@ -90,13 +91,14 @@ $black-chocolate: #191102ff; */
   color: #f3b61fff;
   border: none;
   border-radius: 25px;
-  font-family: Nineteenth;
-  font-weight: 900;
-  font-size: 20pt;
+  font-family: "Candal", sans-serif;
+  font-weight: lighter;
+  font-size: 14pt;
   text-shadow: 1px 2px 2px #191102ff;
-  box-shadow: 1px 3px 5px #191102ff;
+  box-shadow: 1px 3px 3px rgb(41, 28, 3);
   height: auto;
   width: 20em;
+  padding: 0.5em;
   text-align: center;
   background-image: url("https://www.transparenttextures.com/patterns/dark-geometric.png");
   background-color: black;

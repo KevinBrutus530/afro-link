@@ -4,7 +4,7 @@ import {getAPI} from "../util/getAPI"
 import axios from "axios"
 import Modal from "react-bootstrap/Modal"
 import Button from 'react-bootstrap/Button';
-
+import GoogleMap from "./GoogleMap"
 const NewBusiness =()=> {
 
   const API = getAPI();
@@ -18,12 +18,13 @@ const NewBusiness =()=> {
     const phone = useInput("")
     const email = useInput("")
     const social_media = useInput("")
-    const street = useInput("")
-    const city = useInput("")
-    const state = useInput("")
-    const zip = useInput("")
     const website = useInput("")
-    // const [category, setCategory] = useState("");
+    const [houseNum, setHouseNum]= useState("")
+    const [street, setStreet]= useState("")
+    const [city, setCity]= useState("")
+    const [state, setState]= useState("")
+    const [zip, setZip]= useState("")
+
     const [ businessTypes, setBusinessTypes ] = useState([]) 
     
     useEffect(() => {
@@ -31,7 +32,7 @@ const NewBusiness =()=> {
         
         try{
           let res = await axios.get("http://localhost:3000/categories/");
-              debugger
+              // debugger
               setBusinessTypes(res.data.payload);
           } catch (err) {
               console.log(err);
@@ -42,7 +43,7 @@ const NewBusiness =()=> {
   },[])
 
 const types = businessTypes.map((type,i) => {
-  debugger
+  // debugger
   return <option value={type.id} key={i}>{type.type_name}</option>
 })
 
@@ -159,19 +160,27 @@ const types = businessTypes.map((type,i) => {
               <label>Store Page: </label>
               <input type="text" placeholder="Online Website" {...website} />
               <div>
+              {/* <GoogleMap props={setCity,setHouseNum,setStreet,setState}/> */}
+              <GoogleMap 
+              setHouseNum={(e)=>setHouseNum(e)}
+              setStreet={(e)=>setStreet(e)}
+              setCity={(e)=>setCity(e)}
+              setState={(e)=>setState(e)}
+
+              />
                 <div>
                   <span className="label">Street address</span>
                   <span className="slimField">
-                    <input className="field" id="street_number" {...street}/>
+                    <input className="field" id="street_number" placeholder="house number" defaultValue={houseNum}/>
                   </span>
                   <span className="wideField" colSpan="2">
-                    <input className="field" id="route" />
+                    <input className="field" id="route" placeholder="street/route" defaultValue={street}/>
                   </span>
                 </div>
                 <div>
                   <span className="label">City</span>
                   <span className="wideField" colSpan="3">
-                    <input className="field" id="locality" {...city}/>
+                    <input className="field" id="locality" placeholder="city" defaultValue={city}/>
                   </span>
                 </div>
                 <div>
@@ -180,12 +189,13 @@ const types = businessTypes.map((type,i) => {
                     <input
                       className="field"
                       id="administrative_area_level_1"
-                       {...state}
+                       placeholder="state"
+                       defaultValue={state}
                     />
                   </span>
                   <span className="label">Zip code</span>
                   <span className="wideField">
-                    <input className="field" id="postal_code" {...zip}/>
+                    <input className="field" id="postal_code" placeholder="area code"/>
                   </span>
                 </div>
               </div>

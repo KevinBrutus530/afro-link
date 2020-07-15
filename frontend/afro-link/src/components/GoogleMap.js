@@ -35,7 +35,7 @@ const GoogleMap = ({setCity,setHouseNum,setStreet,setState}) => {
           setCity(e.terms[2].value)
           setState(e.terms[3].value)
 
-          fetchZip(e.reference)
+          // fetchZip(e.reference)
           // fetchZip(e.place_id)
           }}
 

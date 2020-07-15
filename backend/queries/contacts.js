@@ -2,7 +2,7 @@ const db = require("../db/index");
 
 const getSingleContact = async (req, res, next) => {
     try {
-      let contact = await db.one(`SELECT addresses.address_id, addresses.street, addresses.city, addresses.state, addresses.zip, addresses.website, businesses.biz_name, businesses.hours, contacts.phone, contacts.email, contacts.social_media FROM contacts RIGHT JOIN addresses ON addresses.address_id=contact_id JOIN businesses  ON businesses.id=addresses.address_id WHERE businesses.id =${req.params.id}`);
+      let contact = await db.one(`SELECT businesses.biz_name, businesses.hours, addresses.address_id, addresses.street, addresses.city, addresses.state, addresses.zip, addresses.website,contacts.phone, contacts.email, contacts.social_media FROM contacts RIGHT JOIN addresses ON addresses.address_id=contact_id JOIN businesses  ON businesses.id=contacts.contact_id WHERE businesses.id =${req.params.id}`);
       res.status(200).json({
         status: "success",
         message: "single contact",

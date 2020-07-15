@@ -94,7 +94,7 @@ const NewBusiness = () => {
       >
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-vcenter">
-            Business Hour
+            Business Hours
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
@@ -250,8 +250,8 @@ const NewBusiness = () => {
 
         <label>Hours of Service: </label>
         <select onChange={(e) => handleHours(e)}>
+          <option defaultValue="2">Add business Hours</option>
           <option defaultValue="1">Online Store 24/7</option>
-          <option defaultValue="2">add businesses hours</option>
         </select>
         <label>Owner Name: </label>
         <input type="text" placeholder="Owner Name" {...owner_name} />

@@ -5,6 +5,9 @@ import axios from "axios";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import GoogleMap from "./GoogleMap";
+import "../css/NewBusinss.css";
+
+
 const NewBusiness = () => {
   const API = getAPI();
   const [modalShow, setModalShow] = useState(false);
@@ -100,7 +103,7 @@ const NewBusiness = () => {
         <Modal.Body>
           <form>
             <h5>select available hour or leave blank for close day</h5>
-            <label>Monday:</label>
+            <label className="timeLabel">Monday:</label>
             <input
               type="time"
               id="open"
@@ -117,7 +120,7 @@ const NewBusiness = () => {
                 handleInput(e);
               }}
             ></input>
-            <label>Tuesday:</label>
+            <label className="timeLabel">Tuesday:</label>
             <input
               type="time"
               id="open"
@@ -134,7 +137,7 @@ const NewBusiness = () => {
                 handleInput(e);
               }}
             ></input>
-            <label>Wednesday:</label>
+            <label className="timeLabel">Wednesday:</label>
             <input
               type="time"
               id="open"
@@ -151,7 +154,7 @@ const NewBusiness = () => {
                 handleInput(e);
               }}
             ></input>
-            <label>Thursday:</label>
+            <label className="timeLabel">Thursday:</label>
             <input
               type="time"
               id="open"
@@ -168,7 +171,7 @@ const NewBusiness = () => {
                 handleInput(e);
               }}
             ></input>
-            <label>Friday:</label>
+            <label className="timeLabel">Friday:</label>
             <input
               type="time"
               id="open"
@@ -185,7 +188,7 @@ const NewBusiness = () => {
                 handleInput(e);
               }}
             ></input>
-            <label>Saturday:</label>
+            <label className="timeLabel">Saturday:</label>
             <input
               type="time"
               id="open"
@@ -202,7 +205,7 @@ const NewBusiness = () => {
                 handleInput(e);
               }}
             ></input>
-            <label>Sunday:</label>
+            <label className="timeLabel">Sunday:</label>
             <input
               type="time"
               id="open"
@@ -250,8 +253,8 @@ const NewBusiness = () => {
 
         <label>Hours of Service: </label>
         <select onChange={(e) => handleHours(e)}>
+          <option defaultValue="1">Online Store</option>
           <option defaultValue="2">Add business Hours</option>
-          <option defaultValue="1">Online Store 24/7</option>
         </select>
         <label>Owner Name: </label>
         <input type="text" placeholder="Owner Name" {...owner_name} />

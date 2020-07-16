@@ -285,6 +285,7 @@ const NewBusiness = () => {
             setStreet={(e) => setStreet(e)}
             setCity={(e) => setCity(e)}
             setState={(e) => setState(e)}
+            setZip={(e) => setZip(e)}
           />
           <div>
             <span className="label">Street address</span>
@@ -328,7 +329,7 @@ const NewBusiness = () => {
             </span>
             <span className="label">Zip Code</span>
             <span className="wideField">
-              <input className="field" id="postal_code" placeholder="Zip" />
+              <input className="field" id="postal_code" placeholder="Zip" defaultValue={zip}/>
             </span>
           </div>
         </div>

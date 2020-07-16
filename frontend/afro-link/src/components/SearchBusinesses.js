@@ -45,7 +45,6 @@ const SearchBusinessForm = () => {
           <option value="">Select Business Type</option>
           {types}
         </select>
-        {/* <input type="text" placeholder="What you looking for?" {...location}/> */}
         <button onClick={() => businessRedirect(category)}>
           Connect
         </button>

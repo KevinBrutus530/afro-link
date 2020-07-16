@@ -5,45 +5,48 @@ import axios from "axios";
 const Results = () => {
   const { id } = useParams();
   const [results, setResults] = useState([]);
+  const [bizType, setBizType] = useState("");
 
   useEffect(() => {
     const getResults = async () => {
       try {
         let res = await axios.get(`http://localhost:3000/categories/${id}`);
         setResults(res.data.payload);
-        debugger
+        setBizType(res.data.payload[0].type_name)
       } catch (err) {
         console.log(err);
       }
     };
     getResults();
   }, []);
+  console.log(results)
 
   let resultDisplay = results.map((biz, i) => {
+    let notAvl = "Not Available"
+    let bizz = biz.street ===  null ? biz.street = notAvl : biz.street
+    let hrsSub = biz.hours ===  "" ? biz.hours = notAvl : biz.hours
     return (
       <>
       <li key={i} value={biz.biz_name}>
-        Name: {biz.biz_name}
+        {biz.biz_name}
       </li>
       <li key={i} value={biz.hours}>
-        Hours: {biz.hours}
+        Hours: {hrsSub}
       </li>      
       <li key={i} value={biz.street}>
-        Address: {biz.street} {biz.city} {biz.state} {biz.zip}
+        Address: {bizz} {biz.city} {biz.state} {biz.zip}
       </li>
       <li key={i} value={biz.website}>
         Website: <a href={biz.website}>{biz.website}</a>
       </li>
-      <li key={i} value={biz.type_name}>
-        Type: {biz.type_name}
-      </li>
+      <br/>
       </>
     );
   });
 
   return (
     <div style={{ color: "white" }}>
-      <h1>Businesses List</h1>
+      <h1>{bizType}</h1>
       <ul style={{listStyleType:"none"}}>{resultDisplay}</ul>
     </div>
   );

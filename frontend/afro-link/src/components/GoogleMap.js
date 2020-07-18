@@ -12,6 +12,7 @@ const GoogleMap = ({setCity,setHouseNum,setStreet,setState, setZip}) => {
     try {
       let res= await axios.get(`https://maps.googleapis.com/maps/api/geocode/json?place_id=${id}`
       +`&key=${process.env.REACT_APP_GOOGLE_API_KEY}`)
+      debugger
       return setZip(res.data.results[0].address_components[7].long_name)
       //res.data.results[0].geometry.location.lat
       //res.data.results[0].geometry.location.lng

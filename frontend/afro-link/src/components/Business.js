@@ -1,7 +1,8 @@
 import React from 'react';
 
 const Business = ({resultDisplay}) => {
-    // let businessId = resultDisplay.id
+    // debugger
+    // let businessId = resultDisplay.biz_id
     let noAddress = ""
     let noHours = "Not Available"
     let bizz = resultDisplay.street ===  null ? resultDisplay.street = noAddress : resultDisplay.street
@@ -9,11 +10,11 @@ const Business = ({resultDisplay}) => {
 
 
     const handleBusiness = (e) =>{
-        // debugger
+        debugger
     }
     return (
-        <div key={resultDisplay.id}  onClick={handleBusiness}>
-            <h3 value={resultDisplay.id}>
+        <div key={resultDisplay.biz_id} value={resultDisplay.biz_id} onClick={()=>handleBusiness(resultDisplay.biz_id)}>
+            <h3>
                 {resultDisplay.biz_name}
             </h3>
             <li>

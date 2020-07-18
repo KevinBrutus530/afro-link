@@ -3,9 +3,8 @@ import { useInput } from "../util/useInput";
 import { getAPI } from "../util/getAPI";
 import axios from "axios";
 import GoogleMap from "./GoogleMap";
-import TimeTable from "./TimeTable"
+import TimeTable from "./TimeTable";
 import "../css/NewBusinss.css";
-
 
 const NewBusiness = () => {
   const API = getAPI();
@@ -22,12 +21,12 @@ const NewBusiness = () => {
     Sat: "close",
     Sun: "close",
   };
-  const owner_name = useInput("");
+  const owner_name = useInput("n/a");
   const type_name = useInput(""); //add  new function let owner/user create one
-  const phone = useInput("");
-  const email = useInput("");
-  const social_media = useInput("");
-  const website = useInput("");
+  const phone = useInput("n/a");
+  const email = useInput("n/a");
+  const social_media = useInput("n/a");
+  const website = useInput("n/a");
   const [houseNum, setHouseNum] = useState("");
   const [street, setStreet] = useState("");
   const [city, setCity] = useState("");
@@ -67,32 +66,34 @@ const NewBusiness = () => {
         hours: hours,
       });
       if (newBiz.data.status === "success") {
-        let newOwner = await axios.post(`${API}/owners`, {
+        // let newOwner = await axios.post(`${API}/owners`, {
+        await axios.post(`${API}/owners`, {
           owner_id: newBiz.data.payload.id,
           owner_name: owner_name.value,
         });
-        let newCategories = await axios.post(`${API}/categories`, {
+        // let newCategories = await axios.post(`${API}/categories`, {
+        await axios.post(`${API}/categories`, {
           biz_id: newBiz.data.payload.id,
           type_id: type_name.value,
         });
-        let newContact = await axios.post(`${API}/contacts`, {
+
+        // let newContact = await axios.post(`${API}/contacts`, {
+        await axios.post(`${API}/contacts`, {
           contact_id: newBiz.data.payload.id,
           phone: phone.value,
           email: email.value,
           social_media: social_media.value,
         });
-        let newAddress = await axios.post(`${API}/addresses`, {
+        // let newAddress = await axios.post(`${API}/addresses`, {
+         await axios.post(`${API}/addresses`, {
           address_id: newBiz.data.payload.id,
-          street: houseNum + " " +street,
+          street: houseNum + " " + street,
           city: city,
           state: state,
           zip: zip,
           website: website.value,
         });
-        
-        console.log(newContact)
       }
-
     } catch (error) {
       console.log(error.status);
     }
@@ -106,28 +107,44 @@ const NewBusiness = () => {
       setModalShow(true);
     }
   };
+
+  const handleOwner =(e)=>{
+    // debugger
+    owner_name.value=e.currentTarget.value
+  }
+
+  console.log(owner_name)
   return (
     <div>
       <form className="newBusiness" onSubmit={handleNewBiz}>
         <label>Business Name: </label>
         <input type="text" placeholder="Business Name" required {...biz_name} />
-
+        
         <label>Hours of Service: </label>
         <select onChange={(e) => handleHours(e)}>
           <option defaultValue="1">Online Store</option>
           <option defaultValue="2">Add business Hours</option>
         </select>
-        <label>Owner Name: </label>
-        <input type="text" placeholder="Owner Name" {...owner_name} />
-
+        <br></br>
         <label>Types Name: </label>
         <select name="Type Name" {...type_name}>
           <option value="">Select Business Type</option>
           {types}
         </select>
+        <label>Owner Name: </label>
+        <input type="text" placeholder="John Doe" {...owner_name} />
+        
+        <label>Owner not available</label>
+        <input type="checkbox" defaultValue="null" onChange={()=>owner_name.value="NULL"}/>
 
+      <br></br>
         <label>Contact Number: </label>
-        <input type="tel" placeholder="212-345-6789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" {...phone} />
+        <input
+          type="tel"
+          placeholder="212-345-6789"
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          {...phone}
+        />
 
         <label>Email: </label>
         <input type="email" placeholder="Email Address" {...email} />
@@ -189,11 +206,16 @@ const NewBusiness = () => {
             </span>
             <span className="label">Zip Code</span>
             <span className="wideField">
-              <input className="field" id="postal_code" placeholder="Zip" defaultValue={zip}/>
+              <input
+                className="field"
+                id="postal_code"
+                placeholder="Zip"
+                defaultValue={zip}
+              />
             </span>
           </div>
         </div>
-        <input type="reset"/>
+        <input type="reset" />
         <button type="submit">
           <span>Create Business</span>
         </button>
@@ -202,7 +224,7 @@ const NewBusiness = () => {
             show={modalShow}
             onHide={() => setModalShow(false)}
             setTime={() => {
-              setHours(JSON.stringify(time));
+              setHours(time);
             }}
             time={time}
           />

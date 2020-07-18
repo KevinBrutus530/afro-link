@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import NewBusiness from "./components/NewBusiness";
 import MainPage from "./components/MainPage";
 import Results from "./components/Results";
+import DisplayBusiness from "./components/DisplayBusiness";
 import "./App.css";
 
 // import { MuiPickersUtilsProvider } from '@material-ui/pickers';
@@ -14,12 +15,10 @@ function App() {
       <Header />
 
       <Switch>
-        <Route exact path="/" component={MainPage} /> //testing
-        <Route exact path="/newBusiness" component={NewBusiness} /> //testing
+        <Route exact path="/" component={MainPage} /> 
+        <Route exact path="/newBusiness" component={NewBusiness} />
         <Route path="/categories/:id" component={Results} />
-        {/* <Route exact path="/" component={Home}/> */}
-        {/* <Route exact path="/NewBusiness" component={NewBusiness}/> */}
-        {/* <Route exact path="/Search" component={Search}/> */}
+        <Route path="/businesses/:id" component={DisplayBusiness} />
       </Switch>
     </div>
   );

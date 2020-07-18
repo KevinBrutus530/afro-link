@@ -18,29 +18,30 @@ const Results = () => {
       }
     };
     getResults();
-  }, []);
+  }, );
   console.log(results)
 
   let resultDisplay = results.map((biz, i) => {
     let notAvl = "Not Available"
-    let bizz = biz.street ===  null ? biz.street = notAvl : biz.street
+    let noAdd = ""
+    let bizz = biz.street ===  null ? biz.street = noAdd : biz.street
     let hrsSub = biz.hours ===  "" ? biz.hours = notAvl : biz.hours
     return (
-      <>
-      <li key={i} value={biz.biz_name}>
+      <div>
+      <h3 key={i} value={biz.biz_name}>
         {biz.biz_name}
-      </li>
+      </h3>
       <li key={i} value={biz.hours}>
         Hours: {hrsSub}
       </li>      
       <li key={i} value={biz.street}>
-        Address: {bizz} {biz.city} {biz.state} {biz.zip}
+        {bizz} {biz.city} {biz.state} {biz.zip}
       </li>
       <li key={i} value={biz.website}>
-        Website: <a href={biz.website}>{biz.website}</a>
+        <a href={biz.website}>{biz.website}</a>
       </li>
       <br/>
-      </>
+      </div>
     );
   });
 

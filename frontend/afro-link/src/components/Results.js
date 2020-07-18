@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import axios from "axios";
 
 const Results = () => {
   const { id } = useParams();
   const [results, setResults] = useState([]);
   const [bizType, setBizType] = useState("");
+  const history = useHistory();
 
   useEffect(() => {
     const getResults = async () => {
@@ -19,25 +20,33 @@ const Results = () => {
     };
     getResults();
   }, );
-  console.log(results)
+
+  const handleBusiness = (e) => {
+    e.preventDefault();
+    debugger
+    // history.push(`/businesses/${e}`)
+  }
 
   let resultDisplay = results.map((biz, i) => {
-    let notAvl = "Not Available"
-    let noAdd = ""
-    let bizz = biz.street ===  null ? biz.street = noAdd : biz.street
-    let hrsSub = biz.hours ===  "" ? biz.hours = notAvl : biz.hours
+    let noAddress = ""
+    let noHours = "Not Available"
+    let businessId = biz.id
+
+    let bizz = biz.street ===  null ? biz.street = noAddress : biz.street
+    let hrsSub = biz.hours ===  "" ? biz.hours = noHours : biz.hours
+
     return (
-      <div>
-      <h3 key={i} value={biz.biz_name}>
+      <div key={businessId} value={businessId} onClick={handleBusiness}>
+      <h3  value={biz.biz_name}>
         {biz.biz_name}
       </h3>
-      <li key={i} value={biz.hours}>
+      <li value={biz.hours}>
         Hours: {hrsSub}
       </li>      
-      <li key={i} value={biz.street}>
+      <li value={biz.street}>
         {bizz} {biz.city} {biz.state} {biz.zip}
       </li>
-      <li key={i} value={biz.website}>
+      <li value={biz.website}>
         <a href={biz.website}>{biz.website}</a>
       </li>
       <br/>

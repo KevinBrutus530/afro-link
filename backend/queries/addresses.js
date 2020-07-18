@@ -13,7 +13,7 @@ const getSingleAddress = async (req, res, next) => {
   } catch (err) {
     res.status(400).json({
       status: "Error",
-      message: "Error",
+      message: "Error get single Address",
       payload: err
     });
     next();
@@ -32,7 +32,7 @@ const deleteAddress = async (req, res, next) => {
   } catch (err) {
     res.status(400).json({
       status: "Error",
-      message: "Error",
+      message: "Error deleting address",
       payload: err
     });
     next();
@@ -51,7 +51,7 @@ const createAddress = async (req, res, next) => {
   } catch (err) {
     res.status(400).json({
       status: "Error",
-      message: " YER Error",
+      message: "Error create address",
       payload: err
     });
     next();
@@ -74,7 +74,7 @@ const editAddress = async (req, res, next) => {
   } catch (err) {
     res.status(400).json({
       status: "Error",
-      message: "Error",
+      message: "Error update address",
       payload: err
     });
     next();

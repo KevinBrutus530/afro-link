@@ -1,12 +1,12 @@
 const categories = require("express").Router();
 
-const { getAllCategories, getSingleCategory } = require("../queries/categories");
+const { getAllCategories, getSingleCategory, createCategory } = require("../queries/categories");
 
 categories.get("/", getAllCategories)
 
 categories.get("/:id", getSingleCategory);
 
-// categories.post("/", createCategory);
+categories.post("/", createCategory);
 
 // businesses.patch("/:id", editCategory);
 

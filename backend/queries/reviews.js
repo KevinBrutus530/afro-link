@@ -5,13 +5,13 @@ const getAllReviews = async (req, res, next) => {
     let review = await db.any("SELECT * FROM reviews");
     res.status(200).json({
       status: "success",
-      message: "recieved all reviews",
+      message: "received all reviews",
       payload: review
     });
   } catch (err) {
     res.status(400).json({
       status: "Error",
-      message: "Couldn't get reviews",
+      message: "Couldn't get all reviews",
       payload: err
     });
     next();
@@ -29,7 +29,7 @@ const getSingleReview = async (req, res, next) => {
   } catch (err) {
     res.status(400).json({
       status: "Error",
-      message: "Error",
+      message: "Error by singe review",
       payload: err
     });
     next();
@@ -50,7 +50,7 @@ const deleteReview = async (req, res, next) => {
   } catch (err) {
     res.status(400).json({
       status: "Error",
-      message: "Error",
+      message: "Error deleting review",
       payload: err
     });
     next();
@@ -69,7 +69,7 @@ const createReview = async (req, res, next) => {
   } catch (err) {
     res.status(400).json({
       status: "Error",
-      message: "Error",
+      message: "Error create review",
       payload: err
     });
     next();
@@ -92,7 +92,7 @@ const editReview = async (req, res, next) => {
   } catch (err) {
     res.status(400).json({
       status: "Error",
-      message: "Error",
+      message: "Error update review",
       payload: err
     });
     next();

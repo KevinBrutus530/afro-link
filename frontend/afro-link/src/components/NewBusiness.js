@@ -68,7 +68,34 @@ const NewBusiness = () => {
         hours: hours,
       });
       if (newBiz.data.status === "success") {
+        let newOwner = await axios.post(`${API}/owners`, {
+          owner_id: newBiz.data.payload.id,
+          owner_name: owner_name.value,
+        });
+        let newCategories = await axios.post(`${API}/categories`, {
+          biz_id: newBiz.data.payload.id,
+          type_id: type_name.value,
+        });
+        let newContact = await axios.post(`${API}/contacts`, {
+          contact_id: newBiz.data.payload.id,
+          phone: phone.value,
+          email: email.value,
+          social_media: social_media.value,
+        });
+        let newAddress = await axios.post(`${API}/addresses`, {
+          address_id: newBiz.data.payload.id,
+          street: houseNum + " " +street,
+          city: city,
+          state: state,
+          zip: zip,
+          website: website.value,
+        });
+
         console.log(newBiz.data.payload);
+        console.log(newOwner.data.payload);
+        console.log(newCategories.data.payload);
+        console.log(newContact.data.payload);
+        console.log(newAddress.data.payload);
       }
     } catch (error) {
       alert(error.status);

@@ -2,9 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useInput } from "../util/useInput";
 import { getAPI } from "../util/getAPI";
 import axios from "axios";
-import Modal from "react-bootstrap/Modal";
-import Button from "react-bootstrap/Button";
 import GoogleMap from "./GoogleMap";
+import TimeTable from "./TimeTable"
 import "../css/NewBusinss.css";
 
 
@@ -13,7 +12,7 @@ const NewBusiness = () => {
   const [modalShow, setModalShow] = useState(false);
 
   const biz_name = useInput("");
-  const [hours, setHours] = useState("Online Store 24/7");
+  const [hours, setHours] = useState("Online Store");
   let time = {
     Mon: "close",
     Tue: "close",
@@ -90,178 +89,13 @@ const NewBusiness = () => {
           zip: zip,
           website: website.value,
         });
-
-        console.log(newBiz.data.payload);
-        console.log(newOwner.data.payload);
-        console.log(newCategories.data.payload);
-        console.log(newContact.data.payload);
-        console.log(newAddress.data.payload);
+        
+        console.log(newContact)
       }
+
     } catch (error) {
-      alert(error.status);
+      console.log(error.status);
     }
-  };
-
-  // let time = {Mon:"close",Tue:"close",Wed:"close",Thu:"close",Fri:"close",Sat:"close",Sun:"close"}
-
-  const handleInput = (e) => {
-    if (time[e.currentTarget.name] == "close") {
-      time[e.currentTarget.name] = { open: "", close: "" };
-      time[e.currentTarget.name][e.currentTarget.id] = e.currentTarget.value;
-    } else {
-      time[e.currentTarget.name][e.currentTarget.id] = e.currentTarget.value;
-    }
-  };
-
-  const HourTable = (props) => {
-    // debugger
-    return (
-      <Modal
-        {...props}
-        size="lg"
-        aria-labelledby="contained-modal-title-vcenter"
-        centered
-      >
-        <Modal.Header closeButton>
-          <Modal.Title id="contained-modal-title-vcenter">
-            Business Hours
-          </Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <form>
-            <h5>select available hour or leave blank for close day</h5>
-            <label className="timeLabel">Monday:</label>
-            <input
-              type="time"
-              id="open"
-              name="Mon"
-              onChange={(e) => {
-                handleInput(e);
-              }}
-            ></input>
-            <input
-              type="time"
-              id="close"
-              name="Mon"
-              onChange={(e) => {
-                handleInput(e);
-              }}
-            ></input>
-            <label className="timeLabel">Tuesday:</label>
-            <input
-              type="time"
-              id="open"
-              name="Tue"
-              onChange={(e) => {
-                handleInput(e);
-              }}
-            ></input>
-            <input
-              type="time"
-              id="close"
-              name="Tue"
-              onChange={(e) => {
-                handleInput(e);
-              }}
-            ></input>
-            <label className="timeLabel">Wednesday:</label>
-            <input
-              type="time"
-              id="open"
-              name="Wed"
-              onChange={(e) => {
-                handleInput(e);
-              }}
-            ></input>
-            <input
-              type="time"
-              id="close"
-              name="Wed"
-              onChange={(e) => {
-                handleInput(e);
-              }}
-            ></input>
-            <label className="timeLabel">Thursday:</label>
-            <input
-              type="time"
-              id="open"
-              name="Thu"
-              onChange={(e) => {
-                handleInput(e);
-              }}
-            ></input>
-            <input
-              type="time"
-              id="close"
-              name="Thu"
-              onChange={(e) => {
-                handleInput(e);
-              }}
-            ></input>
-            <label className="timeLabel">Friday:</label>
-            <input
-              type="time"
-              id="open"
-              name="Fri"
-              onChange={(e) => {
-                handleInput(e);
-              }}
-            ></input>
-            <input
-              type="time"
-              id="close"
-              name="Fri"
-              onChange={(e) => {
-                handleInput(e);
-              }}
-            ></input>
-            <label className="timeLabel">Saturday:</label>
-            <input
-              type="time"
-              id="open"
-              name="Sat"
-              onChange={(e) => {
-                handleInput(e);
-              }}
-            ></input>
-            <input
-              type="time"
-              id="close"
-              name="Sat"
-              onChange={(e) => {
-                handleInput(e);
-              }}
-            ></input>
-            <label className="timeLabel">Sunday:</label>
-            <input
-              type="time"
-              id="open"
-              name="Sun"
-              onChange={(e) => {
-                handleInput(e);
-              }}
-            ></input>
-            <input
-              type="time"
-              id="close"
-              name="Sun"
-              onChange={(e) => {
-                handleInput(e);
-              }}
-            ></input>
-          </form>
-          <Modal.Footer></Modal.Footer>
-          <Button
-            onClick={() => {
-              props.onHide();
-              props.setTime();
-            }}
-          >
-            Submit Time
-          </Button>
-        </Modal.Body>
-      </Modal>
-    );
   };
 
   const handleHours = (e) => {
@@ -293,7 +127,7 @@ const NewBusiness = () => {
         </select>
 
         <label>Contact Number: </label>
-        <input type="number" placeholder="Contact Number" {...phone} />
+        <input type="tel" placeholder="212-345-6789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" {...phone} />
 
         <label>Email: </label>
         <input type="email" placeholder="Email Address" {...email} />
@@ -306,7 +140,6 @@ const NewBusiness = () => {
         <label>Website: </label>
         <input type="text" placeholder="Website" {...website} />
         <div>
-          {/* <GoogleMap props={setCity,setHouseNum,setStreet,setState}/> */}
           <GoogleMap
             setHouseNum={(e) => setHouseNum(e)}
             setStreet={(e) => setStreet(e)}
@@ -360,17 +193,18 @@ const NewBusiness = () => {
             </span>
           </div>
         </div>
-
+        <input type="reset"/>
         <button type="submit">
           <span>Create Business</span>
         </button>
         <>
-          <HourTable
+          <TimeTable
             show={modalShow}
             onHide={() => setModalShow(false)}
             setTime={() => {
               setHours(JSON.stringify(time));
             }}
+            time={time}
           />
         </>
       </form>

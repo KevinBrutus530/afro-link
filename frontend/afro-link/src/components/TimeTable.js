@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import {useInput} from "../util/useInput"
+import React from 'react'
 import Modal from "react-bootstrap/Modal"
 import Button from 'react-bootstrap/Button';
 
@@ -8,7 +7,7 @@ const TimeTable = (props) => {
   // debugger
   const handleInput = (e) => {
     // debugger
-    if (time[e.currentTarget.name] == "close") {
+    if (time[e.currentTarget.name] === "close") {
       time[e.currentTarget.name] = { open: "", close: "" };
       time[e.currentTarget.name][e.currentTarget.id] = e.currentTarget.value;
     } else {

@@ -7,27 +7,28 @@ const Results = () => {
   const { id } = useParams();
   const [results, setResults] = useState([]);
   const [bizType, setBizType] = useState("");
-  // const history = useHistory();
 
+  const getResults = async () => {
+    // debugger
+    try {
+      let res = await axios.get(`http://localhost:3000/categories/${id}`);
+      setResults(res.data.payload);
+      setBizType(res.data.payload[0].type_name)
+      debugger
+    } catch (err) {
+      console.log(err);
+    }
+  };
   useEffect(() => {
-    const getResults = async () => {
-      try {
-        let res = await axios.get(`http://localhost:3000/categories/${id}`);
-        setResults(res.data.payload);
-        setBizType(res.data.payload[0].type_name)
-      } catch (err) {
-        console.log(err);
-      }
-    };
     getResults();
-  }, );
+  },[] );
 
   let resultDisplay = results.map((biz) => {
     return (
       <Business resultDisplay={biz} />
     );
   });
-
+  console.log(results)
   return (
     <div style={{ color: "white" }}>
       <h1>{bizType}</h1>

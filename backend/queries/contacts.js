@@ -11,7 +11,7 @@ const getSingleContact = async (req, res, next) => {
     } catch (err) {
       res.status(400).json({
         status: "Error",
-        message: "Error",
+        message: "Error get single contact",
         payload: err
       });
       next();
@@ -33,7 +33,7 @@ const getSingleContact = async (req, res, next) => {
     } catch (err) {
       res.status(400).json({
         status: "Error",
-        message: "Error",
+        message: "Error deleting contact",
         payload: err
       });
       next();
@@ -52,7 +52,7 @@ const getSingleContact = async (req, res, next) => {
     } catch (err) {
       res.status(400).json({
         status: "Error",
-        message: "Error",
+        message: "Error create contact",
         payload: err
       });
       next();
@@ -61,11 +61,11 @@ const getSingleContact = async (req, res, next) => {
   
   const editContact = async (req, res, next) => {
     try {
-      let { contact_id, phone, email, socialmedia } = req.body;
+      let { contact_id, phone, email, social_media } = req.body;
       let { contactId } = req.params;
       let contact = await db.one(
         "UPDATE contacts SET contact_id=$1, phone=$2 email=$3, =$4, social_media=$5 WHERE id=$6",
-        [contact_id, phone, email, socialmedia, contactId]
+        [contact_id, phone, email, social_media, contactId]
       );
       res.status(200).json({
         status: "success",
@@ -75,7 +75,7 @@ const getSingleContact = async (req, res, next) => {
     } catch (err) {
       res.status(400).json({
         status: "Error",
-        message: "Error",
+        message: "Error update contact",
         payload: err
       });
       next();

@@ -13,7 +13,7 @@ const getAllBusiness = async (req, res, next) => {
   } catch (err) {
     res.status(400).json({
       status: "Error",
-      message: "Error",
+      message: "Error get all business",
       payload: err
     });
     next();
@@ -35,7 +35,7 @@ const getSingleBusiness = async (req, res, next) => {
   } catch (err) {
     res.status(400).json({
       status: "Error",
-      message: "Couldn't get business",
+      message: "Couldn't get single business",
       payload: err
     });
     next();
@@ -53,7 +53,7 @@ const deleteBusiness = async (req, res, next) => {
   } catch (err) {
     res.status(400).json({
       status: "Error",
-      message: "Error",
+      message: "Error deleting business",
       payload: err
     });
     next();
@@ -63,7 +63,6 @@ const deleteBusiness = async (req, res, next) => {
 const getSearchForBusiness = async (req, res, next) => {
   try{
     let searchBiz = req.body.type_name
-    console.log(searchBiz)
     let business = await db.any(`SELECT businesses.id, businesses.biz_name, businesses.hours, owners.owner_name, types.type_name,contacts.phone, contacts.email, contacts.social_media, addresses.street, addresses.city, addresses.state, addresses.zip, addresses.website FROM businesses RIGHT JOIN contacts ON contacts.contact_id=businesses.id JOIN addresses ON addresses.address_id=contacts.contact_id JOIN owners ON contacts.contact_id=owners.owner_id JOIN categories ON categories.biz_id=owners.owner_id JOIN types ON types.id=categories.type_id WHERE types.type_name LIKE '%${searchBiz}%'`)
       res.status(200).json({
         status: "success",
@@ -74,7 +73,7 @@ const getSearchForBusiness = async (req, res, next) => {
   } catch(err){
     res.status(400).json({
       status: "Error",
-      message: "Error",
+      message: "Error get search Business",
       payload: err
     });
     next();
@@ -93,7 +92,7 @@ const createBusiness = async (req, res, next) => {
   } catch (err) {
     res.status(400).json({
       status: "Error",
-      message: "Error",
+      message: "Error create business",
       payload: err
     });
     next();
@@ -115,7 +114,7 @@ const editBusiness = async (req, res, next) => {
   } catch (err) {
     res.status(400).json({
       status: "Error",
-      message: "Big Error",
+      message: "Error for update business",
       payload: err
     });
     next();

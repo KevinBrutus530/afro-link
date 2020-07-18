@@ -11,7 +11,7 @@ const getSingleOwner = async (req, res, next) => {
   } catch (err) {
     res.status(400).json({
       status: "Error",
-      message: "Error",
+      message: "Error get single Owner",
       payload: err
     });
     next();
@@ -33,7 +33,7 @@ const deleteOwner = async (req, res, next) => {
   } catch (err) {
     res.status(400).json({
       status: "Error",
-      message: "Error",
+      message: "Error delete owner",
       payload: err
     });
     next();
@@ -52,7 +52,7 @@ const createOwner = async (req, res, next) => {
   } catch (err) {
     res.status(400).json({
       status: "Error",
-      message: "Error",
+      message: "Error for create Owner",
       payload: err
     });
     next();
@@ -75,7 +75,7 @@ const editOwner = async (req, res, next) => {
   } catch (err) {
     res.status(400).json({
       status: "Error",
-      message: "Error",
+      message: "Error edit Owner",
       payload: err
     });
     next();

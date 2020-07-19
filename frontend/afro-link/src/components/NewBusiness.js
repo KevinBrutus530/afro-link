@@ -21,19 +21,24 @@ const NewBusiness = () => {
     Sat: "close",
     Sun: "close",
   };
-  const owner_name = useInput("n/a");
+  const owner_name = useInput("");
   const type_name = useInput(""); //add  new function let owner/user create one
-  const phone = useInput("n/a");
-  const email = useInput("n/a");
-  const social_media = useInput("n/a");
-  const website = useInput("n/a");
+  const phone = useInput("");
+  const email = useInput("");
+  const social_media = useInput("");
+  const website = useInput("");
   const [houseNum, setHouseNum] = useState("");
   const [street, setStreet] = useState("");
   const [city, setCity] = useState("");
   const [state, setState] = useState("");
   const [zip, setZip] = useState("");
-
   const [businessTypes, setBusinessTypes] = useState([]);
+
+  const [showOwner, setShowOwner] = useState(false);
+  const [showPhone, setShowPhone] = useState(false);
+  const [showEmail, setShowEmail] = useState(false);
+  const [showSocial, setShowSocial] = useState(false);
+  const [showWeb, setShowWeb] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -66,26 +71,23 @@ const NewBusiness = () => {
         hours: hours,
       });
       if (newBiz.data.status === "success") {
-        // let newOwner = await axios.post(`${API}/owners`, {
         await axios.post(`${API}/owners`, {
           owner_id: newBiz.data.payload.id,
           owner_name: owner_name.value,
         });
-        // let newCategories = await axios.post(`${API}/categories`, {
+
         await axios.post(`${API}/categories`, {
           biz_id: newBiz.data.payload.id,
           type_id: type_name.value,
         });
 
-        // let newContact = await axios.post(`${API}/contacts`, {
         await axios.post(`${API}/contacts`, {
           contact_id: newBiz.data.payload.id,
           phone: phone.value,
           email: email.value,
           social_media: social_media.value,
         });
-        // let newAddress = await axios.post(`${API}/addresses`, {
-         await axios.post(`${API}/addresses`, {
+        await axios.post(`${API}/addresses`, {
           address_id: newBiz.data.payload.id,
           street: houseNum + " " + street,
           city: city,
@@ -108,54 +110,130 @@ const NewBusiness = () => {
     }
   };
 
-  const handleOwner =(e)=>{
-    // debugger
-    owner_name.value=e.currentTarget.value
-  }
+  const handleOwner = (e) => {
+    owner_name.value = e.currentTarget.value; //null
+    setShowOwner(!showOwner);
+  };
+  const handlePhone = (e) => {
+    phone.value = e.currentTarget.value; //null
+    setShowPhone(!showPhone);
+  };
+  const handleEmail = (e) => {
+    email.value = e.currentTarget.value; //null
+    setShowEmail(!showEmail);
+  };
+  const handleSocial = (e) => {
+    social_media.value = e.currentTarget.value; //null
+    setShowSocial(!showSocial);
+  };
+  const handleWeb = (e) => {
+    website.value = e.currentTarget.value; //null
+    setShowWeb(!showWeb);
+  };
 
-  console.log(owner_name)
   return (
     <div>
       <form className="newBusiness" onSubmit={handleNewBiz}>
         <label>Business Name: </label>
         <input type="text" placeholder="Business Name" required {...biz_name} />
-        
+
         <label>Hours of Service: </label>
-        <select onChange={(e) => handleHours(e)}>
+        <select onChange={(e) => handleHours(e)} required>
           <option defaultValue="1">Online Store</option>
           <option defaultValue="2">Add business Hours</option>
         </select>
         <br></br>
         <label>Types Name: </label>
-        <select name="Type Name" {...type_name}>
-          <option value="">Select Business Type</option>
+        <select name="Type Name" {...type_name} required>
+          <option value="" disabled>
+            Select Business Type
+          </option>
           {types}
         </select>
         <label>Owner Name: </label>
-        <input type="text" placeholder="John Doe" {...owner_name} />
-        
-        <label>Owner not available</label>
-        <input type="checkbox" defaultValue="null" onChange={()=>owner_name.value="NULL"}/>
+        <input
+          name="Owner Name Input"
+          type="text"
+          placeholder="John Doe"
+          disabled={showOwner}
+          {...owner_name}
+          required
+        />
 
-      <br></br>
+        <label>If not available</label>
+        <input
+          name="Owner Name not available check box"
+          type="checkbox"
+          value="n/a"
+          onChange={handleOwner}
+        />
+
+        <br></br>
         <label>Contact Number: </label>
         <input
           type="tel"
           placeholder="212-345-6789"
           pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          disabled={showPhone}
           {...phone}
+          required
+        />
+        <label>If not available</label>
+        <input
+          name="Phone not available check box"
+          type="checkbox"
+          value="n/a"
+          onChange={handlePhone}
         />
 
         <label>Email: </label>
-        <input type="email" placeholder="Email Address" {...email} />
+        <input
+          type="email"
+          placeholder="123@gmail.com"
+          {...email}
+          disabled={showEmail}
+          required
+        />
+        <label>If not available</label>
+        <input
+          name="Email not available check box"
+          type="checkbox"
+          value="NULL"
+          onChange={handleEmail}
+        />
+
         <label>Social Media: </label>
         <input
           type="text"
           placeholder="Instagram/Facebook/Twitter"
           {...social_media}
+          disabled={showSocial}
+          required
         />
+        <label>If not available</label>
+        <input
+          name="Social Media not available check box"
+          type="checkbox"
+          value="n/a"
+          onChange={handleSocial}
+        />
+
         <label>Website: </label>
-        <input type="text" placeholder="Website" {...website} />
+        <input
+          type="text"
+          placeholder="exmaple.com/url "
+          {...website}
+          disabled={showWeb}
+          required
+        />
+        <label>If not available</label>
+        <input
+          name="Website not available check box"
+          type="checkbox"
+          value="n/a"
+          onChange={handleWeb}
+        />
+
         <div>
           <GoogleMap
             setHouseNum={(e) => setHouseNum(e)}

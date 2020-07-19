@@ -12,7 +12,7 @@ const Business = () => {
     try {
       let res = await axios.get(`http://localhost:3000/businesses/${id}`);
       setBusinessInfo(res.data.payload);
-      debugger
+      // debugger
     } catch (err) {
       console.log(err);
     }

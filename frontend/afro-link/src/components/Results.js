@@ -27,7 +27,7 @@ const Results = () => {
 
     const handleBusiness = (e) =>{
         SinglebusinessRedirect(e)
-        debugger
+        // debugger
     }
 
 

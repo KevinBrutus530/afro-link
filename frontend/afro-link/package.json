@@ -14,11 +14,8 @@
     "react-bootstrap": "^1.2.2",
     "react-dom": "^16.13.1",
     "react-google-places-autocomplete": "^2.1.0",
-<<<<<<< HEAD
     "react-instagram-embed": "^1.5.0",
-=======
     "react-phone-number-input": "^3.0.24",
->>>>>>> fdd8646f468873439ec41000846fe087c6fb9e11
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1"
   },

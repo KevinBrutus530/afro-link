@@ -65,7 +65,6 @@ const Results = () => {
         <ul style={{listStyleType:"none"}}>{resultDisplay}</ul>
       </div>
     </div>
-    {/* <Business results={results} /> */}
   </>
   );
 };

@@ -5,6 +5,8 @@ import axios from "axios";
 import GoogleMap from "./GoogleMap";
 import TimeTable from "./TimeTable";
 import "../css/NewBusinss.css";
+import 'react-phone-number-input/style.css'
+import PhoneInput from 'react-phone-number-input'
 
 const NewBusiness = () => {
   const API = getAPI();
@@ -23,7 +25,8 @@ const NewBusiness = () => {
   };
   const owner_name = useInput("");
   const type_name = useInput(""); //add  new function let owner/user create one
-  const phone = useInput("");
+  // const phone = useInput("");
+  const [phone, setPhone] = useState()
   const email = useInput("");
   const social_media = useInput("");
   const website = useInput("");
@@ -83,7 +86,7 @@ const NewBusiness = () => {
 
         await axios.post(`${API}/contacts`, {
           contact_id: newBiz.data.payload.id,
-          phone: phone.value,
+          phone: phone,
           email: email.value,
           social_media: social_media.value,
         });
@@ -115,7 +118,7 @@ const NewBusiness = () => {
     setShowOwner(!showOwner);
   };
   const handlePhone = (e) => {
-    phone.value = e.currentTarget.value; //null
+    setPhone(e.currentTarget.value); //null
     setShowPhone(!showPhone);
   };
   const handleEmail = (e) => {
@@ -170,14 +173,20 @@ const NewBusiness = () => {
 
         <br></br>
         <label>Contact Number: </label>
-        <input
+        <PhoneInput placeholder="212-345-6789"
+          defaultCountry="US"
+          disabled={showPhone}
+          value={phone} onChange={setPhone} 
+          maxLength="14"
+          /> 
+        {/* <input
           type="tel"
           placeholder="212-345-6789"
           pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
           disabled={showPhone}
           {...phone}
           required
-        />
+        /> */}
         <label>If not available</label>
         <input
           name="Phone not available check box"

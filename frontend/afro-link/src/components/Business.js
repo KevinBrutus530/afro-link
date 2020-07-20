@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import DisplayBusiness from "./DisplayBusiness";
+import ReviewsForm from "./ReviewsForm";
 
 
 const Business = () => {
@@ -24,6 +25,7 @@ const Business = () => {
     return (
         <div>
        <DisplayBusiness businessInfo={businessInfo} />
+       <ReviewsForm />
         </div>
     )
 }

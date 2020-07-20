@@ -45,17 +45,16 @@ const ReviewsForm = () => {
     let showReviews = allReviews.map((post, i) => {
         return(
             <div style={{ color: "white" }} key={i} className="ReviewSect">
-            <h3>{post.name}</h3>
-            <p>{post.text}</p>
+            <h5>{post.name}</h5>
+            <p> {post.text}</p>
             <p>{post.ratings}</p>
-            <p>{post.zip}</p>
             </div>
         )
     })
 
     return(
-        <>
-        <h2>Reviews</h2>
+        
+        <div style={{ color: "white" }}>
         <form onSubmit={submitReviews}>
             <label>Name:</label>
             <input type="text" placeholder="Name..." name="name" {...name} required/>
@@ -65,10 +64,11 @@ const ReviewsForm = () => {
             <input type="text" placeholder="1-5" name="rating" {...ratings} required/>
             <button type="submit" className="reviewBtn">Submit</button>
         </form>
+        <h2>Reviews</h2>
         <ul style={{listStyleType:"none"}}>
             {showReviews}
         </ul>
-        </>
+        </div>
     )
 
 

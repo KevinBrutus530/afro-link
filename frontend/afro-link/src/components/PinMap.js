@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { GoogleMap, Marker, LoadScript } from "@react-google-maps/api";
+import {
+  GoogleMap,
+  Marker,
+  LoadScript,
+  InfoWindow,
+} from "@react-google-maps/api";
 // import usePlacesAutoComplete, {
 //   getGeocode,
 //   getLatLng,
@@ -10,8 +15,6 @@ import axios from "axios";
 const PinMap = ({ location }) => {
   const apiKeyMaps = "AIzaSyDjmfIqEKIgSBGxjJDejyRi5faInCvcyas";
   console.log(location);
-  //   debugger;
-  //   const [latLong, setLatLong] = useState([]);
   const [lat, setLat] = useState(0);
   const [lng, setLng] = useState(0);
 
@@ -41,7 +44,6 @@ const PinMap = ({ location }) => {
     lat: lat,
     lng: lng,
   };
- 
 
   const [map, setMap] = React.useState(null);
 
@@ -61,12 +63,16 @@ const PinMap = ({ location }) => {
       <GoogleMap
         mapContainerStyle={containerStyle}
         center={center}
-        zoom={10}
+        zoom={1}
         onLoad={onLoad}
         onUnmount={onUnmount}
       >
-        {/* Child components, such as markers, info windows, etc. */}
-        <></>
+        <Marker position={{ lat: lat, lng: lng }} />
+        {
+          <InfoWindow position={{ lat: lat, lng: lng }}>
+            <div>{location}</div>
+          </InfoWindow>
+        }
       </GoogleMap>
     </LoadScript>
   );

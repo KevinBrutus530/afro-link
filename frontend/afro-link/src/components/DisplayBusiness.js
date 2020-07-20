@@ -5,7 +5,6 @@ const DisplayBusiness = ({ businessInfo }) => {
   // debugger;
   let location = businessInfo.street + " " + businessInfo.city + " " + businessInfo.state + " " + businessInfo.zip
 
-
   return (
     <>
       <div style={{ color: "white" }}>

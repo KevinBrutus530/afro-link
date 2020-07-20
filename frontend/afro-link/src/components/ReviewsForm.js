@@ -16,7 +16,7 @@ const ReviewsForm = () => {
     const getReviews = async () => {
     try {
         debugger
-      let res = await axios.get(`{API}/reviews/`);
+      let res = await axios.get("http://localhost:3000/reviews/");
       debugger
       setAllReviews(res.data.payload);
     } catch (err) {
@@ -44,7 +44,7 @@ const ReviewsForm = () => {
 
     let showReviews = allReviews.map((post, i) => {
         return(
-            <div key={i} className="ReviewSect">
+            <div style={{ color: "white" }} key={i} className="ReviewSect">
             <h3>{post.name}</h3>
             <p>{post.text}</p>
             <p>{post.ratings}</p>
@@ -64,7 +64,7 @@ const ReviewsForm = () => {
             <input type="text" placeholder="1-5" name="rating" {...ratings} required/>
             <button type="submit" className="reviewBtn">Submit</button>
         </form>
-        <ul>
+        <ul style={{listStyleType:"none"}}>
             {showReviews}
         </ul>
         </>

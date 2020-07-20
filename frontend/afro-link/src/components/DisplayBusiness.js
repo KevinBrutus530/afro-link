@@ -3,6 +3,7 @@ import PinMap from "./PinMap";
 
 const DisplayBusiness = ({ businessInfo }) => {
   // debugger;
+  let location = businessInfo.street + " " + businessInfo.city + " " + businessInfo.state + " " + businessInfo.zip
 
   return (
     <>
@@ -26,12 +27,7 @@ const DisplayBusiness = ({ businessInfo }) => {
         </div>
       </div>
       <PinMap
-        location={{
-          street: businessInfo.street,
-          city: businessInfo.city,
-          state: businessInfo.state,
-          zip: businessInfo.zip,
-        }}
+        location={location}
       />
     </>
   );

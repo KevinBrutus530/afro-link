@@ -16,13 +16,13 @@ const DisplayBusiness = ({ businessInfo }) => {
             {businessInfo.street} {businessInfo.city} {businessInfo.state}{" "}
             {businessInfo.zip}
           </li>
-          <li>{businessInfo.website}</li>
+          <li><a href={businessInfo.website}>{businessInfo.website}</a></li>
         </ul>
         <div className="contactInfo">
           <ul style={{ listStyleType: "none" }}>
             <li>{businessInfo.phone}</li>
             <li>{businessInfo.email}</li>
-            <li>{businessInfo.social_media}</li>
+            <li><a href={businessInfo.social_media}>{businessInfo.social_media}</a></li>
           </ul>
         </div>
       </div>

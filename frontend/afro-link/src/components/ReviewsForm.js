@@ -16,7 +16,7 @@ const ReviewsForm = () => {
     const getReviews = async () => {
     try {
         debugger
-      let res = await axios.get("http://localhost:3000/reviews/");
+            let res = await axios.get(`http://localhost:3000/reviews/${id}`);
       debugger
       setAllReviews(res.data.payload);
     } catch (err) {
@@ -55,6 +55,7 @@ const ReviewsForm = () => {
 
     return(
         <>
+        <h2>Reviews</h2>
         <form onSubmit={submitReviews}>
             <label>Name:</label>
             <input type="text" placeholder="Name..." name="name" {...name} required/>

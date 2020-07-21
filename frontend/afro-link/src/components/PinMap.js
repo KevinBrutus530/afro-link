@@ -17,6 +17,7 @@ const PinMap = ({ location, bizName }) => {
   console.log(location);
   const [lat, setLat] = useState(0);
   const [lng, setLng] = useState(0);
+  const [showMapInfo, setShowMapInfo] = useState(false);
 
   useEffect(() => {
     fetchCoord();
@@ -36,8 +37,8 @@ const PinMap = ({ location, bizName }) => {
   };
 
   const containerStyle = {
-    width: "400px",
-    height: "400px",
+    width: "600px",
+    height: "600px",
   };
 
   const center = {
@@ -59,7 +60,9 @@ const PinMap = ({ location, bizName }) => {
   }, []);
 
   const option = {
-    zoom: 3,
+    zoomControlOptions: {
+      zoom: 5,
+    },
   };
 
   const showInfo = () => {
@@ -76,19 +79,20 @@ const PinMap = ({ location, bizName }) => {
   return (
     <LoadScript googleMapsApiKey={apiKeyMaps}>
       <GoogleMap
-        zoom={1}
         mapContainerStyle={containerStyle}
         center={center}
         onLoad={onLoad}
         onUnmount={onUnmount}
-        onClick={showInfo}
+        zoom={1}
       >
-        <Marker position={{ lat: lat, lng: lng }} />
+        <Marker
+          onClick={() => setShowMapInfo((prevShowMapInfo) => !prevShowMapInfo)}
+          position={{ lat: lat, lng: lng }}
+        />
+        {showMapInfo ? showInfo() : null}
       </GoogleMap>
     </LoadScript>
   );
 };
-
-//   return <div style={{ color: "white" }}>Map PIN Comp</div>;
 
 export default PinMap;

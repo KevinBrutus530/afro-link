@@ -16,7 +16,6 @@ const Results = () => {
       let res = await axios.get(`http://localhost:3000/categories/${id}`);
       setResults(res.data.payload);
       setBizType(res.data.payload[0].type_name);
-      debugger;
     } catch (err) {
       console.log(err);
     }
@@ -60,7 +59,7 @@ const Results = () => {
     <>
       <div style={{ color: "white" }}>
         <h1>{bizType}</h1>
-        <FilterResults />
+        <FilterResults results={results} />
         <div>
           <ul style={{ listStyleType: "none" }}>{resultDisplay}</ul>
         </div>

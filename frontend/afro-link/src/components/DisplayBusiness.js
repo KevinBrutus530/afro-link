@@ -1,9 +1,18 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import PinMap from "./PinMap";
 
-const DisplayBusiness = ({ businessInfo }) => {
+const DisplayBusiness = ({ businessInfo, categoryId }) => {
   // debugger;
-  let location = businessInfo.street + " " + businessInfo.city + " " + businessInfo.state + " " + businessInfo.zip
+  const history = useHistory();
+  let location =
+    businessInfo.street +
+    " " +
+    businessInfo.city +
+    " " +
+    businessInfo.state +
+    " " +
+    businessInfo.zip;
 
   return (
     <>
@@ -16,19 +25,27 @@ const DisplayBusiness = ({ businessInfo }) => {
             {businessInfo.street} {businessInfo.city} {businessInfo.state}{" "}
             {businessInfo.zip}
           </li>
-          <li><a href={businessInfo.website}>{businessInfo.website}</a></li>
+
+          <li>
+            <a href={businessInfo.website}>{businessInfo.website}</a>
+          </li>
+
         </ul>
         <div className="contactInfo">
           <ul style={{ listStyleType: "none" }}>
             <li>{businessInfo.phone}</li>
             <li>{businessInfo.email}</li>
-            <li><a href={businessInfo.social_media}>{businessInfo.social_media}</a></li>
+
+            <li>
+              <a href={businessInfo.social_media}>
+                {businessInfo.social_media}
+              </a>
+            </li>
+
           </ul>
         </div>
       </div>
-      <PinMap
-        location={location}
-      />
+      <PinMap location={location} bizName={businessInfo.biz_name} />
     </>
   );
 };

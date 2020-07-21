@@ -12,7 +12,7 @@ import {
 import axios from "axios";
 //  require("dotenv").config();
 
-const PinMap = ({ location }) => {
+const PinMap = ({ location, bizName }) => {
   const apiKeyMaps = "AIzaSyDjmfIqEKIgSBGxjJDejyRi5faInCvcyas";
   console.log(location);
   const [lat, setLat] = useState(0);
@@ -58,21 +58,32 @@ const PinMap = ({ location }) => {
     setMap(null);
   }, []);
 
+  const option = {
+    zoom: 3,
+  };
+
+  const showInfo = () => {
+    return (
+      <InfoWindow position={{ lat: lat, lng: lng }}>
+        <div>
+          <h4>{bizName}</h4>
+          <p>{location}</p>
+        </div>
+      </InfoWindow>
+    );
+  };
+
   return (
     <LoadScript googleMapsApiKey={apiKeyMaps}>
       <GoogleMap
+        zoom={1}
         mapContainerStyle={containerStyle}
         center={center}
-        zoom={1}
         onLoad={onLoad}
         onUnmount={onUnmount}
+        onClick={showInfo}
       >
         <Marker position={{ lat: lat, lng: lng }} />
-        {
-          <InfoWindow position={{ lat: lat, lng: lng }}>
-            <div>{location}</div>
-          </InfoWindow>
-        }
       </GoogleMap>
     </LoadScript>
   );

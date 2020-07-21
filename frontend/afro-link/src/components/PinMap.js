@@ -37,8 +37,8 @@ const PinMap = ({ location, bizName }) => {
   };
 
   const containerStyle = {
-    width: "600px",
-    height: "600px",
+    width: "400px",
+    height: "400px",
   };
 
   const center = {
@@ -51,7 +51,7 @@ const PinMap = ({ location, bizName }) => {
   const onLoad = React.useCallback(function callback(map) {
     const bounds = new window.google.maps.LatLngBounds();
     // debugger;
-    console.log(map.fitBounds(bounds));
+    // console.log(map.fitBounds(bounds));
     setMap(map);
   }, []);
 
@@ -59,11 +59,11 @@ const PinMap = ({ location, bizName }) => {
     setMap(null);
   }, []);
 
-  const option = {
-    zoomControlOptions: {
-      zoom: 5,
-    },
-  };
+  // const option = {
+  //   zoomControlOptions: {
+  //     zoom: 9,
+  //   },
+  // };
 
   const showInfo = () => {
     return (
@@ -79,11 +79,13 @@ const PinMap = ({ location, bizName }) => {
   return (
     <LoadScript googleMapsApiKey={apiKeyMaps}>
       <GoogleMap
+        id="map"
         mapContainerStyle={containerStyle}
+        zoom={15}
         center={center}
         onLoad={onLoad}
         onUnmount={onUnmount}
-        zoom={1}
+        // options={option.option}
       >
         <Marker
           onClick={() => setShowMapInfo((prevShowMapInfo) => !prevShowMapInfo)}

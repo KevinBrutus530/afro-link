@@ -29,7 +29,6 @@ const DisplayBusiness = ({ businessInfo, categoryId }) => {
           <li>
             <a href={businessInfo.website}>{businessInfo.website}</a>
           </li>
-
         </ul>
         <div className="contactInfo">
           <ul style={{ listStyleType: "none" }}>
@@ -41,7 +40,6 @@ const DisplayBusiness = ({ businessInfo, categoryId }) => {
                 {businessInfo.social_media}
               </a>
             </li>
-
           </ul>
         </div>
       </div>

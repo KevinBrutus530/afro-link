@@ -4,6 +4,7 @@ import axios from "axios";
 import DisplayBusiness from "./DisplayBusiness";
 import ReviewsForm from "./ReviewsForm";
 
+
 const Business = () => {
   const [businessInfo, setBusinessInfo] = useState([]);
   const history = useHistory();
@@ -22,6 +23,7 @@ const Business = () => {
     getInfo();
   }, []);
 
+
   return (
     <div>
       <button onClick={() => history.goBack()} type="submit">
@@ -32,5 +34,6 @@ const Business = () => {
     </div>
   );
 };
+
 
 export default Business;

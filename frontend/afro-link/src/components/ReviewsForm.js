@@ -15,7 +15,6 @@ const ReviewsForm = () => {
   const getReviews = async () => {
     try {
       let res = await axios.get(`http://localhost:3000/reviews/${id}`);
-      debugger;
       setAllReviews(res.data.payload);
     } catch (err) {
       console.log(err);

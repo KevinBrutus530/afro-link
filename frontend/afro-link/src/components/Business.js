@@ -16,6 +16,7 @@ const Business = () => {
     try {
       let res = await axios.get(`http://localhost:3000/businesses/${id}`);
       setBusinessInfo(res.data.payload);
+      setIgUrl(res.data.payload.social_media)
     } catch (err) {
       console.log(err);
     }
@@ -29,13 +30,22 @@ const Business = () => {
     checkingSocialMedia();
   }, [businessInfo]);
 
-  const checkingSocialMedia = () => {
-    let bizInfo = businessInfo.social_media.split("");
-
+  const checkingSocialMedia = (url) => {
     let fb = "facebook";
-    if (bizInfo.includes(fb)) {
+    let ins = "instagram";
+    
+    if (!url) return null
+    if (url.search(ins)){
+      console.log("instagram")
+      return null
+    }else if(url.search(fb)){
+      console.log("facebook")
+      return null
+    } else{
+      return null
     }
-  };
+    }
+  
 
   return (
     <div>
@@ -43,7 +53,11 @@ const Business = () => {
         Return to Results Page
       </button>
       <DisplayBusiness businessInfo={businessInfo} categoryId={id} />
-      <Instagram igUrl={igUrl} />
+      <div>
+      {checkingSocialMedia(igUrl)}
+      </div>
+
+      {/* <Instagram igUrl={igUrl} /> */}
       {/* <Facebook fbUrl={fbUrl} /> */}
       <ReviewsForm />
     </div>

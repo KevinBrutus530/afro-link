@@ -5,16 +5,12 @@ import {
   LoadScript,
   InfoWindow,
 } from "@react-google-maps/api";
-// import usePlacesAutoComplete, {
-//   getGeocode,
-//   getLatLng,
-// } from "use-places-autocomplete";
+
 import axios from "axios";
-//  require("dotenv").config();
+
 
 const PinMap = ({ location, bizName }) => {
-  const apiKeyMaps = "AIzaSyDjmfIqEKIgSBGxjJDejyRi5faInCvcyas";
-  console.log(location);
+  const apiKeyMaps = process.env.REACT_APP_GOOGLE_API_KEY;
   const [lat, setLat] = useState(0);
   const [lng, setLng] = useState(0);
   const [showMapInfo, setShowMapInfo] = useState(false);
@@ -26,7 +22,7 @@ const PinMap = ({ location, bizName }) => {
   const fetchCoord = async () => {
     try {
       let res = await axios.get(
-        `https://maps.googleapis.com/maps/api/geocode/json?address=${location}&key=AIzaSyDjmfIqEKIgSBGxjJDejyRi5faInCvcyas`
+        `https://maps.googleapis.com/maps/api/geocode/json?address=${location}&key=${process.env.REACT_APP_GOOGLE_API_KEY}`
       );
       //   debugger;
       setLat(res.data.results[0].geometry.location.lat);
@@ -50,20 +46,13 @@ const PinMap = ({ location, bizName }) => {
 
   const onLoad = React.useCallback(function callback(map) {
     const bounds = new window.google.maps.LatLngBounds();
-    // debugger;
-    // console.log(map.fitBounds(bounds));
+
     setMap(map);
   }, []);
 
   const onUnmount = React.useCallback(function callback(map) {
     setMap(null);
   }, []);
-
-  // const option = {
-  //   zoomControlOptions: {
-  //     zoom: 9,
-  //   },
-  // };
 
   const showInfo = () => {
     return (
@@ -79,13 +68,12 @@ const PinMap = ({ location, bizName }) => {
   return (
     <LoadScript googleMapsApiKey={apiKeyMaps}>
       <GoogleMap
-        id="map"
+        // id="map"
         mapContainerStyle={containerStyle}
         zoom={15}
         center={center}
         onLoad={onLoad}
         onUnmount={onUnmount}
-        // options={option.option}
       >
         <Marker
           onClick={() => setShowMapInfo((prevShowMapInfo) => !prevShowMapInfo)}

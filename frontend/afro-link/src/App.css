@@ -21,6 +21,7 @@ $black-chocolate: #191102ff; */
   background-image: url("https://www.transparenttextures.com/patterns/dark-geometric.png");
   background-color: rgb(0, 0, 0);
   background-repeat: repeat;
+  --PhoneInputCountryFlag-height:10px;
 }
 
 a {

@@ -137,17 +137,18 @@ const NewBusiness = () => {
   return (
     <div>
       <form className="newBusiness" onSubmit={handleNewBiz}>
+        <div className="business">
         <label>Business Name: </label>
         <input type="text" placeholder="Business Name" required {...biz_name} />
 
         <label>Hours of Service: </label>
-        <select onChange={(e) => handleHours(e)} required>
+        <select className="selectBizBar" onChange={(e) => handleHours(e)} required>
           <option defaultValue="1">Online Store</option>
           <option defaultValue="2">Add business Hours</option>
         </select>
         <br></br>
         <label>Types Name: </label>
-        <select name="Type Name" {...type_name} required>
+        <select className="selectBizBar" name="Type Name" {...type_name} required>
           <option value="" disabled>
             Select Business Type
           </option>
@@ -162,7 +163,7 @@ const NewBusiness = () => {
           {...owner_name}
           required
         />
-
+        <div className="labelBox">
         <label>If not available</label>
         <input
           name="Owner Name not available check box"
@@ -170,8 +171,10 @@ const NewBusiness = () => {
           value="n/a"
           onChange={handleOwner}
         />
+        </div>
+         </div>
+         <div className="contact">
 
-        <br></br>
         <label>Contact Number: </label>
         <PhoneInput placeholder="212-345-6789"
           defaultCountry="US"
@@ -179,14 +182,8 @@ const NewBusiness = () => {
           value={phone} onChange={setPhone} 
           maxLength="14"
           /> 
-        {/* <input
-          type="tel"
-          placeholder="212-345-6789"
-          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-          disabled={showPhone}
-          {...phone}
-          required
-        /> */}
+
+        <div className="labelBox">
         <label>If not available</label>
         <input
           name="Phone not available check box"
@@ -195,6 +192,7 @@ const NewBusiness = () => {
           onChange={handlePhone}
         />
 
+        </div>
         <label>Email: </label>
         <input
           type="email"
@@ -203,6 +201,7 @@ const NewBusiness = () => {
           disabled={showEmail}
           required
         />
+        <div className="labelBox">
         <label>If not available</label>
         <input
           name="Email not available check box"
@@ -211,6 +210,7 @@ const NewBusiness = () => {
           onChange={handleEmail}
         />
 
+        </div>
         <label>Social Media: </label>
         <input
           type="text"
@@ -219,6 +219,7 @@ const NewBusiness = () => {
           disabled={showSocial}
           required
         />
+        <div className="labelBox">
         <label>If not available</label>
         <input
           name="Social Media not available check box"
@@ -227,6 +228,7 @@ const NewBusiness = () => {
           onChange={handleSocial}
         />
 
+        </div>
         <label>Website: </label>
         <input
           type="text"
@@ -235,6 +237,7 @@ const NewBusiness = () => {
           disabled={showWeb}
           required
         />
+        <div className="labelBox">
         <label>If not available</label>
         <input
           name="Website not available check box"
@@ -242,8 +245,12 @@ const NewBusiness = () => {
           value="n/a"
           onChange={handleWeb}
         />
+        </div>
 
-        <div>
+         </div>
+
+        <div className="address">
+        <label className="label">Address:</label>
           <GoogleMap
             setHouseNum={(e) => setHouseNum(e)}
             setStreet={(e) => setStreet(e)}

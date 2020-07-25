@@ -2,14 +2,9 @@ label{
     color:white
 }
 
-.label{
-    color:white
-}
-
 .timeLabel{
     color:black
 }
-
 
 .newBusiness{
     display: grid;
@@ -28,6 +23,8 @@ label{
 }
 
 .business >input{
+    display: flex;
+
     margin-bottom: 1em;
     border-radius: 5px;
     background-color: rgba(244, 211, 128, 0.865);
@@ -37,8 +34,12 @@ label{
 .business >input::placeholder{
     color: rgb(74, 72, 72);
 }
+.business >input:disabled{
+    background: gray;
+}
 
 .contact>input{
+    display: flex;
     margin-bottom: 1em;
     border-radius: 5px;
     background-color: rgba(244, 211, 128, 0.865);
@@ -47,16 +48,15 @@ label{
 .contact >input::placeholder{
     color:  rgb(74, 72, 72);
 }
+.contact >input:disabled{
+    background: gray;
+}
 
 .contact>label{
     display: flex;
     text-align: left;
 }
 
-/* .address>label{
-    display: flex;
-    text-align: left;
-} */
 #react-google-places-autocomplete-input{
     margin-bottom: 1em;
     border-radius: 5px;
@@ -64,7 +64,9 @@ label{
     width: 16em;
 }
 
+
 .label{
+    color:white;
     display: flex;
     text-align: left;
 }
@@ -77,6 +79,9 @@ label{
 .field::placeholder{
     color:  rgb(74, 72, 72);
 }
+.field:disabled{
+    background: gray;
+}
 
 
 .PhoneInputInput {
@@ -84,13 +89,16 @@ label{
     min-width: 0;
     margin-left: -16px;
     border-radius: 5px;
-    background-color: rgba(244, 211, 128, 0.865);
-    width: 16em;
-}
-.PhoneInputInput::placeholder{
-    color:  rgb(74, 72, 72);
+    background-color: rgba(244, 211, 128, 0.865)
 }
 
+.PhoneInputInput::placeholder{
+    color:  rgb(74, 72, 72);
+    font-size: 10pt;
+}
+.PhoneInputInput:disabled{
+    background: gray;
+}
 
 .selectBizBar {
     display: flex;
@@ -110,7 +118,7 @@ label{
     background-color: rgba(243, 183, 31, 0.849);
     cursor: pointer;
   }
-  
+
   .selectBizBar > option {
     text-align-last: center;
     color: #191102ff;
@@ -124,4 +132,42 @@ label{
   }
   .labelBox>label{
     margin-right: 10px;
+  }
+
+  .Btn-create{
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    color: #f3b61fff;
+    background-color: darkred;
+    border: none;
+    border-radius: 25px;
+    font-family: "Candal", sans-serif;
+    font-weight: lighter;
+    font-size: 14pt;
+    text-shadow: 1px 2px 2px #191102ff;
+    box-shadow: 1px 3px 3px rgb(41, 28, 3);
+    height: auto;
+    width: 20em;
+    padding: 0.5em;
+    text-align: center;
+  }
+
+  .Btn-rest{
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    color: #f3b61fff;
+    background-color: gray;
+    border: none;
+    border-radius: 25px;
+    font-family: "Candal", sans-serif;
+    font-weight: lighter;
+    font-size: 14pt;
+    text-shadow: 1px 2px 2px #191102ff;
+    box-shadow: 1px 3px 3px rgb(41, 28, 3);
+    height: auto;
+    width: 20em;
+    padding: 0.5em;
+    text-align: center;
   }

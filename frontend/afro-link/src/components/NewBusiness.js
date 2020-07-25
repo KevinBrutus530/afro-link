@@ -181,6 +181,7 @@ const NewBusiness = () => {
           disabled={showPhone}
           value={phone} onChange={setPhone} 
           maxLength="14"
+          style={{width:"16em"}}
           /> 
 
         <div className="labelBox">
@@ -191,7 +192,6 @@ const NewBusiness = () => {
           value="n/a"
           onChange={handlePhone}
         />
-
         </div>
         <label>Email: </label>
         <input
@@ -309,8 +309,8 @@ const NewBusiness = () => {
             </span>
           </div>
         </div>
-        <input type="reset" />
-        <button type="submit">
+        <input type="reset" className="Btn-rest"/>
+        <button type="submit" className="Btn-create">
           <span>Create Business</span>
         </button>
         <>

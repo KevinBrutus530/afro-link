@@ -35,10 +35,11 @@ const Business = () => {
     let ins = "instagram";
     
     if (!url) return null
-    if (url.search(ins)){
+    if (url.includes(ins)){
+      // debugger
       console.log("instagram")
       return null
-    }else if(url.search(fb)){
+    }else if(url.includes(fb)){
       console.log("facebook")
       return null
     } else{

@@ -2,10 +2,172 @@ label{
     color:white
 }
 
-.label{
-    color:white
-}
-
 .timeLabel{
     color:black
 }
+
+.newBusiness{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5em;
+    width: min-content;
+    margin: auto;
+    padding: 2em;
+
+}
+
+.business >label{
+    display: flex;
+    text-align: left;
+    /* margin-top: 1em; */
+}
+
+.business >input{
+    display: flex;
+
+    margin-bottom: 1em;
+    border-radius: 5px;
+    background-color: rgba(244, 211, 128, 0.865);
+    width: 16em;
+}
+
+.business >input::placeholder{
+    color: rgb(74, 72, 72);
+}
+.business >input:disabled{
+    background: gray;
+}
+
+.contact>input{
+    display: flex;
+    margin-bottom: 1em;
+    border-radius: 5px;
+    background-color: rgba(244, 211, 128, 0.865);
+    width: 16em;
+}
+.contact >input::placeholder{
+    color:  rgb(74, 72, 72);
+}
+.contact >input:disabled{
+    background: gray;
+}
+
+.contact>label{
+    display: flex;
+    text-align: left;
+}
+
+#react-google-places-autocomplete-input{
+    margin-bottom: 1em;
+    border-radius: 5px;
+    background-color: rgba(244, 211, 128, 0.865);
+    width: 16em;
+}
+
+
+.label{
+    color:white;
+    display: flex;
+    text-align: left;
+}
+.field{
+    margin-bottom: 1em;
+    border-radius: 5px;
+    background-color: rgba(244, 211, 128, 0.865);
+    width: 16em;
+}
+.field::placeholder{
+    color:  rgb(74, 72, 72);
+}
+.field:disabled{
+    background: gray;
+}
+
+
+.PhoneInputInput {
+    flex: 1 1;
+    min-width: 0;
+    margin-left: -16px;
+    border-radius: 5px;
+    background-color: rgba(244, 211, 128, 0.865)
+}
+
+.PhoneInputInput::placeholder{
+    color:  rgb(74, 72, 72);
+    font-size: 10pt;
+}
+.PhoneInputInput:disabled{
+    background: gray;
+}
+
+.selectBizBar {
+    display: flex;
+    justify-content: space-around;
+    text-align-last: center;
+    border: none;
+    border-radius: 25px;
+    width: 16em;
+    height: auto;
+    padding: 0.5em;
+    margin-right: 10px;
+    color: #191102ff;
+    font-size: 12pt;
+    font-weight: lighter;
+    box-shadow: 1px 3px 6px #191102ff;
+    text-shadow: 2px 1px 2px rgba(233, 201, 121, 0.746);
+    background-color: rgba(243, 183, 31, 0.849);
+    cursor: pointer;
+  }
+
+  .selectBizBar > option {
+    text-align-last: center;
+    color: #191102ff;
+    font-size: larger;
+  }
+
+  .labelBox{
+    display: flex;
+    align-items: baseline;
+    margin-right: 5px;
+  }
+  .labelBox>label{
+    margin-right: 10px;
+  }
+
+  .Btn-create{
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    color: #f3b61fff;
+    background-color: darkred;
+    border: none;
+    border-radius: 25px;
+    font-family: "Candal", sans-serif;
+    font-weight: lighter;
+    font-size: 14pt;
+    text-shadow: 1px 2px 2px #191102ff;
+    box-shadow: 1px 3px 3px rgb(41, 28, 3);
+    height: auto;
+    width: 20em;
+    padding: 0.5em;
+    text-align: center;
+  }
+
+  .Btn-rest{
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    color: #f3b61fff;
+    background-color: gray;
+    border: none;
+    border-radius: 25px;
+    font-family: "Candal", sans-serif;
+    font-weight: lighter;
+    font-size: 14pt;
+    text-shadow: 1px 2px 2px #191102ff;
+    box-shadow: 1px 3px 3px rgb(41, 28, 3);
+    height: auto;
+    width: 20em;
+    padding: 0.5em;
+    text-align: center;
+  }

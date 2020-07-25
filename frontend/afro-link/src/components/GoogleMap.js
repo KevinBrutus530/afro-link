@@ -22,6 +22,13 @@ const GoogleMap = ({setCity,setHouseNum,setStreet,setState, setZip}) => {
     }
     
   }
+  let styleAddress = {
+
+    marginbottom: "1em",
+    borderradius: "5px",
+    backgroundcolor: "rgba(244, 211, 128, 0.865)",
+    width: "16em",
+  }
   return(
     <div>
       <GooglePlacesAutocomplete
@@ -31,7 +38,9 @@ const GoogleMap = ({setCity,setHouseNum,setStreet,setState, setZip}) => {
       componentRestrictions: {
         country: ['us'],
       }
+      
     }}
+    
         onSelect={(e)=>{
 
           // debugger
@@ -43,7 +52,8 @@ const GoogleMap = ({setCity,setHouseNum,setStreet,setState, setZip}) => {
           // fetchZip(e.reference)
           fetchZip(e.place_id)
           }}
-
+          placeholder="123-23 Broadway Blvd, New York, NY"
+          inputStyle={styleAddress}
       />
     </div>
   )

@@ -1,0 +1,36 @@
+.resultsMainDiv {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+
+/* .resultsULn{
+    background-color: ;
+} */
+
+.businessCard {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    /* background-color: #d5f5cda2; */
+    background-color: #F3B61F;
+    box-shadow: 1px 3px 5px #d5f5cda2;
+    height: 70%;
+    width: 50%;
+    padding: 1em;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #191102;
+}
+
+.businessCard > li {
+    display: flex;
+    flex-direction: row;
+}
+
+.businessCard * {
+    color: #191102;
+    
+}

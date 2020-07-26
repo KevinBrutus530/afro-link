@@ -5,18 +5,22 @@ import DisplayBusiness from "./DisplayBusiness";
 import ReviewsForm from "./ReviewsForm";
 import Instagram from "./socialMedia/Instagram";
 import Facebook from "./socialMedia/Facebook";
+import "../css/Business.css";
 
 const Business = () => {
   const [businessInfo, setBusinessInfo] = useState([]);
   const history = useHistory();
   const { id } = useParams();
   const [igUrl, setIgUrl] = useState("");
+  const [businessName, setBusinessName] = useState("");
 
   const getInfo = async () => {
     try {
       let res = await axios.get(`http://localhost:3000/businesses/${id}`);
+      // debugger
       setBusinessInfo(res.data.payload);
-      setIgUrl(res.data.payload.social_media)
+      setBusinessName(res.data.payload.biz_name);
+      setIgUrl(res.data.payload.social_media);
     } catch (err) {
       console.log(err);
     }
@@ -33,34 +37,41 @@ const Business = () => {
   const checkingSocialMedia = (url) => {
     let fb = "facebook";
     let ins = "instagram";
-    
-    if (!url) return null
-    if (url.includes(ins)){
+
+    if (!url) return null;
+    if (url.includes(ins)) {
       // debugger
-      console.log("instagram")
-      return null
-    }else if(url.includes(fb)){
-      console.log("facebook")
-      return null
-    } else{
-      return null
+      console.log("instagram");
+      return null;
+    } else if (url.includes(fb)) {
+      console.log("facebook");
+      return null;
+    } else {
+      return null;
     }
-    }
-  
+  };
 
   return (
-    <div>
-      <button onClick={() => history.goBack()} type="submit">
+    <div className="businessMainDiv">
+      <button
+        id="goBack"
+        className="Btn-create"
+        onClick={() => history.goBack()}
+        type="submit"
+      >
         Return to Results Page
       </button>
-      <DisplayBusiness businessInfo={businessInfo} categoryId={id} />
-      <div>
-      {checkingSocialMedia(igUrl)}
-      </div>
+      <div>{checkingSocialMedia(igUrl)}</div>
 
-      {/* <Instagram igUrl={igUrl} /> */}
-      {/* <Facebook fbUrl={fbUrl} /> */}
-      <ReviewsForm />
+      <h1 id="bizName">{businessName}</h1>
+
+      <div className="dispReviews">
+        <DisplayBusiness businessInfo={businessInfo} categoryId={id} />
+        <ReviewsForm />
+
+        {/* <Instagram igUrl={igUrl} /> */}
+        {/* <Facebook fbUrl={fbUrl} /> */}
+      </div>
     </div>
   );
 };

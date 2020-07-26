@@ -1,0 +1,22 @@
+
+
+#reviewsBtn {
+    width: 8em;
+    font-size: medium;
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+}
+
+.reviewsForm {
+    background-color: grey;
+    border: 1px green solid;
+    padding: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.reviewsInputs {
+    background-color: green;
+    padding: 1em;
+}

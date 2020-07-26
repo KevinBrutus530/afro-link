@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useInput } from "../util/useInput";
 import { getAPI } from "../util/getAPI";
 import axios from "axios";
+import "../css/ReviewsForm.css";
 
 const ReviewsForm = () => {
   const API = getAPI();
@@ -51,8 +52,9 @@ const ReviewsForm = () => {
   });
 
   return (
-    <div style={{ color: "white" }}>
-      <form onSubmit={submitReviews}>
+    <div className="reviewsForm" style={{ color: "white" }}>
+      <h2>Reviews</h2>
+      <form className="reviewsInputs" onSubmit={submitReviews}>
         <label>Name:</label>
         <input
           type="text"
@@ -77,11 +79,11 @@ const ReviewsForm = () => {
           {...ratings}
           required
         />
-        <button type="submit" className="reviewBtn">
+        <button className="Btn-create" type="submit" id="reviewsBtn">
           Submit
         </button>
       </form>
-      <h2>Reviews</h2>
+
       <ul style={{ listStyleType: "none" }}>{showReviews}</ul>
     </div>
   );

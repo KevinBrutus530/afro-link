@@ -25,5 +25,6 @@ $black-chocolate: #191102ff; */
 }
 
 a {
+  color: white;
   text-decoration: none;
 }

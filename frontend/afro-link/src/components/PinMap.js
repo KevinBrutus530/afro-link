@@ -5,7 +5,7 @@ import {
   LoadScript,
   InfoWindow,
 } from "@react-google-maps/api";
-
+import "../css/PinMap.css";
 import axios from "axios";
 
 
@@ -20,11 +20,12 @@ const PinMap = ({ location, bizName }) => {
   }, [location]);
 
   const fetchCoord = async () => {
+    console.log(process.env.REACT_APP_GOOGLE_API_KEY);
     try {
       let res = await axios.get(
         `https://maps.googleapis.com/maps/api/geocode/json?address=${location}&key=${process.env.REACT_APP_GOOGLE_API_KEY}`
       );
-      //   debugger;
+      debugger;
       setLat(res.data.results[0].geometry.location.lat);
       setLng(res.data.results[0].geometry.location.lng);
     } catch (error) {
@@ -33,6 +34,7 @@ const PinMap = ({ location, bizName }) => {
   };
 
   const containerStyle = {
+    margin: "auto",
     width: "400px",
     height: "400px",
   };

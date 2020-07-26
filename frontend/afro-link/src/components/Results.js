@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import axios from "axios";
 import FilterResults from "./FilterResults";
-// import Business from "./Business";
+import "../css/Results.css";
 
 const Results = () => {
   const { id } = useParams();
@@ -37,18 +37,21 @@ const Results = () => {
     return (
       <>
         <div
+          className="resultsDiv"
           key={biz.biz_id}
           value={biz.biz_id}
           onClick={() => handleBusiness(biz.biz_id)}
         >
-          <h3>{biz.biz_name}</h3>
-          <li>Hours: {hrsSub}</li>
-          <li>
-            {bizz} {biz.city} {biz.state} {biz.zip}
-          </li>
-          <li>
-            <a href={biz.website}>{biz.website}</a>
-          </li>
+          <div className="businessCard">
+            <h3>{biz.biz_name}</h3>
+            {/* <li>Hours: {hrsSub}</li> */}
+            <p>
+              {bizz} {biz.city} {biz.state} {biz.zip}
+            </p>
+            <p>
+              <a href={biz.website}>{biz.website}</a>
+            </p>
+          </div>
           <br />
         </div>
       </>
@@ -57,11 +60,13 @@ const Results = () => {
 
   return (
     <>
-      <div style={{ color: "white" }}>
+      <div className="resultsMainDiv" style={{ color: "white" }}>
         <h1>{bizType}</h1>
         <FilterResults results={results} />
         <div>
-          <ul style={{ listStyleType: "none" }}>{resultDisplay}</ul>
+          <ul className="resultsUL" style={{ listStyleType: "none" }}>
+            {resultDisplay}
+          </ul>
         </div>
       </div>
     </>

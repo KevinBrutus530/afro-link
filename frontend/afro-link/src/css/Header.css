@@ -10,7 +10,7 @@ $black-chocolate: #191102ff; */
   display: flex;
   margin-left: 1em;
   width: auto;
-  height: 13em;
+  height: 9em;
   transition: transform 1s;
 }
 
@@ -22,7 +22,7 @@ $black-chocolate: #191102ff; */
   display: flex;
   justify-content: space-between;
   box-shadow: 1px 5px 7px #f3b61fff;
-  height: 9.5em;
+  height: 6.5em;
   text-align: center;
   width: 101%;
   position: sticky;

@@ -6,6 +6,7 @@ import ReviewsForm from "./ReviewsForm";
 import Instagram from "./socialMedia/Instagram";
 import Facebook from "./socialMedia/Facebook";
 import "../css/Business.css";
+import PinMap from "./PinMap";
 
 const Business = () => {
   const [businessInfo, setBusinessInfo] = useState([]);
@@ -13,6 +14,15 @@ const Business = () => {
   const { id } = useParams();
   const [igUrl, setIgUrl] = useState("");
   const [businessName, setBusinessName] = useState("");
+
+  let location =
+    businessInfo.street +
+    " " +
+    businessInfo.city +
+    " " +
+    businessInfo.state +
+    " " +
+    businessInfo.zip;
 
   const getInfo = async () => {
     try {
@@ -61,16 +71,19 @@ const Business = () => {
       >
         Return to Results Page
       </button>
-      <div>{checkingSocialMedia(igUrl)}</div>
+      {/* <div>{checkingSocialMedia(igUrl)}</div> */}
 
       <h1 id="bizName">{businessName}</h1>
-
-      <div className="dispReviews">
-        <DisplayBusiness businessInfo={businessInfo} categoryId={id} />
-        <ReviewsForm />
-
-        {/* <Instagram igUrl={igUrl} /> */}
-        {/* <Facebook fbUrl={fbUrl} /> */}
+      <div className="bizMapRevContainer">
+        <div className="bizMap">
+          <DisplayBusiness businessInfo={businessInfo} categoryId={id} />
+          <PinMap location={location} bizName={businessInfo.biz_name} />
+        </div>
+        <div className="dispReviews">
+          <ReviewsForm />
+          {/* <Instagram igUrl={igUrl} /> */}
+          {/* <Facebook fbUrl={fbUrl} /> */}
+        </div>
       </div>
     </div>
   );

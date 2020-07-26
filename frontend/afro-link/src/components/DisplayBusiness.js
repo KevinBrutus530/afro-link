@@ -1,19 +1,19 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import PinMap from "./PinMap";
+// import PinMap from "./PinMap";
 import "../css/DisplayBusiness.css";
 
 const DisplayBusiness = ({ businessInfo, categoryId }) => {
   // debugger;
   const history = useHistory();
-  let location =
-    businessInfo.street +
-    " " +
-    businessInfo.city +
-    " " +
-    businessInfo.state +
-    " " +
-    businessInfo.zip;
+  // let location =
+  //   businessInfo.street +
+  //   " " +
+  //   businessInfo.city +
+  //   " " +
+  //   businessInfo.state +
+  //   " " +
+  //   businessInfo.zip;
 
   return (
     <>
@@ -45,7 +45,7 @@ const DisplayBusiness = ({ businessInfo, categoryId }) => {
           </div>
         </div>
       </div>
-      <PinMap location={location} bizName={businessInfo.biz_name} />
+      {/* <PinMap location={location} bizName={businessInfo.biz_name} /> */}
     </>
   );
 };

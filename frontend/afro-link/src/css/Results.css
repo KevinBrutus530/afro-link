@@ -2,35 +2,40 @@
   display: flex;
   flex-direction: column;
   margin: auto;
+  margin-top: 3em;
 }
-
 
 /* .resultsULn{
     background-color: ;
 } */
 
 .businessCard {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    /* background-color: #d5f5cda2; */
-    background-color: #F3B61F;
-    box-shadow: 1px 3px 5px #d5f5cda2;
-    height: 70%;
-    width: 50%;
-    padding: 1em;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 5px;
-    color: #191102;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  background-color: #f3b61f;
+  box-shadow: 1px 1px 7px #d5f5cda2;
+  height: 70%;
+  width: 50%;
+  padding: 2em;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #191102;
+  font-weight: bold;
+}
+
+.businessCard:hover {
+    box-shadow: 1px 3px 5px #510D0A;
+    background-color: goldenrod;
+    color: #510D0A;
 }
 
 .businessCard > li {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .businessCard * {
-    color: #191102;
-    
+  color: #191102;
 }

@@ -52,7 +52,7 @@ const ReviewsForm = () => {
   });
 
   return (
-    <div className="reviewsForm" style={{ color: "white" }}>
+    <div className="reviewsForm" >
       <h2>Reviews</h2>
       <form className="reviewsInputs" onSubmit={submitReviews}>
         <label>Name:</label>

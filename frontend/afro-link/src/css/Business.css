@@ -14,10 +14,18 @@
   font-size: medium;
 }
 
-.dispReviews {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+/* .dispReviews {
+  display: flex;
+  flex-direction: row;
   margin: auto;
+} */
+
+.bizMapRevContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: auto;
+  padding: 3em;
 }
 
 

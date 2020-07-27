@@ -49,7 +49,9 @@ const Results = () => {
               {bizz} {biz.city} {biz.state} {biz.zip}
             </p>
             <p>
-              <a href={biz.website}>{biz.website}</a>
+              <a href={biz.website} target="_blank">
+                Website
+              </a>
             </p>
           </div>
           <br />

@@ -3,17 +3,9 @@ import { useHistory } from "react-router-dom";
 // import PinMap from "./PinMap";
 import "../css/DisplayBusiness.css";
 
-const DisplayBusiness = ({ businessInfo, categoryId }) => {
+const DisplayBusiness = ({ businessInfo }) => {
   // debugger;
   const history = useHistory();
-  // let location =
-  //   businessInfo.street +
-  //   " " +
-  //   businessInfo.city +
-  //   " " +
-  //   businessInfo.state +
-  //   " " +
-  //   businessInfo.zip;
 
   return (
     <>
@@ -45,7 +37,6 @@ const DisplayBusiness = ({ businessInfo, categoryId }) => {
           </div>
         </div>
       </div>
-      {/* <PinMap location={location} bizName={businessInfo.biz_name} /> */}
     </>
   );
 };

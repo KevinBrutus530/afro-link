@@ -28,7 +28,7 @@ const DisplayBusiness = ({ businessInfo, categoryId }) => {
             </li>
 
             <li>
-              <a href={businessInfo.website}>Website Here</a>
+              <a href={businessInfo.website} target="_blank">Website Here</a>
             </li>
           </ul>
           <div className="contactInfo">
@@ -37,7 +37,7 @@ const DisplayBusiness = ({ businessInfo, categoryId }) => {
               <li>{businessInfo.email}</li>
 
               <li>
-                <a href={businessInfo.social_media}>
+                <a href={businessInfo.social_media} target="_blank">
                   {businessInfo.social_media}
                 </a>
               </li>

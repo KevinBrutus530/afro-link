@@ -71,12 +71,12 @@ const createReview = async (req, res, next) => {
       payload: review,
     });
   } catch (err) {
-    res.status(400).json({
-      status: "Error",
-      message: "Error create review",
-      payload: err,
-    });
-    next();
+    // res.status(400).json({
+    //   status: "Error",
+    //   message: "Error create review",
+    //   payload: err,
+    // });
+    next(err);
   }
 };
 

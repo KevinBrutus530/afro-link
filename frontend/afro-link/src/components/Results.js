@@ -26,10 +26,12 @@ const Results = () => {
   }, []);
 
   const handleBusiness = (e) => {
+
     history.push(`/businesses/${e}`);
   };
 
   let resultDisplay = results.map((biz) => {
+
     let noAddress = "";
     let noHours = "Not Available";
     let bizz = biz.street === null ? (biz.street = noAddress) : biz.street;

@@ -20,7 +20,15 @@ const getAllCategories = async (req, res, next) => {
 
 const getSingleCategory = async (req, res, next) => {
   try {
-    let category = await db.any(`SELECT businesses.id, businesses.biz_name, businesses.hours, addresses.street, addresses.city, addresses.state, addresses.zip, addresses.website,categories.biz_id, categories.type_id, types.id, types.type_name FROM addresses RIGHT JOIN businesses ON businesses.id= address_id JOIN categories ON categories.biz_id=addresses.id JOIN types ON categories.type_id=types.id WHERE types.id = ${req.params.id}`);
+    let category = await db.any(`SELECT businesses.id AS BIZ_ID, businesses.biz_name, addresses.*
+    FROM businesses
+    LEFT JOIN addresses ON businesses.id = addresses.address_id
+    WHERE businesses.id IN (
+                      SELECT biz_id FROM categories
+                        WHERE type_id = ${req.params.id}
+                    )
+    ORDER BY businesses.id ASC
+                    `);
     res.status(200).json({
       status: "success",
       message: "single category",

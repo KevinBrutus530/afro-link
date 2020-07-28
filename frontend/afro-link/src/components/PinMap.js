@@ -63,7 +63,7 @@ const PinMap = ({ location, bizName }) => {
         <div>
           <h4>{bizName}</h4>
           <p>{location}</p>
-          <button onClick={() =>
+          <button className="Btn-create" style={{width:"7em",marginBottom:"5px"}} onClick={() =>
                 window.open(
                   `https://www.google.com/maps/dir/?api=1&destination=${location}&travelmode=driving`
                 )

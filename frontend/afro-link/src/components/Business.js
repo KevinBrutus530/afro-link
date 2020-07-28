@@ -77,6 +77,7 @@ const Business = () => {
       <div className="bizMapRevContainer">
         <div className="bizMap">
           <DisplayBusiness businessInfo={businessInfo} categoryId={id} />
+          
           <PinMap location={location} bizName={businessInfo.biz_name} />
         </div>
         <div className="dispReviews">

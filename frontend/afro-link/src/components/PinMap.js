@@ -10,6 +10,7 @@ import axios from "axios";
 
 
 const PinMap = ({ location, bizName }) => {
+  
   const apiKeyMaps = process.env.REACT_APP_GOOGLE_API_KEY;
   const [lat, setLat] = useState(0);
   const [lng, setLng] = useState(0);
@@ -62,29 +63,36 @@ const PinMap = ({ location, bizName }) => {
         <div>
           <h4>{bizName}</h4>
           <p>{location}</p>
+          <button onClick={() =>
+                window.open(
+                  `https://www.google.com/maps/dir/?api=1&destination=${location}&travelmode=driving`
+                )
+              }>Directions</button>
         </div>
       </InfoWindow>
     );
   };
-
-  return (
-    <LoadScript googleMapsApiKey={apiKeyMaps}>
-      <GoogleMap
-        // id="map"
-        mapContainerStyle={containerStyle}
-        zoom={15}
-        center={center}
-        onLoad={onLoad}
-        onUnmount={onUnmount}
-      >
-        <Marker
-          onClick={() => setShowMapInfo((prevShowMapInfo) => !prevShowMapInfo)}
-          position={{ lat: lat, lng: lng }}
-        />
-        {showMapInfo ? showInfo() : null}
-      </GoogleMap>
-    </LoadScript>
-  );
+  if(location.length<20) {return null}
+    else{
+    return (
+      <LoadScript googleMapsApiKey={apiKeyMaps}>
+        <GoogleMap
+          // id="map"
+          mapContainerStyle={containerStyle}
+          zoom={15}
+          center={center}
+          onLoad={onLoad}
+          onUnmount={onUnmount}
+        >
+          <Marker
+            onClick={() => setShowMapInfo((prevShowMapInfo) => !prevShowMapInfo)}
+            position={{ lat: lat, lng: lng }}
+          />
+          {showMapInfo ? showInfo() : null}
+        </GoogleMap>
+      </LoadScript>
+    );
+  }
 };
 
 export default PinMap;

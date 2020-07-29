@@ -11,6 +11,7 @@ const ReviewsForm = () => {
   const name = useInput("");
   const text = useInput("");
   const [allReviews, setAllReviews] = useState([]);
+  // const [form, setForm] = useState({});
   const ratings = useInput("");
 
   const getReviews = async () => {
@@ -28,6 +29,9 @@ const ReviewsForm = () => {
 
   const submitReviews = async (e) => {
     e.preventDefault();
+    // debugger
+    // let form = e.target
+    // debugger
     try {
       await axios.post(`${API}/reviews`, {
         review_id: id,
@@ -39,6 +43,7 @@ const ReviewsForm = () => {
     } catch (err) {
       console.log(err);
     }
+    // e.currentTarget.reset();
   };
 
   let showReviews = allReviews.map((post, i) => {

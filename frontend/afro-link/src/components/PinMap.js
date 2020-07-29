@@ -26,7 +26,7 @@ const PinMap = ({ location, bizName }) => {
       let res = await axios.get(
         `https://maps.googleapis.com/maps/api/geocode/json?address=${location}&key=${process.env.REACT_APP_GOOGLE_API_KEY}`
       );
-      debugger;
+      // debugger;
       setLat(res.data.results[0].geometry.location.lat);
       setLng(res.data.results[0].geometry.location.lng);
     } catch (error) {

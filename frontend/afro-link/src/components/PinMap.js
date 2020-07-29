@@ -20,15 +20,28 @@ const PinMap = ({ location, bizName }) => {
     fetchCoord();
   }, [location]);
 
+  const fetchDetail = async (place_id)=>{
+    debugger
+    try {
+       let details = await axios.get(`https://maps.googleapis.com/maps/api/place/details/json?place_id=${place_id}&fields=name,rating,formatted_phone_number&key=${apiKeyMaps}`)
+          console.log(details.data)
+        debugger;
+    } catch (error) {
+        console.log(error)
+    }
+  }
+
   const fetchCoord = async () => {
-    console.log(process.env.REACT_APP_GOOGLE_API_KEY);
     try {
       let res = await axios.get(
-        `https://maps.googleapis.com/maps/api/geocode/json?address=${location}&key=${process.env.REACT_APP_GOOGLE_API_KEY}`
+        `https://maps.googleapis.com/maps/api/geocode/json?address=${location}&key=${apiKeyMaps}`
       );
-      // debugger;
+
       setLat(res.data.results[0].geometry.location.lat);
       setLng(res.data.results[0].geometry.location.lng);
+      if (res.data.status === "OK"){
+        fetchDetail(res.data.results[0].place_id)
+      }
     } catch (error) {
       console.log(error);
     }

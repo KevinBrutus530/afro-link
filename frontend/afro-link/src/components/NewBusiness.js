@@ -7,8 +7,10 @@ import TimeTable from "./TimeTable";
 import "../css/NewBusinss.css";
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
+import { useHistory } from 'react-router-dom'
 
 const NewBusiness = () => {
+  const history = useHistory()
   const API = getAPI();
   const [modalShow, setModalShow] = useState(false);
 
@@ -26,7 +28,7 @@ const NewBusiness = () => {
   const owner_name = useInput("");
   const type_name = useInput(""); //add  new function let owner/user create one
   // const phone = useInput("");
-  const [phone, setPhone] = useState()
+  const [phone, setPhone] = useState("")
   const email = useInput("");
   const social_media = useInput("");
   const website = useInput("");
@@ -42,6 +44,7 @@ const NewBusiness = () => {
   const [showEmail, setShowEmail] = useState(false);
   const [showSocial, setShowSocial] = useState(false);
   const [showWeb, setShowWeb] = useState(false);
+  const [showAddress, setAddress] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -99,13 +102,23 @@ const NewBusiness = () => {
           website: website.value,
         });
       }
+      welcome(biz_name.value, newBiz.data.status)
+      history.push("/")
     } catch (error) {
+      errorHandle(error.status)
       console.log(error.status);
+
     }
   };
+  
+  const welcome =(name, status)=>{
+   alert(`Create New business ${status}, Welcome ${name} to Afro Link`)
+  }
+  const errorHandle =(status)=>{
+   alert(`Create New business ${status}, Please try create new business Afro Link later`)
+  }
 
   const handleHours = (e) => {
-    // debugger
     if (e.currentTarget.selectedIndex === 0) {
       setHours(e.currentTarget.value);
     } else {
@@ -133,13 +146,37 @@ const NewBusiness = () => {
     website.value = e.currentTarget.value; //null
     setShowWeb(!showWeb);
   };
+  const handleAddress = () => {
+  setHouseNum("")
+  setStreet("")
+  setCity("")
+  setState("")
+  setZip("")
+  setAddress(!showAddress);
+  };
+
+  const resetForm=()=>{
+    biz_name.value=""
+    setHours("Online Store")
+    owner_name.value=""
+    type_name.value=""
+    setPhone("")
+    email.value=""
+    social_media.value=""
+    website.value=""
+    setHouseNum("")
+    setStreet("")
+    setCity("")
+    setState("")
+    setZip("")
+  }
 
   return (
     <div>
-      <form className="newBusiness" onSubmit={handleNewBiz}>
+      <form className="newBusiness" onSubmit={handleNewBiz} onReset={resetForm}>
         <div className="business">
         <label>Business Name: </label>
-        <input type="text" placeholder="Business Name" required {...biz_name} />
+        <input type="text" placeholder="Business Name" value={biz_name.value} required {...biz_name} />
 
         <label>Hours of Service: </label>
         <select className="selectBizBar" onChange={(e) => handleHours(e)} required>
@@ -266,6 +303,7 @@ const NewBusiness = () => {
                 id="street_number"
                 placeholder="House Number"
                 defaultValue={houseNum}
+                disabled={showAddress}
               />
             </span>
             <span className="wideField" colSpan="2">
@@ -274,6 +312,8 @@ const NewBusiness = () => {
                 id="route"
                 placeholder="Street/Route"
                 defaultValue={street}
+                disabled={showAddress}
+
               />
             </span>
           </div>
@@ -285,6 +325,7 @@ const NewBusiness = () => {
                 id="locality"
                 placeholder="City"
                 defaultValue={city}
+                disabled={showAddress}
               />
             </span>
           </div>
@@ -296,6 +337,7 @@ const NewBusiness = () => {
                 id="administrative_area_level_1"
                 placeholder="State"
                 defaultValue={state}
+                disabled={showAddress}
               />
             </span>
             <span className="label">Zip Code</span>
@@ -305,11 +347,20 @@ const NewBusiness = () => {
                 id="postal_code"
                 placeholder="Zip"
                 defaultValue={zip}
+                disabled={showAddress}
+
               />
             </span>
+            <label>If not available</label>
+        <input
+          name="Address not available check box"
+          type="checkbox"
+          value="n/a"
+          onChange={handleAddress}
+        />
           </div>
         </div>
-        <input type="reset" className="Btn-rest"/>
+        <input type="reset" value="reset" className="Btn-rest" />
         <button type="submit" className="Btn-create">
           <span>Create Business</span>
         </button>

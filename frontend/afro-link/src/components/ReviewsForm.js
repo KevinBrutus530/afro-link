@@ -11,6 +11,7 @@ const ReviewsForm = () => {
   const name = useInput("");
   const text = useInput("");
   const [allReviews, setAllReviews] = useState([]);
+  // const [form, setForm] = useState({});
   const ratings = useInput("");
 
   const getReviews = async () => {
@@ -28,6 +29,9 @@ const ReviewsForm = () => {
 
   const submitReviews = async (e) => {
     e.preventDefault();
+    // debugger
+    // let form = e.target
+    // debugger
     try {
       await axios.post(`${API}/reviews`, {
         review_id: id,
@@ -39,6 +43,7 @@ const ReviewsForm = () => {
     } catch (err) {
       console.log(err);
     }
+    // e.currentTarget.reset();
   };
 
   let showReviews = allReviews.map((post, i) => {
@@ -71,16 +76,17 @@ const ReviewsForm = () => {
           {...text}
           required
         />
-        <label>Ratings</label>
+        <label>Rating</label>
         <input
-          type="number"
-          placeholder="1-5"
+          type="range"
+          // placeholder="1-5"
           name="rating"
           min="1"
           max="5"
           {...ratings}
           required
         />
+        <p>{ratings.value}</p>
         <button className="Btn-create" type="submit" id="reviewsBtn">
           Submit
         </button>

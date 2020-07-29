@@ -36,6 +36,7 @@ const PinMap = ({ location, bizName }) => {
       let res = await axios.get(
         `https://maps.googleapis.com/maps/api/geocode/json?address=${location}&key=${apiKeyMaps}`
       );
+
       setLat(res.data.results[0].geometry.location.lat);
       setLng(res.data.results[0].geometry.location.lng);
       if (res.data.status === "OK"){

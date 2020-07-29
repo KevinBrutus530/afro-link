@@ -76,16 +76,17 @@ const ReviewsForm = () => {
           {...text}
           required
         />
-        <label>Ratings</label>
+        <label>Rating</label>
         <input
-          type="number"
-          placeholder="1-5"
+          type="range"
+          // placeholder="1-5"
           name="rating"
           min="1"
           max="5"
           {...ratings}
           required
         />
+        <p>{ratings.value}</p>
         <button className="Btn-create" type="submit" id="reviewsBtn">
           Submit
         </button>

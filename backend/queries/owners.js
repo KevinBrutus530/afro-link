@@ -1,5 +1,24 @@
 const db = require("../db/index");
 
+const signUp = async (req, res, next) => {
+  let {user_id, email} = req.body;
+  try {
+    let user = await db.one("INSERT INTO owners (user_id, email) VALUES($1, $2) RETURNING *", [user_id, email]);
+    res.status(200).json({
+      status: "success",
+      message: "created user",
+      user
+    });
+  } catch (err) {
+    res.status(400).json({
+      status: "Error",
+      message: "could not create new user",
+      payload: err
+    });
+    next();
+  }
+};
+
 const getSingleOwner = async (req, res, next) => {
   try {
     let owner = await db.one(`SELECT * FROM owners WHERE id =${req.params.id}`);
@@ -82,4 +101,4 @@ const editOwner = async (req, res, next) => {
   }
 };
 
-module.exports = { getSingleOwner, createOwner, editOwner, deleteOwner };
+module.exports = { signUp, getSingleOwner, createOwner, editOwner, deleteOwner };

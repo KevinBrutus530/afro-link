@@ -1,5 +1,4 @@
 const db = require("../db/index");
-
 const signUp = async (req, res, next) => {
   let {user_id, email} = req.body;
   try {
@@ -18,7 +17,6 @@ const signUp = async (req, res, next) => {
     next();
   }
 };
-
 const getSingleOwner = async (req, res, next) => {
   try {
     let owner = await db.one(`SELECT * FROM owners WHERE id =${req.params.id}`);
@@ -36,7 +34,6 @@ const getSingleOwner = async (req, res, next) => {
     next();
   }
 };
-
 const deleteOwner = async (req, res, next) => {
   try {
     let { id } = req.params;
@@ -46,7 +43,7 @@ const deleteOwner = async (req, res, next) => {
     );
     res.status(200).json({
       status: "success",
-      message: "deleted owner",
+      message: "deleted owner",
       payload: owner
     });
   } catch (err) {
@@ -58,14 +55,13 @@ const deleteOwner = async (req, res, next) => {
     next();
   }
 };
-
 const createOwner = async (req, res, next) => {
   try {
-    let { owner_id, owner_name } = req.body
+    let { owner_id, owner_name } = req.body
     let owner = await db.one("INSERT INTO owners (owner_id, owner_name) VALUES ($1,$2) RETURNING *", [owner_id, owner_name]);
     res.status(200).json({
       status: "success",
-      message: "created owner",
+      message: "created owner",
       payload: owner
     });
   } catch (err) {
@@ -77,18 +73,17 @@ const createOwner = async (req, res, next) => {
     next();
   }
 };
-
 const editOwner = async (req, res, next) => {
   try {
     let { owner_id, owner_name } = req.body;
     let { id } = req.params;
     let owner = await db.one(
-      "UPDATE owners SET owner_id=$1, owner_name=$2 WHERE id=$3",
+      "UPDATE owners SET owner_id=$1, owner_name=$2 WHERE id=$3",
       [owner_id, owner_name, id]
     );
     res.status(200).json({
       status: "success",
-      message: "updated owner",
+      message: "updated owner",
       payload: owner
     });
   } catch (err) {
@@ -100,5 +95,4 @@ const editOwner = async (req, res, next) => {
     next();
   }
 };
-
 module.exports = { signUp, getSingleOwner, createOwner, editOwner, deleteOwner };

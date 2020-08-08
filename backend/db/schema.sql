@@ -5,11 +5,11 @@ CREATE DATABASE afro_link;
 
 DROP TABLE IF EXISTS businesses;
 DROP TABLE IF EXISTS owners;
+DROP TABLE IF EXISTS types;
 DROP TABLE IF EXISTS categories;
 DROP TABLE IF EXISTS contacts;
 DROP TABLE IF EXISTS addresses;
 DROP TABLE IF EXISTS reviews;
-DROP TABLE IF EXISTS types;
 
 
 CREATE TABLE businesses  
@@ -21,9 +21,10 @@ CREATE TABLE businesses
 
 CREATE TABLE owners 
 (
-  id serial PRIMARY KEY,
+  id VARCHAR PRIMARY KEY,
   owner_id int REFERENCES businesses(id) ON DELETE CASCADE,
-  owner_name varchar DEFAULT 'UNKNOWN'
+  owner_name VARCHAR DEFAULT 'UNKNOWN',
+  owner_email VARCHAR DEFAULT NULL
 );
 
 CREATE TABLE types (

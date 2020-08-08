@@ -1,12 +1,8 @@
 const owners = require("express").Router();
 
-const {
-  signUp,
-  getSingleOwner,
-  createOwner,
-  editOwner,
-  deleteOwner,
-} = require("../queries/owners");
+
+const { signUp, getSingleOwner , createOwner, editOwner, deleteOwner } = require("../queries/owners");
+
 
 owners.get("/:id", getSingleOwner);
 
@@ -18,4 +14,7 @@ owners.patch("/:id", editOwner);
 
 owners.delete("/:id", deleteOwner);
 
-module.exports = owners;
+
+
+module.exports= owners;
+

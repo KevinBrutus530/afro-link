@@ -3,13 +3,17 @@ CREATE DATABASE afro_link;
 
 \c afro_link;
 
-DROP TABLE IF EXISTS businesses;
+
 DROP TABLE IF EXISTS owners;
 DROP TABLE IF EXISTS categories;
 DROP TABLE IF EXISTS contacts;
 DROP TABLE IF EXISTS addresses;
 DROP TABLE IF EXISTS reviews;
 DROP TABLE IF EXISTS types;
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS businesses;
+
+
 
 
 CREATE TABLE businesses  
@@ -19,17 +23,31 @@ CREATE TABLE businesses
   hours varchar
 );
 
+
+
 CREATE TABLE owners 
 (
   id serial PRIMARY KEY,
+  user_id VARCHAR,
+  email VARCHAR,
+  password VARCHAR,
   owner_id int REFERENCES businesses(id) ON DELETE CASCADE,
   owner_name varchar DEFAULT 'UNKNOWN'
 );
+
+-- CREATE TABLE users
+-- (
+--   id VARCHAR PRIMARY KEY,
+--   email VARCHAR,
+--   password VARCHAR 
+-- );
 
 CREATE TABLE types (
     id SERIAL PRIMARY KEY,
     type_name VARCHAR(100)
 );
+
+
 
 CREATE TABLE categories (
     id SERIAL PRIMARY KEY,

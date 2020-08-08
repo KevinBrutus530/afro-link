@@ -30,17 +30,10 @@ CREATE TABLE owners
   id serial PRIMARY KEY,
   user_id VARCHAR,
   email VARCHAR,
-  password VARCHAR,
   owner_id int REFERENCES businesses(id) ON DELETE CASCADE,
   owner_name varchar DEFAULT 'UNKNOWN'
 );
 
--- CREATE TABLE users
--- (
---   id VARCHAR PRIMARY KEY,
---   email VARCHAR,
---   password VARCHAR 
--- );
 
 CREATE TABLE types (
     id SERIAL PRIMARY KEY,

@@ -58,7 +58,7 @@ const ReviewsForm = () => {
   };
 
   let showReviews = allReviews.map((post, i) => {
-    debugger
+    // debugger
     return (
       <div style={{ color: "white" }} key={i} className="ReviewSect">
         <h5>{post.name.toUpperCase()}</h5>
@@ -90,7 +90,11 @@ const ReviewsForm = () => {
           {...text}
           required
         />
+<<<<<<< HEAD
+        <br></br>
+=======
 
+>>>>>>> 355eaed4143afd102733a39c2fc7e6d26a3ee93b
         <label>Rating: </label>
         {[...Array(5)].map((star, i) => {
           const ratingValue = i + 1;
@@ -106,8 +110,6 @@ const ReviewsForm = () => {
               onMouseEnter={()=>setHover(ratingValue)}
                 onMouseLeave={()=>setHover(null)}
                 onClick={() => setRating(ratingValue)}
-
-
                 ></span>
             </label>
           );

@@ -6,11 +6,13 @@
 }
 
 .reviewsForm {
+    display: block;
     background-color: rgba(255, 255, 255, 0.493);
     padding: 1em;
     margin-left: 1em;
     margin-right: 1em;
     border-radius: 5px;
+    width: fit-content;
 }
 
 .reviewsForm > label {
@@ -23,7 +25,11 @@
 .reviewsInputs {
     background-color: #F3B61F;
     padding: 1em;
-    margin: 2px;
+    margin: 10px;
+}
+
+.reviewsInputs >*{
+    padding: 1%;
 }
 
 .ReviewSect{

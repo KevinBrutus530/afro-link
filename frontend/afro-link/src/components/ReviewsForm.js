@@ -11,8 +11,10 @@ const ReviewsForm = () => {
   const name = useInput("");
   const text = useInput("");
   const [allReviews, setAllReviews] = useState([]);
-  // const [form, setForm] = useState({});
-  const ratings = useInput("");
+  // const ratings = useInput("");
+  const [ratings, setRating] = useState(null);
+  const [hover, setHover] = useState(null);
+
 
   const getReviews = async () => {
     try {
@@ -35,14 +37,14 @@ const ReviewsForm = () => {
         review_id: id,
         name: name.value,
         text: text.value,
-        ratings: ratings.value,
+        ratings: ratings,
       });
       getReviews();
     } catch (err) {
       console.log(err);
     }
   };
-  let createStar = (ratings) => {};
+
 
   let starsShow = (ratings) => {
     let starsList = [];
@@ -56,11 +58,14 @@ const ReviewsForm = () => {
   };
 
   let showReviews = allReviews.map((post, i) => {
+    debugger
     return (
       <div style={{ color: "white" }} key={i} className="ReviewSect">
-        <h5>{post.name}</h5>
-        <div className="ratings">{starsShow(post.ratings)}</div>
-        <p> {post.text}</p>
+        <h5>{post.name.toUpperCase()}</h5>
+        <div className="ratings">
+          {starsShow(post.ratings)}
+        </div>
+        <p className="review"> {post.text}</p>
       </div>
     );
   });
@@ -69,38 +74,45 @@ const ReviewsForm = () => {
     <div className="reviewsForm">
       <h2>Reviews</h2>
       <form className="reviewsInputs" onSubmit={submitReviews}>
-        <label>Name:</label>
+        <label>Name: </label>
         <input
           type="text"
-          placeholder="Name..."
+          placeholder="Leave your name..."
           name="name"
           {...name}
           required
         />
-        <label>Text:</label>
+        <label>Review: </label>
         <input
           type="text"
-          placeholder="Text..."
+          placeholder="comments..."
           name="comment"
           {...text}
           required
         />
-        <div className="ratingStars">
-          <label>
-            Rating
-            <input
-              type="range"
-              // placeholder="1-5"
-              name="ratings"
-              min="1"
-              max="5"
-              defaultValue="3"
-              {...ratings}
-              required
-            />
-          </label>
-          <p>{ratings.value}</p>
-        </div>
+
+        <label>Rating: </label>
+        {[...Array(5)].map((star, i) => {
+          const ratingValue = i + 1;
+          return (
+            <label key={i} className="ratingsSec">
+              <input
+                type="radio"
+                className="ratingRadio"
+                value={ratingValue}
+                onClick={() => setRating(ratingValue)}
+              />
+              <span className="fa fa-star-o" style={ratingValue<=(hover||ratings)?{"color":"red"}:{"color":"white"}}
+              onMouseEnter={()=>setHover(ratingValue)}
+                onMouseLeave={()=>setHover(null)}
+                onClick={() => setRating(ratingValue)}
+
+
+                ></span>
+            </label>
+          );
+        })}
+
         <button className="Btn-create" type="submit" id="reviewsBtn">
           Submit
         </button>

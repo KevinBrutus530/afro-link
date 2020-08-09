@@ -1,16 +1,12 @@
-
-
 #reviewsBtn {
     width: 8em;
     font-size: medium;
     margin-top: 1em;
-    margin-bottom: 1em;
-
+    /* margin-bottom: 1em; */
 }
 
 .reviewsForm {
     background-color: rgba(255, 255, 255, 0.493);
-    /* border: 1px #F3B61F solid; */
     padding: 1em;
     margin-left: 1em;
     margin-right: 1em;
@@ -19,12 +15,15 @@
 
 .reviewsForm > label {
     color: #191102;
-
+}
+.reviewsInputs >label{
+    color: #191102;
 }
 
 .reviewsInputs {
     background-color: #F3B61F;
     padding: 1em;
+    margin: 2px;
 }
 
 .ReviewSect{
@@ -32,7 +31,8 @@
     vertical-align: middle;
     width: calc(100% - 75px);
     min-height: auto;
-    margin: 5px 10px;
+    margin-top: 5px 10px;
+    margin-bottom: 0em;
     font-size: .9rem;
     border-bottom: 2px solid #f2f2f2;
 }
@@ -43,8 +43,22 @@
 }
 
 .ratings .fa{
-    font-size: 2rem;
-    color: #ff9800;
     cursor: pointer;
-    /* float: left; */
+    font-size: 1.1rem;
+    color: orange;
+}
+
+.review {
+    display: flex;
+    margin-left: 2em;
+    font-size: 1rem;
+}
+
+.ratingRadio{
+    display: none;
+}
+
+.ratingsSec .fa{
+    color: #191102;
+    transition: color 200ms;
 }

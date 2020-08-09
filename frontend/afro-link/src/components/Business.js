@@ -38,26 +38,6 @@ const Business = () => {
     getInfo();
   }, []);
 
-  useEffect(() => {
-    checkingSocialMedia();
-  }, [businessInfo]);
-
-  const checkingSocialMedia = (url) => {
-    let fb = "facebook";
-    let ins = "instagram";
-
-    if (!url) return null;
-    if (url.includes(ins)) {
-      // debugger
-      console.log("instagram");
-      return null;
-    } else if (url.includes(fb)) {
-      console.log("facebook");
-      return null;
-    } else {
-      return null;
-    }
-  };
 
   return (
     <div className="businessMainDiv">

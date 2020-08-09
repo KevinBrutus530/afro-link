@@ -29,7 +29,7 @@ const ReviewsForm = () => {
 
   const submitReviews = async (e) => {
     e.preventDefault();
-    debugger
+    // debugger;
     try {
       await axios.post(`${API}/reviews`, {
         review_id: id,
@@ -42,40 +42,31 @@ const ReviewsForm = () => {
       console.log(err);
     }
   };
-  let createStar =(ratings)=>{
-    
-  }
+  let createStar = (ratings) => {};
 
-  let starsShow = (ratings)=>{
-    let starsList=[]
-    for (let i=1; i<=ratings; i++){
-      starsList.push(
-        <span className="fa fa-star"></span>
-      )
+  let starsShow = (ratings) => {
+    let starsList = [];
+    for (let i = 1; i <= ratings; i++) {
+      starsList.push(<span className="fa fa-star"></span>);
     }
-    for (let i=1; i<=(5-ratings); i++){
-      starsList.push(
-        <span className="fa fa-star-o"></span>
-      )
+    for (let i = 1; i <= 5 - ratings; i++) {
+      starsList.push(<span className="fa fa-star-o"></span>);
     }
-    return starsList
-  }
-  
+    return starsList;
+  };
 
   let showReviews = allReviews.map((post, i) => {
     return (
       <div style={{ color: "white" }} key={i} className="ReviewSect">
         <h5>{post.name}</h5>
-        <div className="ratings">
-          {starsShow(post.ratings)}
-        </div>
+        <div className="ratings">{starsShow(post.ratings)}</div>
         <p> {post.text}</p>
       </div>
     );
   });
 
   return (
-    <div className="reviewsForm" >
+    <div className="reviewsForm">
       <h2>Reviews</h2>
       <form className="reviewsInputs" onSubmit={submitReviews}>
         <label>Name:</label>
@@ -94,18 +85,22 @@ const ReviewsForm = () => {
           {...text}
           required
         />
-        <label>Rating</label>
-        <input
-          type="range"
-          // placeholder="1-5"
-          name="ratings"
-          min="1"
-          max="5"
-          defaultValue="3"
-          {...ratings}
-          required
-        />
-        <p>{ratings.value}</p>
+        <div className="ratingStars">
+          <label>
+            Rating
+            <input
+              type="range"
+              // placeholder="1-5"
+              name="ratings"
+              min="1"
+              max="5"
+              defaultValue="3"
+              {...ratings}
+              required
+            />
+          </label>
+          <p>{ratings.value}</p>
+        </div>
         <button className="Btn-create" type="submit" id="reviewsBtn">
           Submit
         </button>

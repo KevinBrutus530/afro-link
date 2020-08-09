@@ -33,6 +33,7 @@ const SignUp = () => {
                 <div className="input">
                 <label>Email: </label>
                 <input type="text" placeholder="email" required {...email}/>
+                <label>Password: </label>
                 <input type="password" placeholder="password" required {...password}/>
                 <input type="submit" className="submit"/>
                 </div>

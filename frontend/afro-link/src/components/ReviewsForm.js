@@ -31,7 +31,7 @@ const ReviewsForm = () => {
 
   const submitReviews = async (e) => {
     e.preventDefault();
-    debugger
+    // debugger;
     try {
       await axios.post(`${API}/reviews`, {
         review_id: id,
@@ -45,21 +45,17 @@ const ReviewsForm = () => {
     }
   };
 
-  let starsShow = (ratings)=>{
-    let starsList=[]
-    for (let i=1; i<=ratings; i++){
-      starsList.push(
-        <span className="fa fa-star"></span>
-      )
+
+  let starsShow = (ratings) => {
+    let starsList = [];
+    for (let i = 1; i <= ratings; i++) {
+      starsList.push(<span className="fa fa-star"></span>);
     }
-    for (let i=1; i<=(5-ratings); i++){
-      starsList.push(
-        <span className="fa fa-star-o"></span>
-      )
+    for (let i = 1; i <= 5 - ratings; i++) {
+      starsList.push(<span className="fa fa-star-o"></span>);
     }
-    return starsList
-  }
-  
+    return starsList;
+  };
 
   let showReviews = allReviews.map((post, i) => {
     debugger
@@ -94,6 +90,7 @@ const ReviewsForm = () => {
           {...text}
           required
         />
+
         <label>Rating: </label>
         {[...Array(5)].map((star, i) => {
           const ratingValue = i + 1;

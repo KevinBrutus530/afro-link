@@ -8,7 +8,7 @@ owners.get("/:id", getSingleOwner);
 
 // owners.post("/signup", signUp)
 
-owners.post("/", signUp, createOwner);
+owners.post("/", createOwner);
 
 owners.patch("/:id", editOwner);
 

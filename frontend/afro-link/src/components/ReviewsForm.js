@@ -29,9 +29,7 @@ const ReviewsForm = () => {
 
   const submitReviews = async (e) => {
     e.preventDefault();
-    // debugger
-    // let form = e.target
-    // debugger
+    debugger
     try {
       await axios.post(`${API}/reviews`, {
         review_id: id,
@@ -43,15 +41,35 @@ const ReviewsForm = () => {
     } catch (err) {
       console.log(err);
     }
-    // e.currentTarget.reset();
   };
+  let createStar =(ratings)=>{
+    
+  }
+
+  let starsShow = (ratings)=>{
+    let starsList=[]
+    for (let i=1; i<=ratings; i++){
+      starsList.push(
+        <span className="fa fa-star"></span>
+      )
+    }
+    for (let i=1; i<=(5-ratings); i++){
+      starsList.push(
+        <span className="fa fa-star-o"></span>
+      )
+    }
+    return starsList
+  }
+  
 
   let showReviews = allReviews.map((post, i) => {
     return (
       <div style={{ color: "white" }} key={i} className="ReviewSect">
         <h5>{post.name}</h5>
+        <div className="ratings">
+          {starsShow(post.ratings)}
+        </div>
         <p> {post.text}</p>
-        <p>{post.ratings}</p>
       </div>
     );
   });
@@ -80,9 +98,10 @@ const ReviewsForm = () => {
         <input
           type="range"
           // placeholder="1-5"
-          name="rating"
+          name="ratings"
           min="1"
           max="5"
+          defaultValue="3"
           {...ratings}
           required
         />

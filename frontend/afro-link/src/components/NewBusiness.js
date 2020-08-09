@@ -103,7 +103,7 @@ const NewBusiness = () => {
         });
       }
       welcome(biz_name.value, newBiz.data.status)
-      history.push("/")
+      history.push("/main")
     } catch (error) {
       errorHandle(error.status)
       console.log(error.status);

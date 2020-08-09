@@ -13,6 +13,7 @@ const ReviewsForm = () => {
   const [allReviews, setAllReviews] = useState([]);
   // const ratings = useInput("");
   const [ratings, setRating] = useState(null);
+  const [hover, setHover] = useState(null);
 
 
   const getReviews = async () => {
@@ -36,7 +37,7 @@ const ReviewsForm = () => {
         review_id: id,
         name: name.value,
         text: text.value,
-        ratings: ratings.value,
+        ratings: ratings,
       });
       getReviews();
     } catch (err) {
@@ -61,6 +62,7 @@ const ReviewsForm = () => {
   
 
   let showReviews = allReviews.map((post, i) => {
+    debugger
     return (
       <div style={{ color: "white" }} key={i} className="ReviewSect">
         <h5>{post.name.toUpperCase()}</h5>
@@ -73,10 +75,10 @@ const ReviewsForm = () => {
   });
 
   return (
-    <div className="reviewsForm" >
+    <div className="reviewsForm">
       <h2>Reviews</h2>
       <form className="reviewsInputs" onSubmit={submitReviews}>
-        <label>Name:</label>
+        <label>Name: </label>
         <input
           type="text"
           placeholder="Leave your name..."
@@ -84,7 +86,7 @@ const ReviewsForm = () => {
           {...name}
           required
         />
-        <label>Review:</label>
+        <label>Review: </label>
         <input
           type="text"
           placeholder="comments..."
@@ -92,12 +94,28 @@ const ReviewsForm = () => {
           {...text}
           required
         />
-        <label>Rating:</label>
-        {[...Array(5)].map((star,i)=>{
-          const ratingValue= i+1;
-          return <label key={i} className="ratingsSec"><input type="radio" className="ratingRadio" value={ratingValue} onClick={()=>(setRating(ratingValue))}/><span className="fa fa-star-o"></span></label>
+        <label>Rating: </label>
+        {[...Array(5)].map((star, i) => {
+          const ratingValue = i + 1;
+          return (
+            <label key={i} className="ratingsSec">
+              <input
+                type="radio"
+                className="ratingRadio"
+                value={ratingValue}
+                onClick={() => setRating(ratingValue)}
+              />
+              <span className="fa fa-star-o" style={ratingValue<=(hover||ratings)?{"color":"red"}:{"color":"white"}}
+              onMouseEnter={()=>setHover(ratingValue)}
+                onMouseLeave={()=>setHover(null)}
+                onClick={() => setRating(ratingValue)}
+
+
+                ></span>
+            </label>
+          );
         })}
-        {/* <p>{ratings.value}</p> */}
+
         <button className="Btn-create" type="submit" id="reviewsBtn">
           Submit
         </button>

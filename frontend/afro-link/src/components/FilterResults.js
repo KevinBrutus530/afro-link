@@ -2,7 +2,7 @@ import React from "react";
 
 const FilterResults = ({ results }) => {
   // debugger;
-console.log(results)
+// console.log(results)
 
   // const filter = () => {
   //   return (

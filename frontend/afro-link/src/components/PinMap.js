@@ -21,7 +21,7 @@ const PinMap = ({ location, bizName }) => {
   }, [location]);
 
   const fetchDetail = async (place_id)=>{
-    debugger
+    // debugger
     try {
        let details = await axios.get(`https://maps.googleapis.com/maps/api/place/details/json?place_id=${place_id}&fields=name,rating,formatted_phone_number&key=${apiKeyMaps}`)
           console.log(details.data)

@@ -42,7 +42,7 @@ const SearchBusinessForm = () => {
     <div>
       <form onSubmit={handleSubmit}>
         <select value={category} onChange={handleType}>
-          <option value="">Select Business Type</option>
+          <option value="" disabled>Select Business Type</option>
           {types}
         </select>
         <button onClick={() => businessRedirect(category)}>

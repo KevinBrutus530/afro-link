@@ -26,3 +26,25 @@
     background-color: #F3B61F;
     padding: 1em;
 }
+
+.ReviewSect{
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% - 75px);
+    min-height: auto;
+    margin: 5px 10px;
+    font-size: .9rem;
+    border-bottom: 2px solid #f2f2f2;
+}
+
+.ReviewSect >h5{
+    display: flex;
+    align-items: flex-start;
+}
+
+.ratings .fa{
+    font-size: 2rem;
+    color: #ff9800;
+    cursor: pointer;
+    /* float: left; */
+}

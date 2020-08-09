@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { useHistory } from "react-router-dom";
 // import PinMap from "./PinMap";
 import "../css/DisplayBusiness.css";
@@ -6,6 +6,24 @@ import "../css/DisplayBusiness.css";
 const DisplayBusiness = ({ businessInfo }) => {
   // debugger;
   const history = useHistory();
+
+  // useEffect(() => {
+  //   checkingSocialMedia(businessInfo);
+  // }, [businessInfo]);
+
+  const checkingSocialMedia = (url) => {
+    let fb = "facebook";
+    let ins = "instagram";
+
+    if (!url) return null;
+    if (url.includes(ins)) {
+      return (<p>instagram link</p>)
+    } else if (url.includes(fb)) {
+      return (<p>facebook link</p>)
+    } else {
+      return (<p>{url}</p>)
+    }
+  };
 
   return (
     <>
@@ -30,7 +48,7 @@ const DisplayBusiness = ({ businessInfo }) => {
 
               <li>
                 <a href={businessInfo.social_media} target="_blank">
-                  {businessInfo.social_media}
+                  {checkingSocialMedia(businessInfo.social_media)}
                 </a>
               </li>
             </ul>

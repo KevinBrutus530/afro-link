@@ -3,8 +3,6 @@ import { useParams, useHistory } from "react-router-dom";
 import axios from "axios";
 import DisplayBusiness from "./DisplayBusiness";
 import ReviewsForm from "./ReviewsForm";
-import Instagram from "./socialMedia/Instagram";
-import Facebook from "./socialMedia/Facebook";
 import "../css/Business.css";
 import PinMap from "./PinMap";
 
@@ -27,7 +25,7 @@ const Business = () => {
   const getInfo = async () => {
     try {
       let res = await axios.get(`http://localhost:3000/businesses/${id}`);
-      // debugger
+      
       setBusinessInfo(res.data.payload);
       setBusinessName(res.data.payload.biz_name);
       setIgUrl(res.data.payload.social_media);
@@ -77,7 +75,7 @@ const Business = () => {
       <div className="bizMapRevContainer">
         <div className="bizMap">
           <DisplayBusiness businessInfo={businessInfo} categoryId={id} />
-          
+
           <PinMap location={location} bizName={businessInfo.biz_name} />
         </div>
         <div className="dispReviews">

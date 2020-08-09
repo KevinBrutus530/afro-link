@@ -1,12 +1,19 @@
 const businesses = require("express").Router();
 
-const { getAllBusiness, getSingleBusiness , getSearchForBusiness ,createBusiness,  editBusiness, deleteBusiness } = require("../queries/businesses");
+const {
+  getAllBusiness,
+  getSingleBusiness,
+  getSearchForBusiness,
+  createBusiness,
+  editBusiness,
+  deleteBusiness,
+} = require("../queries/businesses");
 
 businesses.get("/", getAllBusiness);
 
 businesses.get("/:id", getSingleBusiness);
 
-businesses.get("/:search", getSearchForBusiness)
+businesses.get("/:search", getSearchForBusiness);
 
 businesses.post("/", createBusiness);
 
@@ -14,4 +21,4 @@ businesses.patch("/:id", editBusiness);
 
 businesses.delete("/:id", deleteBusiness);
 
-module.exports= businesses;
+module.exports = businesses;

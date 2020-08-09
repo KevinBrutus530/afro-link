@@ -40,7 +40,7 @@ const PinMap = ({ location, bizName }) => {
       setLat(res.data.results[0].geometry.location.lat);
       setLng(res.data.results[0].geometry.location.lng);
       if (res.data.status === "OK"){
-        fetchDetail(res.data.results[0].place_id)
+        // fetchDetail(res.data.results[0].place_id)
       }
     } catch (error) {
       console.log(error);

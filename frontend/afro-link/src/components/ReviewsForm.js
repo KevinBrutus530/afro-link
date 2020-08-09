@@ -11,8 +11,9 @@ const ReviewsForm = () => {
   const name = useInput("");
   const text = useInput("");
   const [allReviews, setAllReviews] = useState([]);
-  // const [form, setForm] = useState({});
-  const ratings = useInput("");
+  // const ratings = useInput("");
+  const [ratings, setRating] = useState(null);
+
 
   const getReviews = async () => {
     try {
@@ -42,9 +43,6 @@ const ReviewsForm = () => {
       console.log(err);
     }
   };
-  let createStar =(ratings)=>{
-    
-  }
 
   let starsShow = (ratings)=>{
     let starsList=[]
@@ -65,11 +63,11 @@ const ReviewsForm = () => {
   let showReviews = allReviews.map((post, i) => {
     return (
       <div style={{ color: "white" }} key={i} className="ReviewSect">
-        <h5>{post.name}</h5>
+        <h5>{post.name.toUpperCase()}</h5>
         <div className="ratings">
           {starsShow(post.ratings)}
         </div>
-        <p> {post.text}</p>
+        <p className="review"> {post.text}</p>
       </div>
     );
   });
@@ -81,31 +79,25 @@ const ReviewsForm = () => {
         <label>Name:</label>
         <input
           type="text"
-          placeholder="Name..."
+          placeholder="Leave your name..."
           name="name"
           {...name}
           required
         />
-        <label>Text:</label>
+        <label>Review:</label>
         <input
           type="text"
-          placeholder="Text..."
+          placeholder="comments..."
           name="comment"
           {...text}
           required
         />
-        <label>Rating</label>
-        <input
-          type="range"
-          // placeholder="1-5"
-          name="ratings"
-          min="1"
-          max="5"
-          defaultValue="3"
-          {...ratings}
-          required
-        />
-        <p>{ratings.value}</p>
+        <label>Rating:</label>
+        {[...Array(5)].map((star,i)=>{
+          const ratingValue= i+1;
+          return <label key={i} className="ratingsSec"><input type="radio" className="ratingRadio" value={ratingValue} onClick={()=>(setRating(ratingValue))}/><span className="fa fa-star-o"></span></label>
+        })}
+        {/* <p>{ratings.value}</p> */}
         <button className="Btn-create" type="submit" id="reviewsBtn">
           Submit
         </button>

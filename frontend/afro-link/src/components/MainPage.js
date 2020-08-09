@@ -14,13 +14,9 @@ const MainPage = () => {
         <SearchBusinessForm />
       </div>
       <div className="addBiz">
-        <h1 className="headingMain">
-          {" "}
-          Add <br /> Your Own <br />
-          Business
-        </h1>
-        <NavLink exact to="/newBusiness" style={{ textDecoration: "none" }}>
-          <button className="addBizBtn">Click Here to Add Your Business</button>
+        <h1 className="headingMain signUpH1"> Sign Up with <br/>Afro Link</h1>
+        <NavLink exact to="/signup" style={{ textDecoration: "none" }}>
+          <button className="addBizBtn">Sign up</button>
         </NavLink>
       </div>
     </div>

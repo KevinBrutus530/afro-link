@@ -14,7 +14,7 @@ owners.patch("/:id", editOwner);
 
 owners.delete("/:id", deleteOwner);
 
-
+owners.post("/signup", signUp)
 
 module.exports= owners;
 

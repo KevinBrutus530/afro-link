@@ -1,4 +1,5 @@
 const db = require("../db/index");
+
 const signUp = async (req, res, next) => {
   let {user_id, email} = req.body;
   try {
@@ -6,7 +7,7 @@ const signUp = async (req, res, next) => {
     res.status(200).json({
       status: "success",
       message: "created user",
-      user
+      payload: user
     });
   } catch (err) {
     res.status(400).json({

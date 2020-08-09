@@ -90,11 +90,7 @@ const ReviewsForm = () => {
           {...text}
           required
         />
-<<<<<<< HEAD
         <br></br>
-=======
-
->>>>>>> 355eaed4143afd102733a39c2fc7e6d26a3ee93b
         <label>Rating: </label>
         {[...Array(5)].map((star, i) => {
           const ratingValue = i + 1;

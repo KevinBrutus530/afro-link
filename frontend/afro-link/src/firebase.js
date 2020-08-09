@@ -21,7 +21,5 @@ const config = {
   appId: REACT_APP_APPID,
 };
 
-
-
 app.initializeApp(config);
 export default app;

@@ -25,11 +25,7 @@
 .reviewsInputs {
     background-color: #F3B61F;
     padding: 1em;
-    margin: 10px;
-}
-
-.reviewsInputs >*{
-    padding: 1%;
+    margin: auto;
 }
 
 .ReviewSect{

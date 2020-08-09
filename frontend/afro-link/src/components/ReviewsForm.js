@@ -101,11 +101,11 @@ const ReviewsForm = () => {
                 className="ratingRadio"
                 value={ratingValue}
                 onClick={() => setRating(ratingValue)}
+                required
               />
               <span className="fa fa-star-o" style={ratingValue<=(hover||ratings)?{"color":"red"}:{"color":"white"}}
-              onMouseEnter={()=>setHover(ratingValue)}
+              onMouseEnter={()=>(setHover(ratingValue))}
                 onMouseLeave={()=>setHover(null)}
-                onClick={() => setRating(ratingValue)}
                 ></span>
             </label>
           );

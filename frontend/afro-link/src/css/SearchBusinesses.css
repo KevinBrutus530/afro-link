@@ -17,6 +17,7 @@ $black-chocolate: #191102ff; */
   display: flex;
   flex-direction: row;
   margin: auto;
+  justify-content: center;
 }
 
 .selectBizForm > :focus {
@@ -50,4 +51,5 @@ $black-chocolate: #191102ff; */
 
 #connect {
   width: 7em;
+  margin: auto 0;
 }

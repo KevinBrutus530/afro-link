@@ -6,12 +6,61 @@ $citron: #a29f15ff;
 $rosewood: #510d0aff;
 $black-chocolate: #191102ff; */
 
+.MainDiv {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+.landingMainDiv {
+  height: 100vh;
+  width: 100vw;
+  margin: auto;
+  place-items: center;
+  justify-content: space-around;
+  background-color: #e7e7ed;
+  color: #191102ff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow-y: scroll;
+  -ms-grid-column-align: center;
+}
+
+.logoDiv {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  cursor: pointer;
+  margin: auto;
+  padding: 10em 0em 2em 12em;
+}
+
+.ourMissionDiv {
+  cursor: pointer;
+  margin-top: 10%;
+  border-radius: 1em;
+  width: fit-content;
+  height: fit-content;
+  padding: 2em 15em 2em 0em;
+}
+
+h1,
+h3,
+h6 {
+  padding: 1em;
+}
+
+.afLogoMain {
+  background-color: transparent;
+}
+
+/* ////////////////////////////////////////////////////// */
+
 .mainPageContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: auto;
-  padding: 2em;
-  /* color: whitesmoke; */
+  padding: 5em;
   font-family: "Bungee", cursive;
   /* font-family: "Monoton", cursive; */
   text-align: center;
@@ -33,7 +82,7 @@ $black-chocolate: #191102ff; */
 .searchBiz {
   border: 1px goldenrod ridge;
   border-radius: 15px;
-  margin: 1em;
+  margin: 2em;
   background-image: url("https://www.transparenttextures.com/patterns/white-carbonfiber.png"),
     url("../images/girlsSearchingOnline.jpg");
   background-size: cover;

@@ -10,7 +10,7 @@ $black-chocolate: #191102ff; */
   display: flex;
   margin-left: 1em;
   width: auto;
-  height: 9em;
+  height: 7em;
   transition: transform 1s;
 }
 
@@ -21,18 +21,15 @@ $black-chocolate: #191102ff; */
 .headerNav {
   display: flex;
   justify-content: space-between;
-  /* box-shadow: 1px 5px 7px #f3b61fff; */
-  /* box-shadow: 5px 5px 5px 5px whitesmoke; */
-
-  height: 6.5em;
+  height: 5em;
   text-align: center;
-  width: 101%;
-  position: sticky;
+  width: 100%;
+  position: fixed;
   top: 0;
   background-color: #f3b61fff;
   background-image: url("https://i.ya-webdesign.com/images/african-border-png-6.png"),
     url("https://www.transparenttextures.com/patterns/diagmonds.png")
-    /* ,
+      /* ,
     linear-gradient(
       180deg,
       rgb(34, 22, 1) 14%,
@@ -41,8 +38,7 @@ $black-chocolate: #191102ff; */
       rgb(209, 25, 15, 1) 75%,
       rgb(81, 18, 10) 95%,
       rgb(34, 22, 1) 104%
-    ) */
-    ;
+    ) */;
 
   background-position: center;
   background-size: 150vw;

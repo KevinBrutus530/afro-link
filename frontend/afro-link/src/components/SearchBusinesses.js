@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
+import "../css/SearchBusinesses.css";
 
 const SearchBusinessForm = () => {
   const [category, setCategory] = useState("");
@@ -40,12 +41,18 @@ const SearchBusinessForm = () => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <select value={category} onChange={handleType}>
-          <option value="" disabled>Select Business Type</option>
+      <form className="selectBizForm" onSubmit={handleSubmit}>
+        <select className="selectBizBar" value={category} onChange={handleType}>
+          <option value="" disabled>
+            Select Business Type
+          </option>
           {types}
         </select>
-        <button onClick={() => businessRedirect(category)}>
+        <button
+          id="connect"
+          className="addBizBtn"
+          onClick={() => businessRedirect(category)}
+        >
           Connect
         </button>
       </form>

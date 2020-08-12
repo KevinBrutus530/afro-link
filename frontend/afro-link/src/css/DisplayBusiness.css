@@ -21,8 +21,12 @@
   padding: 1em;
 }
 
+#root > div > div.businessMainDiv > div > div.bizMap > div.businessDisplay > div > div > ul > label{
+  color: white;
+}
 .businessInfo > * {
   color: #191102;
+}
 
 #root > div > div.businessMainDiv > div > div.bizMap > div > div > ul > li:nth-child(3) > a {
    color: #00838f;

@@ -7,7 +7,7 @@ const getAllBusiness = async (req, res, next) => {
     );
     res.status(200).json({
       status: "success",
-      message: "all businesses",
+      message: "all businesses",
       payload: business,
     });
   } catch (err) {
@@ -23,17 +23,17 @@ const getAllBusiness = async (req, res, next) => {
 const getSingleBusiness = async (req, res, next) => {
   try {
     let business = await db.one(
-      `SELECT businesses.id, businesses.biz_name, businesses.hours, addresses.street, addresses.city, addresses.state, addresses.zip, addresses.website, contacts.phone, contacts.email, contacts.social_media, types.type_name, owners.owner_name FROM contacts RIGHT JOIN addresses ON addresses.address_id=contact_id JOIN owners ON owners.owner_id=addresses.address_id JOIN businesses  ON businesses.id=owners.owner_id JOIN categories ON categories.biz_id=addresses.address_id JOIN types ON types.id=categories.type_id WHERE businesses.id =${req.params.id}`
+      `SELECT businesses.id, businesses.biz_name, businesses.hours, addresses.street, addresses.city, addresses.state, addresses.zip, addresses.website, contacts.phone, contacts.email, contacts.social_media, types.type_name, owners.owner_name, owners.pictures FROM contacts RIGHT JOIN addresses ON addresses.address_id=contact_id JOIN owners ON owners.owner_id=addresses.address_id JOIN businesses  ON businesses.id=owners.owner_id JOIN categories ON categories.biz_id=addresses.address_id JOIN types ON types.id=categories.type_id WHERE businesses.id =${req.params.id}`
     );
     res.status(200).json({
       status: "success",
-      message: "single business",
+      message: "single business",
       payload: business,
     });
   } catch (err) {
     res.status(400).json({
       status: "Error",
-      message: "Couldn't get single business",
+      message: "Couldn't get single business",
       payload: err,
     });
     next();
@@ -46,7 +46,7 @@ const deleteBusiness = async (req, res, next) => {
     await db.none("DELETE FROM businesses WHERE id=$1", id);
     res.status(200).json({
       status: "success",
-      message: "deleted business",
+      message: "deleted business",
     });
   } catch (err) {
     res.status(400).json({
@@ -88,7 +88,7 @@ const createBusiness = async (req, res, next) => {
     );
     res.status(200).json({
       status: "success",
-      message: "added business",
+      message: "added business",
       payload: business,
     });
   } catch (err) {
@@ -106,11 +106,11 @@ const editBusiness = async (req, res, next) => {
     let { biz_name, hours } = req.body;
     let { id } = req.params;
     let business = await db.one(
-      `UPDATE businesses SET biz_name='${biz_name}', hours='${hours}' WHERE id='${id}'`
+      `UPDATE businesses SET biz_name='${biz_name}', hours='${hours}' WHERE id='${id}'`
     );
     res.status(200).json({
       status: "success",
-      message: "updated business",
+      message: "updated business",
       payload: business,
     });
   } catch (err) {

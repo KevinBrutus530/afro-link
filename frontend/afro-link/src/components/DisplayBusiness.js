@@ -31,10 +31,13 @@ const DisplayBusiness = ({ businessInfo }) => {
         <div className="businessInfo">
           <h3>{businessInfo.owner_name}</h3>
           <ul style={{ listStyleType: "none" }}>
+            <li><img src={businessInfo.pictures}></img></li>
             <li>{businessInfo.hours}</li>
             <li>
               {businessInfo.street} {businessInfo.city} {businessInfo.state}{" "}
               {businessInfo.zip}
+            </li>
+            <li>
             </li>
 
             <li>

@@ -25,7 +25,7 @@ const Business = () => {
   const getInfo = async () => {
     try {
       let res = await axios.get(`http://localhost:3000/businesses/${id}`);
-      
+      debugger
       setBusinessInfo(res.data.payload);
       setBusinessName(res.data.payload.biz_name);
       setIgUrl(res.data.payload.social_media);

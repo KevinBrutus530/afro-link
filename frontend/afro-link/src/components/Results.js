@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import axios from "axios";
+import SearchBusinessForm from "./SearchBusinesses";
 import FilterResults from "./FilterResults";
 import "../css/Results.css";
 
@@ -27,18 +28,16 @@ const Results = () => {
   }, []);
 
   const handleBusiness = (e) => {
-
     history.push(`/businesses/${e}`);
   };
 
   let resultDisplay = results.map((biz) => {
-
     let noAddress = "";
     let noHours = "Not Available";
     let bizz = biz.street === null ? (biz.street = noAddress) : biz.street;
     let hrsSub = biz.hours === "" ? (biz.hours = noHours) : biz.hours;
     return (
-      <>
+      <div>
         <div
           className="resultsDiv"
           key={biz.biz_id}
@@ -59,13 +58,17 @@ const Results = () => {
           </div>
           <br />
         </div>
-      </>
+      </div>
     );
   });
 
   return (
-    <>
+    <div className="resultsPage">
+
       <div className="resultsMainDiv" style={{ color: "white" }}>
+      {/* <div className="searchBarDiv"> */}
+        {/* <SearchBusinessForm /> */}
+      
         <h1>{bizType}</h1>
         <FilterResults results={results} />
         <div>
@@ -74,7 +77,7 @@ const Results = () => {
           </ul>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

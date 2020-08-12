@@ -17,9 +17,9 @@ const DisplayBusiness = ({ businessInfo }) => {
 
     if (!url) return null;
     if (url.includes(ins)) {
-      return (<p>instagram link</p>)
+      return (<p>instagram</p>)
     } else if (url.includes(fb)) {
-      return (<p>facebook link</p>)
+      return (<p>facebook</p>)
     } else {
       return (<p>{url}</p>)
     }
@@ -29,8 +29,10 @@ const DisplayBusiness = ({ businessInfo }) => {
     <>
       <div className="businessDisplay" style={{ color: "white" }}>
         <div className="businessInfo">
+        <label>Owner/operation by:</label> 
+
           <h3>{businessInfo.owner_name}</h3>
-          <ul style={{ listStyleType: "none" }}>
+          <ul>
             <li>{businessInfo.hours}</li>
             <li>
               {businessInfo.street} {businessInfo.city} {businessInfo.state}{" "}
@@ -38,11 +40,13 @@ const DisplayBusiness = ({ businessInfo }) => {
             </li>
 
             <li>
-              <a href={businessInfo.website} target="_blank">Website Here</a>
+              <a href={businessInfo.website} target="_blank">Website</a>
             </li>
           </ul>
           <div className="contactInfo">
-            <ul style={{ listStyleType: "none" }}>
+            <ul>
+              
+            <label>Contacts: </label> 
               <li>{businessInfo.phone}</li>
               <li>{businessInfo.email}</li>
 

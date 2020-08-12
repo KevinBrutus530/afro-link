@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import axios from "axios";
+import SearchBusinessForm from "./SearchBusinesses"
 import FilterResults from "./FilterResults";
 import "../css/Results.css";
 
@@ -63,7 +64,8 @@ const Results = () => {
   });
 
   return (
-    <>
+    <div className="resultsPage">
+    <SearchBusinessForm />
       <div className="resultsMainDiv" style={{ color: "white" }}>
         <h1>{bizType}</h1>
         <FilterResults results={results} />
@@ -73,7 +75,7 @@ const Results = () => {
           </ul>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

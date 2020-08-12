@@ -1,6 +1,8 @@
 .businessMainDiv {
   /* display: flex; */
-  width: 100%;
+  width: 100vw;
+  margin: auto;
+  margin-top: 7 em;
 }
 
 #bizName {
@@ -9,7 +11,7 @@
 
 #goBack {
   margin-top: 2em;
-  margin-left: 0;
+  margin-left: 2em;
   width: 250px;
   font-size: medium;
 }

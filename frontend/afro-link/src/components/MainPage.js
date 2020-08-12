@@ -17,28 +17,32 @@ const MainPage = () => {
             Connecting you to Black-Owned businesses through out NYC, the
             tri-state area, and beyond
           </h3>
-          <h3>Our Mission</h3>
-          <p>(our mission story here)</p>
         </div>
       </div>
       <div className="mainPageContainer">
-        <div className="searchBiz">
+        <div className="searchBizDiv">
           <h1 className="headingMain">
             Search <br />
             Black-Owned Businesses
           </h1>
           <SearchBusinessForm />
         </div>
-        <div className="addBiz">
+        <div className="searchBiz"></div>
+        <div className="addBiz"></div>
+        <div className="bizOwnerDiv">
           <h1 className="headingMain signUpH1">
             {" "}
-            Sign Up your business with <br />
+            Sign your business up with <br />
             Afro Link
+            <NavLink exact to="/signup" style={{ textDecoration: "none" }}>
+              <button className="addBizBtn btnWeight">Sign up</button>
+            </NavLink>
           </h1>
-          <NavLink exact to="/signup" style={{ textDecoration: "none" }}>
-            <button className="addBizBtn">Sign up</button>
-          </NavLink>
         </div>
+      </div>
+      <div className="ourMissionStatementDiv">
+        <h3>Our Mission</h3>
+        <p>(our mission story here)</p>
       </div>
     </div>
   );

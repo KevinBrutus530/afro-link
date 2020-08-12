@@ -22,3 +22,12 @@
   color: #191102;
   
 }
+
+#root > div > div.businessMainDiv > div > div.bizMap > div > div > ul > li:nth-child(3) > a {
+   color: #00838f;
+ }
+
+ #root > div > div.businessMainDiv > div > div.bizMap > div > div > div > ul > li:nth-child(3) > a > p{
+  color: #00838f;
+
+ }

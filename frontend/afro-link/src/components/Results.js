@@ -14,7 +14,6 @@ const Results = () => {
     // debugger
     try {
       let res = await axios.get(`http://localhost:3000/categories/${id}`);
-      debugger
       setResults(res.data.payload);
       let res2 = await axios.get(`http://localhost:3000/types/${id}`);
       setBizType(res2.data.payload[0].type_name);

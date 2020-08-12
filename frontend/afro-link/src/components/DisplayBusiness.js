@@ -39,18 +39,18 @@ const DisplayBusiness = ({ businessInfo }) => {
               {businessInfo.zip}
             </li>
 
-            <li>
+            <li className="hyperLink">
               <a href={businessInfo.website} target="_blank">Website</a>
             </li>
           </ul>
           <div className="contactInfo">
             <ul>
               
-            <label>Contacts: </label> 
+            <label id="contactsLabel">Contacts: </label> 
               <li>{businessInfo.phone}</li>
               <li>{businessInfo.email}</li>
 
-              <li>
+              <li className="hyperLink">
                 <a href={businessInfo.social_media} target="_blank">
                   {checkingSocialMedia(businessInfo.social_media)}
                 </a>

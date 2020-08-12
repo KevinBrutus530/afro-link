@@ -11,8 +11,8 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      await login(email, password);
-      history.push("/main");
+      await login(email.value, password.value);
+      history.push("/profile");
     } catch (err) {
       console.log(err);
     }

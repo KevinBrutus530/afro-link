@@ -15,7 +15,6 @@ const ReviewsForm = () => {
   const [ratings, setRating] = useState(null);
   const [hover, setHover] = useState(null);
 
-
   const getReviews = async () => {
     try {
       let res = await axios.get(`http://localhost:3000/reviews/${id}`);
@@ -45,7 +44,6 @@ const ReviewsForm = () => {
     }
   };
 
-
   let starsShow = (ratings) => {
     let starsList = [];
     for (let i = 1; i <= ratings; i++) {
@@ -61,10 +59,9 @@ const ReviewsForm = () => {
     // debugger
     return (
       <div style={{ color: "white" }} key={i} className="ReviewSect">
-        <h5>{post.name.toUpperCase()}</h5>
         <div className="ratings">
-          {starsShow(post.ratings)}
-        </div>
+        <h5 className="reviewerName">{post.name.toUpperCase()}</h5>
+        {starsShow(post.ratings)}</div>
         <p className="review"> {post.text}</p>
       </div>
     );
@@ -74,24 +71,29 @@ const ReviewsForm = () => {
     <div className="reviewsForm">
       <h2>Reviews</h2>
       <form className="reviewsInputs" onSubmit={submitReviews}>
-        <label>Name: </label>
-        <input
-          type="text"
-          placeholder="Leave your name..."
-          name="name"
-          {...name}
-          required
-        />
-        <label>Review: </label>
-        <input
-          type="text"
-          placeholder="comments..."
-          name="comment"
-          {...text}
-          required
-        />
+        <div className="labelInput">
+          {" "}
+          <label className="labelInput">Name: </label>
+          <input
+            type="text"
+            placeholder="Leave your name..."
+            name="name"
+            {...name}
+            required
+          />
+        </div>
+        <div className="labelInput">
+          <label className="labelInput">Review:</label>
+          <textarea
+            type="text"
+            placeholder="comments..."
+            name="comment"
+            {...text}
+            required
+          />
+        </div>
         <br></br>
-        <label>Rating: </label>
+        <label className="labelInput">Rating: </label>
         {[...Array(5)].map((star, i) => {
           const ratingValue = i + 1;
           return (
@@ -103,10 +105,16 @@ const ReviewsForm = () => {
                 onClick={() => setRating(ratingValue)}
                 required
               />
-              <span className="fa fa-star-o" style={ratingValue<=(hover||ratings)?{"color":"red"}:{"color":"white"}}
-              onMouseEnter={()=>(setHover(ratingValue))}
-                onMouseLeave={()=>setHover(null)}
-                ></span>
+              <span
+                className="fa fa-star-o"
+                style={
+                  ratingValue <= (hover || ratings)
+                    ? { color: "red" }
+                    : { color: "white" }
+                }
+                onMouseEnter={() => setHover(ratingValue)}
+                onMouseLeave={() => setHover(null)}
+              ></span>
             </label>
           );
         })}
@@ -116,7 +124,7 @@ const ReviewsForm = () => {
         </button>
       </form>
 
-      <ul style={{ listStyleType: "none" }}>{showReviews}</ul>
+      <ul className="reviewUL">{showReviews}</ul>
     </div>
   );
 };

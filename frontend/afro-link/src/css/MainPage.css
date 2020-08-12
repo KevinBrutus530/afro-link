@@ -18,7 +18,9 @@ $black-chocolate: #191102ff; */
   margin: auto;
   place-items: center;
   justify-content: space-around;
-  background-color: #e7e7ed;
+  /* background-color: #e7e7ed; */
+  background-color: rgba(247, 186, 32, 0.774);
+  background-image: url("https://www.transparenttextures.com/patterns/dimension.png");
   color: #191102ff;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -26,22 +28,56 @@ $black-chocolate: #191102ff; */
   -ms-grid-column-align: center;
 }
 
-.logoDiv {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  cursor: pointer;
-  margin: auto;
-  padding: 10em 0em 2em 12em;
+@media (max-width: 1355px) {
+  .landingMainDiv {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: unset;
+    position: relative;
+  }
+}
+
+@media (max-width: 1355px) {
+  .logoDiv {
+    display: none;
+    position: relative;
+  }
+}
+
+@media (min-width: 1355px) {
+  .logoDiv {
+    padding: 10em 0em 2em 12em;
+  }
+}
+
+@media (max-width: 1355px) {
+  .ourMissionDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+    margin: auto;
+    padding: 0;
+    font-size: 50%;
+  }
+}
+
+@media (min-width: 1355px) {
+  .ourMissionDiv {
+    padding: 10em 0em 2em 15em;
+    margin-right: 5em;
+  }
 }
 
 .ourMissionDiv {
-  cursor: pointer;
+  display: flex;
+  flex-direction: column;
   margin-top: 10%;
   border-radius: 1em;
   width: fit-content;
   height: fit-content;
-  padding: 2em 15em 2em 0em;
+  padding: 7em 0;
 }
 
 h1,
@@ -54,20 +90,42 @@ h6 {
   background-color: transparent;
 }
 
-/* ////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////// */
 
 .mainPageContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: auto;
-  padding: 5em;
   font-family: "Bungee", cursive;
   /* font-family: "Monoton", cursive; */
   text-align: center;
+  width: 100vw;
+  height: 100vh;
+  margin-bottom: 40em;
+  margin-top: 8em;
+  padding: 0 6em;
+  grid-gap: 5.5em;
+}
+
+@media (max-width: 1355px) {
+  .mainPageContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20em;
+  }
+}
+
+.searchBizDiv {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: space-evenly;
 }
 
 .headingMain {
   display: flex;
+  flex-direction: column;
   margin: auto;
   justify-content: space-around;
   padding-top: 1em;
@@ -94,6 +152,17 @@ h6 {
   animation-duration: 2s;
   animation-name: slideIn;
   transition: transform 1s;
+}
+
+@media (max-width: 1355px) {
+  .searchBiz {
+    display: none;
+    position: relative;
+  }
+  .addBiz {
+    display: none;
+    position: relative;
+  }
 }
 
 .searchBiz:hover {
@@ -141,6 +210,7 @@ h6 {
   display: flex;
   justify-content: space-around;
   margin: auto;
+  margin-top: 1em;
   color: #f3b61fff;
   border: none;
   border-radius: 25px;
@@ -154,10 +224,14 @@ h6 {
   padding: 0.5em;
   text-align: center;
   background-image: url("https://www.transparenttextures.com/patterns/dark-geometric.png");
-  background-color: black;
+  background-color: #510d0aff;
   background-position: center;
   background-size: contain;
   background-repeat: repeat;
+}
+
+.btnWeight {
+  letter-spacing: 3px;
 }
 
 .addBizBtn:active {
@@ -165,6 +239,36 @@ h6 {
   top: 2px;
 }
 
+.addBizBtn:hover {
+  background-color: rgb(44, 4, 2);
+}
+
 .addBizBtn:focus {
   outline: none;
+  background-color: rgb(44, 4, 2);
+}
+
+.bizOwnerDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: auto;
+  margin-bottom: 5em;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////// */
+
+.ourMissionStatementDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: auto;
+  /* margin-top: 10em; */
+  padding: 5em;
+  width: 100vw;
+  height: 100vh;
+  background-color: #e7e7ed;
+  /* background-image: url("https://www.transparenttextures.com/patterns/gplay.png"); */
+  background-image: url("https://www.transparenttextures.com/patterns/dimension.png");
+  color: #191102ff;
 }

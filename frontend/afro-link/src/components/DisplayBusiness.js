@@ -17,9 +17,9 @@ const DisplayBusiness = ({ businessInfo }) => {
 
     if (!url) return null;
     if (url.includes(ins)) {
-      return (<p>instagram link</p>)
+      return (<p>instagram</p>)
     } else if (url.includes(fb)) {
-      return (<p>facebook link</p>)
+      return (<p>facebook</p>)
     } else {
       return (<p>{url}</p>)
     }
@@ -29,6 +29,8 @@ const DisplayBusiness = ({ businessInfo }) => {
     <>
       <div className="businessDisplay" style={{ color: "white" }}>
         <div className="businessInfo">
+        <label>Owner/operation by:</label> 
+
           <h3>{businessInfo.owner_name}</h3>
           <ul style={{ listStyleType: "none" }}>
             <li><img src={businessInfo.pictures}></img></li>
@@ -40,16 +42,18 @@ const DisplayBusiness = ({ businessInfo }) => {
             <li>
             </li>
 
-            <li>
-              <a href={businessInfo.website} target="_blank">Website Here</a>
+            <li className="hyperLink">
+              <a href={businessInfo.website} target="_blank">Website</a>
             </li>
           </ul>
           <div className="contactInfo">
-            <ul style={{ listStyleType: "none" }}>
+            <ul>
+              
+            <label id="contactsLabel">Contacts: </label> 
               <li>{businessInfo.phone}</li>
               <li>{businessInfo.email}</li>
 
-              <li>
+              <li className="hyperLink">
                 <a href={businessInfo.social_media} target="_blank">
                   {checkingSocialMedia(businessInfo.social_media)}
                 </a>

@@ -49,19 +49,15 @@ const Business = () => {
       >
         Return to Results Page
       </button>
-      {/* <div>{checkingSocialMedia(igUrl)}</div> */}
 
       <h1 id="bizName">{businessName}</h1>
       <div className="bizMapRevContainer">
         <div className="bizMap">
           <DisplayBusiness businessInfo={businessInfo} categoryId={id} />
-
           <PinMap location={location} bizName={businessInfo.biz_name} />
         </div>
         <div className="dispReviews">
           <ReviewsForm />
-          {/* <Instagram igUrl={igUrl} /> */}
-          {/* <Facebook fbUrl={fbUrl} /> */}
         </div>
       </div>
     </div>

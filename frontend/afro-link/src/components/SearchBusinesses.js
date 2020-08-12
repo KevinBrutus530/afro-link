@@ -53,7 +53,7 @@ const SearchBusinessForm = () => {
           className="addBizBtn"
           onClick={() => businessRedirect(category)}
         >
-          Connect
+          Search
         </button>
       </form>
     </div>

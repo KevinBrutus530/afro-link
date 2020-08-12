@@ -85,7 +85,7 @@ const PinMap = ({ location, bizName }) => {
       </InfoWindow>
     );
   };
-  if(location.length<20) {return null}
+  if(location.length<24) {return null}
     else{
     return (
       <LoadScript googleMapsApiKey={apiKeyMaps}>

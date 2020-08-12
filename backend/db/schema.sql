@@ -1,12 +1,12 @@
 DROP DATABASE IF EXISTS afro_link;
 CREATE DATABASE afro_link;
 \c afro_link;
-DROP TABLE IF EXISTS owners;
 DROP TABLE IF EXISTS categories;
 DROP TABLE IF EXISTS contacts;
 DROP TABLE IF EXISTS addresses;
 DROP TABLE IF EXISTS reviews;
 DROP TABLE IF EXISTS types;
+DROP TABLE IF EXISTS owners;
 DROP TABLE IF EXISTS businesses;
 CREATE TABLE businesses  
 (
@@ -20,7 +20,8 @@ CREATE TABLE owners
   user_id VARCHAR,
   email VARCHAR,
   owner_id int REFERENCES businesses(id) ON DELETE CASCADE,
-  owner_name varchar DEFAULT 'UNKNOWN'
+  owner_name varchar DEFAULT 'UNKNOWN',
+  pictures varchar DEFAULT NULL
 );
 CREATE TABLE types (
     id SERIAL PRIMARY KEY,

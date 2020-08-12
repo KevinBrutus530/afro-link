@@ -32,11 +32,14 @@ const DisplayBusiness = ({ businessInfo }) => {
         <label>Owner/operation by:</label> 
 
           <h3>{businessInfo.owner_name}</h3>
-          <ul>
+          <ul style={{ listStyleType: "none" }}>
+            <li><img src={businessInfo.pictures}></img></li>
             <li>{businessInfo.hours}</li>
             <li>
               {businessInfo.street} {businessInfo.city} {businessInfo.state}{" "}
               {businessInfo.zip}
+            </li>
+            <li>
             </li>
 
             <li className="hyperLink">

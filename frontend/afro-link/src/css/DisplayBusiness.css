@@ -23,6 +23,14 @@
 
 .businessInfo > * {
   color: #191102;
+<<<<<<< HEAD
+  
+}
+
+img {
+  width: 20em;
+  height: auto;
+=======
 }
 
 /* .hyperLink {
@@ -35,4 +43,5 @@
 
 #contactsLabel {
   color: black;
+>>>>>>> 0194e091549185885bc0c1dac2280a416221e2d5
 }

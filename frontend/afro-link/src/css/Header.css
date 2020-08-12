@@ -26,9 +26,11 @@ $black-chocolate: #191102ff; */
   width: 100%;
   position: fixed;
   top: 0;
-  background-color: #f3b61fff;
-  background-image: url("https://i.ya-webdesign.com/images/african-border-png-6.png"),
-    url("https://www.transparenttextures.com/patterns/diagmonds.png")
+  z-index: 10;
+  background-color: rgba(25, 17, 2, 0.801);
+  /* background-color: rgb(102, 16, 11); */
+  background-image: url("https://i.ya-webdesign.com/images/african-border-png-6.png")
+   /* url("https://www.transparenttextures.com/patterns/diagmonds.png")*/
       /* ,
     linear-gradient(
       180deg,

@@ -1,66 +1,121 @@
+/* colors
+/* SCSS HEX */
+/* $tea-green: #bbd8b3ff;
+$orange-yellow: #f3b61fff;
+$citron: #a29f15ff;
+$rosewood: #510d0aff;
+$black-chocolate: #191102ff; */
+
 #reviewsBtn {
-    width: 8em;
-    font-size: medium;
-    margin-top: 1em;
-    /* margin-bottom: 1em; */
+  width: 8em;
+  font-size: medium;
+  margin-top: 1em;
+  /* margin-bottom: 1em; */
 }
 
 .reviewsForm {
-    display: block;
-    background-color: rgba(255, 255, 255, 0.493);
-    padding: 1em;
-    margin-left: 1em;
-    margin-right: 1em;
-    border-radius: 5px;
-    width: fit-content;
+  display: block;
+  /* background-color: whitesmoke; */
+  /* background-color: rgba(255, 255, 255, 0.493); */
+  padding: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+  border-radius: 5px;
+  width: 25em;
+}
+
+.reviewsForm > * {
+  padding: 1em;
+}
+
+.reviewsForm > h2 {
+  color: whitesmoke;
 }
 
 .reviewsForm > label {
-    color: #191102;
+  color: #191102;
 }
-.reviewsInputs >label{
-    color: #191102;
+.reviewsInputs > label {
+  color: #191102;
+}
+
+.labelInput {
+  display: flex;
+  flex-direction: column;
+  color: #191102ff;
+  padding: 5px;
 }
 
 .reviewsInputs {
-    background-color: #F3B61F;
-    padding: 1em;
-    margin: auto;
+  background-color: #f3b61fff;
+  background-image: url("https://www.transparenttextures.com/patterns/dimension.png");
+  padding: 1em;
+  margin: auto;
+  border-radius: 5px;
 }
 
-.ReviewSect{
-    display: inline-block;
-    vertical-align: middle;
-    width: calc(100% - 75px);
-    min-height: auto;
-    margin-top: 5px 10px;
-    margin-bottom: 0em;
-    font-size: .9rem;
-    border-bottom: 2px solid #f2f2f2;
+.ReviewSect {
+  display: flex;
+  flex-direction: column;
+  vertical-align: middle;
+  width: calc(100% - 0);
+  min-height: auto;
+  margin-top: 5px 10px;
+  margin-bottom: 0em;
+  font-size: 0.9rem;
+  border-bottom: 2px solid #f2f2f2;
 }
 
-.ReviewSect >h5{
-    display: flex;
-    align-items: flex-start;
+.ReviewSect > h5 {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: flex-start;
 }
 
-.ratings .fa{
-    cursor: pointer;
-    font-size: 1.1rem;
-    color: orange;
+.ratings {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.reviewerName {
+padding-right: 1em;
+}
+
+.ratings .fa {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: orange;
+}
+
+.fa-star-o:hover {
+  fill: #510d0aff;
+}
+
+.reviewUL {
+  list-style: "none";
+  padding: 2em;
+}
+
+.reviewUL > * {
+  padding: 1em;
 }
 
 .review {
-    display: flex;
-    margin-left: 2em;
-    font-size: 1rem;
+  display: flex;
+  /* margin-left: 2em; */
+  font-size: 1rem;
+  /* padding: .5em; */
 }
 
-.ratingRadio{
-    display: none;
+.ratingRadio {
+  display: none;
 }
 
-.ratingsSec .fa{
-    color: #191102;
-    transition: color 200ms;
+.ratingsSec .fa {
+  color: #191102;
+  transition: color 200ms;
 }

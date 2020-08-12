@@ -1,8 +1,15 @@
+.resultsPage {
+  margin: auto;
+  width: 100vw;
+  height: 100vw;
+  margin-top: 7em;
+}
+
 .resultsMainDiv {
   display: flex;
   flex-direction: column;
   margin: auto;
-  margin-top: 3em;
+  margin-top: 1em;
 }
 
 /* .resultsULn{
@@ -14,6 +21,7 @@
   flex-direction: column;
   margin: auto;
   background-color: #f3b61f;
+  background-image: url("https://www.transparenttextures.com/patterns/dimension.png");
   box-shadow: 1px 1px 7px #d5f5cda2;
   height: 70%;
   width: 50%;
@@ -26,9 +34,9 @@
 }
 
 .businessCard:hover {
-    box-shadow: 1px 3px 5px #510D0A;
-    background-color: goldenrod;
-    color: #510D0A;
+  box-shadow: 1px 3px 5px #510d0a;
+  background-color: goldenrod;
+  color: #510d0a;
 }
 
 .businessCard > li {

@@ -9,19 +9,20 @@
 
 .businessInfo {
   display: flex;
-  margin: auto;
   flex-direction: column;
-  background-color: #F3B61F;
+  justify-content: space-around;
+  margin: auto;
+  background-color: #f3b61fff;
+  background-image: url("https://www.transparenttextures.com/patterns/dimension.png");
   width: 25em;
   height: auto;
   border-radius: 5px;
   font-weight: bold;
+  padding: 1em;
 }
 
-.businessInfo * {
+.businessInfo > * {
   color: #191102;
-  
-}
 
 #root > div > div.businessMainDiv > div > div.bizMap > div > div > ul > li:nth-child(3) > a {
    color: #00838f;
@@ -31,4 +32,3 @@
 
    color: #00838f;
  }
-

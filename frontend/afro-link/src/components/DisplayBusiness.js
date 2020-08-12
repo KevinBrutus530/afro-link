@@ -29,6 +29,8 @@ const DisplayBusiness = ({ businessInfo }) => {
     <>
       <div className="businessDisplay" style={{ color: "white" }}>
         <div className="businessInfo">
+        <label>Owner/operation by:</label> 
+
           <h3>{businessInfo.owner_name}</h3>
           <ul>
             <li>{businessInfo.hours}</li>
@@ -43,7 +45,8 @@ const DisplayBusiness = ({ businessInfo }) => {
           </ul>
           <div className="contactInfo">
             <ul>
-
+              
+            <label>Contacts: </label> 
               <li>{businessInfo.phone}</li>
               <li>{businessInfo.email}</li>
 

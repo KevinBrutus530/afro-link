@@ -7,6 +7,7 @@ import Results from "./components/Results";
 import Business from "./components/Business";
 import SignUp from "./components/SignUp";
 import Login from "./components/Login";
+import ProfilePage from "./components/ProfilePage";
 import "./App.css";
 // import LandingPage from "./components/LandingPage";
 require("dotenv").config();
@@ -26,6 +27,7 @@ function App() {
         <Route path="/businesses/:id" component={Business} />
         <Route path="/signup" component={SignUp} />
         <Route path="/login" component={Login} />
+        <Route path="/profile" component={ProfilePage} />
       </Switch>
     </div>
   );

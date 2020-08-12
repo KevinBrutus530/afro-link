@@ -9,7 +9,7 @@ const Header = () => {
       <nav className="headerNav">
         {" "}
         <p>
-          <NavLink exact to="/main">
+          <NavLink exact to="/">
             <img className="logoHeader" src={logo} alt="logo" />
           </NavLink>
         </p>

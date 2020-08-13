@@ -86,11 +86,23 @@ h6 {
   padding: 10px;
 }
 
+.titleH1 {
+  font-size: 3em;
+  text-shadow: 1px 1px rgb(119, 90, 17);
+}
+
+.tagline {
+  color: #510d0aff;
+  text-shadow: 1px 1px rgb(119, 90, 17);
+  font-weight: 600;
+}
+
 .afLogoMain {
   margin: auto;
   background-color: transparent;
   width: 30em;
   height: auto;
+  filter: drop-shadow(1.5px 1.5px rgb(119, 90, 17))
 }
 
 /* ///////////////////////////////////////////////////////////////////////////// */

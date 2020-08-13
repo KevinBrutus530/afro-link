@@ -1,33 +1,43 @@
-
-
 .signUpMainDiv {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: auto;
-    margin-top: 5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  margin-top: 5em;
 }
 
 .signUpHeader {
-    color: white;
+  color: white;
+  margin-top: 2em;
 }
 
 .input {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 2em;
-    margin: auto;
-    width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2em;
+  margin: auto;
+  width: 25em;
+}
+
+.input > input {
+    padding: .25em;
+    margin-bottom: .5em;
+}
+
+::placeholder {
+    text-align: start;
+    color: rgb(1, 44, 1);
+    text-transform: capitalize;
 }
 
 .submit {
-    width: 7em;
-    margin: 1em auto;
+  width: 7em;
+  margin: 1em auto;
 }
 
 #gotAccount {
-    margin: 2em;
-    color: darkgreen;
-    
+  margin: 2em;
+  color: rgb(1, 44, 1);
+  font-size: 1.25em;
 }

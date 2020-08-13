@@ -19,20 +19,20 @@ const Login = () => {
   };
 
   return (
-    <div style={{ color: "white" }}>
-      <h1>Login</h1>
+    <div className="signUpMainDiv" style={{ color: "white" }}>
+      <h1 className="heavyFont signUpHeader">Login</h1>
       <form className="loginForm" onSubmit={handleLogin}>
         <div className="input">
-          <label>Email: </label>
+          <label className="labelInput text-white">Email: </label>
           <input type="text" placeholder="email" required {...email} />
-          <label>Password: </label>
+          <label className="labelInput text-white">Password: </label>
           <input
             type="password"
             placeholder="password"
             required
             {...password}
           />
-          <input type="submit" className="submit" />
+          <input type="submit" className="Btn-create submit" />
         </div>
       </form>
     </div>

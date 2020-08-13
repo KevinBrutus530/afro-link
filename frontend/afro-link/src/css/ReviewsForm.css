@@ -25,6 +25,7 @@ $black-chocolate: #191102ff; */
   border-radius: 5px;
   width: 30em;
   overflow-x: scroll;
+  
 }
 
 .reviewsForm > * {
@@ -43,10 +44,11 @@ $black-chocolate: #191102ff; */
 }
 
 .labelInput {
+  font-weight: 900;
   display: flex;
   flex-direction: column;
   text-align: left;
-  color: #191102ff;
+  color: #191102;
   padding: 5px;
 }
 
@@ -61,8 +63,9 @@ $black-chocolate: #191102ff; */
 .reviewsInputs {
   display: flex;
   flex-direction: column;
-  background-color: #f3b61fff;
-  background-image: url("https://www.transparenttextures.com/patterns/dimension.png");
+  background-color: white; 
+  /* background-image: url("https://www.transparenttextures.com/patterns/dimension.png"); */
+  box-shadow: 2px 2px 2px #191102ff;
   padding: 1em;
   margin: auto;
   border-radius: 5px;

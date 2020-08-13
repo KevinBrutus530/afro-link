@@ -10,8 +10,11 @@
   flex-direction: column;
   justify-content: space-around;
   margin: auto;
-  background-color: #f3b61fff;
-  background-image: url("https://www.transparenttextures.com/patterns/dimension.png");
+  /* background-color: #f3b61fff;
+  background-image: url("https://www.transparenttextures.com/patterns/dimension.png"); */
+  background-color: white;
+  /* background-image: url("https://www.transparenttextures.com/patterns/dimension.png"); */
+  box-shadow: 2px 2px 2px #191102ff;
   width: 25em;
   height: auto;
   border-radius: 5px;

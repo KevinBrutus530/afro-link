@@ -32,6 +32,8 @@
   margin: auto;
   padding: 3em;
   border-top: 2px solid #191102ff;
+  background-color: rgba(162, 160, 21, 0.5);
+  background-image: url("https://www.transparenttextures.com/patterns/dark-geometric.png");
 }
 
 @media (max-width: 1178px) {

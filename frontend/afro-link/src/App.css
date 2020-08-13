@@ -29,6 +29,7 @@ $black-chocolate: #191102ff; */
 
 a {
   color: #2d99a3;
+  font-weight: bolder;
   /* text-decoration: none; */
 }
 

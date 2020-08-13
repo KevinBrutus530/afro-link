@@ -1,0 +1,31 @@
+
+
+.signUpMainDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    margin-top: 5em;
+}
+
+.signUpHeader {
+    color: white;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2em;
+}
+
+.submit {
+    width: 7em;
+    margin: 1em auto;
+}
+
+#gotAccount {
+    margin: 2em;
+    color: darkgreen;
+    
+}

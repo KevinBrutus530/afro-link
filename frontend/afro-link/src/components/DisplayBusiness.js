@@ -44,7 +44,8 @@ const DisplayBusiness = ({ businessInfo }) => {
         <div className="businessInfo">
           <h3>{owner}</h3>
          <p>Owner/Operator</p>
-        
+
+  
           <ul style={{ listStyleType: "none" }}>
             <li>
               <img src={businessInfo.pictures}></img>

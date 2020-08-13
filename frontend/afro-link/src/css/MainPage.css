@@ -114,8 +114,40 @@ h6 {
   .mainPageContainer {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
+    margin-top: 15em;
     margin-bottom: 20em;
+    padding: 0;
+  }
+  .headingMain {
+    display: flex;
+    font-size: 25%;
+    width: fill;
+  }
+}
+
+@media (max-width: 410px) {
+  .searchBizDiv,
+  .bizOwnerDiv {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-shrink: 50%;
+    justify-content: center;
+    padding: 0;
+    width: fill;
+  }
+
+  .headingMain {
+    font-size: 1em;
+    width: fill;
+  }
+}
+
+@media (max-width: 661px) {
+  .headingMain {
+    margin: 50%;
+    width: fill;
   }
 }
 
@@ -134,10 +166,12 @@ h6 {
   padding-top: 1em;
   padding-bottom: 1em;
   font-weight: 570;
-  font-size: 44pt;
+  font-size: 3em;
   text-shadow: 1px 3px 5px #191102ff;
   color: rgba(104, 17, 13, 0.842);
   -webkit-text-stroke: 2px rgba(243, 183, 31, 0.863);
+  width: 100%;
+  height: auto;
 }
 
 .searchBiz {

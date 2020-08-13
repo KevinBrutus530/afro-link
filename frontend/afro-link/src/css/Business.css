@@ -8,6 +8,31 @@
   color: #191102ff;
 }
 
+@media (max-width: 410px) {
+  .businessMainDiv {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: inherit;
+    place-items: center;
+  }
+
+  .businessMainDiv > * {
+    width: fill;
+    padding: 1em;
+  }
+
+  .bizMapRevContainer {
+    display: flex;
+    place-items: center;
+    width: fill;
+    justify-content: center;
+    margin: auto;
+    padding: 0;
+  }
+
+}
+
 #bizName {
   color: white;
 }

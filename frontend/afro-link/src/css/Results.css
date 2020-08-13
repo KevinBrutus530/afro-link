@@ -33,6 +33,14 @@
   font-weight: bold;
 }
 
+@media (max-width: 410px) {
+.businessCard {
+  width: fill;
+}
+
+}
+
+
 .businessCard:hover {
   box-shadow: 1px 3px 5px #510d0a;
   background-color: goldenrod;

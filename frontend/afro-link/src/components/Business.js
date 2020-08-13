@@ -54,7 +54,7 @@ const Business = () => {
       <h1 id="bizName" className="heavyFont">
         {businessName}
       </h1>
-      <h4 style={{ color: "white" }}>{type}</h4>
+      <h4 style={{ color: "white", padding: ".5em" }}>{type}</h4>
       <div className="bizMapRevContainer">
         <div className="bizMap">
           <DisplayBusiness businessInfo={businessInfo} categoryId={id} />

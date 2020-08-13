@@ -26,8 +26,8 @@ $black-chocolate: #191102ff; */
 }
 
 a {
-  color: white;
-  text-decoration: none;
+  color: #2d99a3;
+  /* text-decoration: none; */
 }
 
 input:focus {

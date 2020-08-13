@@ -45,14 +45,14 @@ const Results = () => {
           onClick={() => handleBusiness(biz.biz_id)}
         >
           <div className="businessCard">
-            <h3>{biz.biz_name}</h3>
+            <h3 className="heavyFont">{biz.biz_name}</h3>
             {/* <li>Hours: {hrsSub}</li> */}
             <p>
               {bizz} {biz.city} {biz.state} {biz.zip}
             </p>
             <p>
-              <a href={biz.website} target="_blank">
-                Website
+              <a className="hyperLink" href={biz.website} target="_blank">
+                Visit Website
               </a>
             </p>
           </div>
@@ -64,12 +64,11 @@ const Results = () => {
 
   return (
     <div className="resultsPage">
-
       <div className="resultsMainDiv" style={{ color: "white" }}>
-      {/* <div className="searchBarDiv"> */}
+        {/* <div className="searchBarDiv"> */}
         {/* <SearchBusinessForm /> */}
-      
-        <h1>{bizType}</h1>
+
+        <h1 className="heavyFont">{bizType}</h1>
         <FilterResults results={results} />
         <div>
           <ul className="resultsUL" style={{ listStyleType: "none" }}>

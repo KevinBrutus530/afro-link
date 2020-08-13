@@ -12,6 +12,7 @@ const Business = () => {
   const { id } = useParams();
   const [igUrl, setIgUrl] = useState("");
   const [businessName, setBusinessName] = useState("");
+  const [type, setType] = useState("");
 
   let location =
     businessInfo.street +
@@ -25,10 +26,11 @@ const Business = () => {
   const getInfo = async () => {
     try {
       let res = await axios.get(`http://localhost:3000/businesses/${id}`);
-      debugger
+      // debugger
       setBusinessInfo(res.data.payload);
       setBusinessName(res.data.payload.biz_name);
       setIgUrl(res.data.payload.social_media);
+      setType(res.data.payload.type_name);
     } catch (err) {
       console.log(err);
     }
@@ -37,7 +39,6 @@ const Business = () => {
   useEffect(() => {
     getInfo();
   }, []);
-
 
   return (
     <div className="businessMainDiv">
@@ -50,7 +51,10 @@ const Business = () => {
         Return to Results Page
       </button>
 
-      <h1 id="bizName">{businessName}</h1>
+      <h1 id="bizName" className="heavyFont">
+        {businessName}
+      </h1>
+      <h4 style={{ color: "white" }}>{type}</h4>
       <div className="bizMapRevContainer">
         <div className="bizMap">
           <DisplayBusiness businessInfo={businessInfo} categoryId={id} />

@@ -35,3 +35,28 @@ img {
 #contactsLabel {
   color: #191102;
 }
+
+.heavyFont {
+  font-weight: 800;
+}
+
+.ownerHeader {
+  margin: auto;
+}
+
+.bizHours {
+  color: #191102b6;
+  text-transform: capitalize;
+  padding: 1em 2em;
+  text-align: center;
+}
+
+.contactInfo {
+  display: flex;
+  margin: auto;
+}
+
+.contactInfo > * {
+  text-align: flex-start;
+  align-items: flex-start;
+}

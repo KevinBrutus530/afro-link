@@ -60,8 +60,9 @@ const ReviewsForm = () => {
     return (
       <div style={{ color: "white" }} key={i} className="ReviewSect">
         <div className="ratings">
-        <h5 className="reviewerName">{post.name.toUpperCase()}</h5>
-        {starsShow(post.ratings)}</div>
+          <h5 className="reviewerName">{post.name.toUpperCase()}</h5>
+          {starsShow(post.ratings)}
+        </div>
         <p className="review"> {post.text}</p>
       </div>
     );
@@ -69,7 +70,7 @@ const ReviewsForm = () => {
 
   return (
     <div className="reviewsForm">
-      <h2>Reviews</h2>
+      <h2 className="heavyFont">Reviews</h2>
       <form className="reviewsInputs" onSubmit={submitReviews}>
         <div className="labelInput">
           {" "}
@@ -86,38 +87,40 @@ const ReviewsForm = () => {
           <label className="labelInput">Review:</label>
           <textarea
             type="text"
-            placeholder="comments..."
+            placeholder="Comments..."
             name="comment"
             {...text}
             required
           />
         </div>
         <br></br>
-        <label className="labelInput">Rating: </label>
-        {[...Array(5)].map((star, i) => {
-          const ratingValue = i + 1;
-          return (
-            <label key={i} className="ratingsSec">
-              <input
-                type="radio"
-                className="ratingRadio"
-                value={ratingValue}
-                onClick={() => setRating(ratingValue)}
-                required
-              />
-              <span
-                className="fa fa-star-o"
-                style={
-                  ratingValue <= (hover || ratings)
-                    ? { color: "red" }
-                    : { color: "white" }
-                }
-                onMouseEnter={() => setHover(ratingValue)}
-                onMouseLeave={() => setHover(null)}
-              ></span>
-            </label>
-          );
-        })}
+        <div className="rateStarsDiv">
+          <label className="labelInput">Rating: </label>
+          {[...Array(5)].map((star, i) => {
+            const ratingValue = i + 1;
+            return (
+              <label key={i} className="ratingsSec">
+                <input
+                  type="radio"
+                  className="ratingRadio"
+                  value={ratingValue}
+                  onClick={() => setRating(ratingValue)}
+                  required
+                />
+                <span
+                  className="fa fa-star-o"
+                  style={
+                    ratingValue <= (hover || ratings)
+                      ? { color: "red" }
+                      : { color: "white" }
+                  }
+                  onMouseEnter={() => setHover(ratingValue)}
+                  onMouseLeave={() => setHover(null)}
+                ></span>
+              </label>
+            );
+          })}
+        </div>
 
         <button className="Btn-create" type="submit" id="reviewsBtn">
           Submit

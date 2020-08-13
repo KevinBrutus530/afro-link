@@ -1,5 +1,3 @@
-
-
 .businessDisplay {
   display: flex;
   flex-direction: column;
@@ -23,10 +21,17 @@
 
 .businessInfo > * {
   color: #191102;
-  
 }
 
 img {
   width: 20em;
   height: auto;
+}
+
+.hyperLink > a {
+  color: #2d99a3;
+}
+
+#contactsLabel {
+  color: #191102;
 }

@@ -72,10 +72,21 @@ $black-chocolate: #191102ff; */
   height: auto;
 }
 
+@media (max-width: 1190px) {
+  .reviewsInputs {
+    display: flex;
+    justify-content: center;
+    width: fill;
+    place-items: center;
+    margin: auto;
+    padding: 0;
+  }
+}
+
 @media (max-width: 410px) {
   .reviewsInputs {
     width: fill;
-    padding: 4em;
+    padding: 5em;
   }
 }
 

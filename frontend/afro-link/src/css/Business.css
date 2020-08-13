@@ -33,6 +33,13 @@
 
 }
 
+/* @media (max-width: 1190px) {
+.bizMapRevContainer {
+  width: fill;
+  margin: auto;
+}
+} */
+
 #bizName {
   color: white;
 }
@@ -67,5 +74,6 @@
     flex-direction: column;
     justify-content: center;
     margin: auto;
+    padding: 0;
   }
 }

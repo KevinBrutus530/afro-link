@@ -17,6 +17,8 @@
     flex-direction: column;
     justify-content: center;
     padding: 2em;
+    margin: auto;
+    width: 75%;
 }
 
 .submit {

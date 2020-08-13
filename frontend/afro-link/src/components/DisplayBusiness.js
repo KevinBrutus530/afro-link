@@ -41,9 +41,9 @@ const DisplayBusiness = ({ businessInfo }) => {
   return (
     <>
       <div className="businessDisplay" style={{ color: "white" }}>
-        <div className="businessInfo">
           <h3>{owner}</h3>
          <p>Owner/Operator</p>
+        <div className="businessInfo">
 
   
           <ul style={{ listStyleType: "none" }}>

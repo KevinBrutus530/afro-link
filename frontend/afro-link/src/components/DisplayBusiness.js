@@ -25,47 +25,39 @@ const DisplayBusiness = ({ businessInfo }) => {
     }
   };
 
-  // let bizz = biz.street === null ? (biz.street = noAddress) : biz.street;
-  // const showOwner = () => {
-  //   let noOwner = "Not Available";
-  //   let owner = businessInfo.owner_name;
-  //   owner === null || "UNKNOWN" ? (owner = noOwner) : owner;
+  let owner =
+    businessInfo.owner_name === null
+      ? (businessInfo.owner_name = "")
+      : businessInfo.owner_name;
 
-  //   return (
-  //     <div>
-  //     </div>
-  //   );
-  // };
-  let owner = businessInfo.owner_name === null ? businessInfo.owner_name = "Not Available" : businessInfo.owner_name
-  
   return (
     <>
       <div className="businessDisplay" style={{ color: "white" }}>
+        <div className="ownerHeader">
+          <h3 className="heavyFont">{owner}</h3>
+          {owner === "" ? "" : <p>Owner/Operator</p>}
+        </div>
         <div className="businessInfo">
-          <h3>{owner}</h3>
-         <p>Owner/Operator</p>
-
-  
           <ul style={{ listStyleType: "none" }}>
             <li>
               <img src={businessInfo.pictures}></img>
             </li>
-            <li>{businessInfo.hours}</li>
             <li>
               {businessInfo.street} {businessInfo.city} {businessInfo.state}{" "}
               {businessInfo.zip}
             </li>
+            <li className="bizHours">{businessInfo.hours}</li>
             <li></li>
 
             <li className="hyperLink">
               <a href={businessInfo.website} target="_blank">
-                Website
+                Visit Website
               </a>
             </li>
           </ul>
           <div className="contactInfo">
             <ul>
-              <label id="contactsLabel">Contacts: </label>
+              <label id="contactsLabel">Contact Info: </label>
               <li>{businessInfo.phone}</li>
               <li>{businessInfo.email}</li>
 

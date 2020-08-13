@@ -44,6 +44,6 @@
   flex-direction: row;
 }
 
-.businessCard * {
+.businessCard > * {
   color: #191102;
 }

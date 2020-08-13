@@ -17,13 +17,13 @@ $black-chocolate: #191102ff; */
   width: 100vw;
   margin: auto;
   place-items: center;
-  justify-content: space-around;
+  justify-content: center;
   /* background-color: #e7e7ed; */
   background-color: rgba(247, 186, 32, 0.774);
   background-image: url("https://www.transparenttextures.com/patterns/dimension.png");
   color: #191102ff;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: row;
   overflow-y: scroll;
   -ms-grid-column-align: center;
 }
@@ -73,7 +73,7 @@ $black-chocolate: #191102ff; */
 .ourMissionDiv {
   display: flex;
   flex-direction: column;
-  margin-top: 10%;
+  /* margin-top: 10%; */
   border-radius: 1em;
   width: fit-content;
   height: fit-content;
@@ -87,7 +87,10 @@ h6 {
 }
 
 .afLogoMain {
+  margin: auto;
   background-color: transparent;
+  width: 30em;
+  height: auto;
 }
 
 /* ///////////////////////////////////////////////////////////////////////////// */

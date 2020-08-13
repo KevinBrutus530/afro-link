@@ -21,7 +21,7 @@ $black-chocolate: #191102ff; */
   margin-left: 1em;
   margin-right: 1em;
   border-radius: 5px;
-  width: 25em;
+  width: 30em;
 }
 
 .reviewsForm > * {
@@ -42,8 +42,17 @@ $black-chocolate: #191102ff; */
 .labelInput {
   display: flex;
   flex-direction: column;
+  text-align: left;
   color: #191102ff;
   padding: 5px;
+}
+
+.rateStarsDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 5px;
+  text-align-last: center;
 }
 
 .reviewsInputs {
@@ -58,7 +67,7 @@ $black-chocolate: #191102ff; */
   display: flex;
   flex-direction: column;
   vertical-align: middle;
-  width: calc(100% - 0);
+  width: 100%;
   min-height: auto;
   margin-top: 5px 10px;
   margin-bottom: 0em;
@@ -75,12 +84,16 @@ $black-chocolate: #191102ff; */
 
 .ratings {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 100%;
 }
 
 .reviewerName {
 padding-right: 1em;
+}
+
+span {
+  letter-spacing: 1px;
 }
 
 .ratings .fa {

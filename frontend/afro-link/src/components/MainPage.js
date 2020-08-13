@@ -12,7 +12,7 @@ const MainPage = () => {
           <img className="afLogoMain" src={circleLogo} alt="afro link logo" />
         </div>
         <div className="ourMissionDiv">
-          <h1>Welcome to Afro Link</h1>
+          <h1 className="heavyFont">Welcome to Afro Link</h1>
           <h3>
             Connecting you to Black-Owned businesses through out NYC, the
             tri-state area, and beyond
@@ -41,7 +41,7 @@ const MainPage = () => {
         </div>
       </div>
       <div className="ourMissionStatementDiv">
-        <h3>Our Mission</h3>
+        <h3 className="heavyFont">Our Mission</h3>
         <p>(our mission story here)</p>
       </div>
     </div>

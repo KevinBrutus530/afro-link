@@ -14,18 +14,22 @@ $black-chocolate: #191102ff; */
 }
 
 .reviewsForm {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
   /* background-color: whitesmoke; */
   /* background-color: rgba(255, 255, 255, 0.493); */
   padding: 1em;
-  margin-left: 1em;
-  margin-right: 1em;
+  /* margin-left: 1em;
+  margin-right: 1em; */
   border-radius: 5px;
   width: 30em;
+  overflow-x: scroll;
+  
 }
 
 .reviewsForm > * {
-  padding: 1em;
+  padding: .5em;
 }
 
 .reviewsForm > h2 {
@@ -40,10 +44,11 @@ $black-chocolate: #191102ff; */
 }
 
 .labelInput {
+  font-weight: 900;
   display: flex;
   flex-direction: column;
   text-align: left;
-  color: #191102ff;
+  color: #191102;
   padding: 5px;
 }
 
@@ -56,11 +61,16 @@ $black-chocolate: #191102ff; */
 }
 
 .reviewsInputs {
-  background-color: #f3b61fff;
-  background-image: url("https://www.transparenttextures.com/patterns/dimension.png");
+  display: flex;
+  flex-direction: column;
+  background-color: white; 
+  /* background-image: url("https://www.transparenttextures.com/patterns/dimension.png"); */
+  box-shadow: 2px 2px 2px #191102ff;
   padding: 1em;
   margin: auto;
   border-radius: 5px;
+  width: 100%;
+  height: auto;
 }
 
 .ReviewSect {

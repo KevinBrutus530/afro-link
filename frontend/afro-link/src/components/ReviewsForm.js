@@ -112,7 +112,7 @@ const ReviewsForm = () => {
                   style={
                     ratingValue <= (hover || ratings)
                       ? { color: "red" }
-                      : { color: "white" }
+                      : { color: "#background-color: #1911026b" }
                   }
                   onMouseEnter={() => setHover(ratingValue)}
                   onMouseLeave={() => setHover(null)}

@@ -28,7 +28,7 @@ $black-chocolate: #191102ff; */
   -ms-grid-column-align: center;
 }
 
-@media (max-width: 1355px) {
+@media (max-width: 1190px) {
   .landingMainDiv {
     display: flex;
     flex-direction: column;
@@ -38,7 +38,7 @@ $black-chocolate: #191102ff; */
   }
 }
 
-@media (max-width: 1355px) {
+@media (max-width: 1190px) {
   .logoDiv {
     display: none;
     position: relative;
@@ -51,7 +51,7 @@ $black-chocolate: #191102ff; */
   }
 }
 
-@media (max-width: 1355px) {
+@media (max-width: 1190px) {
   .ourMissionDiv {
     display: flex;
     flex-direction: column;
@@ -83,7 +83,7 @@ $black-chocolate: #191102ff; */
 h1,
 h3,
 h6 {
-  padding: 1em;
+  padding: 10px;
 }
 
 .afLogoMain {
@@ -110,7 +110,7 @@ h6 {
   grid-gap: 5.5em;
 }
 
-@media (max-width: 1355px) {
+@media (max-width: 1190px) {
   .mainPageContainer {
     display: flex;
     flex-direction: column;
@@ -157,7 +157,7 @@ h6 {
   transition: transform 1s;
 }
 
-@media (max-width: 1355px) {
+@media (max-width: 1190px) {
   .searchBiz {
     display: none;
     position: relative;
@@ -173,6 +173,7 @@ h6 {
 }
 
 .addBiz {
+  margin: auto;
   border: 1px goldenrod ridge;
   border-radius: 15px;
   margin: 2em;

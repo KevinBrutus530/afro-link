@@ -5,6 +5,7 @@ import { getAPI } from "../util/getAPI";
 import { useHistory} from 'react-router-dom'
 import { signUp } from '../util/firebaseFunctions';
 import axios from 'axios'
+import "../css/SignUp.css"
 
 const SignUp = () => {
 
@@ -27,19 +28,19 @@ const SignUp = () => {
         }
     }
     return(
-        <div>
+        <div className="signUpMainDiv">
              <form className="signUpForm" onSubmit={handleNewUser}>
-                <h1> Sign Up </h1>
+                <h1 className="heavyFont signUpHeader">Sign Up</h1>
                 <div className="input">
-                <label>Email: </label>
+                <label className="labelInput text-white">Email: </label>
                 <input type="text" placeholder="email" required {...email}/>
-                <label>Password: </label>
+                <label className="labelInput text-white">Password: </label>
                 <input type="password" placeholder="password" required {...password}/>
-                <input type="submit" className="submit"/>
+                <input type="submit" className="Btn-create submit"/>
                 </div>
             </form>
             <form className="user">
-                <Link to="/login" className="button">Have An Account? Click Here</Link>
+                <Link to="/login" id="gotAccount" className="submit">Have An Account? Click Here</Link>
             </form>
         </div>
         

@@ -103,7 +103,7 @@ const NewBusiness = () => {
         });
       }
       welcome(biz_name.value, newBiz.data.status)
-      history.push("/main")
+      history.push("/profile")
     } catch (error) {
       errorHandle(error.status)
       console.log(error.status);
@@ -147,11 +147,11 @@ const NewBusiness = () => {
     setShowWeb(!showWeb);
   };
   const handleAddress = () => {
-  setHouseNum("")
-  setStreet("")
-  setCity("")
-  setState("")
-  setZip("")
+  setHouseNum(null)
+  setStreet(null)
+  setCity(null)
+  setState(null)
+  setZip(null)
   setAddress(!showAddress);
   };
 

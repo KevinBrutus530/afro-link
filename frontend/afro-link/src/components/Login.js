@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useHistory } from "react-router-dom";
 import { useInput } from "../util/useInput";
 import { login } from "../util/firebaseFunctions";
@@ -15,6 +15,7 @@ const Login = () => {
       history.push("/profile");
     } catch (err) {
       console.log(err);
+      alert("Error Logging In. Please Try Again Later")
     }
   };
 

@@ -1,5 +1,3 @@
-
-
 .businessDisplay {
   display: flex;
   flex-direction: column;
@@ -10,10 +8,10 @@
 .businessInfo {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   margin: auto;
-  background-color: #f3b61fff;
-  background-image: url("https://www.transparenttextures.com/patterns/dimension.png");
+  align-items: center;
+  background-color: white;
   width: 25em;
   height: auto;
   border-radius: 5px;
@@ -23,9 +21,23 @@
 
 .businessInfo > * {
   color: #191102;
+  width: inherit;
 }
 
-.hyperLink >a {
+.bizPicProfile {
+  padding: 1em;
+  width: 25em;
+  height: auto;
+}
+
+.ownerHeader {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  place-items: center;
+}
+
+.hyperLink > a {
   color: #00838f;
   padding: 15px;
 }

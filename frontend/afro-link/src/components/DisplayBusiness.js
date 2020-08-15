@@ -33,8 +33,11 @@ const DisplayBusiness = ({ businessInfo }) => {
         </div>
         <div className="businessInfo">
           <ul style={{ listStyleType: "none" }}>
-            <li>
-              <img src={businessInfo.pictures}></img>
+            <li >
+              <img className="bizPicProfile"
+                src={businessInfo.pictures}
+                alt="business photo"
+              />
             </li>
             <li>
               {businessInfo.street} {businessInfo.city} {businessInfo.state}{" "}

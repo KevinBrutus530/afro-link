@@ -49,7 +49,7 @@ const NewBusiness = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        let res = await axios.get("http://localhost:3000/categories/");
+        let res = await axios.get(`${API}/categories/`);
         // debugger
         setBusinessTypes(res.data.payload);
       } catch (err) {

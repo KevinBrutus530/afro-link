@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
+import { getAPI } from "../util/getAPI";
+
+
 import axios from "axios";
 import "../css/SearchBusinesses.css";
 
 const SearchBusinessForm = () => {
+  const API = getAPI()
   const [category, setCategory] = useState("");
   const [businessTypes, setBusinessTypes] = useState([]);
   const history = useHistory();
@@ -13,7 +17,7 @@ const SearchBusinessForm = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        let res = await axios.get("http://localhost:3000/categories/");
+        let res = await axios.get(`${API}/categories/`);
         setBusinessTypes(res.data.payload);
       } catch (err) {
         console.log(err);

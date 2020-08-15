@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
+import { getAPI } from "../util/getAPI";
+
 import axios from "axios";
 import DisplayBusiness from "./DisplayBusiness";
 import ReviewsForm from "./ReviewsForm";
@@ -7,6 +9,7 @@ import "../css/Business.css";
 import PinMap from "./PinMap";
 
 const Business = () => {
+  const API = getAPI();
   const [businessInfo, setBusinessInfo] = useState([]);
   const history = useHistory();
   const { id } = useParams();
@@ -25,7 +28,7 @@ const Business = () => {
 
   const getInfo = async () => {
     try {
-      let res = await axios.get(`http://localhost:3000/businesses/${id}`);
+      let res = await axios.get(`${API}/businesses/${id}`);
       // debugger
       setBusinessInfo(res.data.payload);
       setBusinessName(res.data.payload.biz_name);

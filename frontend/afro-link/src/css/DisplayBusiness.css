@@ -1,3 +1,5 @@
+
+
 .businessDisplay {
   display: flex;
   flex-direction: column;
@@ -10,11 +12,8 @@
   flex-direction: column;
   justify-content: space-around;
   margin: auto;
-  /* background-color: #f3b61fff;
-  background-image: url("https://www.transparenttextures.com/patterns/dimension.png"); */
-  background-color: white;
-  /* background-image: url("https://www.transparenttextures.com/patterns/dimension.png"); */
-  box-shadow: 2px 2px 2px #191102ff;
+  background-color: #f3b61fff;
+  background-image: url("https://www.transparenttextures.com/patterns/dimension.png");
   width: 25em;
   height: auto;
   border-radius: 5px;
@@ -26,40 +25,11 @@
   color: #191102;
 }
 
-img {
-  width: 20em;
-  height: auto;
-}
-
-.hyperLink > a {
-  color: #2d99a3;
+.hyperLink >a {
+  color: #00838f;
+  padding: 15px;
 }
 
 #contactsLabel {
-  color: #191102;
-}
-
-.heavyFont {
-  font-weight: 800;
-}
-
-.ownerHeader {
-  margin: auto;
-}
-
-.bizHours {
-  color: #191102b6;
-  text-transform: capitalize;
-  padding: 1em 2em;
-  text-align: center;
-}
-
-.contactInfo {
-  display: flex;
-  margin: auto;
-}
-
-.contactInfo > * {
-  text-align: flex-start;
-  align-items: flex-start;
+  color: black;
 }

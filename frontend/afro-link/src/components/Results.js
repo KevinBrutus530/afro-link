@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import axios from "axios";
+import { getAPI } from "../util/getAPI";
 import SearchBusinessForm from "./SearchBusinesses";
 import FilterResults from "./FilterResults";
 import "../css/Results.css";
 
 const Results = () => {
+  const API = getAPI()
   const { id } = useParams();
   const [results, setResults] = useState([]);
   const [bizType, setBizType] = useState("");
@@ -14,9 +16,9 @@ const Results = () => {
   const getResults = async () => {
     // debugger
     try {
-      let res = await axios.get(`http://localhost:3000/categories/${id}`);
+      let res = await axios.get(`${API}/categories/${id}`);
       setResults(res.data.payload);
-      let res2 = await axios.get(`http://localhost:3000/types/${id}`);
+      let res2 = await axios.get(`${API}/types/${id}`);
       setBizType(res2.data.payload[0].type_name);
     } catch (err) {
       console.log(err);

@@ -1,15 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useHistory } from "react-router-dom";
-// import PinMap from "./PinMap";
 import "../css/DisplayBusiness.css";
 
 const DisplayBusiness = ({ businessInfo }) => {
-  // debugger;
   const history = useHistory();
-
-  // useEffect(() => {
-  //   checkingSocialMedia(businessInfo);
-  // }, [businessInfo]);
 
   const checkingSocialMedia = (url) => {
     let fb = "facebook";

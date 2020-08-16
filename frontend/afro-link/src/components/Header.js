@@ -13,7 +13,6 @@ const Header = () => {
     };
     path();
     console.log("header is showing up");
-    searchBiz();
   }, [location]);
 
   const searchBiz = () => {

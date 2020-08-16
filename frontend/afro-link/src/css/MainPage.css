@@ -18,7 +18,6 @@ $black-chocolate: #191102ff; */
   margin: auto;
   place-items: center;
   justify-content: center;
-  /* background-color: #e7e7ed; */
   background-color: rgba(247, 186, 32, 0.774);
   background-image: url("https://www.transparenttextures.com/patterns/dimension.png");
   color: #191102ff;
@@ -73,11 +72,10 @@ $black-chocolate: #191102ff; */
 .ourMissionDiv {
   display: flex;
   flex-direction: column;
-  /* margin-top: 10%; */
   border-radius: 1em;
   width: fit-content;
   height: fit-content;
-  padding: 7em 0;
+  padding: 7em 2em;
 }
 
 h1,
@@ -112,14 +110,13 @@ h6 {
   grid-template-columns: 1fr 1fr;
   margin: auto;
   font-family: "Bungee", cursive;
-  /* font-family: "Monoton", cursive; */
   text-align: center;
   width: 100vw;
-  height: 100vh;
-  margin-bottom: 40em;
-  margin-top: 8em;
-  padding: 0 6em;
-  grid-gap: 5.5em;
+  height: auto;
+  margin-bottom: 2em;
+  margin-top: 2em;
+  padding: 5em 2em;
+  grid-gap: 2em;
 }
 
 @media (max-width: 1190px) {

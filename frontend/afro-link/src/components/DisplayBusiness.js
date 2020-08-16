@@ -29,22 +29,18 @@ const DisplayBusiness = ({ businessInfo }) => {
       <div className="businessDisplay" style={{ color: "white" }}>
         <div className="ownerHeader">
           <h3 className="heavyFont">{owner}</h3>
-          {owner === "" ? "" : <p>Owner/Operator</p>}
+          {owner === "" ? <p className="empty"></p> : <p>Owner/Operator</p>}
         </div>
         <div className="businessInfo">
           <ul style={{ listStyleType: "none" }}>
-            <li >
-              <img className="bizPicProfile"
-                src={businessInfo.pictures}
-                alt="business photo"
-              />
-            </li>
             <li>
+              <img className="bizPicProfile" src={businessInfo.pictures} />
+            </li>
+            <li className="bizAddress">
               {businessInfo.street} {businessInfo.city} {businessInfo.state}{" "}
               {businessInfo.zip}
             </li>
             <li className="bizHours">{businessInfo.hours}</li>
-            <li></li>
 
             <li className="hyperLink">
               <a href={businessInfo.website} target="_blank">

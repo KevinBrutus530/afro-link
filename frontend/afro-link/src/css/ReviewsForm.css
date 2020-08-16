@@ -19,7 +19,7 @@ $black-chocolate: #191102ff; */
   margin: auto;
   /* background-color: whitesmoke; */
   /* background-color: rgba(255, 255, 255, 0.493); */
-  padding: 1em;
+  padding: 1.5em;
   /* margin-left: 1em;
   margin-right: 1em; */
   border-radius: 5px;
@@ -27,9 +27,7 @@ $black-chocolate: #191102ff; */
   overflow-x: scroll;
 }
 
-.reviewsForm > * {
-  padding: 0.5em;
-}
+
 
 .reviewsForm > h2 {
   color: whitesmoke;

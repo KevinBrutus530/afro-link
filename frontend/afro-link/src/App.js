@@ -5,12 +5,12 @@ import NewBusiness from "./components/NewBusiness";
 import MainPage from "./components/MainPage";
 import Results from "./components/Results";
 import Business from "./components/Business";
-import SignUp from "./components/SignUp";
-import Login from "./components/Login";
-import ProfilePage from "./components/ProfilePage";
+import SignUp from "./components/Users/SignUp";
+import Login from "./components/Users/Login";
+import ProfilePage from "./components/Users/ProfilePage";
+import AuthProvider from "./providers/AuthContext";
 import "./App.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import LandingPage from "./components/LandingPage";
 require("dotenv").config();
 
 // import { MuiPickersUtilsProvider } from '@material-ui/pickers';
@@ -19,17 +19,17 @@ function App() {
   return (
     <div className="App">
       <Header />
-
+    <AuthProvider>
       <Switch>
-        {/* <Route exact path="/" component={LandingPage} /> */}
         <Route exact path="/" component={MainPage} />
         <Route exact path="/newBusiness" component={NewBusiness} />
         <Route path="/categories/:id" component={Results} />
         <Route path="/businesses/:id" component={Business} />
         <Route path="/signup" component={SignUp} />
         <Route path="/login" component={Login} />
-        <Route path="/profile" component={ProfilePage} />
+        <Route path="/profile/:userId" component={ProfilePage} />
       </Switch>
+    </AuthProvider>
     </div>
   );
 }

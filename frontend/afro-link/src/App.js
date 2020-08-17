@@ -9,6 +9,7 @@ import SignUp from "./components/SignUp";
 import Login from "./components/Login";
 import ProfilePage from "./components/ProfilePage";
 import "./App.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 // import LandingPage from "./components/LandingPage";
 require("dotenv").config();
 

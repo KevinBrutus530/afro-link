@@ -5,6 +5,10 @@
   padding-bottom: 1em;
 }
 
+.bizMap {
+  margin-top: unset;
+}
+
 .businessInfo {
   display: flex;
   flex-direction: column;
@@ -22,6 +26,11 @@
 .businessInfo > * {
   color: #191102;
   width: inherit;
+  height: auto;
+}
+
+.bizHours {
+  padding: 10px 2em;
 }
 
 .bizPicProfile {
@@ -34,14 +43,18 @@
   display: flex;
   flex-direction: column;
   margin: auto;
-  place-items: center;
+  /* place-items: center; */
 }
 
 .hyperLink > a {
   color: #00838f;
-  padding: 15px;
+  padding: 10px;
 }
 
 #contactsLabel {
   color: black;
+}
+
+.empty {
+  margin-top: 1em;
 }

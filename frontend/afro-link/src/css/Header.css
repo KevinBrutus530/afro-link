@@ -20,7 +20,7 @@ $black-chocolate: #191102ff; */
 
 .headerNav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   height: 5em;
   text-align: center;
   width: 100%;
@@ -28,21 +28,26 @@ $black-chocolate: #191102ff; */
   top: 0;
   z-index: 10;
   background-color: rgba(25, 17, 2, 0.801);
-  /* background-color: rgb(102, 16, 11); */
-  background-image: url("https://i.ya-webdesign.com/images/african-border-png-6.png")
-   /* url("https://www.transparenttextures.com/patterns/diagmonds.png")*/
-      /* ,
-    linear-gradient(
-      180deg,
-      rgb(34, 22, 1) 14%,
-      rgba(42, 155, 11, 0.56) 46%,
-      #f3b61fff 60%,
-      rgb(209, 25, 15, 1) 75%,
-      rgb(81, 18, 10) 95%,
-      rgb(34, 22, 1) 104%
-    ) */;
-
+  background-image: url("https://i.ya-webdesign.com/images/african-border-png-6.png");
   background-position: center;
   background-size: 150vw;
-  /* background-repeat: no-repeat, repeat, no-repeat; */
+}
+
+.BLM {
+  display: flex;
+  align-items: center;
+  color: white;
+  width: fit-content;
+  position: relative;
+}
+
+.BLM > * {
+  padding: 5px;
+}
+
+@media (max-width: 1190px) {
+  .BLM {
+    display: none;
+    position: relative;
+  }
 }

@@ -40,6 +40,12 @@ const Header = () => {
             <img className="logoHeader" src={logo} alt="logo" />
           </NavLink>
         </p>
+        <div className="BLM">
+          Black Lives Matter.
+          <a href="https://support.eji.org/give/153413/#!/donation/checkout">
+            Donate to the Equal Justice Initiative
+          </a>
+        </div>
         {searchBiz}
       </nav>
     </div>

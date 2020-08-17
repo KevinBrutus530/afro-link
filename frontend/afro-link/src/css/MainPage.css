@@ -22,7 +22,7 @@ $black-chocolate: #191102ff; */
   background-image: url("https://www.transparenttextures.com/patterns/dimension.png");
   color: #191102ff;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   overflow-y: scroll;
   -ms-grid-column-align: center;
 }
@@ -37,7 +37,7 @@ $black-chocolate: #191102ff; */
   }
 }
 
-@media (max-width: 1190px) {
+/* @media (max-width: 1190px) {
   .logoDiv {
     display: none;
     position: relative;
@@ -48,7 +48,7 @@ $black-chocolate: #191102ff; */
   .logoDiv {
     padding: 10em 0em 2em 12em;
   }
-}
+} */
 
 @media (max-width: 1190px) {
   .ourMissionDiv {
@@ -75,7 +75,7 @@ $black-chocolate: #191102ff; */
   border-radius: 1em;
   width: fit-content;
   height: fit-content;
-  padding: 7em 2em;
+  /* padding: 7em 2em; */
 }
 
 h1,
@@ -85,13 +85,14 @@ h6 {
 }
 
 .titleH1 {
-  font-size: 3em;
+  font-size: 4em;
   text-shadow: 1px 1px rgb(119, 90, 17);
+  padding-top: 1.5em;
 }
 
 .tagline {
   color: #510d0aff;
-  text-shadow: 1px 1px rgb(119, 90, 17);
+  /* text-shadow: 1px 1px rgb(119, 90, 17); */
   font-weight: 600;
 }
 
@@ -102,6 +103,8 @@ h6 {
   height: auto;
   filter: drop-shadow(1.5px 1.5px rgb(119, 90, 17))
 }
+
+
 
 /* ///////////////////////////////////////////////////////////////////////////// */
 
@@ -184,10 +187,10 @@ h6 {
 }
 
 .searchBiz {
-  border: 1px goldenrod ridge;
-  border-radius: 15px;
+  /* border: 1px goldenrod ridge; */
+  /* border-radius: 15px; */
   margin: 2em;
-  background-image: url("https://www.transparenttextures.com/patterns/white-carbonfiber.png"),
+  background-image:/*  url("https://www.transparenttextures.com/patterns/white-carbonfiber.png"), */
     url("../images/girlsSearchingOnline.jpg");
   background-size: cover;
   background-repeat: repeat, no-repeat;
@@ -217,10 +220,10 @@ h6 {
 
 .addBiz {
   margin: auto;
-  border: 1px goldenrod ridge;
-  border-radius: 15px;
+  /* border: 1px goldenrod ridge;
+  border-radius: 15px; */
   margin: 2em;
-  background-image: url("https://www.transparenttextures.com/patterns/graphcoders-lil-fiber.png"),
+   background-image: /*url("https://www.transparenttextures.com/patterns/graphcoders-lil-fiber.png"), */
     url("../images/coupleOpenSign.jpg");
   background-size: cover;
   background-repeat: repeat, no-repeat;

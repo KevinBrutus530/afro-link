@@ -29,6 +29,7 @@ const Header = () => {
       </div>
     );
   };
+  console.log("Header");
 
   return (
     <div>

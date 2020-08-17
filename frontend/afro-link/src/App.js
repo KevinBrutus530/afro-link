@@ -8,8 +8,9 @@ import Business from "./components/Business";
 import SignUp from "./components/SignUp";
 import Login from "./components/Users/Login";
 import ProfilePage from "./components/Users/ProfilePage";
-import "./App.css";
 import AuthProvider from "./providers/AuthContext";
+import "./App.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 // import LandingPage from "./components/LandingPage";
 require("dotenv").config();
 

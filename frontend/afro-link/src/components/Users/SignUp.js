@@ -1,11 +1,11 @@
 import React from "react";
-import { useInput} from "../util/useInput";
+import { useInput} from "../../util/useInput";
 import {Link} from "react-router-dom"
-import { getAPI } from "../util/getAPI";
+import { getAPI } from "../../util/getAPI";
 import { useHistory} from 'react-router-dom'
-import { signUp } from '../util/firebaseFunctions';
+import { signUp } from '../../util/firebaseFunctions';
 import axios from 'axios'
-import "../css/SignUp.css"
+import "../../css/SignUp.css"
 
 const SignUp = () => {
 

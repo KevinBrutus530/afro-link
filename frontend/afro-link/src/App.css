@@ -36,3 +36,12 @@ a {
 input:focus {
   outline: none;
 }
+
+.carouselPics {
+  width: 750px;
+  height: auto;
+}
+
+/* .padDown {
+  /* padding-top: 8em; */
+

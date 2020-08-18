@@ -9,6 +9,7 @@ import SignUp from "./components/Users/SignUp";
 import Login from "./components/Users/Login";
 import ProfilePage from "./components/Users/ProfilePage";
 import AuthProvider from "./providers/AuthContext";
+import { AuthRoute, ProtectedRoute } from "./util/routesUtil";
 import "./App.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 require("dotenv").config();
@@ -18,16 +19,24 @@ require("dotenv").config();
 function App() {
   return (
     <div className="App">
-      <Header />
     <AuthProvider>
+      <Header />
       <Switch>
+        <AuthRoute exact path="/signup">
+          <SignUp />
+        </AuthRoute>
+        <AuthRoute path="/login">
+          <Login />
+        </AuthRoute>
+        <ProtectedRoute path="/newBusiness">
+          <NewBusiness />
+        </ProtectedRoute>
+        <ProtectedRoute path="/profile/:userId">
+          <ProfilePage />
+        </ProtectedRoute>
         <Route exact path="/" component={MainPage} />
-        <Route exact path="/newBusiness" component={NewBusiness} />
         <Route path="/categories/:id" component={Results} />
         <Route path="/businesses/:id" component={Business} />
-        <Route path="/signup" component={SignUp} />
-        <Route path="/login" component={Login} />
-        <Route path="/profile/:userId" component={ProfilePage} />
       </Switch>
     </AuthProvider>
     </div>

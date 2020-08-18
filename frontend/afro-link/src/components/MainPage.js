@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { logout } from "../util/firebaseFunctions"
+// import { logout } from "../util/firebaseFunctions"
 import SearchBusinessForm from "./SearchBusinesses";
 import circleLogo from "../images/circleLogoYellow.png";
 import "../css/MainPage.css";
@@ -19,9 +19,9 @@ const MainPage = () => {
         <h3 className="tagline">
           Connecting you to Black-Owned businesses throughout NYC and beyond
         </h3>
-        <button onClick={logout}>
+        {/* <button onClick={logout}>
             Log Out
-          </button>
+          </button> */}
         <Carousel>
           <Carousel.Item>
             <img

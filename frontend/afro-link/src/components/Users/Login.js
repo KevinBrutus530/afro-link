@@ -13,9 +13,8 @@ const Login = () => {
     e.preventDefault();
     try {
       await login(email.value, password.value);
-      debugger
       // setProfileInfo(email.value)
-      // history.push(`/profile/${}`);
+      history.push(`/profile/${email.value}`);
     } catch (err) {
       console.log(err);
       alert("Error Logging In. Please Try Again Later")

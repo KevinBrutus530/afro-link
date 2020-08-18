@@ -5,6 +5,7 @@ import { getAPI } from "../util/getAPI";
 import SearchBusinessForm from "./SearchBusinesses";
 import FilterResults from "./FilterResults";
 import "../css/Results.css";
+import SearchBar from "./SearchBar";
 
 const Results = () => {
   const API = getAPI()
@@ -67,8 +68,8 @@ const Results = () => {
   return (
     <div className="resultsPage">
       <div className="resultsMainDiv" style={{ color: "white" }}>
-        {/* <div className="searchBarDiv"> */}
-        {/* <SearchBusinessForm /> */}
+
+      <SearchBar/>
 
         <h1 className="heavyFont">{bizType}</h1>
         <FilterResults results={results} />

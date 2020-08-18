@@ -49,6 +49,20 @@ const MainPage = () => {
 
           <Carousel.Item>
             <img
+              className="carouselPics"
+              src="https://bloximages.chicago2.vip.townnews.com/napavalleyregister.com/content/tncms/assets/v3/editorial/f/a8/fa8512ca-ebed-5992-85a5-838ca6d35559/537e796f42bdb.image.jpg"
+            />
+
+            <Carousel.Caption>
+              <h3 className="contrastBackground">André Hueston Mack</h3>
+              <a href="https://maisonnoirwines.com/our-story">
+                <p className="contrastLight">Mainson Noir Wines </p>
+              </a>
+            </Carousel.Caption>
+          </Carousel.Item>
+
+          <Carousel.Item>
+            <img
               className="carouselPics padDown"
               src="https://media.vanityfair.com/photos/55f0bf75200c343535919904/4:3/w_1280,h_960,c_limit/pat-mcgrath-fashion-week-make-up.jpg"
               alt="third slide"
@@ -58,21 +72,6 @@ const MainPage = () => {
               <h3 className="contrastBackground">Pat McGrath</h3>
               <a href="https://www.patmcgrath.com/pages/pat-mcgrath-biography">
                 <p className="contrastLight">Pat McGrath Labs</p>
-              </a>
-            </Carousel.Caption>
-          </Carousel.Item>
-
-          {/* second photo */}
-          <Carousel.Item>
-            <img
-              className="carouselPics"
-              src="https://bloximages.chicago2.vip.townnews.com/napavalleyregister.com/content/tncms/assets/v3/editorial/f/a8/fa8512ca-ebed-5992-85a5-838ca6d35559/537e796f42bdb.image.jpg"
-            />
-
-            <Carousel.Caption>
-              <h3 className="contrastBackground">André Hueston Mack</h3>
-              <a href="https://maisonnoirwines.com/our-story">
-                <p className="contrastLight">Mainson Noir Wines </p>
               </a>
             </Carousel.Caption>
           </Carousel.Item>

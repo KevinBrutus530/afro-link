@@ -42,6 +42,6 @@ input:focus {
   height: auto;
 }
 
-/* .padDown {
-  /* padding-top: 8em; */
-
+.padDown {
+  padding-bottom: 2em;
+}

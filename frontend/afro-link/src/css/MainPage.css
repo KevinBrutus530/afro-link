@@ -104,6 +104,24 @@ h6 {
   filter: drop-shadow(1.5px 1.5px rgb(119, 90, 17))
 }
 
+.contrastBackground {
+  background-color:  rgba(240, 255, 240, 0.5);
+  width: fit-content;
+  margin: auto;
+  color: #510d0aff;
+  font-weight: 900;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+.contrastLight {
+  background-color: rgba(240, 255, 240, 0.5);
+  width: max-content;
+  margin: auto;
+  color: navy;
+  letter-spacing: 1px;
+  padding: 5px;
+}
 
 
 /* ///////////////////////////////////////////////////////////////////////////// */

@@ -20,7 +20,7 @@ const signUp = async (req, res, next) => {
 };
 const getSingleOwner = async (req, res, next) => {
   try {
-    let owner = await db.one(`SELECT * FROM owners WHERE id =${req.params.id}`);
+    let owner = await db.one(`SELECT * FROM owners WHERE user_id =${req.params.id}`);
     res.status(200).json({
       status: "success",
       message: "single owner",

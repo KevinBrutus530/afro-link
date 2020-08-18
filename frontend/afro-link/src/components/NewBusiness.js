@@ -103,7 +103,7 @@ const NewBusiness = () => {
         });
       }
       welcome(biz_name.value, newBiz.data.status)
-      history.push("/profile")
+      history.push("/profile/:userId")
     } catch (error) {
       errorHandle(error.status)
       console.log(error.status);

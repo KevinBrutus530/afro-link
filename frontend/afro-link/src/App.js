@@ -11,15 +11,14 @@ import ProfilePage from "./components/Users/ProfilePage";
 import AuthProvider from "./providers/AuthContext";
 import "./App.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
-require("dotenv").config();
 
-// import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 
 function App() {
   return (
     <div className="App">
       <Header />
     <AuthProvider>
+     
       <Switch>
         <Route exact path="/" component={MainPage} />
         <Route exact path="/newBusiness" component={NewBusiness} />

@@ -30,24 +30,27 @@ const MainPage = () => {
               alt="first slide"
             />
             <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <h3 className="contrastBackground">Denequa Williams</h3>
+              <a href="https://www.litbklyn.co/meet-the-maker">
+                <p className="contrastLight">Lit Brooklyn</p>
+              </a>
             </Carousel.Caption>
           </Carousel.Item>
+
           <Carousel.Item>
             <img
               className="carouselPics"
-              src="https://gl-images.condecdn.net/image/RjXgoZlO4B3/crop/1620/f/shutterstock_editorial_8858109yd_huge_l.jpg"
-              alt="second slide"
+              src="https://cdn.fashionmagazine.com/wp-content/uploads/2019/06/Goodee-Pop-Up-Studio-Montreal_Celia-Spenard-Ko_20.jpg"
             />
 
             <Carousel.Caption>
-              <h3>Second slide label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <h3 className="contrastBackground">Byron and Dexter Peart</h3>
+              <a href="https://www.goodeeworld.com/pages/about-us">
+                <p className="contrastLight">Goodee</p>
+              </a>
             </Carousel.Caption>
           </Carousel.Item>
 
-          {/* second photo */}
           <Carousel.Item>
             <img
               className="carouselPics"
@@ -55,10 +58,25 @@ const MainPage = () => {
             />
 
             <Carousel.Caption>
-              <h3>Third slide label</h3>
-              <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-              </p>
+              <h3 className="contrastBackground">André Hueston Mack</h3>
+              <a href="https://maisonnoirwines.com/our-story">
+                <p className="contrastLight">Mainson Noir Wines </p>
+              </a>
+            </Carousel.Caption>
+          </Carousel.Item>
+
+          <Carousel.Item>
+            <img
+              className="carouselPics padDown"
+              src="https://media.vanityfair.com/photos/55f0bf75200c343535919904/4:3/w_1280,h_960,c_limit/pat-mcgrath-fashion-week-make-up.jpg"
+              alt="third slide"
+            />
+
+            <Carousel.Caption>
+              <h3 className="contrastBackground">Pat McGrath</h3>
+              <a href="https://www.patmcgrath.com/pages/pat-mcgrath-biography">
+                <p className="contrastLight">Pat McGrath Labs</p>
+              </a>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>

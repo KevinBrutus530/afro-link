@@ -12,15 +12,14 @@ import AuthProvider from "./providers/AuthContext";
 import { AuthRoute, ProtectedRoute } from "./util/routesUtil";
 import "./App.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
-require("dotenv").config();
 
-// import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 
 function App() {
   return (
     <div className="App">
     <AuthProvider>
       <Header />
+     
       <Switch>
         <AuthRoute exact path="/signup">
           <SignUp />

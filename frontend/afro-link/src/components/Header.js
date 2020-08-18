@@ -1,35 +1,9 @@
-import React, { useState, useEffect } from "react";
-import { NavLink, useHistory } from "react-router-dom";
+import React from "react";
+import { NavLink } from "react-router-dom";
 import logo from "../images/circleLogoYellow.png";
 import "../css/Header.css";
 
 const Header = () => {
-  const history = useHistory();
-  const [location, setLocation] = useState("");
-
-  useEffect(() => {
-    const path = () => {
-      setLocation(history.location.pathname);
-    };
-    path();
-    console.log("header is showing up");
-    searchBiz();
-  }, [location]);
-
-  const searchBiz = () => {
-    console.log("checking");
-    return (
-      <div>
-        <form>
-          <label>
-            Search
-            <input type="text" placeholder="Search Businesses" />
-          </label>
-          <button type="submit">Submit</button>
-        </form>
-      </div>
-    );
-  };
 
   return (
     <div>
@@ -46,7 +20,6 @@ const Header = () => {
             Donate to the Equal Justice Initiative
           </a>
         </div>
-        {searchBiz}
       </nav>
     </div>
   );

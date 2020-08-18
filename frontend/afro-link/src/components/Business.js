@@ -7,6 +7,7 @@ import DisplayBusiness from "./DisplayBusiness";
 import ReviewsForm from "./ReviewsForm";
 import "../css/Business.css";
 import PinMap from "./PinMap";
+import SearchBar from "./SearchBar";
 
 const Business = () => {
   const API = getAPI();
@@ -45,6 +46,7 @@ const Business = () => {
 
   return (
     <div className="businessMainDiv">
+      <SearchBar/>
       <button
         id="goBack"
         className="Btn-create"

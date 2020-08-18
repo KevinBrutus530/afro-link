@@ -4,19 +4,21 @@ import { getAPI } from "../util/getAPI";
 import { useInput } from "../util/useInput";
 import axios from "axios";
 
-const SearchBar = () => {
-  const API = getAPI();
-  const [businessTypes, setBusinessTypes] = useState([]);
-  const type_name = useInput("");
+
+const SearchBar = ({type}) => {
+
+    const history = useHistory();
+    const API = getAPI();
+    const [businessTypes, setBusinessTypes] = useState([]);
+    const type_name = useInput("");
+    // console.log(type)
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         let res = await axios.get(`${API}/categories/`);
-        // debugger
         setBusinessTypes(res.data.payload);
       } catch (err) {
-        console.log(err);
         setBusinessTypes([]);
       }
     };
@@ -24,15 +26,16 @@ const SearchBar = () => {
   }, []);
 
   const types = businessTypes.map((type, i) => {
-    // debugger
+    //   debugger
+    type_name.value=type
+
     return (
-      <option value={type.id} key={i}>
+      <option value={type.id} key={i} >
         {type.type_name}
       </option>
     );
   });
-  const history = useHistory();
-  console.log(history.location.pathname != "/");
+
   if (history.location.pathname != "/") {
     return (
       <div>
@@ -43,7 +46,7 @@ const SearchBar = () => {
             <option value="" disabled>
               Select Business Type
             </option>
-            {types}
+                {types}
           </select>
           <button type="submit">Submit</button>
         </form>

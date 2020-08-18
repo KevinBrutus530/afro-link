@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import { getAPI } from "../util/getAPI";
-
 import axios from "axios";
 import DisplayBusiness from "./DisplayBusiness";
 import ReviewsForm from "./ReviewsForm";
@@ -46,7 +45,7 @@ const Business = () => {
 
   return (
     <div className="businessMainDiv">
-      <SearchBar/>
+      <SearchBar type={type}/>
       <button
         id="goBack"
         className="Btn-create"

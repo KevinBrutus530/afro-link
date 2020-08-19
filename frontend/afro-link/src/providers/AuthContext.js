@@ -1,14 +1,11 @@
 import React, { createContext, useState, useEffect } from "react";
 import firebase from "../firebase";
 import { getFirebaseIdToken } from "../util/firebaseFunctions";
-
 export const AuthContext = createContext();
-
 const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [currentUser, setCurrentUser] = useState(null);
   const [token, setToken] = useState(null);
-
   const updateUser = (user) => {
     if (user) {
       const { email, uid } = user;
@@ -23,16 +20,13 @@ const AuthProvider = ({ children }) => {
       setLoading(false);
     }
   };
-
   useEffect(() => {
     const unsubscribe = firebase.auth().onAuthStateChanged(updateUser);
     return unsubscribe;
   }, []);
-
   if (loading) return <div>Loading...</div>;
-
   return (
-    <AuthContext.Provider value={{ currentUser, token, loading }}>
+    <AuthContext.Provider value={{currentUser, token, loading}}>
       {children}
     </AuthContext.Provider>
   );

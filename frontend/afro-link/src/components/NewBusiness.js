@@ -77,7 +77,11 @@ const NewBusiness = () => {
         hours: hours,
       });
       if (newBiz.data.status === "success") {
-        await axios.post(`${API}/owners`, {
+        // await axios.post(`${API}/owners`, {
+        //   owner_id: newBiz.data.payload.id,
+        //   owner_name: owner_name.value,
+        // });
+        await axios.patch(`${API}/owners/${newBiz.data.payload.id}`, {
           owner_id: newBiz.data.payload.id,
           owner_name: owner_name.value,
         });
@@ -103,7 +107,7 @@ const NewBusiness = () => {
         });
       }
       welcome(biz_name.value, newBiz.data.status)
-      history.push("/profile")
+      history.push("/profile/:userId")
     } catch (error) {
       errorHandle(error.status)
       console.log(error.status);

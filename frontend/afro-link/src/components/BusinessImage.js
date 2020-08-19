@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { getAPI } from "../util/getAPI";
+import "../css/BusinessImage.css";
 
 const BusinessImage = ({ bizID }) => {
   const [bizPic, setBizPic] = useState("");
@@ -17,9 +18,12 @@ const BusinessImage = ({ bizID }) => {
   fetchImage();
 
   return (
-    <div>
-      <img src={bizPic} alt="bizpic" />
-      business image
+    <div className="bizPicDiv">
+      {bizPic !== null ? (
+        <img className="bizPic" src={bizPic} alt="biz pic" />
+      ) : (
+        ""
+      )}
     </div>
   );
 };

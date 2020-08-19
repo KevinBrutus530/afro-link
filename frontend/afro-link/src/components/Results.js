@@ -14,10 +14,9 @@ const Results = () => {
   const [bizType, setBizType] = useState("");
   const history = useHistory();
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage, setPostsPerPage] = useState(10);
+  const [postsPerPage, setPostsPerPage] = useState(9);
 
   const getResults = async () => {
-    // debugger
     try {
       let res = await axios.get(`${API}/categories/${id}`);
       setResults(res.data.payload);
@@ -32,40 +31,7 @@ const Results = () => {
     getResults();
   }, []);
 
-  // const handleBusiness = (e) => {
-  //   history.push(`/businesses/${e}`);
-  // };
-
-  // let resultDisplay = results.map((biz) => {
-  //   let noAddress = "";
-  //   let noHours = "Not Available";
-  //   let bizz = biz.street === null ? (biz.street = noAddress) : biz.street;
-  //   let hrsSub = biz.hours === "" ? (biz.hours = noHours) : biz.hours;
-  //   return (
-  //     <div>
-  //       <div
-  //         className="resultsDiv"
-  //         key={biz.biz_id}
-  //         value={biz.biz_id}
-  //         onClick={() => handleBusiness(biz.biz_id)}
-  //       >
-  //         <div className="businessCard">
-  //           <h3 className="heavyFont">{biz.biz_name}</h3>
-  //           {/* <li>Hours: {hrsSub}</li> */}
-  //           <p>
-  //             {bizz} {biz.city} {biz.state} {biz.zip}
-  //           </p>
-  //           <p>
-  //             <a className="hyperLink" href={biz.website} target="_blank">
-  //               Visit Website
-  //             </a>
-  //           </p>
-  //         </div>
-  //         <br />
-  //       </div>
-  //     </div>
-  //   );
-  // });
+ 
 
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
@@ -78,13 +44,8 @@ const Results = () => {
       <div className="resultsMainDiv" style={{ color: "white" }}>
         <SearchBar type={bizType.id}/>
 
-        <h1 className="heavyFont">{bizType.type_name}</h1>
-        {/* <FilterResults results={results} /> */}
-        {/* <div>
-          <ul className="resultsUL" style={{ listStyleType: "none" }}>
-            {resultDisplay}
-          </ul>
-        </div> */}
+        <h1 className="heavyFont ctgTitle">{bizType.type_name}</h1>
+       
         <ResultsIndex results={currentPosts} />
         <Pagination
           postsPerPage={postsPerPage}

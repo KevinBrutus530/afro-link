@@ -40,6 +40,7 @@ input:focus {
 .carouselPics {
   width: 750px;
   height: auto;
+  filter: drop-shadow(5px rgb(240, 198, 92))
 }
 
 .padDown {

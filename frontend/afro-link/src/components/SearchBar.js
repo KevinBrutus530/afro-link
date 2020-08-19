@@ -11,7 +11,7 @@ const SearchBar = ({type}) => {
     const API = getAPI();
     const [businessTypes, setBusinessTypes] = useState([]);
     const type_name = useInput("");
-    // console.log(type)
+    console.log(type)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,12 +25,9 @@ const SearchBar = ({type}) => {
     fetchData();
   }, []);
 
-  const types = businessTypes.map((type, i) => {
-    //   debugger
-    type_name.value=type
-
+  const types = businessTypes.map((type) => {
     return (
-      <option value={type.id} key={i} >
+      <option value={type.id} key={type.id}>
         {type.type_name}
       </option>
     );

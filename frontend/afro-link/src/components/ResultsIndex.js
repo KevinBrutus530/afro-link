@@ -2,16 +2,14 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
 import { getAPI } from "../util/getAPI";
-import BusinessImage from "./BusinessImage"
+import BusinessImage from "./BusinessImage";
 
 const ResultsIndex = ({ results }) => {
-  // console.log(currentPosts)
   const history = useHistory();
   const API = getAPI();
   const handleBusiness = (e) => {
     history.push(`/businesses/${e}`);
   };
-  // const [imageUrl, setImageUrl] = useState("");
 
   let resultDisplay = results.map((biz) => {
     let bizPic;
@@ -20,8 +18,6 @@ const ResultsIndex = ({ results }) => {
     let noHours = "Not Available";
     let bizz = biz.street === null ? (biz.street = noAddress) : biz.street;
     let hrsSub = biz.hours === "" ? (biz.hours = noHours) : biz.hours;
-  
-    // console.log(imageUrl);
 
     return (
       <div key={biz.biz_id}>
@@ -31,17 +27,19 @@ const ResultsIndex = ({ results }) => {
           onClick={() => handleBusiness(biz.biz_id)}
         >
           <div className="businessCard">
-           <BusinessImage bizID={bizID} />
-            <h3 className="heavyFont">{biz.biz_name}</h3>
-            {/* <li>Hours: {hrsSub}</li> */}
-            <p>
-              {bizz} {biz.city} {biz.state} {biz.zip}
-            </p>
-            <p>
-              <a className="hyperLink" href={biz.website} target="_blank">
-                Visit Website
-              </a>
-            </p>
+            <BusinessImage bizID={bizID} />
+            <div>
+              <h3 className="heavyFont">{biz.biz_name}</h3>
+              {/* <li>Hours: {hrsSub}</li> */}
+              <p>
+                {bizz} {biz.city} {biz.state} {biz.zip}
+              </p>
+              <p>
+                <a className="hyperLink" href={biz.website} target="_blank">
+                  Visit Website
+                </a>
+              </p>
+            </div>
           </div>
           <br />
         </div>

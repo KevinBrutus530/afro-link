@@ -20,12 +20,13 @@
   display: flex;
   flex-direction: column;
   margin: auto;
-  background-color: #f3b61f;
+  justify-content: space-between;
+  background-color: white;
   background-image: url("https://www.transparenttextures.com/patterns/dimension.png");
   box-shadow: 1px 1px 7px #d5f5cda2;
-  height: 70%;
-  width: 50%;
-  padding: 2em;
+  height: 24em;
+  width: 20em;
+  padding: 1em;
   text-align: center;
   cursor: pointer;
   border-radius: 5px;

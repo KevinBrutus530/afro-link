@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import axios from "axios";
 import { getAPI } from "../util/getAPI";
-// import SearchBusinessForm from "./SearchBusinesses";
-// import FilterResults from "./FilterResults";
 import "../css/Results.css";
 import SearchBar from "./SearchBar";
 import ResultsIndex from "./ResultsIndex";

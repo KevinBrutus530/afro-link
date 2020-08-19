@@ -20,7 +20,7 @@ const signUp = async (req, res, next) => {
 };
 const getSingleOwner = async (req, res, next) => {
   try {
-    let owner = await db.one(`SELECT * FROM owners WHERE id =${req.params.id}`);
+    let owner = await db.one(`SELECT * FROM owners WHERE user_id =${req.params.id}`);
     res.status(200).json({
       status: "success",
       message: "single owner",
@@ -79,7 +79,7 @@ const editOwner = async (req, res, next) => {
     let { owner_id, owner_name } = req.body;
     let { id } = req.params;
     let owner = await db.one(
-      "UPDATE owners SET owner_id=$1, owner_name=$2 WHERE id=$3",
+      "UPDATE owners SET owner_id=$1, owner_name=$2 WHERE id=$3 RETURNING *",
       [owner_id, owner_name, id]
     );
     res.status(200).json({

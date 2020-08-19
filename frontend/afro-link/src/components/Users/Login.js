@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import { useHistory } from "react-router-dom";
 import { useInput } from "../../util/useInput";
 import { login } from "../../util/firebaseFunctions";
@@ -7,15 +7,12 @@ const Login = () => {
   const email = useInput("");
   const password = useInput("");
   const history = useHistory();
-  // const [ profileInfo, setProfileInfo ] = useState("")
 
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
       await login(email.value, password.value);
-      debugger
-      // setProfileInfo(email.value)
-      // history.push(`/profile/${}`);
+      history.push(`/profile/${email.value}`);
     } catch (err) {
       console.log(err);
       alert("Error Logging In. Please Try Again Later")

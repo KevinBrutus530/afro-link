@@ -44,7 +44,7 @@
   background-color: white;
   background-image: url("https://www.transparenttextures.com/patterns/dimension.png");
   box-shadow: 1px 1px 7px #d5f5cda2;
-  height: 24em;
+  height: 22em;
   width: 20em;
   padding: 1em;
   text-align: center;
@@ -77,10 +77,13 @@
 
 .bizTitle {
  border-bottom: solid #191102 1px;
+ font-size: 1.06em;
+ font-weight: bold;
 }
 
 .bizAddress {
+  text-transform: capitalize;
   font-size: 10pt;
   color: #191102;
-  padding: 0 2em;
+  padding: 0 1em;
 }

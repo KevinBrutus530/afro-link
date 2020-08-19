@@ -10,19 +10,35 @@
   flex-direction: column;
   margin: auto;
   margin-top: 1em;
+  padding: 2em;
+}
+
+.ctgTitle {
+  padding-top: 2em;
+}
+
+.resultsUl {
+  margin: auto;
+  padding-left: 7em;
+  padding-right: 7em;
+  margin-top: 5em;
+}
+
+.resultsUl > li {
+  padding-bottom: 2em;
 }
 
 .resultsUl li {
   margin: auto;
   float: left;
   width: 33%;
-  padding: 1em;
+  /* padding: 3em 1em; */
 }
 .resultsUl {
   list-style-type: none;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1030px) {
   .resultsUl {
     display: flex;
     flex-direction: column;

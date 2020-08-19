@@ -44,7 +44,7 @@ const Results = () => {
       <div className="resultsMainDiv" style={{ color: "white" }}>
         <SearchBar />
 
-        <h1 className="heavyFont">{bizType}</h1>
+        <h1 className="heavyFont ctgTitle">{bizType}</h1>
        
         <ResultsIndex results={currentPosts} />
         <Pagination

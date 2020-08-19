@@ -20,8 +20,8 @@ const ResultsIndex = ({ results }) => {
     let hrsSub = biz.hours === "" ? (biz.hours = noHours) : biz.hours;
 
     return (
-      <div key={biz.biz_id}>
-        <div
+      <ul key={biz.biz_id} className="resultsUl">
+        <li
           className="resultsDiv"
           value={biz.biz_id}
           onClick={() => handleBusiness(biz.biz_id)}
@@ -29,10 +29,11 @@ const ResultsIndex = ({ results }) => {
           <div className="businessCard">
             <BusinessImage bizID={bizID} />
             <div>
-              <h3 className="heavyFont">{biz.biz_name}</h3>
+              <h3 className="heavyFont bizTitle">{biz.biz_name}</h3>
               {/* <li>Hours: {hrsSub}</li> */}
-              <p>
-                {bizz} {biz.city} {biz.state} {biz.zip}
+              <p className="bizAddress">
+                {bizz} <br />
+                {biz.city} {biz.state} {biz.zip}
               </p>
               <p>
                 <a className="hyperLink" href={biz.website} target="_blank">
@@ -42,8 +43,8 @@ const ResultsIndex = ({ results }) => {
             </div>
           </div>
           <br />
-        </div>
-      </div>
+        </li>
+      </ul>
     );
   });
 

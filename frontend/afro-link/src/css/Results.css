@@ -12,9 +12,29 @@
   margin-top: 1em;
 }
 
-/* .resultsULn{
-    background-color: ;
-} */
+.resultsUl li {
+  margin: auto;
+  float: left;
+  width: 33%;
+  padding: 1em;
+}
+.resultsUl {
+  list-style-type: none;
+}
+
+@media (max-width: 1000px) {
+  .resultsUl {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: fill;
+    position: relative;
+  }
+
+  .resultsUl li {
+    width: fill;
+  }
+}
 
 .businessCard {
   display: flex;
@@ -35,12 +55,10 @@
 }
 
 @media (max-width: 410px) {
-.businessCard {
-  width: fill;
+  .businessCard {
+    width: fill;
+  }
 }
-
-}
-
 
 .businessCard:hover {
   box-shadow: 1px 3px 5px #510d0a;
@@ -55,4 +73,14 @@
 
 .businessCard > * {
   color: #191102;
+}
+
+.bizTitle {
+ border-bottom: solid #191102 1px;
+}
+
+.bizAddress {
+  font-size: 10pt;
+  color: #191102;
+  padding: 0 2em;
 }

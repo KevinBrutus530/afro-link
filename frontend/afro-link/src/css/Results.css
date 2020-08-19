@@ -10,22 +10,59 @@
   flex-direction: column;
   margin: auto;
   margin-top: 1em;
+  padding: 2em;
 }
 
-/* .resultsULn{
-    background-color: ;
-} */
+.ctgTitle {
+  padding-top: 2em;
+}
+
+.resultsUl {
+  margin: auto;
+  padding-left: 7em;
+  padding-right: 7em;
+  margin-top: 5em;
+}
+
+.resultsUl > li {
+  padding-bottom: 2em;
+}
+
+.resultsUl li {
+  margin: auto;
+  float: left;
+  width: 33%;
+  /* padding: 3em 1em; */
+}
+.resultsUl {
+  list-style-type: none;
+}
+
+@media (max-width: 1030px) {
+  .resultsUl {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: fill;
+    position: relative;
+  }
+
+  .resultsUl li {
+    width: fill;
+  }
+}
 
 .businessCard {
   display: flex;
   flex-direction: column;
   margin: auto;
-  background-color: #f3b61f;
+  justify-content: space-between;
+  background-color: white;
   background-image: url("https://www.transparenttextures.com/patterns/dimension.png");
   box-shadow: 1px 1px 7px #d5f5cda2;
-  height: 70%;
-  width: 50%;
-  padding: 2em;
+  height: 22em;
+  width: 19.7em;
+  padding: 1em;
   text-align: center;
   cursor: pointer;
   border-radius: 5px;
@@ -34,12 +71,10 @@
 }
 
 @media (max-width: 410px) {
-.businessCard {
-  width: fill;
+  .businessCard {
+    width: fill;
+  }
 }
-
-}
-
 
 .businessCard:hover {
   box-shadow: 1px 3px 5px #510d0a;
@@ -54,4 +89,17 @@
 
 .businessCard > * {
   color: #191102;
+}
+
+.bizTitle {
+ border-bottom: solid #191102 1px;
+ font-size: 1.06em;
+ font-weight: bold;
+}
+
+.bizAddress {
+  text-transform: capitalize;
+  font-size: 10pt;
+  color: #191102;
+  padding: 0 1em;
 }

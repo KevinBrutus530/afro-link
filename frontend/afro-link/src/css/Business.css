@@ -30,15 +30,7 @@
     margin: auto;
     padding: 0;
   }
-
 }
-
-/* @media (max-width: 1190px) {
-.bizMapRevContainer {
-  width: fill;
-  margin: auto;
-}
-} */
 
 #bizName {
   color: white;
@@ -50,12 +42,6 @@
   width: 250px;
   font-size: medium;
 }
-
-/* .dispReviews {
-  display: flex;
-  flex-direction: row;
-  margin: auto;
-} */
 
 .bizMapRevContainer {
   display: flex;

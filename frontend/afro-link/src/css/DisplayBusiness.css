@@ -20,7 +20,7 @@
   height: auto;
   border-radius: 5px;
   font-weight: bold;
-  padding: 1em;
+  /* padding: 1em; */
 }
 
 .businessInfo > * {
@@ -34,7 +34,7 @@
 }
 
 .bizPicProfile {
-  padding: 1em;
+  padding-bottom: 1em;
   width: 25em;
   height: auto;
 }

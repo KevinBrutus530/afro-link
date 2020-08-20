@@ -14,7 +14,12 @@
 }
 
 .ctgTitle {
+  display: flex;
+  margin: auto;
+  justify-content: center;
   padding-top: 2em;
+  border-bottom: white 2px solid;
+  width: fill;
 }
 
 .resultsUl {

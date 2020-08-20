@@ -37,19 +37,25 @@
   margin: auto;
   float: left;
   width: 33%;
-  /* padding: 3em 1em; */
 }
 .resultsUl {
   list-style-type: none;
 }
 
-@media (max-width: 1030px) {
+@media (max-width: 1270px) {
+
+  .ctgTitle {
+    margin-bottom: 2em;
+  }
+
   .resultsUl {
     display: flex;
     flex-direction: column;
+    place-items: center;
     margin: auto;
     width: fill;
     position: relative;
+    padding: 0;
   }
 
   .resultsUl li {

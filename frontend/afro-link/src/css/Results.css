@@ -103,7 +103,7 @@
 }
 
 .bizTitle {
- border-bottom: solid #191102 1px;
+ /* border-bottom: solid #191102 1px; */
  font-size: 1.06em;
  font-weight: bold;
 }

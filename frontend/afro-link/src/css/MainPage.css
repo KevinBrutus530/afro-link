@@ -92,7 +92,6 @@ h6 {
 
 .tagline {
   color: #510d0aff;
-  /* text-shadow: 1px 1px rgb(119, 90, 17); */
   font-weight: 600;
 }
 
@@ -105,24 +104,35 @@ h6 {
 }
 
 .contrastBackground {
-  background-color:  rgba(240, 255, 240, 0.5);
+  background-color: rgba(218, 165, 32, 0.5) /*rgba(240, 255, 240, 0.5)*/;
   width: fit-content;
   margin: auto;
-  color: #510d0aff;
+  color: whitesmoke;
   font-weight: 900;
   margin-bottom: 5px;
   letter-spacing: 1px;
+  text-shadow: 1px 1px 1px rgba(240, 255, 240);
+  
+  
+}
+
+.contrastBackground:hover {
+  background-color: rgba(218, 165, 32, 0.75)/* rgba(240, 255, 240)*/;
 }
 
 .contrastLight {
-  background-color: rgba(240, 255, 240, 0.5);
+  /* background-color: rgba(218, 165, 32, 0.5); */
   width: max-content;
   margin: auto;
   color: navy;
   letter-spacing: 1px;
   padding: 5px;
+  text-shadow: .5px .5px 1px rgb(151, 151, 199);
 }
 
+.contrastLight:hover {
+  background-color: rgba(218, 165, 32, 0.75)/* rgba(240, 255, 240)*/;
+}
 
 /* ///////////////////////////////////////////////////////////////////////////// */
 

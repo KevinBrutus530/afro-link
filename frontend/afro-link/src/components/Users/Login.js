@@ -2,17 +2,12 @@ import React, { useContext } from "react";
 import { useHistory } from "react-router-dom";
 import { useInput } from "../../util/useInput";
 import { login } from "../../util/firebaseFunctions";
-import { AuthContext } from "../../providers/AuthContext"
+// import { AuthContext } from "../../providers/AuthContext";
 // import axios from 'axios';
-
 
 const Login = () => {
   // let API = getAPI();
-  const {
-      token,
-      currentUser,
-      loading
-  } = useContext(AuthContext)
+  // const { token, currentUser, loading } = useContext(AuthContext);
   const email = useInput("");
   const password = useInput("");
   const history = useHistory();
@@ -20,11 +15,11 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      await login(email.value, password.value);
-      history.push(`/profile/${currentUser.uid}`);
+      let res = await login(email.value, password.value);
+      history.push(`/profile/${res.user.uid}`);
     } catch (err) {
       console.log(err);
-      alert("Error Logging In. Please Try Again Later")
+      alert("Error Logging In. Please Try Again Later");
     }
   };
 

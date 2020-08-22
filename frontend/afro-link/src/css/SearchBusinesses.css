@@ -36,11 +36,12 @@ $black-chocolate: #191102ff; */
   margin-right: 10px;
   color: #191102ff;
   font-size: 12pt;
-  font-weight: lighter;
   box-shadow: 1px 3px 6px #191102ff;
   text-shadow: 2px 1px 2px rgba(233, 201, 121, 0.746);
   background-color: rgba(243, 183, 31, 0.849);
   cursor: pointer;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
 }
 
 .selectBizBar > option {
@@ -52,4 +53,35 @@ $black-chocolate: #191102ff; */
 #connect {
   width: 7em;
   margin: auto 0;
+}
+
+.searchBizInput {
+  display: flex;
+  border-radius: 5px;
+  background-color: rgba(244, 211, 128, 0.865);
+  width: 16em;
+  height: 2.5em;
+  margin-right: 5px;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+}
+
+.searchBarDiv {
+  margin: auto;
+  justify-content: center;
+}
+
+.searchBarForm {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  height: min-content;
+  align-items: baseline;
+}
+
+.searchBarForm > button {
+  width: 5em;
+  font-size: 11pt;
+  margin: 0;
 }

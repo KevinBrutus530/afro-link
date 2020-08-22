@@ -35,17 +35,22 @@ const SearchBar = ({type}) => {
 
   if (history.location.pathname != "/") {
     return (
-      <div>
-        <form>
-          <label>Search:</label>
-          <input type="text" placeholder="Search Businesses" />
-          <select name="Type Name" {...type_name} required>
+      <div className="searchBarDiv">
+        <form className="searchBarForm">
+          {/* <label>Search:</label> */}
+          <input className='searchBizInput' type="text" placeholder="Search Businesses" />
+          <select
+            className="selectBizBar"
+            name="Type Name"
+            {...type_name}
+            required
+          >
             <option value="" disabled>
               Select Business Type
             </option>
                 {types}
           </select>
-          <button type="submit">Submit</button>
+          <button className="addBizBtn" type="submit">Submit</button>
         </form>
       </div>
     );

@@ -14,7 +14,12 @@
 }
 
 .ctgTitle {
+  display: flex;
+  margin: auto;
+  justify-content: center;
   padding-top: 2em;
+  border-bottom: white 2px solid;
+  width: fill;
 }
 
 .resultsUl {
@@ -32,19 +37,25 @@
   margin: auto;
   float: left;
   width: 33%;
-  /* padding: 3em 1em; */
 }
 .resultsUl {
   list-style-type: none;
 }
 
-@media (max-width: 1030px) {
+@media (max-width: 1270px) {
+
+  .ctgTitle {
+    margin-bottom: 2em;
+  }
+
   .resultsUl {
     display: flex;
     flex-direction: column;
+    place-items: center;
     margin: auto;
     width: fill;
     position: relative;
+    padding: 0;
   }
 
   .resultsUl li {
@@ -92,7 +103,7 @@
 }
 
 .bizTitle {
- border-bottom: solid #191102 1px;
+ /* border-bottom: solid #191102 1px; */
  font-size: 1.06em;
  font-weight: bold;
 }

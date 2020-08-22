@@ -3,12 +3,13 @@ import axios from "axios";
 import { getAPI } from "../../util/getAPI";
 import { AuthContext } from "../../providers/AuthContext";
 import { logout } from "../../util/firebaseFunctions";
+import { useParams } from "react-router-dom";
 
 const ProfilePage = () => {
+  const { id } = useParams();
   let API = getAPI();
   const { token, currentUser, loading } = useContext(AuthContext);
 
-  console.log(currentUser);
 
   useEffect(() => {
     const fetchUserById = async () => {
@@ -19,9 +20,6 @@ const ProfilePage = () => {
           AuthToken: token,
         },
       });
-      console.log(currentUser.uid, "current uid");
-      // setUser(res.data.user);
-      console.log(res.data.user);
     };
     fetchUserById();
   }, []);

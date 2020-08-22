@@ -30,7 +30,7 @@ function App() {
         <ProtectedRoute path="/newBusiness">
           <NewBusiness />
         </ProtectedRoute>
-        <ProtectedRoute path="/profile/:userId">
+        <ProtectedRoute path="/profile/:id">
           <ProfilePage />
         </ProtectedRoute>
         <Route exact path="/" component={MainPage} />

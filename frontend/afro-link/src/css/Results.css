@@ -9,15 +9,14 @@
   display: flex;
   flex-direction: column;
   margin: auto;
-  margin-top: 1em;
-  padding: 2em;
+  padding: 1em;
 }
 
 .ctgTitle {
   display: flex;
   margin: auto;
   justify-content: center;
-  padding-top: 2em;
+  padding-top: 1em;
   border-bottom: white 2px solid;
   width: fill;
 }
@@ -43,9 +42,8 @@
 }
 
 @media (max-width: 1270px) {
-
   .ctgTitle {
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
   }
 
   .resultsUl {
@@ -103,9 +101,9 @@
 }
 
 .bizTitle {
- /* border-bottom: solid #191102 1px; */
- font-size: 1.06em;
- font-weight: bold;
+  /* border-bottom: solid #191102 1px; */
+  font-size: 1.06em;
+  font-weight: bold;
 }
 
 .bizAddress {

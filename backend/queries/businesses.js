@@ -19,6 +19,25 @@ const getAllBusiness = async (req, res, next) => {
     next();
   }
 };
+const getAllBusinessByOwner = async (req, res, next) => {
+  try {
+    let business = await db.any(
+      "SELECT businesses.id, businesses.biz_name, businesses.hours, addresses.street, addresses.city, addresses.state, addresses.zip, addresses.website, contacts.phone, contacts.email, contacts.social_media, types.type_name, owners.owner_name FROM contacts RIGHT JOIN addresses ON addresses.address_id=contact_id JOIN owners ON owners.owner_id=addresses.address_id JOIN businesses  ON businesses.id=owners.owner_id JOIN categories ON categories.biz_id=addresses.address_id JOIN types ON types.id=categories.type_id"
+    );
+    res.status(200).json({
+      status: "success",
+      message: "all businesses by Owner",
+      payload: business,
+    });
+  } catch (err) {
+    res.status(400).json({
+      status: "Error",
+      message: "Error get all business by Owner",
+      payload: err,
+    });
+    next();
+  }
+};
 
 const getSingleBusiness = async (req, res, next) => {
   try {
@@ -135,4 +154,5 @@ module.exports = {
   createBusiness,
   editBusiness,
   deleteBusiness,
+  getAllBusinessByOwner
 };

@@ -21,7 +21,7 @@ const Results = () => {
       let res = await axios.get(`${API}/categories/${id}`);
       setResults(res.data.payload);
       let res2 = await axios.get(`${API}/types/${id}`);
-      setBizType(res2.data.payload[0].type_name);
+      setBizType(res2.data.payload[0]);
     } catch (err) {
       console.log(err);
     }
@@ -42,9 +42,9 @@ const Results = () => {
   return (
     <div className="resultsPage">
       <div className="resultsMainDiv" style={{ color: "white" }}>
-        <SearchBar />
+        <SearchBar type={bizType.id} setResults={setResults} setBizType={setBizType}/>
 
-        <h1 className="heavyFont ctgTitle">{bizType}</h1>
+        <h1 className="heavyFont ctgTitle">{bizType.type_name}</h1>
        
         <ResultsIndex results={currentPosts} />
         <Pagination

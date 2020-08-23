@@ -4,51 +4,69 @@ import { getAPI } from "../util/getAPI";
 import { useInput } from "../util/useInput";
 import axios from "axios";
 
-const SearchBar = () => {
-  const API = getAPI();
-  const [businessTypes, setBusinessTypes] = useState([]);
-  const type_name = useInput("");
+
+const SearchBar = ({type,setResults, setBizType}) => {
+
+    const history = useHistory();
+    const API = getAPI();
+    const [businessTypes, setBusinessTypes] = useState([]);
+  
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         let res = await axios.get(`${API}/categories/`);
-        // debugger
         setBusinessTypes(res.data.payload);
       } catch (err) {
-        console.log(err);
         setBusinessTypes([]);
       }
     };
     fetchData();
   }, []);
 
-  const types = businessTypes.map((type, i) => {
-    // debugger
+  const types = businessTypes.map((type) => {
     return (
-      <option value={type.id} key={i}>
+      <option value={type.id} key={type.id}>
         {type.type_name}
       </option>
     );
   });
-  const history = useHistory();
-  console.log(history.location.pathname != "/");
+
+  const handleSubmit = async(e) => {
+    e.preventDefault();
+    let search = e.target[0].value;
+    let typeId = e.target[1].value
+    // debugger
+    try {
+      let newSearch = await axios.get(`${API}/businesses/search/${typeId}/${search}`);
+      let res2 = await axios.get(`${API}/types/${typeId}`);
+      setResults(newSearch.data.payload)
+      setBizType(res2.data.payload[0]);
+      // setBizType()
+    } catch (error) {
+      console.log(error)
+    }
+
+  };
+
   if (history.location.pathname != "/") {
     return (
+
       <div className="searchBarDiv searchInformation">
-        <form className="searchBarForm">
+
+        <form className="searchBarForm" onSubmit={handleSubmit}>
+
           {/* <label>Search:</label> */}
           <input className='searchBizInput' type="text" placeholder="Search Businesses" />
           <select
             className="selectBizBar"
             name="Type Name"
-            {...type_name}
             required
           >
             <option value="" disabled>
               Select Business Type
             </option>
-            {types}
+                {types}
           </select>
           <button className="addBizBtn" type="submit">Submit</button>
         </form>

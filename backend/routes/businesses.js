@@ -13,7 +13,7 @@ businesses.get("/", getAllBusiness);
 
 businesses.get("/:id", getSingleBusiness);
 
-businesses.get("/:search", getSearchForBusiness);
+businesses.get("/search/:typeId/:search", getSearchForBusiness);
 
 businesses.post("/", createBusiness);
 

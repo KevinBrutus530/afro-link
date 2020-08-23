@@ -10,8 +10,7 @@ const SearchBar = ({type}) => {
     const history = useHistory();
     const API = getAPI();
     const [businessTypes, setBusinessTypes] = useState([]);
-    const type_name = useInput("");
-    console.log(type)
+  
 
   useEffect(() => {
     const fetchData = async () => {
@@ -33,16 +32,29 @@ const SearchBar = ({type}) => {
     );
   });
 
+  const handleSubmit = async(e) => {
+    e.preventDefault();
+    let search = e.target[0].value;
+    let typeId = e.target[1].value
+    try {
+      let newSearch = await axios.get(`${API}/businesses/search/${typeId}/${search}`);
+      console.log(newSearch.data)
+      
+    } catch (error) {
+      console.log(error)
+    }
+
+  };
+
   if (history.location.pathname != "/") {
     return (
       <div className="searchBarDiv">
-        <form className="searchBarForm">
+        <form className="searchBarForm" onSubmit={handleSubmit}>
           {/* <label>Search:</label> */}
           <input className='searchBizInput' type="text" placeholder="Search Businesses" />
           <select
             className="selectBizBar"
             name="Type Name"
-            {...type_name}
             required
           >
             <option value="" disabled>

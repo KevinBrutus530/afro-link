@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import { getAPI } from "../util/getAPI";
-
 import axios from "axios";
 import DisplayBusiness from "./DisplayBusiness";
 import ReviewsForm from "./ReviewsForm";
@@ -30,11 +29,12 @@ const Business = () => {
   const getInfo = async () => {
     try {
       let res = await axios.get(`${API}/businesses/${id}`);
-      // debugger
+      debugger
       setBusinessInfo(res.data.payload);
       setBusinessName(res.data.payload.biz_name);
       setIgUrl(res.data.payload.social_media);
       setType(res.data.payload.type_name);
+
     } catch (err) {
       console.log(err);
     }
@@ -46,7 +46,7 @@ const Business = () => {
 
   return (
     <div className="businessMainDiv">
-      <SearchBar/>
+      <SearchBar type={type}/>
       <button
         id="goBack"
         className="Btn-create"

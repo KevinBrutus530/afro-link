@@ -60,9 +60,14 @@ const deleteBusiness = async (req, res, next) => {
 
 const getSearchForBusiness = async (req, res, next) => {
   try {
-    let searchBiz = req.body.type_name;
+    // let { typeId } = req.params;
     let business = await db.any(
-      `SELECT businesses.id, businesses.biz_name, businesses.hours, owners.owner_name, types.type_name,contacts.phone, contacts.email, contacts.social_media, addresses.street, addresses.city, addresses.state, addresses.zip, addresses.website FROM businesses RIGHT JOIN contacts ON contacts.contact_id=businesses.id JOIN addresses ON addresses.address_id=contacts.contact_id JOIN owners ON contacts.contact_id=owners.owner_id JOIN categories ON categories.biz_id=owners.owner_id JOIN types ON types.id=categories.type_id WHERE types.type_name LIKE '%${searchBiz}%'`
+      `SELECT businesses.id AS BIZ_ID, businesses.biz_name, addresses.*, type_id
+      FROM businesses 
+      LEFT JOIN addresses ON businesses.id = addresses.address_id 
+      RIGHT JOIN categories ON categories.biz_id = businesses.id
+      WHERE biz_name LIKE '%${req.params.search}%' AND type_id = ${req.params.typeId}
+      ORDER BY biz_name ASC`
     );
     res.status(200).json({
       status: "success",

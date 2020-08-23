@@ -42,7 +42,6 @@ const SearchBar = ({type,setResults, setBizType}) => {
       let res2 = await axios.get(`${API}/types/${typeId}`);
       setResults(newSearch.data.payload)
       setBizType(res2.data.payload[0]);
-      // setBizType()
     } catch (error) {
       console.log(error)
     }

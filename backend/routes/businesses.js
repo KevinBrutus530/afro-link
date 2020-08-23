@@ -7,11 +7,13 @@ const {
   createBusiness,
   editBusiness,
   deleteBusiness,
+  getAllBusinessByOwner
 } = require("../queries/businesses");
 
 businesses.get("/", getAllBusiness);
 
 businesses.get("/:id", getSingleBusiness);
+businesses.get("/owner/:id", getAllBusinessByOwner);
 
 businesses.get("/search/:typeId/:search", getSearchForBusiness);
 

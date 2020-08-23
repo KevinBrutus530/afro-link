@@ -29,7 +29,7 @@ const Business = () => {
   const getInfo = async () => {
     try {
       let res = await axios.get(`${API}/businesses/${id}`);
-      debugger
+      // debugger
       setBusinessInfo(res.data.payload);
       setBusinessName(res.data.payload.biz_name);
       setIgUrl(res.data.payload.social_media);

@@ -364,7 +364,7 @@ const NewBusiness = () => {
         />
           </div>
         </div>
-        <input type="reset" value="reset" className="Btn-rest" />
+        <input type="reset" value="Reset" className="Btn-rest" />
         <button type="submit" className="Btn-create">
           <span>Create Business</span>
         </button>

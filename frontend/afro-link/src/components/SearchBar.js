@@ -35,7 +35,7 @@ const SearchBar = () => {
   console.log(history.location.pathname != "/");
   if (history.location.pathname != "/") {
     return (
-      <div className="searchBarDiv">
+      <div className="searchBarDiv searchInformation">
         <form className="searchBarForm">
           {/* <label>Search:</label> */}
           <input className='searchBizInput' type="text" placeholder="Search Businesses" />

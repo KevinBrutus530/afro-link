@@ -6,6 +6,7 @@
   margin-top: 5em;
   padding-top: 3em;
   color: #191102ff;
+  /* justify-content: center; */
 }
 
 @media (max-width: 410px) {
@@ -37,8 +38,6 @@
 }
 
 #goBack {
-  margin-top: 2em;
-  margin-left: 2em;
   width: 250px;
   font-size: medium;
 }
@@ -62,4 +61,13 @@
     margin: auto;
     padding: 0;
   }
+}
+
+.businessHeader {
+  display: flex;
+  margin: auto;
+  /* attempting to get space between return to results and search options: */
+  /* place-items: center; */
+  /* justify-content: ; */
+  /* align-content: space-between; */
 }

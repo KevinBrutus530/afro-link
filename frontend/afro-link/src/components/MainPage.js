@@ -31,7 +31,7 @@ const MainPage = () => {
             />
             <Carousel.Caption>
               <h3 className="contrastBackground">Denequa Williams</h3>
-              <a href="https://www.litbklyn.co/meet-the-maker">
+              <a target="_blank" href="https://www.litbklyn.co/meet-the-maker">
                 <p className="contrastLight">Lit Brooklyn</p>
               </a>
             </Carousel.Caption>
@@ -45,7 +45,7 @@ const MainPage = () => {
 
             <Carousel.Caption>
               <h3 className="contrastBackground">Byron and Dexter Peart</h3>
-              <a href="https://www.goodeeworld.com/pages/about-us">
+              <a target="_blank" href="https://www.goodeeworld.com/pages/about-us">
                 <p className="contrastLight">Goodee</p>
               </a>
             </Carousel.Caption>
@@ -59,7 +59,7 @@ const MainPage = () => {
 
             <Carousel.Caption>
               <h3 className="contrastBackground">André Hueston Mack</h3>
-              <a href="https://maisonnoirwines.com/our-story">
+              <a target="_blank" href="https://maisonnoirwines.com/our-story">
                 <p className="contrastLight">Mainson Noir Wines </p>
               </a>
             </Carousel.Caption>
@@ -74,7 +74,7 @@ const MainPage = () => {
 
             <Carousel.Caption>
               <h3 className="contrastBackground">Pat McGrath</h3>
-              <a href="https://www.patmcgrath.com/pages/pat-mcgrath-biography">
+              <a target="_blank" href="https://www.patmcgrath.com/pages/pat-mcgrath-biography">
                 <p className="contrastLight">Pat McGrath Labs</p>
               </a>
             </Carousel.Caption>

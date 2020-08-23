@@ -50,8 +50,11 @@ const SearchBar = ({type,setResults, setBizType}) => {
 
   if (history.location.pathname != "/") {
     return (
-      <div className="searchBarDiv">
+
+      <div className="searchBarDiv searchInformation">
+
         <form className="searchBarForm" onSubmit={handleSubmit}>
+
           {/* <label>Search:</label> */}
           <input className='searchBizInput' type="text" placeholder="Search Businesses" />
           <select

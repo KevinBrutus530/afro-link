@@ -42,7 +42,7 @@ const Results = () => {
   return (
     <div className="resultsPage">
       <div className="resultsMainDiv" style={{ color: "white" }}>
-        <SearchBar type={bizType.id}/>
+        <SearchBar type={bizType.id} setResults={setResults} setBizType={setBizType}/>
 
         <h1 className="heavyFont ctgTitle">{bizType.type_name}</h1>
        

@@ -5,7 +5,7 @@ import { useInput } from "../util/useInput";
 import axios from "axios";
 
 
-const SearchBar = ({type}) => {
+const SearchBar = ({type,setResults, setBizType}) => {
 
     const history = useHistory();
     const API = getAPI();
@@ -36,10 +36,13 @@ const SearchBar = ({type}) => {
     e.preventDefault();
     let search = e.target[0].value;
     let typeId = e.target[1].value
+    // debugger
     try {
       let newSearch = await axios.get(`${API}/businesses/search/${typeId}/${search}`);
-      console.log(newSearch.data)
-      
+      let res2 = await axios.get(`${API}/types/${typeId}`);
+      setResults(newSearch.data.payload)
+      setBizType(res2.data.payload[0]);
+      // setBizType()
     } catch (error) {
       console.log(error)
     }

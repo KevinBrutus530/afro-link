@@ -46,7 +46,11 @@ const Business = () => {
 
   return (
     <div className="businessMainDiv">
+      
+        <div className="businessHeader">
+
       <SearchBar type={type}/>
+
       <button
         id="goBack"
         className="Btn-create"
@@ -55,6 +59,9 @@ const Business = () => {
       >
         Return to Results Page
       </button>
+      <SearchBar/>
+        </div>
+
 
       <h1 id="bizName" className="heavyFont">
         {businessName}

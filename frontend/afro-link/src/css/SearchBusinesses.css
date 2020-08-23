@@ -29,7 +29,7 @@ $black-chocolate: #191102ff; */
   justify-content: space-around;
   text-align-last: center;
   border: none;
-  border-radius: 25px;
+  border-radius: 7px;
   width: 16em;
   height: auto;
   padding: 0.5em;
@@ -85,3 +85,8 @@ $black-chocolate: #191102ff; */
   font-size: 11pt;
   margin: 0;
 }
+
+/* .searchInformation {
+  color: blue;
+  margin: 0;
+} */

@@ -38,8 +38,8 @@ input:focus {
 }
 
 .carouselPics {
-  width: 750px;
-  height: auto;
+  object-fit: contain;
+  width: 100%;
   filter: drop-shadow(5px rgb(240, 198, 92))
 }
 

@@ -18,6 +18,7 @@ const SearchBusinessForm = () => {
     const fetchData = async () => {
       try {
         let res = await axios.get(`${API}/categories/`);
+        debugger;
         setBusinessTypes(res.data.payload);
       } catch (err) {
         console.log(err);

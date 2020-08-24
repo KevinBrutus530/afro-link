@@ -5,12 +5,14 @@ import axios from "axios";
 import GoogleMap from "./GoogleMap";
 import TimeTable from "./TimeTable";
 import "../css/NewBusinss.css";
-import 'react-phone-number-input/style.css'
-import PhoneInput from 'react-phone-number-input'
-import { useHistory } from 'react-router-dom'
+import "react-phone-number-input/style.css";
+import PhoneInput from "react-phone-number-input";
+import { useHistory } from "react-router-dom";
+import Notification from "./commonlyUsed/Notification";
 
 const NewBusiness = () => {
-  const history = useHistory()
+  const [message, setMessage] = useState("");
+  const history = useHistory();
   const API = getAPI();
   const [modalShow, setModalShow] = useState(false);
 
@@ -28,7 +30,7 @@ const NewBusiness = () => {
   const owner_name = useInput("");
   const type_name = useInput(""); //add  new function let owner/user create one
   // const phone = useInput("");
-  const [phone, setPhone] = useState("")
+  const [phone, setPhone] = useState("");
   const email = useInput("");
   const social_media = useInput("");
   const website = useInput("");
@@ -106,21 +108,22 @@ const NewBusiness = () => {
           website: website.value,
         });
       }
-      welcome(biz_name.value, newBiz.data.status)
-      history.push("/profile/:userId")
+      // welcome(biz_name.value, newBiz.data.status);
+      history.push("/profile/:userId");
     } catch (error) {
-      errorHandle(error.status)
+      // debugger;
+      setMessage(error.response.data.message);
+      // errorHandle(error.status)
       console.log(error.status);
-
     }
   };
-  
-  const welcome =(name, status)=>{
-   alert(`Create New business ${status}, Welcome ${name} to Afro Link`)
-  }
-  const errorHandle =(status)=>{
-   alert(`Create New business ${status}, Please try create new business Afro Link later`)
-  }
+
+  // const welcome =(name, status)=>{
+  //  alert(`Create New business ${status}, Welcome ${name} to Afro Link`)
+  // }
+  // const errorHandle =(status)=>{
+  //  alert(`Create New business ${status}, Please try create new business Afro Link later`)
+  // }
 
   const handleHours = (e) => {
     if (e.currentTarget.selectedIndex === 0) {
@@ -151,147 +154,160 @@ const NewBusiness = () => {
     setShowWeb(!showWeb);
   };
   const handleAddress = () => {
-  setHouseNum(null)
-  setStreet(null)
-  setCity(null)
-  setState(null)
-  setZip(null)
-  setAddress(!showAddress);
+    setHouseNum(null);
+    setStreet(null);
+    setCity(null);
+    setState(null);
+    setZip(null);
+    setAddress(!showAddress);
   };
 
-  const resetForm=()=>{
-    biz_name.value=""
-    setHours("Online Store")
-    owner_name.value=""
-    type_name.value=""
-    setPhone("")
-    email.value=""
-    social_media.value=""
-    website.value=""
-    setHouseNum("")
-    setStreet("")
-    setCity("")
-    setState("")
-    setZip("")
-  }
+  const resetForm = () => {
+    biz_name.value = "";
+    setHours("Online Store");
+    owner_name.value = "";
+    type_name.value = "";
+    setPhone("");
+    email.value = "";
+    social_media.value = "";
+    website.value = "";
+    setHouseNum("");
+    setStreet("");
+    setCity("");
+    setState("");
+    setZip("");
+  };
 
   return (
     <div>
       <form className="newBusiness" onSubmit={handleNewBiz} onReset={resetForm}>
         <div className="business">
-        <label>Business Name: </label>
-        <input type="text" placeholder="Business Name" value={biz_name.value} required {...biz_name} />
+          <label>Business Name: </label>
+          <input
+            type="text"
+            placeholder="Business Name"
+            value={biz_name.value}
+            required
+            {...biz_name}
+          />
 
-        <label>Hours of Service: </label>
-        <select className="selectBizBar" onChange={(e) => handleHours(e)} required>
-          <option defaultValue="1">Online Store</option>
-          <option defaultValue="2">Add business Hours</option>
-        </select>
-        <br></br>
-        <label>Types Name: </label>
-        <select className="selectBizBar" name="Type Name" {...type_name} required>
-          <option value="" disabled>
-            Select Business Type
-          </option>
-          {types}
-        </select>
-        <label>Owner Name: </label>
-        <input
-          name="Owner Name Input"
-          type="text"
-          placeholder="John Doe"
-          disabled={showOwner}
-          {...owner_name}
-          required
-        />
-        <div className="labelBox">
-        <label>If not available</label>
-        <input
-          name="Owner Name not available check box"
-          type="checkbox"
-          value="n/a"
-          onChange={handleOwner}
-        />
+          <label>Hours of Service: </label>
+          <select
+            className="selectBizBar"
+            onChange={(e) => handleHours(e)}
+            required
+          >
+            <option defaultValue="1">Online Store</option>
+            <option defaultValue="2">Add business Hours</option>
+          </select>
+          <br></br>
+          <label>Types Name: </label>
+          <select
+            className="selectBizBar"
+            name="Type Name"
+            {...type_name}
+            required
+          >
+            <option value="" disabled>
+              Select Business Type
+            </option>
+            {types}
+          </select>
+          <label>Owner Name: </label>
+          <input
+            name="Owner Name Input"
+            type="text"
+            placeholder="John Doe"
+            disabled={showOwner}
+            {...owner_name}
+            required
+          />
+          <div className="labelBox">
+            <label>If not available</label>
+            <input
+              name="Owner Name not available check box"
+              type="checkbox"
+              value="n/a"
+              onChange={handleOwner}
+            />
+          </div>
         </div>
-         </div>
-         <div className="contact">
+        <div className="contact">
+          <label>Contact Number: </label>
+          <PhoneInput
+            placeholder="212-345-6789"
+            defaultCountry="US"
+            disabled={showPhone}
+            value={phone}
+            onChange={setPhone}
+            maxLength="14"
+            style={{ width: "16em" }}
+          />
 
-        <label>Contact Number: </label>
-        <PhoneInput placeholder="212-345-6789"
-          defaultCountry="US"
-          disabled={showPhone}
-          value={phone} onChange={setPhone} 
-          maxLength="14"
-          style={{width:"16em"}}
-          /> 
-
-        <div className="labelBox">
-        <label>If not available</label>
-        <input
-          name="Phone not available check box"
-          type="checkbox"
-          value="n/a"
-          onChange={handlePhone}
-        />
+          <div className="labelBox">
+            <label>If not available</label>
+            <input
+              name="Phone not available check box"
+              type="checkbox"
+              value="n/a"
+              onChange={handlePhone}
+            />
+          </div>
+          <label>Email: </label>
+          <input
+            type="email"
+            placeholder="123@gmail.com"
+            {...email}
+            disabled={showEmail}
+            required
+          />
+          <div className="labelBox">
+            <label>If not available</label>
+            <input
+              name="Email not available check box"
+              type="checkbox"
+              value="NULL"
+              onChange={handleEmail}
+            />
+          </div>
+          <label>Social Media: </label>
+          <input
+            type="text"
+            placeholder="Instagram/Facebook/Twitter"
+            {...social_media}
+            disabled={showSocial}
+            required
+          />
+          <div className="labelBox">
+            <label>If not available</label>
+            <input
+              name="Social Media not available check box"
+              type="checkbox"
+              value="n/a"
+              onChange={handleSocial}
+            />
+          </div>
+          <label>Website: </label>
+          <input
+            type="text"
+            placeholder="exmaple.com/url "
+            {...website}
+            disabled={showWeb}
+            required
+          />
+          <div className="labelBox">
+            <label>If not available</label>
+            <input
+              name="Website not available check box"
+              type="checkbox"
+              value="n/a"
+              onChange={handleWeb}
+            />
+          </div>
         </div>
-        <label>Email: </label>
-        <input
-          type="email"
-          placeholder="123@gmail.com"
-          {...email}
-          disabled={showEmail}
-          required
-        />
-        <div className="labelBox">
-        <label>If not available</label>
-        <input
-          name="Email not available check box"
-          type="checkbox"
-          value="NULL"
-          onChange={handleEmail}
-        />
-
-        </div>
-        <label>Social Media: </label>
-        <input
-          type="text"
-          placeholder="Instagram/Facebook/Twitter"
-          {...social_media}
-          disabled={showSocial}
-          required
-        />
-        <div className="labelBox">
-        <label>If not available</label>
-        <input
-          name="Social Media not available check box"
-          type="checkbox"
-          value="n/a"
-          onChange={handleSocial}
-        />
-
-        </div>
-        <label>Website: </label>
-        <input
-          type="text"
-          placeholder="exmaple.com/url "
-          {...website}
-          disabled={showWeb}
-          required
-        />
-        <div className="labelBox">
-        <label>If not available</label>
-        <input
-          name="Website not available check box"
-          type="checkbox"
-          value="n/a"
-          onChange={handleWeb}
-        />
-        </div>
-
-         </div>
 
         <div className="address">
-        <label className="label">Address:</label>
+          <label className="label">Address:</label>
           <GoogleMap
             setHouseNum={(e) => setHouseNum(e)}
             setStreet={(e) => setStreet(e)}
@@ -317,7 +333,6 @@ const NewBusiness = () => {
                 placeholder="Street/Route"
                 defaultValue={street}
                 disabled={showAddress}
-
               />
             </span>
           </div>
@@ -352,18 +367,18 @@ const NewBusiness = () => {
                 placeholder="Zip"
                 defaultValue={zip}
                 disabled={showAddress}
-
               />
             </span>
             <label>If not available</label>
-        <input
-          name="Address not available check box"
-          type="checkbox"
-          value="n/a"
-          onChange={handleAddress}
-        />
+            <input
+              name="Address not available check box"
+              type="checkbox"
+              value="n/a"
+              onChange={handleAddress}
+            />
           </div>
         </div>
+        <Notification message={message} />
         <input type="reset" value="Reset" className="Btn-rest" />
         <button type="submit" className="Btn-create">
           <span>Create Business</span>

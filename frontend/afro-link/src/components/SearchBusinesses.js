@@ -22,7 +22,6 @@ const SearchBusinessForm = () => {
       } catch (err) {
         console.log(err);
         setBusinessTypes([]);
-        return <div>{err}</div>;
       }
     };
     fetchData();

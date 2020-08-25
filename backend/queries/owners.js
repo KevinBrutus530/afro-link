@@ -1,4 +1,5 @@
 const db = require("../db/index");
+const { as } = require("pg-promise");
 
 const signUp = async (req, res, next) => {
   let { user_id, email } = req.body;
@@ -41,6 +42,29 @@ const getSingleOwner = async (req, res, next) => {
     next();
   }
 };
+
+const getBusinessesByUser = async (req, res, next) => {
+  try {
+    let { user_id } = req.params;
+    let userBusinesses = await db.any(
+      `SELECT * FROM businesses JOIN owners ON owners.id = businesses.id JOIN contacts ON contacts.contact_id = owners.id JOIN addresses ON addresses.address_id = businesses.id WHERE user_id = $1`, 
+      [user_id]
+      );
+    res.status(200).json({
+      status: "success",
+      message: "All user businesses",
+      payload: userBusinesses
+    });
+  } catch (err){
+    res.status(400).json({
+      status: "Error",
+      message: "Error getting businesses by owner",
+      payload: err
+    });
+    next();
+  }
+};
+
 const deleteOwner = async (req, res, next) => {
   try {
     let { id } = req.params;
@@ -105,6 +129,7 @@ const editOwner = async (req, res, next) => {
 module.exports = {
   signUp,
   getSingleOwner,
+  getBusinessesByUser,
   createOwner,
   editOwner,
   deleteOwner,

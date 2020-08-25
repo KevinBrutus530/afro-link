@@ -18,8 +18,9 @@ const ProfilePage = () => {
         url: `${API}/owners/${currentUser.uid}`,
         headers: {
           AuthToken: token,
-        },
+        }
       });
+      debugger
     };
     fetchUserById();
   }, []);

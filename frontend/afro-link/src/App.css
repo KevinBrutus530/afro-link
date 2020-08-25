@@ -37,12 +37,22 @@ input:focus {
   outline: none;
 }
 
+.carousel {
+  object-fit: contain;
+
+}
+
 .carouselPics {
-  width: 750px;
-  height: auto;
+  width: 700px;
   filter: drop-shadow(5px rgb(240, 198, 92))
 }
 
 .padDown {
-  padding-bottom: 2em;
+  height: 525px;
+  padding-top: 1em;
+}
+
+img {
+  object-fit: cover;
+ 
 }

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { getAPI } from "../util/getAPI";
+import logo from "../images/circleLogoYellow.png"
 import "../css/BusinessImage.css";
 
 const BusinessImage = ({ bizID }) => {
@@ -22,7 +23,7 @@ const BusinessImage = ({ bizID }) => {
       {bizPic !== null ? (
         <img className="bizPic" src={bizPic} alt="biz pic" />
       ) : (
-        ""
+        <img className="altLogo" src={logo} alt="afro link" />
       )}
     </div>
   );

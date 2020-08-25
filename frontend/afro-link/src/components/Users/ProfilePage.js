@@ -1,13 +1,12 @@
-import React, { useContext, useEffect } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import axios from "axios";
 import { getAPI } from "../../util/getAPI";
 import { AuthContext } from "../../providers/AuthContext";
 import { logout } from "../../util/firebaseFunctions";
-import { useParams } from "react-router-dom";
 
 const ProfilePage = () => {
-  const { id } = useParams();
   let API = getAPI();
+  const [ userBusinesses, setUserBusinesses ] = useState([]);
   const { token, currentUser, loading } = useContext(AuthContext);
 
 
@@ -17,18 +16,25 @@ const ProfilePage = () => {
         method: "get",
         url: `${API}/owners/${currentUser.uid}`,
         headers: {
-          AuthToken: token,
+          AuthToken: token
         }
       });
-      debugger
+      setUserBusinesses(res.data.payload)
     };
     fetchUserById();
   }, []);
+
+  let allUserBusinesses = userBusinesses.map(business => {
+    return <div>{business.biz_name}</div>
+  })
 
   return (
     <div>
       <h1 style={{ padding: "2em", color: "white" }}> Profile Page</h1>
       <button onClick={logout}>Log Out</button>
+      <div>
+        {allUserBusinesses}
+      </div>
     </div>
   );
 };

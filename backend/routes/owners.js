@@ -1,9 +1,11 @@
 const owners = require("express").Router();
 const { checkFirebaseToken } = require("../middleware/auth");
 
-const { signUp, getSingleOwner , createOwner, editOwner, deleteOwner } = require("../queries/owners");
+const { signUp, getSingleOwner , getBusinessesByUser,createOwner, editOwner, deleteOwner } = require("../queries/owners");
 
-owners.get("/:id", checkFirebaseToken, getSingleOwner);
+owners.get("/:id", checkFirebaseToken, getBusinessesByUser);
+
+// owners.get("/:id", checkFirebaseToken, getSingleOwner);
 
 owners.post("/", createOwner);
 

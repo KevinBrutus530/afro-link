@@ -95,7 +95,7 @@ const ReviewsForm = () => {
         </div>
         <br></br>
         <div className="rateStarsDiv">
-          <label className="labelInput">Rating: </label>
+          <label className="rateLabel">Rating: </label>
           {[...Array(5)].map((star, i) => {
             const ratingValue = i + 1;
             return (

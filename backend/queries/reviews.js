@@ -79,6 +79,33 @@ const createReview = async (req, res, next) => {
     next(err);
   }
 };
+const createReviewReply = async (req, res, next) => {
+  try {
+    const { reply_id } = req.params;
+    let { reply_text, name } = req.body;
+    let reviewReply = await db.one(
+      "INSERT INTO reviews (reply_text, name) VALUES ($1, $2) RETURNING *",
+      [reply_text, name]
+    );
+
+    await db.none(
+      `UPDATE reviews SET reply=1 WHERE id = ${reply_id}`
+    )
+
+    res.status(200).json({
+      status: "success",
+      message: "created review reply",
+      payload: reviewReply,
+    });
+  } catch (err) {
+    res.status(400).json({
+      status: "Error",
+      message: "Error create review reply",
+      payload: err,
+    });
+    next(err);
+  }
+};
 
 const editReview = async (req, res, next) => {
   try {
@@ -107,6 +134,7 @@ module.exports = {
   getAllReviewsByStoreId,
   getSingleReview,
   createReview,
+  createReviewReply,
   editReview,
   deleteReview,
 };

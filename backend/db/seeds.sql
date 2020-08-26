@@ -910,3 +910,13 @@ INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES
 ,(167,NULL,NULL,NULL,NULL,'https://zafawines.com/')
 ,(168,NULL,NULL,NULL,NULL,'https://www.blacktechpipeline.com/')
 ,(169,NULL,NULL,NULL,NULL,'https://idontdoclubs.com/');
+
+
+INSERT INTO reviews(review_id, name, text, ratings) VALUES
+(1, 'kong', 'love this Candle shop', 5);
+
+INSERT INTO reviews(review_id, reply_id, name, reply_text) VALUES
+(1, 1, 'Owner', 'Weclome to the shop');
+
+UPDATE reviews SET reply=1 WHERE id = 1
+-- UPDATE reviews SET reply=1 WHERE review.reply_id = 1;

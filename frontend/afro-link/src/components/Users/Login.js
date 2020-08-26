@@ -1,13 +1,11 @@
-import React, { useContext } from "react";
+import React, { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import { useInput } from "../../util/useInput";
 import { login } from "../../util/firebaseFunctions";
-// import { AuthContext } from "../../providers/AuthContext";
-// import axios from 'axios';
+import Notification from "../commonlyUsed/Notification";
 
 const Login = () => {
-  // let API = getAPI();
-  // const { token, currentUser, loading } = useContext(AuthContext);
+  const [message, setMessage] = useState("");
   const email = useInput("");
   const password = useInput("");
   const history = useHistory();
@@ -16,15 +14,17 @@ const Login = () => {
     e.preventDefault();
     try {
       let res = await login(email.value, password.value);
+
       history.push(`/profile/${res.user.uid}`);
     } catch (err) {
+      setMessage(err.message);
       console.log(err);
-      alert("Error Logging In. Please Try Again Later");
     }
   };
 
   return (
     <div className="signUpMainDiv" style={{ color: "white" }}>
+      <Notification message={message} />
       <h1 className="heavyFont signUpHeader">Login</h1>
       <form className="loginForm" onSubmit={handleLogin}>
         <div className="input">

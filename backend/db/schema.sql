@@ -54,9 +54,13 @@ CREATE TABLE addresses
 CREATE TABLE reviews 
 (
   id serial PRIMARY KEY,
+  dt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   review_id int REFERENCES businesses(id) ON DELETE CASCADE,
-  text varchar,
-  name varchar,
-  ratings int
+  name varchar(20),
+  text varchar(500),
+  ratings varchar(5),
+  reply int DEFAULT NULL,
+  reply_id int REFERENCES reviews(id),
+  reply_text VARCHAR
  );
 

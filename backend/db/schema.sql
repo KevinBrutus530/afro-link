@@ -59,7 +59,7 @@ CREATE TABLE reviews
   name varchar(20),
   text varchar(500),
   ratings varchar(5),
-  reply int,
+  reply int DEFAULT NULL,
   reply_id int REFERENCES reviews(id),
   reply_text VARCHAR
  );

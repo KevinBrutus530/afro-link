@@ -82,14 +82,14 @@ const createReview = async (req, res, next) => {
 const createReviewReply = async (req, res, next) => {
   try {
     const { reply_id } = req.params;
-    let { reply_text, name } = req.body;
+    let { review_id,reply_text, name } = req.body;
     let reviewReply = await db.one(
-      "INSERT INTO reviews (reply_text, name) VALUES ($1, $2) RETURNING *",
-      [reply_text, name]
+      "INSERT INTO reviews (review_id, reply_id, reply_text, name) VALUES ($1, $2, $3, $4) RETURNING *",
+      [review_id, reply_id, reply_text, name]
     );
 
     await db.none(
-      `UPDATE reviews SET reply=1 WHERE id = ${reply_id}`
+      `UPDATE reviews SET reply=${reviewReply.id} WHERE id = ${reply_id}`
     )
 
     res.status(200).json({

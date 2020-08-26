@@ -35,6 +35,8 @@
 
 #bizName {
   color: white;
+  margin-top: 0.5em;
+  font-size: 3em;
 }
 
 #goBack {
@@ -43,12 +45,12 @@
 }
 
 .bizMapRevContainer {
-  display: flex;
-  flex-direction: row;
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
   justify-content: space-around;
   margin: auto;
   padding: 3em;
-  border-top: 2px solid #191102ff;
+  border-top: 2px ridge whitesmoke;
   background-color: rgba(162, 160, 21, 0.5);
   background-image: url("https://www.transparenttextures.com/patterns/dark-geometric.png");
 }

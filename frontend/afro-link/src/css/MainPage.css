@@ -19,7 +19,7 @@ $black-chocolate: #191102ff; */
   place-items: center;
   justify-content: center;
   background-color: rgba(247, 186, 32, 0.774);
-  background-image: url("https://www.transparenttextures.com/patterns/dimension.png");
+  background-image: url('https://www.transparenttextures.com/patterns/dimension.png');
   color: #191102ff;
   display: flex;
   flex-direction: column;
@@ -85,10 +85,10 @@ h6 {
 } */
 
 .titleH1 {
-  font-size: 3.5em;
+  font-size: 3em;
   position: sticky;
   text-shadow: 1px 1px rgb(119, 90, 17);
-  /* padding-top: 1.5em; */
+  padding-top: 1em;
 }
 
 @media (max-height: 1290px) {
@@ -105,7 +105,6 @@ h6 {
 @media (max-height: 1290px) {
   .tagline {
     font-size: 2em;
-    padding: 1em;
   }
 }
 
@@ -115,7 +114,6 @@ h6 {
     margin-top: 4em;
     padding: 0;
   }
-
 }
 
 .afLogoMain {
@@ -123,7 +121,7 @@ h6 {
   background-color: transparent;
   width: 30em;
   height: auto;
-  filter: drop-shadow(1.5px 1.5px rgb(119, 90, 17))
+  filter: drop-shadow(1.5px 1.5px rgb(119, 90, 17));
 }
 
 .contrastBackground {
@@ -135,12 +133,10 @@ h6 {
   margin-bottom: 5px;
   letter-spacing: 1px;
   text-shadow: 1px 1px 1px rgba(240, 255, 240);
-  
-  
 }
 
 .contrastBackground:hover {
-  background-color: rgba(218, 165, 32, 0.75)/* rgba(240, 255, 240)*/;
+  background-color: rgba(218, 165, 32, 0.75) /* rgba(240, 255, 240)*/;
 }
 
 .contrastLight {
@@ -150,11 +146,11 @@ h6 {
   color: navy;
   letter-spacing: 1px;
   padding: 5px;
-  text-shadow: .5px .5px 1px rgb(151, 151, 199);
+  text-shadow: 0.5px 0.5px 1px rgb(151, 151, 199);
 }
 
 .contrastLight:hover {
-  background-color: rgba(218, 165, 32, 0.75)/* rgba(240, 255, 240)*/;
+  background-color: rgba(218, 165, 32, 0.75) /* rgba(240, 255, 240)*/;
 }
 
 /* ///////////////////////////////////////////////////////////////////////////// */
@@ -163,7 +159,7 @@ h6 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: auto;
-  font-family: "Bungee", cursive;
+  font-family: 'Bungee', cursive;
   text-align: center;
   width: 100vw;
   height: auto;
@@ -242,7 +238,7 @@ h6 {
   /* border-radius: 15px; */
   margin: 2em;
   background-image:/*  url("https://www.transparenttextures.com/patterns/white-carbonfiber.png"), */
-    url("../images/girlsSearchingOnline.jpg");
+    url('../images/girlsSearchingOnline.jpg');
   background-size: cover;
   background-repeat: repeat, no-repeat;
   background-position: center;
@@ -274,8 +270,8 @@ h6 {
   /* border: 1px goldenrod ridge;
   border-radius: 15px; */
   margin: 2em;
-   background-image: /*url("https://www.transparenttextures.com/patterns/graphcoders-lil-fiber.png"), */
-    url("../images/coupleOpenSign.jpg");
+  background-image: /*url("https://www.transparenttextures.com/patterns/graphcoders-lil-fiber.png"), */
+    url('../images/coupleOpenSign.jpg');
   background-size: cover;
   background-repeat: repeat, no-repeat;
   background-position: center;
@@ -315,7 +311,7 @@ h6 {
   color: #f3b61fff;
   border: none;
   border-radius: 7px;
-  font-family: "Candal", sans-serif;
+  font-family: 'Candal', sans-serif;
   font-weight: lighter;
   font-size: 14pt;
   text-shadow: 1px 2px 2px #191102ff;
@@ -324,7 +320,7 @@ h6 {
   width: 20em;
   padding: 0.5em;
   text-align: center;
-  background-image: url("https://www.transparenttextures.com/patterns/dark-geometric.png");
+  background-image: url('https://www.transparenttextures.com/patterns/dark-geometric.png');
   background-color: #510d0aff;
   background-position: center;
   background-size: contain;
@@ -370,6 +366,6 @@ h6 {
   height: 100vh;
   background-color: #e7e7ed;
   /* background-image: url("https://www.transparenttextures.com/patterns/gplay.png"); */
-  background-image: url("https://www.transparenttextures.com/patterns/dimension.png");
+  background-image: url('https://www.transparenttextures.com/patterns/dimension.png');
   color: #191102ff;
 }

@@ -9,35 +9,38 @@ import SignUp from "./components/Users/SignUp";
 import Login from "./components/Users/Login";
 import ProfilePage from "./components/Users/ProfilePage";
 import AuthProvider from "./providers/AuthContext";
+import EditBusiness from "./components/Users/EditBusiness";
 import { AuthRoute, ProtectedRoute } from "./util/routesUtil";
 import "./App.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
-
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
     <div className="App">
-    <AuthProvider>
-      <Header />
-     
-      <Switch>
-        <AuthRoute exact path="/signup">
-          <SignUp />
-        </AuthRoute>
-        <AuthRoute path="/login">
-          <Login />
-        </AuthRoute>
-        <ProtectedRoute path="/newBusiness">
-          <NewBusiness />
-        </ProtectedRoute>
-        <ProtectedRoute path="/profile/:id">
-          <ProfilePage />
-        </ProtectedRoute>
-        <Route exact path="/" component={MainPage} />
-        <Route path="/categories/:id" component={Results} />
-        <Route path="/businesses/:id" component={Business} />
-      </Switch>
-    </AuthProvider>
+      <AuthProvider>
+        <Header />
+
+        <Switch>
+          <AuthRoute exact path="/signup">
+            <SignUp />
+          </AuthRoute>
+          <AuthRoute path="/login">
+            <Login />
+          </AuthRoute>
+          <ProtectedRoute path="/newBusiness">
+            <NewBusiness />
+          </ProtectedRoute>
+          <ProtectedRoute path="/profile/:id">
+            <ProfilePage />
+          </ProtectedRoute>
+          <ProtectedRoute exact path="/editbusiness/:id">
+            <EditBusiness />
+          </ProtectedRoute>
+          <Route exact path="/" component={MainPage} />
+          <Route path="/categories/:id" component={Results} />
+          <Route path="/businesses/:id" component={Business} />
+        </Switch>
+      </AuthProvider>
     </div>
   );
 }

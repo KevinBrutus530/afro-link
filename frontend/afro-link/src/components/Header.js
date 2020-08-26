@@ -16,7 +16,7 @@ const Header = () => {
         </p>
         <div className="BLM">
           Black Lives Matter.
-          <a href="https://support.eji.org/give/153413/#!/donation/checkout">
+          <a target="_blank" href="https://support.eji.org/give/153413/#!/donation/checkout">
             Donate to the Equal Justice Initiative
           </a>
         </div>

@@ -25,7 +25,7 @@ const MainPage = () => {
         <Carousel>
           <Carousel.Item>
             <img
-              className="carouselPics padDown"
+              className="carouselPics"
               src="https://images.squarespace-cdn.com/content/v1/55d87f14e4b022811c4f4abf/1516659329325-YUU5Q7BBMWVPV78R899T/ke17ZwdGBToddI8pDm48kFdzrld7ehk6VYcJKgp_Rgp7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmLLxGPZs9cXJqW7PQ94qJw00fYnZboa-zNHqWLG_25EPqf5LHoJIOMMeOntqCGq7N/denequa.jpeg"
               alt="first slide"
             />
@@ -45,7 +45,10 @@ const MainPage = () => {
 
             <Carousel.Caption>
               <h3 className="contrastBackground">Byron and Dexter Peart</h3>
-              <a target="_blank" href="https://www.goodeeworld.com/pages/about-us">
+              <a
+                target="_blank"
+                href="https://www.goodeeworld.com/pages/about-us"
+              >
                 <p className="contrastLight">Goodee</p>
               </a>
             </Carousel.Caption>
@@ -74,7 +77,10 @@ const MainPage = () => {
 
             <Carousel.Caption>
               <h3 className="contrastBackground">Pat McGrath</h3>
-              <a target="_blank" href="https://www.patmcgrath.com/pages/pat-mcgrath-biography">
+              <a
+                target="_blank"
+                href="https://www.patmcgrath.com/pages/pat-mcgrath-biography"
+              >
                 <p className="contrastLight">Pat McGrath Labs</p>
               </a>
             </Carousel.Caption>

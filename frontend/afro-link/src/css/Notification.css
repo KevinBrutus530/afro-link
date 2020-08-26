@@ -1,0 +1,6 @@
+.notification {
+  color: darkred;
+  font-weight: bolder;
+  font-size: 2em;
+  text-transform: uppercase;
+}

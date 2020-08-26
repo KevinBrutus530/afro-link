@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { useInput } from "../../util/useInput";
 import { Link } from "react-router-dom";
 import { getAPI } from "../../util/getAPI";
 import { useHistory } from "react-router-dom";
 import { signUp } from "../../util/firebaseFunctions";
+import Notification from "../commonlyUsed/Notification";
 import axios from "axios";
 import "../../css/SignUp.css";
 
@@ -12,6 +13,7 @@ const SignUp = () => {
   const password = useInput("");
   const API = getAPI();
   const history = useHistory();
+  const [message, setMessage] = useState("");
 
   const handleNewUser = async (e) => {
     e.preventDefault();
@@ -21,13 +23,16 @@ const SignUp = () => {
         user_id: res.user.uid,
         email: email.value,
       });
+      setMessage("Congratulations! You have successfully signed up!")
       history.push(`/profile/${res.user.uid}`);
     } catch (err) {
+      setMessage(err.message);
       console.log(err);
     }
   };
   return (
     <div className="signUpMainDiv">
+      <Notification message={message} />
       <form className="signUpForm" onSubmit={handleNewUser}>
         <h1 className="heavyFont signUpHeader">Sign Up</h1>
         <div className="input">

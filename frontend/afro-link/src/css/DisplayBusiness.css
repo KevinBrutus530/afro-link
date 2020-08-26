@@ -58,3 +58,7 @@
 .empty {
   margin-top: 1em;
 }
+
+.lightGrey {
+  color: lightgrey;
+}

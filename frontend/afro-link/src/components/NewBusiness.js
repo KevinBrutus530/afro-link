@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import { useInput } from "../util/useInput";
 import { getAPI } from "../util/getAPI";
 import axios from "axios";
 import GoogleMap from "./GoogleMap";
 import TimeTable from "./TimeTable";
+import PhoneInput from "react-phone-number-input";
+import Notification from "./commonlyUsed/Notification";
 import "../css/NewBusinss.css";
 import "react-phone-number-input/style.css";
-import PhoneInput from "react-phone-number-input";
-import { useHistory } from "react-router-dom";
-import Notification from "./commonlyUsed/Notification";
 
 const NewBusiness = () => {
   const [message, setMessage] = useState("");
@@ -108,22 +108,12 @@ const NewBusiness = () => {
           website: website.value,
         });
       }
-      // welcome(biz_name.value, newBiz.data.status);
       history.push("/profile/:userId");
     } catch (error) {
-      // debugger;
       setMessage(error.response.data.message);
-      // errorHandle(error.status)
       console.log(error.status);
     }
   };
-
-  // const welcome =(name, status)=>{
-  //  alert(`Create New business ${status}, Welcome ${name} to Afro Link`)
-  // }
-  // const errorHandle =(status)=>{
-  //  alert(`Create New business ${status}, Please try create new business Afro Link later`)
-  // }
 
   const handleHours = (e) => {
     if (e.currentTarget.selectedIndex === 0) {

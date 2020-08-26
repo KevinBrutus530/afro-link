@@ -27,42 +27,46 @@ $black-chocolate: #191102ff; */
   overflow-x: scroll;
 }
 
-
-
 .reviewsForm > h2 {
   color: whitesmoke;
 }
 
 .reviewsForm > label {
-  color: #191102;
+  color: #f2f2f2;
+  /* color: #191102; */
 }
 .reviewsInputs > label {
-  color: #191102;
+  color: #f2f2f2;
+  /* color: #191102; */
 }
 
 .labelInput {
-  font-weight: 900;
+  font-weight: 700;
   display: flex;
   flex-direction: column;
   text-align: left;
-  color: #191102;
+  color: whitesmoke;
   padding: 5px;
+  font-size: 1em;
 }
 
 .rateStarsDiv {
   display: flex;
   flex-direction: row;
+  background-color: whitesmoke;
   justify-content: center;
-  padding: 5px;
+  padding: .5rem;
   text-align-last: center;
+  width: max-content;
+  margin: auto;
 }
 
 .reviewsInputs {
   display: flex;
   flex-direction: column;
-  background-color: white;
+  /* background-color: white; */
   /* background-image: url("https://www.transparenttextures.com/patterns/dimension.png"); */
-  box-shadow: 2px 2px 2px #191102ff;
+  /* box-shadow: 2px 2px 2px #191102ff; */
   padding: 1em;
   margin: auto;
   border-radius: 5px;
@@ -97,7 +101,7 @@ $black-chocolate: #191102ff; */
   margin-top: 5px 10px;
   margin-bottom: 0em;
   font-size: 0.9rem;
-  border-bottom: 2px solid #f2f2f2;
+  border-bottom: 2px outset #f2f2f2;
 }
 
 .ReviewSect > h5 {
@@ -108,8 +112,9 @@ $black-chocolate: #191102ff; */
 }
 
 .ratings {
+  
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   width: 100%;
 }
 
@@ -156,4 +161,11 @@ span {
 .ratingsSec .fa {
   color: #191102;
   transition: color 200ms;
+}
+
+.rateLabel{
+  color: #191102;
+  padding: 5px;
+  font-weight: 700;
+  margin: 0;
 }

@@ -29,7 +29,7 @@ const DisplayBusiness = ({ businessInfo }) => {
       <div className="businessDisplay" style={{ color: "white" }}>
         <div className="ownerHeader">
           <h3 className="heavyFont">{owner}</h3>
-          {owner === "" ? <p className="empty"></p> : <p>Owner/Operator</p>}
+          {owner === "" ? <p className="empty"></p> : <p className="lightGrey">Owner/Operator</p>}
         </div>
         <div className="businessInfo">
           <ul style={{ listStyleType: "none" }}>

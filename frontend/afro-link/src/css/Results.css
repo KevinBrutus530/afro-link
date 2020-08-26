@@ -17,6 +17,7 @@
   margin: auto;
   justify-content: center;
   padding-top: 1em;
+  padding-bottom: 5px;
   border-bottom: white 2px solid;
   width: fill;
 }
@@ -70,8 +71,8 @@
   background-image: url("https://www.transparenttextures.com/patterns/dimension.png");
   box-shadow: 1px 1px 7px #d5f5cda2;
   height: 22em;
-  width: 19.7em;
-  padding: 1em;
+  width: 17em;
+  padding: .5em;
   text-align: center;
   cursor: pointer;
   border-radius: 5px;

@@ -13,7 +13,9 @@ const EditBusiness = () => {
 
   const editBusinessInfo = async () => {
     try {
-      let res = await axios.patch(`${API}/businesses/${id}`);
+      await axios.patch(`${API}/businesses/${id}`, {
+          biz_name: biz_name
+      });
       debugger;
     } catch (err) {
       console.log(err);
@@ -23,6 +25,7 @@ const EditBusiness = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     editBusinessInfo();
+    debugger;
   };
 
   return (

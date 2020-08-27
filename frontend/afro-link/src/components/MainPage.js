@@ -8,19 +8,12 @@ import Carousel from 'react-bootstrap/Carousel';
 const MainPage = () => {
   return (
     <div className="MainDiv">
-      {/* <div className="logoDiv">
-        <a href="#landingPage">
-          <img className="afLogoMain" src={circleLogo} alt="afro link logo" />
-        </a>
-      </div> */}
+     
       <div id="landingPage" className="landingMainDiv">
         <h1 className="titleH1 heavyFont">Welcome to Afro Link</h1>
         <h3 className="tagline">
           Connecting you to Black-Owned businesses throughout NYC and beyond
         </h3>
-        {/* <button onClick={logout}>
-            Log Out
-          </button> */}
         <Carousel>
           <Carousel.Item>
             <img
@@ -69,8 +62,8 @@ const MainPage = () => {
 
           <Carousel.Item>
             <img
-              className="carouselPics padDown"
-              src="https://media.vanityfair.com/photos/55f0bf75200c343535919904/4:3/w_1280,h_960,c_limit/pat-mcgrath-fashion-week-make-up.jpg"
+              className="carouselPics"
+              src="https://www.ft.com/__origami/service/image/v2/images/raw/http://prod-upp-image-read.ft.com/44a2ea70-1729-11ea-8d73-6303645ac406?source=next&fit=scale-down&quality=highest&width=1067"
               alt="third slide"
             />
 

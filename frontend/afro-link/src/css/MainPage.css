@@ -16,10 +16,12 @@ $black-chocolate: #191102ff; */
   height: 100vh;
   width: 100vw;
   margin: auto;
+  margin-top: 3em;
+  padding-bottom: 1em;
   place-items: center;
-  justify-content: center;
+  justify-content: baseline;
   background-color: rgba(247, 186, 32, 0.774);
-  background-image: url('https://www.transparenttextures.com/patterns/dimension.png');
+  background-image: url(https://www.transparenttextures.com/patterns/dimension.png);
   color: #191102ff;
   display: flex;
   flex-direction: column;
@@ -31,8 +33,8 @@ $black-chocolate: #191102ff; */
   .landingMainDiv {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     margin: auto;
-    padding: unset;
     position: relative;
   }
 }
@@ -89,7 +91,7 @@ h6 {
   text-shadow: 1px 1px rgb(119, 90, 17);
 }
 
-@media (max-height: 750px) {
+@media (max-height: 755px) {
   .titleH1 {
     display: none;
     position: relative;
@@ -104,16 +106,19 @@ h6 {
 
 .tagline {
   display: flex;
+  justify-content: center;
   color: #510d0aff;
   font-weight: 600;
-  font-size: 24pt;
+  font-size: 20pt;
+  padding: 1em 2em;
 }
 
 @media (max-height: 1290px) {
   .tagline {
     display: flex;
     flex-wrap: wrap;
-    font-size: 20pt;
+    font-size: 18pt;
+    padding: .5em 2em;
   }
 }
 

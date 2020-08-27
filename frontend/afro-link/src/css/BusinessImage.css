@@ -19,7 +19,7 @@
 
 .altLogo {
     place-items: center;
-    /* border-radius: 100%; */
+    padding-left: 10px;
     width: 12em;
     height: 12em;
     opacity: 0.7;

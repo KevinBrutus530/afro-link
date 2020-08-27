@@ -1,20 +1,19 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-// import { logout } from "../util/firebaseFunctions"
-import SearchBusinessForm from "./SearchBusinesses";
-import circleLogo from "../images/circleLogoYellow.png";
-import "../css/MainPage.css";
-import Carousel from "react-bootstrap/Carousel";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import SearchBusinessForm from './SearchBusinesses';
+import circleLogo from '../images/circleLogoYellow.png';
+import '../css/MainPage.css';
+import Carousel from 'react-bootstrap/Carousel';
 
 const MainPage = () => {
   return (
     <div className="MainDiv">
-      <div className="landingMainDiv">
-        {/* <div className="logoDiv">
+      {/* <div className="logoDiv">
+        <a href="#landingPage">
           <img className="afLogoMain" src={circleLogo} alt="afro link logo" />
-        </div> */}
-        {/* <div className="ourMissionDiv"> */}
-        {/* </div> */}
+        </a>
+      </div> */}
+      <div id="landingPage" className="landingMainDiv">
         <h1 className="titleH1 heavyFont">Welcome to Afro Link</h1>
         <h3 className="tagline">
           Connecting you to Black-Owned businesses throughout NYC and beyond
@@ -99,10 +98,10 @@ const MainPage = () => {
         <div className="addBiz"></div>
         <div className="bizOwnerDiv">
           <h1 className="headingMain signUpH1">
-            {" "}
+            {' '}
             Sign your business up with <br />
             Afro Link
-            <NavLink exact to="/signup" style={{ textDecoration: "none" }}>
+            <NavLink exact to="/signup" style={{ textDecoration: 'none' }}>
               <button className="addBizBtn btnWeight">Sign up</button>
             </NavLink>
           </h1>

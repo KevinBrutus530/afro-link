@@ -8,7 +8,6 @@ import Carousel from 'react-bootstrap/Carousel';
 const MainPage = () => {
   return (
     <div className="MainDiv">
-     
       <div id="landingPage" className="landingMainDiv">
         <h1 className="titleH1 heavyFont">Welcome to Afro Link</h1>
         <h3 className="tagline">
@@ -102,7 +101,84 @@ const MainPage = () => {
       </div>
       <div className="ourMissionStatementDiv">
         <h3 className="heavyFont">Our Mission</h3>
-        <p>(our mission story here)</p>
+        <p>
+          We aim to bring authentic Black owned businesses and services to the
+          community, from New York City and more. <br /> We created this site to
+          honor and celebrate Black entrepreneurship together.
+        </p>
+        <p>
+          Please follow the links below for resources on anti-racism, activism,
+          ways to help, and more.
+        </p>
+        <ul>
+          <li>
+            <a
+              target="_blank"
+              href="https://www.ted.com/talks/bryan_stevenson_we_need_to_talk_about_an_injustice"
+            >
+              Ted Talk: Brian Stevenson, We Need To Talk About An Injustice
+            </a>
+          </li>
+          <li>
+            {' '}
+            <a
+              target="_blank"
+              href="https://novareid.com/free-anti-racism-guide/"
+            >
+              Nova Reid's Free Anti-Racism Guide
+            </a>
+          </li>
+          <li>
+            {' '}
+            <a
+              target="_blank"
+              href="https://docs.google.com/document/d/1S5uckFHCA_XZkxG0Zg5U4GQGbY_RklZARwu43fqJH0E/edit"
+            >
+              Goodle Doc: Anti-Racism
+            </a>
+          </li>
+          <li>
+            {' '}
+            <a
+              target="_blank"
+              href="https://docs.google.com/document/d/1CjZMORRVuv-I-qo4B0YfmOTqIOa3GUS207t5iuLZmyA/mobilebasic"
+            >
+              Google Doc: #GeorgeFloyd action
+            </a>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://docs.google.com/document/d/1u1cZrJ9xEDSIG_1sYK579GR0wbBiW5Q-ygV_bvI_nAI/edit"
+            >
+              Trans Funds & Resources
+            </a>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://drive.google.com/drive/u/0/folders/0Bz011IF2Pu9TUWIxVWxybGJ1Ync"
+            >
+              Learn about Black History
+            </a>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://www.buzzfeednews.com/article/ariannarebolini/george-floyd-amy-cooper-antiracist-books-reading-resources"
+            >
+              An Essential Reading Guide For Fighting Racism
+            </a>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://www.instagram.com/p/CA04VKDAyjb/?utm_source=ig_web_copy_link"
+            >
+              10 Steps to Non-Optical Allyship, Mireille Charper
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   );

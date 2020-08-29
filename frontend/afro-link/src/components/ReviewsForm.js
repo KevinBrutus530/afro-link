@@ -18,6 +18,7 @@ const ReviewsForm = () => {
   const getReviews = async () => {
     try {
       let res = await axios.get(`${API}/reviews/${id}`);
+      // debugger
       setAllReviews(res.data.payload);
     } catch (err) {
       console.log(err);
@@ -54,21 +55,38 @@ const ReviewsForm = () => {
     }
     return starsList;
   };
-
-  let showReviews = allReviews.map((post, i) => {
-    // debugger
-    return (
-      <div style={{ color: "white" }} key={i} className="ReviewSect">
-        <div className="ratings">
-          <h5 className="reviewerName">{post.name.toUpperCase()}</h5>
-          {starsShow(post.ratings)}
+  let showReviewsRely = allReviews.map((post, i) => {
+    if(post.reply_text){
+      return (
+        <div style={{ color: "white" }} key={post.id} className="ReplySect">
+          <div>
+            <h5 className="reply_Name">{post.name.toUpperCase()}</h5>
+          </div>
+          <p className="reply_Text"> {post.reply_text}</p>
+          <p className="reply_TextDT">{post.dt.substring(0,10)}</p>
         </div>
-        <p className="review"> {post.text}</p>
-      </div>
-    );
+      );
+    }
   });
 
-  // console.log(ratings)
+  let showReviews = allReviews.map((post, i) => {
+    if(post.text){
+      return (
+        <div style={{ color: "white" }} key={post.id} className="ReviewSect">
+          <div className="ratings">
+            <h5 className="reviewerName">{post.name.toUpperCase()}</h5>
+            {starsShow(post.ratings)}
+          </div>
+          <p className="review"> {post.text}</p>
+          <p className="reviewDT">{post.dt.substring(0,10)}</p>
+          <div className="reply">
+            {showReviewsRely}
+          </div>
+        </div>
+      );
+    }
+  });
+ 
 
   return (
     <div className="reviewsForm">

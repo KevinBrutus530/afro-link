@@ -24,7 +24,7 @@ const ProfilePage = () => {
     };
     fetchUserById();
   }, []);
-
+  console.log(userBusinesses);
   return (
     <div>
       <h1 style={{ padding: '2em', color: 'white' }}> Profile Page</h1>

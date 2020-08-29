@@ -29,6 +29,7 @@ const EditBusiness = () => {
   };
 
   const editBusinessInfo = async () => {
+    // debugger;
     try {
       await axios.patch(`${API}/businesses/${id}`, {
         biz_name: biz_name.value,

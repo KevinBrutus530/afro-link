@@ -9,6 +9,7 @@ const EditBusiness = () => {
   const API = getAPI();
   const { id } = useParams();
   const biz_name = useInput('');
+  const address = useInput('');
   const [modalShow, setModalShow] = useState(false);
   const [hours, setHours] = useState('Online Store');
 
@@ -40,6 +41,15 @@ const EditBusiness = () => {
       setModalShow(true);
     }
   };
+
+  // const handleAddress = () => {
+  //   setHouseNum(null);
+  //   setStreet(null);
+  //   setCity(null);
+  //   setState(null);
+  //   setZip(null);
+  //   setAddress(!showAddress);
+  // };
 
   const handleSubmit = (e) => {
     e.preventDefault();

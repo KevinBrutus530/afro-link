@@ -25,7 +25,7 @@ const EditBusiness = () => {
   const editBusinessInfo = async () => {
     try {
       await axios.patch(`${API}/businesses/${id}`, {
-        biz_name: biz_name,
+        biz_name: biz_name.value,
         hours: hours,
       });
     } catch (err) {

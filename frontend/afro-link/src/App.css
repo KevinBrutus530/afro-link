@@ -42,6 +42,7 @@ input:focus {
   height: auto;
   object-fit: scale-down;
   position: static;
+  z-index: 0;
 }
 
 @media (max-width: 500px) {

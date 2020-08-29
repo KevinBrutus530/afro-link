@@ -100,17 +100,16 @@ const MainPage = () => {
         </div>
       </div>
       <div className="ourMissionStatementDiv">
-        <h3 className="heavyFont">Our Mission</h3>
-        <p>
+        <h1 className="heavyFont">Our Mission</h1>
+        <p className="alMission">
           We aim to bring authentic Black owned businesses and services to the
           community, from New York City and more. <br /> We created this site to
           honor and celebrate Black entrepreneurship together.
         </p>
-        <p>
-          Please follow the links below for resources on anti-racism, activism,
-          ways to help, and more.
+        <p className="alMission">
+          Please follow the links below for resources on anti-racism, activism, and more.
         </p>
-        <ul>
+        <ul className="resourcesUL">
           <li>
             <a
               target="_blank"

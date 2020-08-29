@@ -118,7 +118,7 @@ h6 {
     display: flex;
     flex-wrap: wrap;
     font-size: 18pt;
-    padding: .5em 2em;
+    padding: 0.5em 2em;
   }
 }
 
@@ -387,3 +387,22 @@ h6 {
   background-image: url('https://www.transparenttextures.com/patterns/dimension.png');
   color: #191102ff;
 }
+
+.alMission {
+  font-size: 1.5em;
+}
+
+.resourcesUL li {
+  margin: auto;
+  float: left;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  padding: 5px;
+}
+.resourcesUl {
+  display: flex;
+  list-style-type: none;
+  
+}
+

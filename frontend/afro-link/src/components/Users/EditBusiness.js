@@ -9,6 +9,7 @@ import AddressForm from '../Forms/Address';
 const EditBusiness = () => {
   const API = getAPI();
   const { id } = useParams();
+  let history = useHistory();
   const biz_name = useInput('');
   const address = useInput('');
   const [modalShow, setModalShow] = useState(false);
@@ -56,7 +57,7 @@ const EditBusiness = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     editBusinessInfo();
-    // debugger;
+    history.push(`/profile/:userId`);
   };
 
   return (
@@ -81,8 +82,7 @@ const EditBusiness = () => {
           <option defaultValue="2">Add business Hours</option>
         </select>
         <AddressForm />
-        <button type="submit">Edit</button>
-
+        <button type="submit">Save</button>
         <div>
           <TimeTable
             show={modalShow}

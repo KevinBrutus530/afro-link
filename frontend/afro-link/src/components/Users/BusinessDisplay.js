@@ -8,6 +8,7 @@ const BusinessDisplay = ({ userBusinesses }) => {
   const showBusiness = () => {
     if (userBusinesses.length) {
       let allUserBusiness = userBusinesses.map((business) => {
+        // debugger;
         // create a function that calls the reviews from each business
         // create function in spearate component using the business id as a prop
         return (

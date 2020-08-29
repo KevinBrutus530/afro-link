@@ -48,7 +48,7 @@ const MainPage = () => {
           <Carousel.Item>
             <img
               className="carouselPics"
-              src="https://bloximages.chicago2.vip.townnews.com/napavalleyregister.com/content/tncms/assets/v3/editorial/f/a8/fa8512ca-ebed-5992-85a5-838ca6d35559/537e796f42bdb.image.jpg"
+              src="https://bloximages.newyork1.vip.townnews.com/feastmagazine.com/content/tncms/assets/v3/editorial/9/8f/98ff9c78-f445-11e9-91ff-bf70a7b15818/5dae1c2fb80a1.image.jpg?resize=1200%2C901"
             />
 
             <Carousel.Caption>

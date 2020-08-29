@@ -4,13 +4,16 @@ import { useInput } from '../../util/useInput';
 import axios from 'axios';
 import { getAPI } from '../../util/getAPI';
 import TimeTable from '../../components/TimeTable';
+import AddressForm from '../Forms/Address';
 
 const EditBusiness = () => {
   const API = getAPI();
   const { id } = useParams();
   const biz_name = useInput('');
+  const address = useInput('');
   const [modalShow, setModalShow] = useState(false);
   const [hours, setHours] = useState('Online Store');
+  // const [showAddress, setAddress] = useState(false);
 
   let time = {
     Mon: 'close',
@@ -25,7 +28,7 @@ const EditBusiness = () => {
   const editBusinessInfo = async () => {
     try {
       await axios.patch(`${API}/businesses/${id}`, {
-        biz_name: biz_name,
+        biz_name: biz_name.value,
         hours: hours,
       });
     } catch (err) {
@@ -41,10 +44,19 @@ const EditBusiness = () => {
     }
   };
 
+  // const handleAddress = () => {
+  //   setHouseNum(null);
+  //   setStreet(null);
+  //   setCity(null);
+  //   setState(null);
+  //   setZip(null);
+  //   setAddress(!showAddress);
+  // };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     editBusinessInfo();
-    debugger;
+    // debugger;
   };
 
   return (
@@ -68,7 +80,7 @@ const EditBusiness = () => {
           <option defaultValue="1">Online Store</option>
           <option defaultValue="2">Add business Hours</option>
         </select>
-
+        <AddressForm />
         <button type="submit">Edit</button>
 
         <div>

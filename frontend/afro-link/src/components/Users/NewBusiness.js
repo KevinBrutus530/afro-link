@@ -1,44 +1,44 @@
-import React, { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
-import { useInput } from "../util/useInput";
-import { getAPI } from "../util/getAPI";
-import axios from "axios";
-import GoogleMap from "./GoogleMap";
-import TimeTable from "./TimeTable";
-import PhoneInput from "react-phone-number-input";
-import Notification from "./commonlyUsed/Notification";
-import "../css/NewBusinss.css";
-import "react-phone-number-input/style.css";
+import React, { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
+import { useInput } from '../../util/useInput';
+import { getAPI } from '../../util/getAPI';
+import axios from 'axios';
+import GoogleMap from '../GoogleMap';
+import TimeTable from '../TimeTable';
+import PhoneInput from 'react-phone-number-input';
+import Notification from '../commonlyUsed/Notification';
+import '../../css/NewBusiness.css';
+import 'react-phone-number-input/style.css';
 
 const NewBusiness = () => {
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState('');
   const history = useHistory();
   const API = getAPI();
   const [modalShow, setModalShow] = useState(false);
 
-  const biz_name = useInput("");
-  const [hours, setHours] = useState("Online Store");
+  const biz_name = useInput('');
+  const [hours, setHours] = useState('Online Store');
   let time = {
-    Mon: "close",
-    Tue: "close",
-    Wed: "close",
-    Thu: "close",
-    Fri: "close",
-    Sat: "close",
-    Sun: "close",
+    Mon: 'close',
+    Tue: 'close',
+    Wed: 'close',
+    Thu: 'close',
+    Fri: 'close',
+    Sat: 'close',
+    Sun: 'close',
   };
-  const owner_name = useInput("");
-  const type_name = useInput(""); //add  new function let owner/user create one
+  const owner_name = useInput('');
+  const type_name = useInput(''); //add  new function let owner/user create one
   // const phone = useInput("");
-  const [phone, setPhone] = useState("");
-  const email = useInput("");
-  const social_media = useInput("");
-  const website = useInput("");
-  const [houseNum, setHouseNum] = useState("");
-  const [street, setStreet] = useState("");
-  const [city, setCity] = useState("");
-  const [state, setState] = useState("");
-  const [zip, setZip] = useState("");
+  const [phone, setPhone] = useState('');
+  const email = useInput('');
+  const social_media = useInput('');
+  const website = useInput('');
+  const [houseNum, setHouseNum] = useState('');
+  const [street, setStreet] = useState('');
+  const [city, setCity] = useState('');
+  const [state, setState] = useState('');
+  const [zip, setZip] = useState('');
   const [businessTypes, setBusinessTypes] = useState([]);
 
   const [showOwner, setShowOwner] = useState(false);
@@ -78,7 +78,7 @@ const NewBusiness = () => {
         biz_name: biz_name.value,
         hours: hours,
       });
-      if (newBiz.data.status === "success") {
+      if (newBiz.data.status === 'success') {
         // await axios.post(`${API}/owners`, {
         //   owner_id: newBiz.data.payload.id,
         //   owner_name: owner_name.value,
@@ -101,14 +101,14 @@ const NewBusiness = () => {
         });
         await axios.post(`${API}/addresses`, {
           address_id: newBiz.data.payload.id,
-          street: houseNum + " " + street,
+          street: houseNum + ' ' + street,
           city: city,
           state: state,
           zip: zip,
           website: website.value,
         });
       }
-      history.push("/profile/:userId");
+      history.push('/profile/:userId');
     } catch (error) {
       setMessage(error.response.data.message);
       console.log(error.status);
@@ -153,19 +153,19 @@ const NewBusiness = () => {
   };
 
   const resetForm = () => {
-    biz_name.value = "";
-    setHours("Online Store");
-    owner_name.value = "";
-    type_name.value = "";
-    setPhone("");
-    email.value = "";
-    social_media.value = "";
-    website.value = "";
-    setHouseNum("");
-    setStreet("");
-    setCity("");
-    setState("");
-    setZip("");
+    biz_name.value = '';
+    setHours('Online Store');
+    owner_name.value = '';
+    type_name.value = '';
+    setPhone('');
+    email.value = '';
+    social_media.value = '';
+    website.value = '';
+    setHouseNum('');
+    setStreet('');
+    setCity('');
+    setState('');
+    setZip('');
   };
 
   return (
@@ -231,7 +231,7 @@ const NewBusiness = () => {
             value={phone}
             onChange={setPhone}
             maxLength="14"
-            style={{ width: "16em" }}
+            style={{ width: '16em' }}
           />
 
           <div className="labelBox">

@@ -1,10 +1,10 @@
-import React, { useState, useContext, useEffect } from "react";
-import axios from "axios";
-import { getAPI } from "../../util/getAPI";
-import { AuthContext } from "../../providers/AuthContext";
-import { logout } from "../../util/firebaseFunctions";
-import { useHistory } from "react-router-dom";
-import "../../css/DisplayBusiness.css";
+import React, { useState, useContext, useEffect } from 'react';
+import axios from 'axios';
+import { getAPI } from '../../util/getAPI';
+import { AuthContext } from '../../providers/AuthContext';
+import { logout } from '../../util/firebaseFunctions';
+import { useHistory } from 'react-router-dom';
+import '../../css/DisplayBusiness.css';
 
 const ProfilePage = () => {
   let history = useHistory();
@@ -16,7 +16,7 @@ const ProfilePage = () => {
   useEffect(() => {
     const fetchUserById = async () => {
       let res = await axios({
-        method: "get",
+        method: 'get',
         url: `${API}/owners/${currentUser.uid}`,
         headers: {
           AuthToken: token,
@@ -38,7 +38,7 @@ const ProfilePage = () => {
       <div>
         <div className="ownerHeader">{business.biz_name}</div>
         <div className="businessInfo">
-          <ul style={{ listStyleType: "none" }}>
+          <ul style={{ listStyleType: 'none' }}>
             <li>
               <img className="bizPicProfile" src={business.pictures} />
             </li>
@@ -74,9 +74,21 @@ const ProfilePage = () => {
 
   return (
     <div>
-      <h1 style={{ padding: "2em", color: "white" }}> Profile Page</h1>
+      <h1 style={{ padding: '2em', color: 'white' }}> Profile Page</h1>
       <button onClick={logout}>Log Out</button>
       <div>{allUserBusinesses}</div>
+
+      {/* <div>
+        {!allUserBusinesses ? (
+          <div>
+            <button onClick={() => history.push('/newBusiness')}>
+              Add New Business
+            </button>
+          </div>
+        ) : (
+          allUserBusinesses
+        )}
+      </div> */}
     </div>
   );
 };

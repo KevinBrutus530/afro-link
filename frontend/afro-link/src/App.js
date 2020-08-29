@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Switch, NavLink } from 'react-router-dom';
 import Header from './components/Header';
-import NewBusiness from './components/NewBusiness';
+import NewBusiness from './components/Users/NewBusiness';
 import MainPage from './components/MainPage';
 import Results from './components/Results';
 import Business from './components/Business';

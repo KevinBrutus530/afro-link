@@ -4,6 +4,7 @@ import { useInput } from '../../util/useInput';
 import axios from 'axios';
 import { getAPI } from '../../util/getAPI';
 import TimeTable from '../../components/TimeTable';
+import AddressForm from '../Forms/Address';
 
 const EditBusiness = () => {
   const API = getAPI();
@@ -12,6 +13,7 @@ const EditBusiness = () => {
   const address = useInput('');
   const [modalShow, setModalShow] = useState(false);
   const [hours, setHours] = useState('Online Store');
+  // const [showAddress, setAddress] = useState(false);
 
   let time = {
     Mon: 'close',
@@ -54,7 +56,7 @@ const EditBusiness = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     editBusinessInfo();
-    debugger;
+    // debugger;
   };
 
   return (
@@ -78,7 +80,7 @@ const EditBusiness = () => {
           <option defaultValue="1">Online Store</option>
           <option defaultValue="2">Add business Hours</option>
         </select>
-
+        <AddressForm />
         <button type="submit">Edit</button>
 
         <div>

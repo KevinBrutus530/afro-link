@@ -425,6 +425,11 @@ h6 {
     width: 100%;
   }
 
+  .mission {
+    margin: 0;
+    padding: 1em;
+  }
+
 
   .resourcesUL li {
     display: flex;

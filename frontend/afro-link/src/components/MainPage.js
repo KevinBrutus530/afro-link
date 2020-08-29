@@ -1,9 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import SearchBusinessForm from './SearchBusinesses';
-import circleLogo from '../images/circleLogoYellow.png';
 import '../css/MainPage.css';
 import Carousel from 'react-bootstrap/Carousel';
+import circleLogo from '../images/circleLogoYellow.png';
 
 const MainPage = () => {
   return (
@@ -100,14 +100,16 @@ const MainPage = () => {
         </div>
       </div>
       <div className="ourMissionStatementDiv">
-        <h1 className="heavyFont">Our Mission</h1>
+      <div className="logoDiv"><img id="alLogo" src={circleLogo} alt="afrolink" /></div>
+        <h1 className="heavyFont mission">Our Mission</h1>
         <p className="alMission">
-          We aim to bring authentic Black owned businesses and services to the
-          community, from New York City and more. <br /> We created this site to
-          honor and celebrate Black entrepreneurship together.
+          We created this site to honor and celebrate Black entrepreneurship by
+          highlighting authentic Black owned businesses and services right in
+          our community, from New York City and much more.
         </p>
         <p className="alMission">
-          Please follow the links below for resources on anti-racism, activism, and more.
+          Please follow the links below for helpful resources on anti-racism,
+          activism, and ways to give back.
         </p>
         <ul className="resourcesUL">
           <li>

@@ -378,7 +378,7 @@ h6 {
   flex-direction: column;
   justify-content: space-evenly;
   margin: auto;
-  /* margin-top: 10em; */
+
   padding: 5em;
   width: 100vw;
   height: 100vh;
@@ -403,6 +403,39 @@ h6 {
 .resourcesUl {
   display: flex;
   list-style-type: none;
-  
 }
 
+#alLogo {
+  display: flex;
+  margin: auto;
+  padding: 1em;
+  width: 15em;
+  height: 15em;
+}
+
+.mission {
+  margin-top: -2em;
+}
+
+@media (max-width: 800px) {
+  .ourMissionStatementDiv {
+    display: flex;
+    object-fit: contain;
+    height: fit-content;
+    width: 100%;
+  }
+
+
+  .resourcesUL li {
+    display: flex;
+    flex-direction: column;
+    width: fill;
+    position: relative;
+    padding: 1em;
+  }
+
+  #alLogo {
+    display: none;
+    position: relative;
+  }
+}

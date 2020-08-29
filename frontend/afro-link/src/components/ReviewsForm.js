@@ -47,10 +47,10 @@ const ReviewsForm = () => {
   let starsShow = (ratings) => {
     let starsList = [];
     for (let i = 1; i <= ratings; i++) {
-      starsList.push(<span className="fa fa-star"></span>);
+      starsList.push(<span className="fa fa-star" key={i}></span>);
     }
     for (let i = 1; i <= 5 - ratings; i++) {
-      starsList.push(<span className="fa fa-star-o"></span>);
+      starsList.push(<span className="fa fa-star-o" key={i}></span>);
     }
     return starsList;
   };
@@ -67,6 +67,8 @@ const ReviewsForm = () => {
       </div>
     );
   });
+
+  // console.log(ratings)
 
   return (
     <div className="reviewsForm">
@@ -110,12 +112,14 @@ const ReviewsForm = () => {
                 <span
                   className="fa fa-star-o"
                   style={
-                    ratingValue <= (hover || ratings)
+                    ratingValue <= (hover||ratings)
                       ? { color: "red" }
                       : { color: "#background-color: #1911026b" }
                   }
-                  onMouseEnter={() => setHover(ratingValue)}
-                  onMouseLeave={() => setHover(null)}
+                  onMouseEnter={()=>setHover(ratingValue)}
+                onMouseLeave={()=>setHover(1)}
+                onClick={() => setRating(ratingValue)}
+                  
                 ></span>
               </label>
             );

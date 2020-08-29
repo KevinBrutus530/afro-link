@@ -6,7 +6,7 @@ const BusinessDisplay = ({ userBusinesses }) => {
   const redirectToEdit = (id) => history.push(`/editbusiness/${id}`);
 
   const showBusiness = () => {
-    if (userBusinesses) {
+    if (userBusinesses.length) {
       let allUserBusiness = userBusinesses.map((business) => {
         // create a function that calls the reviews from each business
         // create function in spearate component using the business id as a prop
@@ -48,8 +48,10 @@ const BusinessDisplay = ({ userBusinesses }) => {
           </div>
         );
       });
+      console.log(userBusinesses);
       return <div>{allUserBusiness}</div>;
     } else {
+      console.log(userBusinesses);
       return (
         <div>
           <button>Add New Business</button>

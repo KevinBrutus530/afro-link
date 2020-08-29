@@ -379,7 +379,7 @@ h6 {
   justify-content: space-evenly;
   margin: auto;
 
-  padding: 4em 5em 1em 5em;
+  padding: 5em 5em 1em 5em;
   width: 100vw;
   height: 100vh;
   background-color: #e7e7ed;
@@ -402,10 +402,11 @@ h6 {
   font-size: 13pt;
 }
 .resourcesUL {
-  /* padding: 2em; */
+  padding-bottom: 2em;
   list-style-type: none;
-  border: 2px outset whitesmoke;
-  background-color: whitesmoke;
+  /* border-top: 1px groove black; */
+  border-bottom: 1px groove black;
+  /* background-color: whitesmoke; */
 }
 
 #alLogo {
@@ -417,8 +418,8 @@ h6 {
 }
 
 .mission {
-  padding: 5px;
-  border-bottom: 3px whitesmoke solid;
+  padding: .5em;
+  border-bottom: 1px black solid;
 }
 
 @media (max-width: 800px) {

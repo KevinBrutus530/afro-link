@@ -16,10 +16,10 @@ $black-chocolate: #191102ff; */
   text-align: center;
   height: 100vh;
   width: auto;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   overflow-y: scroll;
   overflow-x: hidden;
-  background-image: url("https://www.transparenttextures.com/patterns/dark-geometric.png");
+  background-image: url('https://www.transparenttextures.com/patterns/dark-geometric.png');
   /* background-color: rgb(0, 0, 0)
   ; */
   background-color: #a29f15ff;
@@ -38,11 +38,12 @@ input:focus {
 }
 
 .carousel {
-  width: 100%;
+  width: 75%;
   height: auto;
-  object-fit: scale-down;
+  object-fit: contain;
   position: static;
   z-index: 0;
+
 }
 
 @media (max-width: 500px) {
@@ -50,15 +51,15 @@ input:focus {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    object-fit: scale-down;
+    
   }
 }
 
 .carouselPics {
-  width: auto;
-  height: 600px;
+  width: 100%;
+  height: auto;
   filter: drop-shadow(5px rgb(240, 198, 92));
-  overflow-x: scroll;
+  
 }
 
 .padDown {
@@ -67,6 +68,5 @@ input:focus {
 }
 
 img {
-  object-fit: contain;
- 
+  object-fit: scale-down;
 }

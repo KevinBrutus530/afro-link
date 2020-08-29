@@ -100,8 +100,8 @@ const MainPage = () => {
         </div>
       </div>
       <div className="ourMissionStatementDiv">
-      <div className="logoDiv"><img id="alLogo" src={circleLogo} alt="afrolink" /></div>
-        <h1 className="heavyFont mission">Our Mission</h1>
+      {/* <div className="logoDiv"><img id="alLogo" src={circleLogo} alt="afrolink" /></div> */}
+        <h1 className="heavyFont">Our Mission</h1>
         <p className="alMission">
           We created this site to honor and celebrate Black entrepreneurship by
           highlighting authentic Black owned businesses and services right in

@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import { useInput } from '../../util/useInput';
 import axios from 'axios';
 import { getAPI } from '../../util/getAPI';
 import TimeTable from '../../components/TimeTable';
 import AddressForm from '../Forms/Address';
+import { AuthContext } from '../../providers/AuthContext';
 
 const EditBusiness = () => {
   const API = getAPI();
   const { id } = useParams();
+  const { currentUser, loading } = useContext(AuthContext);
   let history = useHistory();
   const biz_name = useInput('');
   const address = useInput('');
@@ -57,7 +59,7 @@ const EditBusiness = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     editBusinessInfo();
-    history.push(`/profile/:userId`);
+    history.push(`/profile/${currentUser.uid}`);
   };
 
   return (

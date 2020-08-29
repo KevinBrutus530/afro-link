@@ -1,19 +1,15 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import { Whatsapp, Facebook, Linkedin, Twitter } from "react-social-sharing";
-import "../CSS/Footer.css";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { Whatsapp, Facebook, Linkedin, Twitter } from 'react-social-sharing';
+import '../css/Footer.css';
 
 const Footer = () => {
   return (
     <footer>
       <nav className="footer">
-        <NavLink  exact to={"/about"}>
-          Afro Link™
-        </NavLink>
-        <NavLink  exact to={"/bio"}>
-          Meet the Team
-        </NavLink>
-        <div >
+        <a href={'/'}>Afro Link™</a>
+        <div className="shareSocial">
+          {/* we still have to deploy to put actual site address in "link" */}
           <p>Share: </p>
           <Twitter
             link=""

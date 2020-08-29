@@ -10,6 +10,7 @@ import Login from './components/Users/Login';
 import ProfilePage from './components/Users/ProfilePage';
 import AuthProvider from './providers/AuthContext';
 import EditBusiness from './components/Users/EditBusiness';
+import Footer from './components/Footer.js';
 import { AuthRoute, ProtectedRoute } from './util/routesUtil';
 import circleLogo from './images/circleLogoYellow.png';
 import './App.css';
@@ -43,6 +44,7 @@ function App() {
           <Route path="/categories/:id" component={Results} />
           <Route path="/businesses/:id" component={Business} />
         </Switch>
+        <Footer />
       </AuthProvider>
     </div>
   );

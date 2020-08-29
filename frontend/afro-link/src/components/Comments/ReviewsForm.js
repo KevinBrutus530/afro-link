@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { useInput } from "../util/useInput";
-import { getAPI } from "../util/getAPI";
+import { useInput } from "../../util/useInput";
+import { getAPI } from "../../util/getAPI";
 import axios from "axios";
-import "../css/ReviewsForm.css";
+import "../../css/ReviewsForm.css";
+import Reply from "./Reply.js"
 
 const ReviewsForm = () => {
   const API = getAPI();
@@ -55,19 +56,7 @@ const ReviewsForm = () => {
     }
     return starsList;
   };
-  let showReviewsRely = allReviews.map((post, i) => {
-    if(post.reply_text){
-      return (
-        <div style={{ color: "white" }} key={post.id} className="ReplySect">
-          <div>
-            <h5 className="reply_Name">{post.name.toUpperCase()}</h5>
-          </div>
-          <p className="reply_Text"> {post.reply_text}</p>
-          <p className="reply_TextDT">{post.dt.substring(0,10)}</p>
-        </div>
-      );
-    }
-  });
+
 
   let showReviews = allReviews.map((post, i) => {
     if(post.text){
@@ -80,7 +69,7 @@ const ReviewsForm = () => {
           <p className="review"> {post.text}</p>
           <p className="reviewDT">{post.dt.substring(0,10)}</p>
           <div className="reply">
-            {showReviewsRely}
+            <Reply allReviews={allReviews} replyID={post.id} />
           </div>
         </div>
       );

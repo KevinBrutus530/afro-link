@@ -8,7 +8,7 @@
   justify-content: space-evenly;
   margin: auto;
   align-items: center;
-  height: 3em;
+  height: 3.5em;
   color: #f6f6f6;
   font-weight: bolder;
   text-decoration: none;
@@ -22,7 +22,7 @@
   place-items: center;
   justify-items: center;
   text-align: center;
-  height: 3em;
+  height: 3.5em;
   width: auto;
 }
 

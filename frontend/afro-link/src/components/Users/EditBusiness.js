@@ -1,11 +1,11 @@
 import React, { useState, useContext } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import { useInput } from '../../util/useInput';
-import axios from 'axios';
+import { AuthContext } from '../../providers/AuthContext';
 import { getAPI } from '../../util/getAPI';
 import TimeTable from '../../components/TimeTable';
 import AddressForm from '../Forms/Address';
-import { AuthContext } from '../../providers/AuthContext';
+import axios from 'axios';
 
 const EditBusiness = () => {
   const API = getAPI();

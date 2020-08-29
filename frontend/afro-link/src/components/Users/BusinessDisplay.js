@@ -55,7 +55,13 @@ const BusinessDisplay = ({ userBusinesses }) => {
       console.log(userBusinesses);
       return (
         <div>
-          <button>Add New Business</button>
+          <button
+            onClick={() => {
+              history.push('/newBusiness');
+            }}
+          >
+            Add New Business
+          </button>
         </div>
       );
     }

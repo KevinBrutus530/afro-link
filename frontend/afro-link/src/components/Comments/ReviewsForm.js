@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { useInput } from "../util/useInput";
-import { getAPI } from "../util/getAPI";
+import { useInput } from "../../util/useInput";
+import { getAPI } from "../../util/getAPI";
 import axios from "axios";
-import "../css/ReviewsForm.css";
+import "../../css/ReviewsForm.css";
+import Reply from "./Reply.js"
 
 const ReviewsForm = () => {
   const API = getAPI();
@@ -18,6 +19,7 @@ const ReviewsForm = () => {
   const getReviews = async () => {
     try {
       let res = await axios.get(`${API}/reviews/${id}`);
+      // debugger
       setAllReviews(res.data.payload);
     } catch (err) {
       console.log(err);
@@ -55,20 +57,25 @@ const ReviewsForm = () => {
     return starsList;
   };
 
-  let showReviews = allReviews.map((post, i) => {
-    // debugger
-    return (
-      <div style={{ color: "white" }} key={i} className="ReviewSect">
-        <div className="ratings">
-          <h5 className="reviewerName">{post.name.toUpperCase()}</h5>
-          {starsShow(post.ratings)}
-        </div>
-        <p className="review"> {post.text}</p>
-      </div>
-    );
-  });
 
-  // console.log(ratings)
+  let showReviews = allReviews.map((post, i) => {
+    if(post.text){
+      return (
+        <div style={{ color: "white" }} key={post.id} className="ReviewSect">
+          <div className="ratings">
+            <h5 className="reviewerName">{post.name.toUpperCase()}</h5>
+            {starsShow(post.ratings)}
+          </div>
+          <p className="review"> {post.text}</p>
+          <p className="reviewDT">{post.dt.substring(0,10)}</p>
+          <div className="reply">
+            <Reply allReviews={allReviews} replyID={post.id} />
+          </div>
+        </div>
+      );
+    }
+  });
+ 
 
   return (
     <div className="reviewsForm">

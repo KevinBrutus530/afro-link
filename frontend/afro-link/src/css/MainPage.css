@@ -16,10 +16,12 @@ $black-chocolate: #191102ff; */
   height: 100vh;
   width: 100vw;
   margin: auto;
+  margin-top: 3em;
+  padding-bottom: 1em;
   place-items: center;
-  justify-content: center;
+  justify-content: baseline;
   background-color: rgba(247, 186, 32, 0.774);
-  background-image: url('https://www.transparenttextures.com/patterns/dimension.png');
+  background-image: url(https://www.transparenttextures.com/patterns/dimension.png);
   color: #191102ff;
   display: flex;
   flex-direction: column;
@@ -31,8 +33,8 @@ $black-chocolate: #191102ff; */
   .landingMainDiv {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     margin: auto;
-    padding: unset;
     position: relative;
   }
 }
@@ -85,68 +87,84 @@ h6 {
 } */
 
 .titleH1 {
-  font-size: 3em;
-  position: sticky;
+  font-size: 4em;
   text-shadow: 1px 1px rgb(119, 90, 17);
-  padding-top: 1em;
 }
 
-@media (max-height: 1290px) {
+@media (max-height: 755px) {
   .titleH1 {
-    padding-top: 1.25em;
+    display: none;
+    position: relative;
+  }
+}
+@media (max-width: 655px) {
+  .titleH1 {
+    display: none;
+    position: relative;
   }
 }
 
 .tagline {
+  display: flex;
+  justify-content: center;
   color: #510d0aff;
   font-weight: 600;
+  font-size: 20pt;
+  padding: 1em 2em;
 }
 
 @media (max-height: 1290px) {
   .tagline {
-    font-size: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 18pt;
+    padding: 0.5em 2em;
   }
 }
 
 @media (max-width: 350px) {
   .tagline {
-    font-size: 6pt;
-    margin-top: 4em;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 10pt;
     padding: 0;
   }
 }
 
 .afLogoMain {
-  margin: auto;
+  display: flex;
   background-color: transparent;
-  width: 30em;
-  height: auto;
-  filter: drop-shadow(1.5px 1.5px rgb(119, 90, 17));
+  width: 4em;
+  height: 4em;
+  margin: 0 2em;
+  position: fixed;
+  filter: drop-shadow(2px 2px 4px rgb(119, 90, 17));
+  z-index: 10;
 }
 
 .contrastBackground {
-  background-color: rgba(218, 165, 32, 0.5) /*rgba(240, 255, 240, 0.5)*/;
+  background-color: rgba(25, 17, 2, 0.5);
   width: fit-content;
   margin: auto;
   color: whitesmoke;
   font-weight: 900;
   margin-bottom: 5px;
-  letter-spacing: 1px;
-  text-shadow: 1px 1px 1px rgba(240, 255, 240);
+  letter-spacing: 2px;
+  /* text-shadow: 1px 1px 1px rgba(240, 255, 240); */
 }
 
-.contrastBackground:hover {
-  background-color: rgba(218, 165, 32, 0.75) /* rgba(240, 255, 240)*/;
-}
+/* .contrastBackground:hover {
+  background-color: rgba(218, 165, 32, 0.75);
+ }   */
 
 .contrastLight {
-  /* background-color: rgba(218, 165, 32, 0.5); */
+  background-color: rgba(25, 17, 2, 0.5);
   width: max-content;
   margin: auto;
-  color: navy;
-  letter-spacing: 1px;
+  color: white;
+  letter-spacing: 2px;
   padding: 5px;
-  text-shadow: 0.5px 0.5px 1px rgb(151, 151, 199);
+  text-shadow: 0.5px 0.5px 1px rgb(57, 57, 190);
 }
 
 .contrastLight:hover {
@@ -360,12 +378,72 @@ h6 {
   flex-direction: column;
   justify-content: space-evenly;
   margin: auto;
-  /* margin-top: 10em; */
-  padding: 5em;
+
+  padding: 4em 5em 1em 5em;
   width: 100vw;
   height: 100vh;
   background-color: #e7e7ed;
   /* background-image: url("https://www.transparenttextures.com/patterns/gplay.png"); */
   background-image: url('https://www.transparenttextures.com/patterns/dimension.png');
   color: #191102ff;
+}
+
+.alMission {
+  font-size: 18pt;
+}
+
+.resourcesUL li {
+  margin: auto;
+  float: left;
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0.5em;
+  font-size: 13pt;
+}
+.resourcesUL {
+  /* padding: 2em; */
+  list-style-type: none;
+  border: 2px outset whitesmoke;
+  background-color: whitesmoke;
+}
+
+#alLogo {
+  display: flex;
+  margin: auto;
+  padding: 1em;
+  width: 15em;
+  height: 15em;
+}
+
+.mission {
+  padding: 5px;
+  border-bottom: 3px whitesmoke solid;
+}
+
+@media (max-width: 800px) {
+  .ourMissionStatementDiv {
+    display: flex;
+    object-fit: contain;
+    height: fit-content;
+    width: 100%;
+  }
+
+  .mission {
+    margin: 0;
+    padding: 1em;
+  }
+
+  .resourcesUL li {
+    display: flex;
+    flex-direction: column;
+    width: fill;
+    position: relative;
+    padding: 1em;
+  }
+
+  #alLogo {
+    display: none;
+    position: relative;
+  }
 }

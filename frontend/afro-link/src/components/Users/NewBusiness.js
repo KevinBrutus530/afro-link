@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useInput } from '../../util/useInput';
 import { getAPI } from '../../util/getAPI';
@@ -9,8 +9,10 @@ import PhoneInput from 'react-phone-number-input';
 import Notification from '../commonlyUsed/Notification';
 import '../../css/NewBusiness.css';
 import 'react-phone-number-input/style.css';
+import { AuthContext } from '../../providers/AuthContext';
 
 const NewBusiness = () => {
+  const { currentUser } = useContext(AuthContext);
   const [message, setMessage] = useState('');
   const history = useHistory();
   const API = getAPI();
@@ -108,7 +110,7 @@ const NewBusiness = () => {
           website: website.value,
         });
       }
-      history.push('/profile/:userId');
+      history.push(`/profile/${currentUser.uid}`);
     } catch (error) {
       setMessage(error.response.data.message);
       console.log(error.status);

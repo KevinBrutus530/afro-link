@@ -1,14 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import { useInput } from '../../util/useInput';
-import axios from 'axios';
+import { AuthContext } from '../../providers/AuthContext';
 import { getAPI } from '../../util/getAPI';
 import TimeTable from '../../components/TimeTable';
 import AddressForm from '../Forms/Address';
+import axios from 'axios';
 
 const EditBusiness = () => {
   const API = getAPI();
   const { id } = useParams();
+  const { currentUser, loading } = useContext(AuthContext);
+  let history = useHistory();
   const biz_name = useInput('');
   const address = useInput('');
   const [modalShow, setModalShow] = useState(false);
@@ -56,7 +59,7 @@ const EditBusiness = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     editBusinessInfo();
-    // debugger;
+    history.push(`/profile/${currentUser.uid}`);
   };
 
   return (
@@ -81,8 +84,7 @@ const EditBusiness = () => {
           <option defaultValue="2">Add business Hours</option>
         </select>
         <AddressForm />
-        <button type="submit">Edit</button>
-
+        <button type="submit">Save</button>
         <div>
           <TimeTable
             show={modalShow}

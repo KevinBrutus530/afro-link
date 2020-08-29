@@ -3,7 +3,7 @@ import { useParams, useHistory } from "react-router-dom";
 import { getAPI } from "../util/getAPI";
 import axios from "axios";
 import DisplayBusiness from "./DisplayBusiness";
-import ReviewsForm from "./ReviewsForm";
+import ReviewsForm from "./Comments/ReviewsForm";
 import "../css/Business.css";
 import PinMap from "./PinMap";
 import SearchBar from "./SearchBar";

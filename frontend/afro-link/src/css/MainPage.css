@@ -13,7 +13,7 @@ $black-chocolate: #191102ff; */
 }
 
 .landingMainDiv {
-  height: 100vh;
+  height: 110vh;
   width: 100vw;
   margin: auto;
   margin-top: 3em;
@@ -186,7 +186,7 @@ h6 {
   height: auto;
   margin-bottom: 2em;
   margin-top: 2em;
-  padding: 5em 2em;
+  padding: 5em 2em 3em 2em;
   grid-gap: 5em;
 }
 
@@ -236,7 +236,7 @@ h6 {
   flex-direction: row;
   margin: auto;
   justify-content: center;
-  border: 1px groove black;
+  border: 1px inset #510d0aff;
   padding: 2em;
   align-items: center;
 }
@@ -265,6 +265,7 @@ h6 {
   animation-duration: 2s;
   animation-name: slideIn;
   transition: transform 1s;
+  padding: 1em;
 }
 
 @media (max-width: 1190px) {
@@ -360,9 +361,10 @@ h6 {
   flex-direction: row;
   justify-content: center;
   align-content: center;
+  text-align: center;
   place-items: center;
   margin: auto;
-  border: 1px groove black;
+  border: 1px outset #510d0aff;
   padding: 1em;
 }
 
@@ -373,7 +375,6 @@ h6 {
   flex-direction: column;
   justify-content: space-evenly;
   margin: auto;
-
   padding: 4em 5em 1em 5em;
   width: 100vw;
   height: 100vh;

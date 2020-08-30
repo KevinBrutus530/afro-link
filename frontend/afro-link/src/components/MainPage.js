@@ -18,6 +18,7 @@ const MainPage = () => {
         <Carousel>
           <Carousel.Item>
             <img
+              style={{ width: 'auto', height: '600px' }}
               className="carouselPics"
               src="https://static1.squarespace.com/static/59754241414fb5f8aba62bc5/597e22d46b8f5bb6b4ee92a9/59b04b59ccc5c58e16514916/1515100594146/IMG_5280.jpg?format=1500w"
               alt="first slide"
@@ -31,6 +32,7 @@ const MainPage = () => {
           </Carousel.Item>
           <Carousel.Item>
             <img
+              style={{ width: 'auto', height: '600px' }}
               className="carouselPics"
               src="https://pbs.twimg.com/media/EeinSt-UYAAgGlb.jpg"
               alt="first slide"
@@ -48,6 +50,7 @@ const MainPage = () => {
 
           <Carousel.Item>
             <img
+              style={{ width: 'auto', height: '600px' }}
               className="carouselPics"
               src="https://cdn.fashionmagazine.com/wp-content/uploads/2019/06/Goodee-Pop-Up-Studio-Montreal_Celia-Spenard-Ko_20.jpg"
             />
@@ -65,6 +68,7 @@ const MainPage = () => {
 
           <Carousel.Item>
             <img
+              style={{ width: 'auto', height: '600px' }}
               className="carouselPics"
               src="https://bklyner.com/wp-content/uploads/2017/07/DSC_5270.jpg"
               alt="carousel pic"
@@ -83,6 +87,7 @@ const MainPage = () => {
 
           <Carousel.Item>
             <img
+              style={{ width: 'auto', height: '600px' }}
               className="carouselPics"
               src="https://bloximages.newyork1.vip.townnews.com/feastmagazine.com/content/tncms/assets/v3/editorial/9/8f/98ff9c78-f445-11e9-91ff-bf70a7b15818/5dae1c2fb80a1.image.jpg?resize=1200%2C901"
             />
@@ -97,6 +102,7 @@ const MainPage = () => {
 
           <Carousel.Item>
             <img
+              style={{ width: 'auto', height: '600px' }}
               className="carouselPics"
               src="https://www.ft.com/__origami/service/image/v2/images/raw/http://prod-upp-image-read.ft.com/44a2ea70-1729-11ea-8d73-6303645ac406?source=next&fit=scale-down&quality=highest&width=1067"
               alt="third slide"
@@ -114,6 +120,7 @@ const MainPage = () => {
           </Carousel.Item>
         </Carousel>
       </div>
+
       <div className="mainPageContainer">
         <div className="searchBizDiv">
           <div>

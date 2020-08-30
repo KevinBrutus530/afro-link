@@ -171,7 +171,7 @@ const NewBusiness = () => {
   };
 
   return (
-    <div>
+    <div className="newBizMainDiv">
       <form className="newBusiness" onSubmit={handleNewBiz} onReset={resetForm}>
         <div className="business">
           <label>Business Name: </label>

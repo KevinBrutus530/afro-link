@@ -64,7 +64,7 @@ const EditBusiness = () => {
   };
 
   return (
-    <div style={{ marginTop: '7em' }}>
+    <div className="editBizDiv" style={{ marginTop: '7em' }}>
       <form onSubmit={handleSubmit}>
         <label>Business Name: </label>
         <input

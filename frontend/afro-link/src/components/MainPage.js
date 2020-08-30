@@ -87,7 +87,7 @@ const MainPage = () => {
 
           <Carousel.Item>
             <img
-              style={{ width: 'auto', height: '600px' }}
+              style={{ width: 'auto', height: '550px' }}
               className="carouselPics"
               src="https://bloximages.newyork1.vip.townnews.com/feastmagazine.com/content/tncms/assets/v3/editorial/9/8f/98ff9c78-f445-11e9-91ff-bf70a7b15818/5dae1c2fb80a1.image.jpg?resize=1200%2C901"
             />
@@ -157,85 +157,87 @@ const MainPage = () => {
       </div>
 
       <div className="ourMissionStatementDiv">
-        <h1 className="heavyFont mission">Our Mission</h1>
-        <p className="alMission">
-          We aim to honor and celebrate Black entrepreneurship by highlighting
-          authentic Black owned businesses and services right in our community,
-          starting from New York City and much more.
-        </p>
-        <p className="alMission">
-          Please follow the links below for helpful resources on anti-racism,
-          activism, and ways to give back.
-        </p>
-        <ul className="resourcesUL">
-          <li>
-            <a
-              target="_blank"
-              href="https://www.ted.com/talks/bryan_stevenson_we_need_to_talk_about_an_injustice"
-            >
-              Ted Talk: Brian Stevenson, We Need To Talk About An Injustice
-            </a>
-          </li>
-          <li>
-            {' '}
-            <a
-              target="_blank"
-              href="https://novareid.com/free-anti-racism-guide/"
-            >
-              Nova Reid's Free Anti-Racism Guide
-            </a>
-          </li>
-          <li>
-            {' '}
-            <a
-              target="_blank"
-              href="https://docs.google.com/document/d/1S5uckFHCA_XZkxG0Zg5U4GQGbY_RklZARwu43fqJH0E/edit"
-            >
-              Goodle Doc: Anti-Racism
-            </a>
-          </li>
-          <li>
-            {' '}
-            <a
-              target="_blank"
-              href="https://docs.google.com/document/d/1CjZMORRVuv-I-qo4B0YfmOTqIOa3GUS207t5iuLZmyA/mobilebasic"
-            >
-              Google Doc: #GeorgeFloyd action
-            </a>
-          </li>
-          <li>
-            <a
-              target="_blank"
-              href="https://docs.google.com/document/d/1u1cZrJ9xEDSIG_1sYK579GR0wbBiW5Q-ygV_bvI_nAI/edit"
-            >
-              Trans Funds & Resources
-            </a>
-          </li>
-          <li>
-            <a
-              target="_blank"
-              href="https://drive.google.com/drive/u/0/folders/0Bz011IF2Pu9TUWIxVWxybGJ1Ync"
-            >
-              Learn about Black History
-            </a>
-          </li>
-          <li>
-            <a
-              target="_blank"
-              href="https://www.buzzfeednews.com/article/ariannarebolini/george-floyd-amy-cooper-antiracist-books-reading-resources"
-            >
-              An Essential Reading Guide For Fighting Racism
-            </a>
-          </li>
-          <li>
-            <a
-              target="_blank"
-              href="https://www.instagram.com/p/CA04VKDAyjb/?utm_source=ig_web_copy_link"
-            >
-              10 Steps to Non-Optical Allyship, Mireille Charper
-            </a>
-          </li>
-        </ul>
+        <div className="missionContainer">
+          <h1 className="heavyFont mission">Our Mission</h1>
+          <p className="alMission">
+            We aim to honor and celebrate Black entrepreneurship by highlighting
+            authentic Black owned businesses and services right in our
+            community, starting from New York City and much more.
+          </p>
+          <p className="alMission">
+            Please follow the links below for helpful resources on anti-racism,
+            activism, and ways to give back.
+          </p>
+          <ul className="resourcesUL">
+            <li>
+              <a
+                target="_blank"
+                href="https://www.ted.com/talks/bryan_stevenson_we_need_to_talk_about_an_injustice"
+              >
+                Ted Talk: Brian Stevenson, We Need To Talk About An Injustice
+              </a>
+            </li>
+            <li>
+              {' '}
+              <a
+                target="_blank"
+                href="https://novareid.com/free-anti-racism-guide/"
+              >
+                Nova Reid's Free Anti-Racism Guide
+              </a>
+            </li>
+            <li>
+              {' '}
+              <a
+                target="_blank"
+                href="https://docs.google.com/document/d/1S5uckFHCA_XZkxG0Zg5U4GQGbY_RklZARwu43fqJH0E/edit"
+              >
+                Goodle Doc: Anti-Racism
+              </a>
+            </li>
+            <li>
+              {' '}
+              <a
+                target="_blank"
+                href="https://docs.google.com/document/d/1CjZMORRVuv-I-qo4B0YfmOTqIOa3GUS207t5iuLZmyA/mobilebasic"
+              >
+                Google Doc: #GeorgeFloyd action
+              </a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                href="https://docs.google.com/document/d/1u1cZrJ9xEDSIG_1sYK579GR0wbBiW5Q-ygV_bvI_nAI/edit"
+              >
+                Trans Funds & Resources
+              </a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                href="https://drive.google.com/drive/u/0/folders/0Bz011IF2Pu9TUWIxVWxybGJ1Ync"
+              >
+                Learn about Black History
+              </a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                href="https://www.buzzfeednews.com/article/ariannarebolini/george-floyd-amy-cooper-antiracist-books-reading-resources"
+              >
+                An Essential Reading Guide For Fighting Racism
+              </a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                href="https://www.instagram.com/p/CA04VKDAyjb/?utm_source=ig_web_copy_link"
+              >
+                10 Steps to Non-Optical Allyship, Mireille Charper
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );

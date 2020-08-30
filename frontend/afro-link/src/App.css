@@ -80,3 +80,17 @@ img {
 input:focus::placeholder {
   color: transparent;
 }
+
+.timeTableForm {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  height: 50%;
+  width: 50%;
+}
+
+.timeTableBtn {
+  display: flex;
+  margin: auto;
+  place-items: center;
+}

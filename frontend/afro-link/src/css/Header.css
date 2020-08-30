@@ -39,6 +39,7 @@ $black-chocolate: #191102ff; */
   color: white;
   width: fit-content;
   position: relative;
+  font-weight: bold;
 }
 
 .BLM > * {

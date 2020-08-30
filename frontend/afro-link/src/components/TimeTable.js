@@ -1,14 +1,14 @@
-import React from 'react'
-import Modal from "react-bootstrap/Modal"
+import React from 'react';
+import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
 const TimeTable = (props) => {
-  let time = props.time
+  let time = props.time;
   // debugger
   const handleInput = (e) => {
     // debugger
-    if (time[e.currentTarget.name] === "close") {
-      time[e.currentTarget.name] = { open: "", close: "" };
+    if (time[e.currentTarget.name] === 'close') {
+      time[e.currentTarget.name] = { open: '', close: '' };
       time[e.currentTarget.name][e.currentTarget.id] = e.currentTarget.value;
     } else {
       time[e.currentTarget.name][e.currentTarget.id] = e.currentTarget.value;
@@ -28,7 +28,7 @@ const TimeTable = (props) => {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <form>
+        <form className="timeTableForm">
           <h5>select available hour or leave blank for close day</h5>
           <label className="timeLabel">Monday:</label>
           <input
@@ -152,6 +152,7 @@ const TimeTable = (props) => {
         </form>
         <Modal.Footer></Modal.Footer>
         <Button
+          className="timeTableBtn"
           onClick={() => {
             props.onHide();
             props.setTime();
@@ -164,5 +165,4 @@ const TimeTable = (props) => {
   );
 };
 
-
-export default TimeTable
+export default TimeTable;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-// import logo from "../images/circleLogoYellow.png";
+import HamburgerMenu from './commonlyUsed/HamburgerMenu';
 import '../css/Header.css';
 
 const Header = () => {
@@ -22,6 +22,7 @@ const Header = () => {
             Donate to the Equal Justice Initiative
           </a>
         </div>
+        <HamburgerMenu />
       </nav>
     </div>
   );

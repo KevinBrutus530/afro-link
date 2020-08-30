@@ -55,7 +55,7 @@ $black-chocolate: #191102ff; */
   flex-direction: row;
   background-color: whitesmoke;
   justify-content: center;
-  padding: .5rem;
+  padding: 0.5rem;
   text-align-last: center;
   width: max-content;
   margin: auto;
@@ -64,14 +64,12 @@ $black-chocolate: #191102ff; */
 .reviewsInputs {
   display: flex;
   flex-direction: column;
-  /* background-color: white; */
-  /* background-image: url("https://www.transparenttextures.com/patterns/dimension.png"); */
-  /* box-shadow: 2px 2px 2px #191102ff; */
-  padding: 1em;
+  padding: 1em 1.5em 1.5em 1.5em;
   margin: auto;
-  border-radius: 5px;
+  border-radius: 3px;
   width: 100%;
   height: auto;
+  border: 1px solid #f2f2f2;
 }
 
 @media (max-width: 1190px) {
@@ -112,7 +110,6 @@ $black-chocolate: #191102ff; */
 }
 
 .ratings {
-  
   display: flex;
   justify-content: center;
   width: 100%;
@@ -139,7 +136,7 @@ span {
 }
 
 .reviewUL {
-  list-style: "none";
+  list-style: 'none';
   padding: 2em;
 }
 
@@ -163,7 +160,7 @@ span {
   transition: color 200ms;
 }
 
-.rateLabel{
+.rateLabel {
   color: #191102;
   padding: 5px;
   font-weight: 700;

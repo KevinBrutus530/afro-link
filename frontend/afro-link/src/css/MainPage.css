@@ -383,7 +383,6 @@ h6 {
   width: 100vw;
   height: 100vh;
   background-color: #e7e7ed;
-  /* background-image: url("https://www.transparenttextures.com/patterns/gplay.png"); */
   background-image: url('https://www.transparenttextures.com/patterns/dimension.png');
   color: #191102ff;
 }
@@ -418,7 +417,7 @@ h6 {
 }
 
 .mission {
-  padding: .5em;
+  padding: 0.5em;
   border-bottom: 1px black solid;
 }
 

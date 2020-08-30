@@ -2,14 +2,15 @@
   margin: auto;
   width: 100vw;
   height: 100vw;
-  margin-top: 7em;
+  /* margin-top: 7em; */
 }
 
 .resultsMainDiv {
   display: flex;
   flex-direction: column;
   margin: auto;
-  padding: 1em;
+  padding: 5em 0em;
+  width: auto;
 }
 
 .ctgTitle {

@@ -1,13 +1,13 @@
-import React, { useState, useContext } from "react";
-import { useHistory } from "react-router-dom";
-import { useInput } from "../../util/useInput";
-import { login } from "../../util/firebaseFunctions";
-import Notification from "../commonlyUsed/Notification";
+import React, { useState, useContext } from 'react';
+import { useHistory, Link } from 'react-router-dom';
+import { useInput } from '../../util/useInput';
+import { login } from '../../util/firebaseFunctions';
+import Notification from '../commonlyUsed/Notification';
 
 const Login = () => {
-  const [message, setMessage] = useState("");
-  const email = useInput("");
-  const password = useInput("");
+  const [message, setMessage] = useState('');
+  const email = useInput('');
+  const password = useInput('');
   const history = useHistory();
 
   const handleLogin = async (e) => {
@@ -23,7 +23,7 @@ const Login = () => {
   };
 
   return (
-    <div className="signUpMainDiv" style={{ color: "white" }}>
+    <div className="signUpMainDiv" style={{ color: 'white' }}>
       <Notification message={message} />
       <h1 className="heavyFont signUpHeader">Login</h1>
       <form className="loginForm" onSubmit={handleLogin}>
@@ -39,6 +39,16 @@ const Login = () => {
           />
           <input type="submit" className="Btn-create submit" />
         </div>
+      </form>
+      <form className="user">
+        <Link
+          to="/signup"
+          id="gotAccount"
+          className="submit"
+          style={{ marginTop: '10px' }}
+        >
+          Are You A Business Owner And Don't Have An Account? Click Here!
+        </Link>
       </form>
     </div>
   );

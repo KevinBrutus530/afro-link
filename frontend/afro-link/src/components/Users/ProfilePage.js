@@ -5,6 +5,7 @@ import { AuthContext } from '../../providers/AuthContext';
 import { logout } from '../../util/firebaseFunctions';
 import BusinessDisplay from './BusinessDisplay';
 import '../../css/DisplayBusiness.css';
+import '../../css/ProfilePage.css';
 
 const ProfilePage = () => {
   let API = getAPI();
@@ -26,7 +27,7 @@ const ProfilePage = () => {
   }, []);
   console.log(userBusinesses);
   return (
-    <div>
+    <div className="profilePageMainDiv">
       <h1 style={{ padding: '2em', color: 'white' }}> Profile Page</h1>
       <button onClick={logout}>Log Out</button>
       <BusinessDisplay userBusinesses={userBusinesses} />

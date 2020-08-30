@@ -40,7 +40,7 @@ const Results = () => {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
-    <div className="resultsPage">
+    // <div className="resultsPage">
       <div className="resultsMainDiv" style={{ color: "white" }}>
         <SearchBar type={bizType.id} setResults={setResults} setBizType={setBizType}/>
 
@@ -53,7 +53,7 @@ const Results = () => {
           paginate={paginate}
         />
       </div>
-    </div>
+    // </div>
   );
 };
 

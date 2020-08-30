@@ -49,7 +49,7 @@ const ResultsIndex = ({ results }) => {
   });
 
   return (
-    <div>
+    <div className="resultsPage">
       <ul>{resultDisplay}</ul>
     </div>
   );

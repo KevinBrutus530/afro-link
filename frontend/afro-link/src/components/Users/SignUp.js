@@ -50,7 +50,7 @@ const SignUp = () => {
       </form>
       <form className="user">
         <Link to="/login" id="gotAccount" className="submit">
-          Have An Account? Click Here
+          Already Have An Account? Click Here!
         </Link>
       </form>
     </div>

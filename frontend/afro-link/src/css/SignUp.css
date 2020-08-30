@@ -2,13 +2,16 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  place-content: center;
   margin: auto;
-  margin-top: 5em;
+  height: 100%;
+  width: auto;
+  /* margin-top: 5em; */
 }
 
 .signUpHeader {
   color: white;
-  margin-top: 2em;
+  /* margin-top: 2em; */
 }
 
 .input {
@@ -17,18 +20,20 @@
   justify-content: center;
   padding: 2em;
   margin: auto;
+  margin-bottom: 1em;
   width: 25em;
+  border: 1px solid whitesmoke;
 }
 
 .input > input {
-    padding: .25em;
-    margin-bottom: .5em;
+  padding: 0.25em;
+  margin-bottom: 0.5em;
 }
 
 ::placeholder {
-    text-align: start;
-    color: rgb(1, 44, 1);
-    text-transform: capitalize;
+  text-align: start;
+  color: rgb(1, 44, 1);
+  text-transform: capitalize;
 }
 
 .submit {
@@ -37,6 +42,7 @@
 }
 
 #gotAccount {
+  margin-top: 1em;
   margin: 2em;
   color: rgb(1, 44, 1);
   font-size: 1.25em;

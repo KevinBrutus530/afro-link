@@ -130,7 +130,8 @@ const editBusiness = async (req, res, next) => {
     let { biz_name, hours } = req.body;
     let { id } = req.params;
     let business = await db.one(
-      `UPDATE businesses SET biz_name='${biz_name}', hours='${hours}' WHERE id='${id}' RETURNING *`
+      `UPDATE businesses SET biz_name=$1, hours=$2 WHERE id=$3 RETURNING *`,
+      [biz_name, hours, id]
     );
     res.status(200).json({
       status: 'success',

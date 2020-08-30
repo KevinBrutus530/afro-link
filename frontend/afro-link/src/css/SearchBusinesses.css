@@ -66,6 +66,10 @@ $black-chocolate: #191102ff; */
   font-weight: bold;
 }
 
+.searchBizInput::placeholder {
+  color: darkolivegreen;
+}
+
 .searchBarDiv {
   margin: auto;
   justify-content: center;

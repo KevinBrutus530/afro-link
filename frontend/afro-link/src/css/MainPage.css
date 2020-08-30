@@ -246,7 +246,7 @@ h6 {
   flex-direction: column;
   margin: auto;
   justify-content: center;
-  /* padding-bottom: 1em; */
+  padding-bottom: 16px;
   font-weight: 570;
   font-size: 30pt;
   text-shadow: 1px 3px 5px #191102ff;
@@ -375,7 +375,8 @@ h6 {
   flex-direction: column;
   justify-content: space-evenly;
   margin: auto;
-  padding: 6.5em;
+  padding: 5em;
+  padding-top: 5.5em;
   width: 100%;
   height: auto;
   background-color: #e7e7ed;
@@ -388,7 +389,11 @@ h6 {
   flex-direction: column;
   justify-content: space-between;
   border: 1px outset #510d0aff;
-  padding: 2em;
+  padding: 1em 5em;
+}
+
+.missionContainer > * {
+  padding: .5em;
 }
 
 .alMission {
@@ -405,7 +410,7 @@ h6 {
   font-size: 13pt;
 }
 .resourcesUL {
-  padding-bottom: 2em;
+  padding: 2em;
   list-style-type: none;
 }
 

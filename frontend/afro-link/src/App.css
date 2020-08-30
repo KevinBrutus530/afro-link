@@ -12,6 +12,10 @@ $citron: #a29f15ff;
 $rosewood: #510d0aff;
 $black-chocolate: #191102ff; */
 
+html {
+  scroll-behavior: smooth;
+}
+
 .App {
   text-align: center;
   height: 100vh;
@@ -71,4 +75,8 @@ img {
 .editBizDiv {
   width: 100%;
   height: 100%;
+}
+
+input:focus::placeholder {
+  color: transparent;
 }

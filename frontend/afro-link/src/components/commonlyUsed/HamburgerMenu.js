@@ -1,5 +1,5 @@
 import React from 'react';
-import { slide as Menu } from 'react-burger-menu';
+import { stack as Menu } from 'react-burger-menu';
 
 const HamburgerMenu = () => {
   // NOTE: You also need to provide styles, see https://github.com/negomi/react-burger-menu#styling

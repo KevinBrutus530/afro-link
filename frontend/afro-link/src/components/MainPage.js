@@ -4,6 +4,8 @@ import SearchBusinessForm from './SearchBusinesses';
 import '../css/MainPage.css';
 import Carousel from 'react-bootstrap/Carousel';
 import circleLogo from '../images/circleLogoYellow.png';
+import girlsSearch from '../images/girlsSearchingOnline.jpg';
+import coupleOwners from '../images/coupleOpenSign.jpg';
 
 const MainPage = () => {
   return (
@@ -17,13 +19,29 @@ const MainPage = () => {
           <Carousel.Item>
             <img
               className="carouselPics"
-              src="https://images.squarespace-cdn.com/content/v1/55d87f14e4b022811c4f4abf/1516659329325-YUU5Q7BBMWVPV78R899T/ke17ZwdGBToddI8pDm48kFdzrld7ehk6VYcJKgp_Rgp7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmLLxGPZs9cXJqW7PQ94qJw00fYnZboa-zNHqWLG_25EPqf5LHoJIOMMeOntqCGq7N/denequa.jpeg"
+              src="https://static1.squarespace.com/static/59754241414fb5f8aba62bc5/597e22d46b8f5bb6b4ee92a9/59b04b59ccc5c58e16514916/1515100594146/IMG_5280.jpg?format=1500w"
               alt="first slide"
             />
             <Carousel.Caption>
               <h3 className="contrastBackground">Denequa Williams</h3>
               <a target="_blank" href="https://www.litbklyn.co/meet-the-maker">
                 <p className="contrastLight">Lit Brooklyn</p>
+              </a>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="carouselPics"
+              src="https://pbs.twimg.com/media/EeinSt-UYAAgGlb.jpg"
+              alt="first slide"
+            />
+            <Carousel.Caption>
+              <h3 className="contrastBackground">Charles Gabriel</h3>
+              <a
+                target="_blank"
+                href="https://www.facebook.com/charlespanfried/about/?ref=page_internal"
+              >
+                <p className="contrastLight">Charles' Pan Fried Chicken</p>
               </a>
             </Carousel.Caption>
           </Carousel.Item>
@@ -41,6 +59,24 @@ const MainPage = () => {
                 href="https://www.goodeeworld.com/pages/about-us"
               >
                 <p className="contrastLight">Goodee</p>
+              </a>
+            </Carousel.Caption>
+          </Carousel.Item>
+
+          <Carousel.Item>
+            <img
+              className="carouselPics"
+              src="https://bklyner.com/wp-content/uploads/2017/07/DSC_5270.jpg"
+              alt="carousel pic"
+            />
+
+            <Carousel.Caption>
+              <h3 className="contrastBackground">Felicia Eve</h3>
+              <a
+                target="_blank"
+                href="https://www.stringthingstudio.com/media-presence"
+              >
+                <p className="contrastLight">String Thing Studio</p>
               </a>
             </Carousel.Caption>
           </Carousel.Item>
@@ -80,32 +116,45 @@ const MainPage = () => {
       </div>
       <div className="mainPageContainer">
         <div className="searchBizDiv">
-          <h1 className="headingMain">
-            Search <br />
-            Black-Owned Businesses
-          </h1>
-          <SearchBusinessForm />
+          <div>
+            <h1 className="headingMain">
+              Search <br />
+              Black-Owned Businesses
+            </h1>
+            <SearchBusinessForm />
+          </div>
+          <div>
+            <img
+              className="searchBiz"
+              src={girlsSearch}
+              alt="girls search online"
+            />
+          </div>
         </div>
-        <div className="searchBiz"></div>
-        <div className="addBiz"></div>
+
         <div className="bizOwnerDiv">
-          <h1 className="headingMain signUpH1">
-            {' '}
-            Sign your business up with <br />
-            Afro Link
-            <NavLink exact to="/signup" style={{ textDecoration: 'none' }}>
-              <button className="addBizBtn btnWeight">Sign up</button>
-            </NavLink>
-          </h1>
+          <div>
+            <img className="addBiz" src={coupleOwners} alt="business owners" />
+          </div>
+          <div>
+            <h1 className="headingMain signUpH1">
+              {' '}
+              Sign your business up with <br />
+              Afro Link
+              <NavLink exact to="/signup" style={{ textDecoration: 'none' }}>
+                <button className="addBizBtn btnWeight">Sign up</button>
+              </NavLink>
+            </h1>
+          </div>
         </div>
       </div>
+
       <div className="ourMissionStatementDiv">
-      {/* <div className="logoDiv"><img id="alLogo" src={circleLogo} alt="afrolink" /></div> */}
         <h1 className="heavyFont mission">Our Mission</h1>
         <p className="alMission">
-          We aim to honor and celebrate Black entrepreneurship by
-          highlighting authentic Black owned businesses and services right in
-          our community, starting from New York City and much more.
+          We aim to honor and celebrate Black entrepreneurship by highlighting
+          authentic Black owned businesses and services right in our community,
+          starting from New York City and much more.
         </p>
         <p className="alMission">
           Please follow the links below for helpful resources on anti-racism,

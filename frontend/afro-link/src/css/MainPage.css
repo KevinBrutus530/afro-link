@@ -17,7 +17,7 @@ $black-chocolate: #191102ff; */
   width: 100vw;
   margin: auto;
   margin-top: 3em;
-  padding-bottom: 1em;
+  padding-bottom: 3em;
   place-items: center;
   justify-content: baseline;
   background-color: rgba(247, 186, 32, 0.774);
@@ -88,7 +88,10 @@ h6 {
 
 .titleH1 {
   font-size: 4em;
-  text-shadow: 1px 1px rgb(119, 90, 17);
+  padding-top: 20px;
+  font-weight: bold;
+  text-shadow: 1px 2px 7px rgb(236, 213, 121);
+  /* text-shadow: 1px 1px rgb(119, 90, 17); */
 }
 
 @media (max-height: 755px) {
@@ -175,7 +178,7 @@ h6 {
 
 .mainPageContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   margin: auto;
   font-family: 'Bungee', cursive;
   text-align: center;
@@ -184,7 +187,7 @@ h6 {
   margin-bottom: 2em;
   margin-top: 2em;
   padding: 5em 2em;
-  grid-gap: 2em;
+  grid-gap: 5em;
 }
 
 @media (max-width: 1190px) {
@@ -230,39 +233,35 @@ h6 {
 
 .searchBizDiv {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin: auto;
-  justify-content: space-evenly;
+  justify-content: center;
+  border: 1px groove black;
+  padding: 2em;
+  align-items: center;
 }
 
 .headingMain {
   display: flex;
   flex-direction: column;
   margin: auto;
-  justify-content: space-around;
-  padding-top: 1em;
+  justify-content: center;
   padding-bottom: 1em;
   font-weight: 570;
   font-size: 3em;
   text-shadow: 1px 3px 5px #191102ff;
   color: rgba(104, 17, 13, 0.842);
   -webkit-text-stroke: 2px rgba(243, 183, 31, 0.863);
-  width: 100%;
+  width: 80%;
   height: auto;
 }
 
 .searchBiz {
-  /* border: 1px goldenrod ridge; */
-  /* border-radius: 15px; */
-  margin: 2em;
-  background-image:/*  url("https://www.transparenttextures.com/patterns/white-carbonfiber.png"), */
-    url('../images/girlsSearchingOnline.jpg');
   background-size: cover;
   background-repeat: repeat, no-repeat;
   background-position: center;
   height: 32em;
   width: auto;
-  box-shadow: 4px 4px 10px #191102ff;
   animation-duration: 2s;
   animation-name: slideIn;
   transition: transform 1s;
@@ -284,18 +283,11 @@ h6 {
 }
 
 .addBiz {
-  margin: auto;
-  /* border: 1px goldenrod ridge;
-  border-radius: 15px; */
-  margin: 2em;
-  background-image: /*url("https://www.transparenttextures.com/patterns/graphcoders-lil-fiber.png"), */
-    url('../images/coupleOpenSign.jpg');
   background-size: cover;
   background-repeat: repeat, no-repeat;
   background-position: center;
   height: 32em;
   width: auto;
-  box-shadow: 4px 4px 10px #191102ff;
   animation-duration: 2s;
   animation-name: slideIn;
   transition: transform 1s;
@@ -365,10 +357,13 @@ h6 {
 
 .bizOwnerDiv {
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  place-items: center;
   margin: auto;
-  margin-bottom: 5em;
+  border: 1px groove black;
+  padding: 1em;
 }
 
 /* /////////////////////////////////////////////////////////////////////////////// */

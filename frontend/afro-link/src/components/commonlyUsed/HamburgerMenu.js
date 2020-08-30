@@ -22,9 +22,9 @@ const HamburgerMenu = () => {
       height: '20px',
       width: '20px',
     },
-    // bmCross: {
-    //   background: '#bdc3c7',
-    // },
+    bmCross: {
+      background: '#bdc3c7',
+    },
     bmMenuWrap: {
       position: 'fixed',
       height: '100%',
@@ -52,7 +52,7 @@ const HamburgerMenu = () => {
   };
 
   return (
-    <Menu right styles={styles} width={'11em'}>
+    <Menu right styles={styles}>
       <a id="home" className="menu-item" href="/">
         Home
       </a>

@@ -8,21 +8,23 @@
 
 .profileHeader {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   margin: auto;
   border-bottom: inset white 2px;
+  padding: 4em 0 2em 0;
 }
 
 .loBtn {
   display: flex;
   margin: auto;
-  width: 10em;
+  width: 7em;
 }
 
 .profileTitle {
   display: flex;
   margin: auto;
   color: white;
-  padding: 1.5em;
 }
 
 .bizProfileInfo {

@@ -127,6 +127,7 @@ const BusinessDisplay = ({ userBusinesses }) => {
       return (
         <div>
           <button
+            className="addBizBtn"
             onClick={() => {
               history.push('/newBusiness');
             }}

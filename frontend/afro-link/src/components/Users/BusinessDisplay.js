@@ -12,10 +12,11 @@ const BusinessDisplay = ({ userBusinesses }) => {
         // create a function that calls the reviews from each business
         // create function in spearate component using the business id as a prop
 
-        //fn to show each address components "blank" if null in db//
+        //fn to show each address components "blank" if null in db/
+
         const displayAddress = () => {
           return (
-            <div className="bizHours">
+            <div className="bizAddress">
               {
                 (business.street ? (
                   business.street
@@ -39,52 +40,77 @@ const BusinessDisplay = ({ userBusinesses }) => {
             <div id="bizName" className="ownerHeader heavyFont">
               {business.biz_name}
             </div>
-            <div className="businessInfo bizProfileInfo">
+            <div className="bizProfileInfo">
               <ul style={{ listStyleType: 'none' }}>
                 <li>
                   <img className="bizPicProfile" src={business.pictures} />
                 </li>
-                <li className="bizAddress">{displayAddress()}</li>
-                <li className="bizHours">{business.hours}</li>
 
-                <li className="hyperLink">
-                  {business.website ? (
-                    <a href={business.website} target="_blank">
-                      Visit Website
-                    </a>
-                  ) : (
-                    <p className="noneProvided">None Provided</p>
-                  )}
-                </li>
+                <li className="bizAddress">{displayAddress()}</li>
+
+                <label className="bizLabel">
+                  Business Hours:
+                  <li className="bizHoursProfile">
+                    {business.hours === 'Online Store' ? (
+                      <p>Online Business</p>
+                    ) : (
+                      <details className="hoursDetails">
+                        <summary>Hours</summary>
+                        {business.hours}
+                      </details>
+                    )}
+                  </li>
+                </label>
+
+                <label className="bizLabel">
+                  Website:
+                  <li className="hyperLink">
+                    {business.website ? (
+                      <a href={business.website} target="_blank">
+                        Visit Website
+                      </a>
+                    ) : (
+                      <p className="noneProvided">None Provided</p>
+                    )}
+                  </li>
+                </label>
               </ul>
               <div className="contactInfo">
                 <ul>
-                  <label id="contactsLabel">Contact Info: </label>
-                  <li>
-                    {!business.phone || business.phone === 'n/a' ? (
-                      <p className="noneProvided">None Provided</p>
-                    ) : (
-                      business.phone
-                    )}
-                  </li>
-                  <li>
-                    {business.email ? (
-                      business.email
-                    ) : (
-                      <p className="noneProvided">None Provided</p>
-                    )}
-                  </li>
-
-                  <li className="hyperLink">
-                    {business.social_media ? (
-                      <a href={business.social_media} target="_blank"></a>
-                    ) : (
-                      <p className="noneProvided">None Provided</p>
-                    )}
-                  </li>
+                  {/* <label id="contactsLabel">Contact Info: </label> */}
+                  <label className="bizLabel">
+                    Phone:
+                    <li>
+                      {!business.phone || business.phone === 'n/a' ? (
+                        <p className="noneProvided">None Provided</p>
+                      ) : (
+                        business.phone
+                      )}
+                    </li>
+                  </label>
+                  <label className="bizLabel">
+                    Email:
+                    <li>
+                      {business.email ? (
+                        business.email
+                      ) : (
+                        <p className="noneProvided">None Provided</p>
+                      )}
+                    </li>
+                  </label>
+                  <label className="bizLabel">
+                    Social Media Page:
+                    <li className="hyperLink">
+                      {business.social_media ? (
+                        <a href={business.social_media} target="_blank"></a>
+                      ) : (
+                        <p className="noneProvided">None Provided</p>
+                      )}
+                    </li>
+                  </label>
                 </ul>
                 <button
-                  className="Btn-rest"
+                  className="Btn-rest BtnEdit"
                   onClick={() => redirectToEdit(business.id)}
                 >
                   Edit Business

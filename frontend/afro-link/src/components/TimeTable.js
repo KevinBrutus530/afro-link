@@ -29,7 +29,7 @@ const TimeTable = (props) => {
       </Modal.Header>
       <Modal.Body>
         <form className="timeTableForm">
-          <h5>select available hour or leave blank for close day</h5>
+          <h5 className="timeH5">Select your business hours or leave blank if closed that day.</h5>
           <label className="timeLabel">Monday:</label>
           <input
             type="time"
@@ -158,7 +158,7 @@ const TimeTable = (props) => {
             props.setTime();
           }}
         >
-          Submit Time
+          Submit
         </Button>
       </Modal.Body>
     </Modal>

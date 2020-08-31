@@ -30,7 +30,11 @@
 }
 
 .bizHours {
-  padding: 10px 2em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: fill;
+  padding: 10px 1em;
 }
 
 .bizPicProfile {
@@ -61,4 +65,12 @@
 
 .lightGrey {
   color: lightgrey;
+}
+
+.noneProvided {
+  color: rgb(104, 104, 104);
+}
+
+.displayNone {
+  display: none;
 }

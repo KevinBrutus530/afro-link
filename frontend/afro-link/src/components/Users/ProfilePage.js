@@ -28,8 +28,10 @@ const ProfilePage = () => {
   console.log(userBusinesses);
   return (
     <div className="profilePageMainDiv">
-      <h1 style={{ padding: '2em', color: 'white' }}> Profile Page</h1>
-      <button onClick={logout}>Log Out</button>
+      <div className="profileHeader">
+        <h1 className="profileTitle"> Profile Page</h1>
+        <button className="Btn-create loBtn" onClick={logout}>Log Out</button>
+      </div>
       <BusinessDisplay userBusinesses={userBusinesses} />
     </div>
   );

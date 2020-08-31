@@ -1,0 +1,26 @@
+.editBizDiv {
+  width: 100%;
+  height: 100%;
+}
+
+.editBizForm {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  align-content: center;
+  border: 1px whitesmoke solid;
+  width: 30em;
+  height: auto;
+  padding: 2em;
+}
+
+.editBizForm > * {
+    margin-bottom: 1em;
+    text-align: left;
+}
+
+.editH1 {
+    color: whitesmoke;
+    padding: 1em;
+}

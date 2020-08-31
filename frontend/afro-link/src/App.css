@@ -72,11 +72,6 @@ img {
   object-fit: scale-down;
 }
 
-.editBizDiv {
-  width: 100%;
-  height: 100%;
-}
-
 input:focus::placeholder {
   color: transparent;
 }
@@ -84,13 +79,22 @@ input:focus::placeholder {
 .timeTableForm {
   display: flex;
   flex-direction: column;
+  place-items: center;
   margin: auto;
-  height: 50%;
-  width: 50%;
+  height: auto;
+  width: 100%;
+  text-align: left;
 }
+
 
 .timeTableBtn {
   display: flex;
   margin: auto;
   place-items: center;
+}
+
+.timeH5 {
+  color: #0468da;
+  font-weight: bold;
+  padding: 1em;
 }

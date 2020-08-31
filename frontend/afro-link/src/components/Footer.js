@@ -1,5 +1,4 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import { Whatsapp, Facebook, Linkedin, Twitter } from 'react-social-sharing';
 import '../css/Footer.css';
 

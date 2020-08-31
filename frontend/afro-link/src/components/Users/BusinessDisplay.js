@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
+import { parseTimes } from '../commonlyUsed/ParseHours';
 
 const BusinessDisplay = ({ userBusinesses }) => {
   let history = useHistory();
@@ -7,16 +8,13 @@ const BusinessDisplay = ({ userBusinesses }) => {
 
   const showBusiness = () => {
     if (userBusinesses.length) {
-      let allUserBusiness = userBusinesses.map((business) => {
-        // debugger;
+      let allUserBusiness = userBusinesses.map((business, i) => {
         // create a function that calls the reviews from each business
         // create function in spearate component using the business id as a prop
-
         //fn to show each address components "blank" if null in db/
-
         const displayAddress = () => {
           return (
-            <div className="bizAddress">
+            <div key={i} className="bizAddress">
               {
                 (business.street ? (
                   business.street
@@ -36,7 +34,7 @@ const BusinessDisplay = ({ userBusinesses }) => {
         };
 
         return (
-          <div>
+          <div key={i}>
             <div id="bizName" className="ownerHeader heavyFont">
               {business.biz_name}
             </div>
@@ -77,7 +75,6 @@ const BusinessDisplay = ({ userBusinesses }) => {
               </ul>
               <div className="contactInfo">
                 <ul>
-                  {/* <label id="contactsLabel">Contact Info: </label> */}
                   <label className="bizLabel">
                     Phone:
                     <li>
@@ -120,10 +117,9 @@ const BusinessDisplay = ({ userBusinesses }) => {
           </div>
         );
       });
-      console.log(userBusinesses);
+
       return <div>{allUserBusiness}</div>;
     } else {
-      console.log(userBusinesses);
       return (
         <div>
           <button
@@ -138,6 +134,7 @@ const BusinessDisplay = ({ userBusinesses }) => {
       );
     }
   };
+
   return <div>{showBusiness()}</div>;
 };
 

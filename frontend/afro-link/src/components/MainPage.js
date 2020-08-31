@@ -52,6 +52,21 @@ const MainPage = () => {
             <img
               style={{ width: 'auto', height: '600px' }}
               className="carouselPics"
+              src="https://cdn.shopify.com/s/files/1/0223/5181/articles/kat_in_bsas_full_size_aff1574f-a5da-4fae-93ec-ebe1e46f6bc1_2000x.jpg?v=1580418798"
+              alt="first slide"
+            />
+            <Carousel.Caption>
+              <h3 className="contrastBackground">Katherine Theobalds</h3>
+              <a target="_blank" href="https://www.zouxou.com/aboutzx">
+                <p className="contrastLight">Zou Xou Shoes</p>
+              </a>
+            </Carousel.Caption>
+          </Carousel.Item>
+
+          <Carousel.Item>
+            <img
+              style={{ width: 'auto', height: '600px' }}
+              className="carouselPics"
               src="https://cdn.fashionmagazine.com/wp-content/uploads/2019/06/Goodee-Pop-Up-Studio-Montreal_Celia-Spenard-Ko_20.jpg"
             />
 

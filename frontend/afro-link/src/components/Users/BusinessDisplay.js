@@ -7,8 +7,10 @@ const BusinessDisplay = ({ userBusinesses }) => {
   const redirectToEdit = (id) => history.push(`/editbusiness/${id}`);
 
   const showBusiness = () => {
+    let biznessHours = '';
     if (userBusinesses.length) {
       let allUserBusiness = userBusinesses.map((business, i) => {
+        debugger;
         // create a function that calls the reviews from each business
         // create function in spearate component using the business id as a prop
         //fn to show each address components "blank" if null in db/
@@ -33,6 +35,8 @@ const BusinessDisplay = ({ userBusinesses }) => {
           );
         };
 
+        console.log(business.hours);
+
         return (
           <div key={i}>
             <div id="bizName" className="ownerHeader heavyFont">
@@ -54,7 +58,12 @@ const BusinessDisplay = ({ userBusinesses }) => {
                     ) : (
                       <details className="hoursDetails">
                         <summary>Hours</summary>
-                        {business.hours}
+                        {
+                          (biznessHours = business.hours.replace(
+                            /[^\w\s]/g,
+                            ''
+                          ))
+                        }
                       </details>
                     )}
                   </li>

@@ -33,10 +33,11 @@ export const parseTimes = (obj) => {
 
     final.map((day, i) => {
       results.push(day);
-      //   results.push(day[i]);
-      //   results.push(day.day);
+        results.push(day[i]);
+        results.push(day.day);
     });
     return results.join('');
   };
   return getHours(parseDays(obj));
 };
+// console.log(parseTimes(objHours))

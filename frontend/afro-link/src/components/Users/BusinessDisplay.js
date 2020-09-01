@@ -48,8 +48,13 @@ const BusinessDisplay = ({ userBusinesses, setUpdate }) => {
                 <li>
                   <img className="bizPicProfile" src={business.pictures} />
                 </li>
+                <li className="bizAddress">
+                  {/* {business.street} {business.city}
+                  {business.state}
+                  {business.zip} */}
 
-                <li className="bizAddress">{displayAddress()}</li>
+                {displayAddress()}
+                </li>
 
                 <label className="bizLabel">
                   Business Hours:

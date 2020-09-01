@@ -9,7 +9,7 @@ owners.get("/:id", checkFirebaseToken, getBusinessesByUser);
 
 owners.post("/", createOwner);
 
-owners.patch("/:id", editOwner);
+owners.patch("/:uid", editOwner);
 
 owners.delete("/:id", deleteOwner);
 

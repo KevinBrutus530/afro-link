@@ -8,9 +8,8 @@ import AddressForm from '../Forms/Address';
 import axios from 'axios';
 import '../../css/EditBusiness.css';
 
-const EditBusiness = () => {
+const EditBusiness = ({ setUpdate, bizId }) => {
   const API = getAPI();
-  const { id } = useParams();
   const { currentUser, loading } = useContext(AuthContext);
   let history = useHistory();
   const biz_name = useInput('');
@@ -19,6 +18,7 @@ const EditBusiness = () => {
   const [hours, setHours] = useState('Online Store');
   // const [showAddress, setAddress] = useState(false);
 
+  //This variable is holding "time" for storage
   let time = {
     Mon: 'close',
     Tue: 'close',
@@ -29,9 +29,10 @@ const EditBusiness = () => {
     Sun: 'close',
   };
 
+  //This fun patches new biz info to db
   const editBusinessInfo = async () => {
     try {
-      await axios.patch(`${API}/businesses/${id}`, {
+      await axios.patch(`${API}/businesses/${bizId}`, {
         biz_name: biz_name.value,
         hours: hours,
       });
@@ -40,6 +41,7 @@ const EditBusiness = () => {
     }
   };
 
+  //Handles and sets hours input by user
   const handleHours = (e) => {
     if (e.currentTarget.selectedIndex === 0) {
       setHours(e.currentTarget.value);
@@ -48,32 +50,25 @@ const EditBusiness = () => {
     }
   };
 
-  // const handleAddress = () => {
-  //   setHouseNum(null);
-  //   setStreet(null);
-  //   setCity(null);
-  //   setState(null);
-  //   setZip(null);
-  //   setAddress(!showAddress);
-  // };
+  //fun will set and show address fields
+  const handleAddress = () => {
+    setHouseNum(null);
+    setStreet(null);
+    setCity(null);
+    setState(null);
+    setZip(null);
+    setAddress(!showAddress);
+  };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    //No prevent default to reset biz info from edit on refresh page
     editBusinessInfo();
-    history.push(`/profile/${currentUser.uid}`);
   };
 
   return (
     <div className="editBizDiv" style={{ marginTop: '7em' }}>
-      <button
-        id="goBack"
-        className="Btn-create"
-        onClick={() => history.goBack()}
-        type="submit"
-      >
-        Return to Profile Page
-      </button>
       <h1 className="editH1 heavyFont">Edit Your Business Details</h1>
+
       <form className="editBizForm" onSubmit={handleSubmit}>
         <label>Business Name: </label>
         <input
@@ -93,10 +88,13 @@ const EditBusiness = () => {
           <option defaultValue="1">Online Store</option>
           <option defaultValue="2">Add business Hours</option>
         </select>
-        <AddressForm />
-        <button className="Btn-create" type="submit">
+
+        <AddressForm bizId={bizId} handleAddress={handleAddress} />
+
+        <button type="submit" className="Btn-create">
           Save
         </button>
+
         <div>
           <TimeTable
             show={modalShow}

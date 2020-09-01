@@ -11,9 +11,10 @@ const ProfilePage = () => {
   let API = getAPI();
   const [userBusinesses, setUserBusinesses] = useState([]);
   const { token, currentUser, loading } = useContext(AuthContext);
+  const [update, setUpdate] = useState(null);
 
-  useEffect(() => {
-    const fetchUserById = async () => {
+  const fetchUserById = async () => {
+    try {
       let res = await axios({
         method: 'get',
         url: `${API}/owners/${currentUser.uid}`,
@@ -21,12 +22,19 @@ const ProfilePage = () => {
           AuthToken: token,
         },
       });
-      // debugger;
       setUserBusinesses(res.data.payload);
-    };
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  useEffect(() => {
     fetchUserById();
   }, []);
-  // console.log(currentUser);
+
+  useEffect(() => {
+    fetchUserById();
+  }, [update]);
 
   return (
     <div className="profilePageMainDiv">
@@ -37,7 +45,10 @@ const ProfilePage = () => {
           Log Out
         </button>
       </div>
-      <BusinessDisplay userBusinesses={userBusinesses} />
+      <BusinessDisplay
+        userBusinesses={userBusinesses}
+        editBusiness={setUpdate}
+      />
     </div>
   );
 };

@@ -35,7 +35,7 @@ const MainPage = () => {
               style={{ width: 'auto', height: '600px' }}
               className="carouselPics"
               src="https://pbs.twimg.com/media/EeinSt-UYAAgGlb.jpg"
-              alt="first slide"
+              alt="second slide"
             />
             <Carousel.Caption>
               <h3 className="contrastBackground">Charles Gabriel</h3>
@@ -52,7 +52,23 @@ const MainPage = () => {
             <img
               style={{ width: 'auto', height: '600px' }}
               className="carouselPics"
+              src="https://cdn.shopify.com/s/files/1/0223/5181/articles/kat_in_bsas_full_size_aff1574f-a5da-4fae-93ec-ebe1e46f6bc1_2000x.jpg?v=1580418798"
+              alt="third slide"
+            />
+            <Carousel.Caption>
+              <h3 className="contrastBackground">Katherine Theobalds</h3>
+              <a target="_blank" href="https://www.zouxou.com/aboutzx">
+                <p className="contrastLight">Zou Xou Shoes</p>
+              </a>
+            </Carousel.Caption>
+          </Carousel.Item>
+
+          <Carousel.Item>
+            <img
+              style={{ width: 'auto', height: '600px' }}
+              className="carouselPics"
               src="https://cdn.fashionmagazine.com/wp-content/uploads/2019/06/Goodee-Pop-Up-Studio-Montreal_Celia-Spenard-Ko_20.jpg"
+              alt="fourth slide"
             />
 
             <Carousel.Caption>
@@ -71,7 +87,7 @@ const MainPage = () => {
               style={{ width: 'auto', height: '600px' }}
               className="carouselPics"
               src="https://bklyner.com/wp-content/uploads/2017/07/DSC_5270.jpg"
-              alt="carousel pic"
+              alt="fifth slide"
             />
 
             <Carousel.Caption>
@@ -90,6 +106,7 @@ const MainPage = () => {
               style={{ width: 'auto', height: '550px' }}
               className="carouselPics"
               src="https://bloximages.newyork1.vip.townnews.com/feastmagazine.com/content/tncms/assets/v3/editorial/9/8f/98ff9c78-f445-11e9-91ff-bf70a7b15818/5dae1c2fb80a1.image.jpg?resize=1200%2C901"
+              alt="sixth slide"
             />
 
             <Carousel.Caption>
@@ -105,7 +122,7 @@ const MainPage = () => {
               style={{ width: 'auto', height: '600px' }}
               className="carouselPics"
               src="https://www.ft.com/__origami/service/image/v2/images/raw/http://prod-upp-image-read.ft.com/44a2ea70-1729-11ea-8d73-6303645ac406?source=next&fit=scale-down&quality=highest&width=1067"
-              alt="third slide"
+              alt="seventh slide"
             />
 
             <Carousel.Caption>

@@ -1,47 +1,124 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
+import { parseTimes } from '../commonlyUsed/ParseHours';
 
 const BusinessDisplay = ({ userBusinesses }) => {
   let history = useHistory();
   const redirectToEdit = (id) => history.push(`/editbusiness/${id}`);
 
   const showBusiness = () => {
+    let biznessHours = '';
     if (userBusinesses.length) {
-      let allUserBusiness = userBusinesses.map((business) => {
-        // debugger;
+      let allUserBusiness = userBusinesses.map((business, i) => {
+        debugger;
         // create a function that calls the reviews from each business
         // create function in spearate component using the business id as a prop
+        //fn to show each address components "blank" if null in db/
+        const displayAddress = () => {
+          return (
+            <div key={i} className="bizAddress">
+              {
+                (business.street ? (
+                  business.street
+                ) : (
+                  <p className="displayNone"></p>
+                ),
+                business.city ? business.city : <p className="displayNone"></p>,
+                business.state ? (
+                  business.state
+                ) : (
+                  <p className="displayNone"></p>
+                ),
+                business.zip ? business.zip : <p className="displayNone"></p>)
+              }
+            </div>
+          );
+        };
+
+        console.log(business.hours);
+
         return (
-          <div>
-            <div className="ownerHeader">{business.biz_name}</div>
-            <div className="businessInfo">
+          <div key={i}>
+            <div id="bizName" className="ownerHeader heavyFont">
+              {business.biz_name}
+            </div>
+            <div className="bizProfileInfo">
               <ul style={{ listStyleType: 'none' }}>
                 <li>
                   <img className="bizPicProfile" src={business.pictures} />
                 </li>
-                <li className="bizAddress">
-                  {business.street} {business.city} {business.state}{' '}
-                  {business.zip}
-                </li>
-                <li className="bizHours">{business.hours}</li>
 
-                <li className="hyperLink">
-                  <a href={business.website} target="_blank">
-                    Visit Website
-                  </a>
-                </li>
+                <li className="bizAddress">{displayAddress()}</li>
+
+                <label className="bizLabel">
+                  Business Hours:
+                  <li className="bizHoursProfile">
+                    {business.hours === 'Online Store' ? (
+                      <p>Online Business</p>
+                    ) : (
+                      <details className="hoursDetails">
+                        <summary>Hours</summary>
+                        {
+                          (biznessHours = business.hours.replace(
+                            /[^\w\s]/g,
+                            ''
+                          ))
+                        }
+                      </details>
+                    )}
+                  </li>
+                </label>
+
+                <label className="bizLabel">
+                  Website:
+                  <li className="hyperLink">
+                    {business.website ? (
+                      <a href={business.website} target="_blank">
+                        Visit Website
+                      </a>
+                    ) : (
+                      <p className="noneProvided">None Provided</p>
+                    )}
+                  </li>
+                </label>
               </ul>
               <div className="contactInfo">
                 <ul>
-                  <label id="contactsLabel">Contact Info: </label>
-                  <li>{business.phone}</li>
-                  <li>{business.email}</li>
-
-                  <li className="hyperLink">
-                    <a href={business.social_media} target="_blank"></a>
-                  </li>
+                  <label className="bizLabel">
+                    Phone:
+                    <li>
+                      {!business.phone || business.phone === 'n/a' ? (
+                        <p className="noneProvided">None Provided</p>
+                      ) : (
+                        business.phone
+                      )}
+                    </li>
+                  </label>
+                  <label className="bizLabel">
+                    Email:
+                    <li>
+                      {business.email ? (
+                        business.email
+                      ) : (
+                        <p className="noneProvided">None Provided</p>
+                      )}
+                    </li>
+                  </label>
+                  <label className="bizLabel">
+                    Social Media Page:
+                    <li className="hyperLink">
+                      {business.social_media ? (
+                        <a href={business.social_media} target="_blank"></a>
+                      ) : (
+                        <p className="noneProvided">None Provided</p>
+                      )}
+                    </li>
+                  </label>
                 </ul>
-                <button onClick={() => redirectToEdit(business.id)}>
+                <button
+                  className="Btn-rest BtnEdit"
+                  onClick={() => redirectToEdit(business.id)}
+                >
                   Edit Business
                 </button>
               </div>
@@ -49,13 +126,13 @@ const BusinessDisplay = ({ userBusinesses }) => {
           </div>
         );
       });
-      console.log(userBusinesses);
+
       return <div>{allUserBusiness}</div>;
     } else {
-      console.log(userBusinesses);
       return (
         <div>
           <button
+            className="addBizBtn"
             onClick={() => {
               history.push('/newBusiness');
             }}
@@ -66,6 +143,7 @@ const BusinessDisplay = ({ userBusinesses }) => {
       );
     }
   };
+
   return <div>{showBusiness()}</div>;
 };
 

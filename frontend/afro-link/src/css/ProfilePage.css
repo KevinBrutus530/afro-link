@@ -1,6 +1,45 @@
-
-
 .profilePageMainDiv {
-    height:100vh;
-    width: 100%;
+  height: 100vh;
+  width: 100%;
+  justify-content: space-evenly;
+  overflow-y: scroll;
+  padding-bottom: 2em;
+}
+
+.profileHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+  border-bottom: inset white 2px;
+  padding: 4em 0 2em 0;
+}
+
+.loBtn {
+  display: flex;
+  margin: auto;
+  width: 7em;
+}
+
+.profileTitle {
+  display: flex;
+  margin: auto;
+  color: white;
+}
+
+.bizProfileInfo {
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+  margin: auto;
+  text-align-last: center;
+  margin-top: 1em;
+  padding: 1em;
+  width: 25em;
+  height: auto;
+}
+
+.bizProfileInfo label {
+  color: darkred;
+  font-weight: bolder;
 }

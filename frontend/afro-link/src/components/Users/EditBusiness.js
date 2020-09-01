@@ -6,6 +6,7 @@ import { getAPI } from '../../util/getAPI';
 import TimeTable from '../../components/TimeTable';
 import AddressForm from '../Forms/Address';
 import axios from 'axios';
+import '../../css/EditBusiness.css';
 
 const EditBusiness = () => {
   const API = getAPI();
@@ -64,7 +65,16 @@ const EditBusiness = () => {
 
   return (
     <div className="editBizDiv" style={{ marginTop: '7em' }}>
-      <form onSubmit={handleSubmit}>
+      <button
+        id="goBack"
+        className="Btn-create"
+        onClick={() => history.goBack()}
+        type="submit"
+      >
+        Return to Profile Page
+      </button>
+      <h1 className="editH1 heavyFont">Edit Your Business Details</h1>
+      <form className="editBizForm" onSubmit={handleSubmit}>
         <label>Business Name: </label>
         <input
           type="text"
@@ -84,7 +94,9 @@ const EditBusiness = () => {
           <option defaultValue="2">Add business Hours</option>
         </select>
         <AddressForm />
-        <button type="submit">Save</button>
+        <button className="Btn-create" type="submit">
+          Save
+        </button>
         <div>
           <TimeTable
             show={modalShow}

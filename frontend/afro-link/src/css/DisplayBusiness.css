@@ -29,8 +29,17 @@
   height: auto;
 }
 
-.bizHours {
-  padding: 10px 2em;
+/* .bizHours {
+  display: table-column-group;
+  max-width: 15em;
+  margin-right: 5em;
+  width: 15em;
+  padding: 10px 1em;
+} */
+
+.bizHoursProfile {
+  display: flex;
+  flex-direction: column;
 }
 
 .bizPicProfile {
@@ -61,4 +70,32 @@
 
 .lightGrey {
   color: lightgrey;
+}
+
+.noneProvided {
+  color: rgb(104, 104, 104);
+}
+
+.displayNone {
+  display: none;
+}
+
+.bizLabel {
+  display: flex;
+  flex-direction: row;
+  color: #191102;
+  text-align: left;
+  padding: 10px;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(104, 104, 104);
+}
+
+.BtnEdit {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.hoursDetails {
+  background-color: whitesmoke;
+  width: 100%;
 }

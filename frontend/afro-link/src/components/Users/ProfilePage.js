@@ -21,15 +21,22 @@ const ProfilePage = () => {
           AuthToken: token,
         },
       });
+      // debugger;
       setUserBusinesses(res.data.payload);
     };
     fetchUserById();
   }, []);
-  console.log(userBusinesses);
+  // console.log(currentUser);
+
   return (
     <div className="profilePageMainDiv">
-      <h1 style={{ padding: '2em', color: 'white' }}> Profile Page</h1>
-      <button onClick={logout}>Log Out</button>
+      <div className="profileHeader">
+        <h4 className="profileTitle"> Profile Page</h4>
+        <h5 className="profileTitle">{currentUser.email}</h5>
+        <button className="Btn-create loBtn" onClick={logout}>
+          Log Out
+        </button>
+      </div>
       <BusinessDisplay userBusinesses={userBusinesses} />
     </div>
   );

@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
-import { parseTimes } from '../commonlyUsed/ParseHours';
+import EditBusiness from './EditBusiness';
 
-const BusinessDisplay = ({ userBusinesses }) => {
+const BusinessDisplay = ({ userBusinesses, setUpdate }) => {
+  const [showEdit, setShowEdit] = useState(true);
   let history = useHistory();
-  const redirectToEdit = (id) => history.push(`/editbusiness/${id}`);
+
+  const toggleButton = () => {
+    setShowEdit(!showEdit);
+  };
 
   const showBusiness = () => {
     let biznessHours = '';
     if (userBusinesses.length) {
       let allUserBusiness = userBusinesses.map((business, i) => {
-        debugger;
         // create a function that calls the reviews from each business
         // create function in spearate component using the business id as a prop
         //fn to show each address components "blank" if null in db/
@@ -35,8 +38,6 @@ const BusinessDisplay = ({ userBusinesses }) => {
           );
         };
 
-        console.log(business.hours);
-
         return (
           <div key={i}>
             <div id="bizName" className="ownerHeader heavyFont">
@@ -47,8 +48,13 @@ const BusinessDisplay = ({ userBusinesses }) => {
                 <li>
                   <img className="bizPicProfile" src={business.pictures} />
                 </li>
+                <li className="bizAddress">
+                  {/* {business.street} {business.city}
+                  {business.state}
+                  {business.zip} */}
 
-                <li className="bizAddress">{displayAddress()}</li>
+                {displayAddress()}
+                </li>
 
                 <label className="bizLabel">
                   Business Hours:
@@ -115,12 +121,20 @@ const BusinessDisplay = ({ userBusinesses }) => {
                     </li>
                   </label>
                 </ul>
+
+                {/* {<EditBusiness setUpdate={setUpdate} />}
                 <button
                   className="Btn-rest BtnEdit"
-                  onClick={() => redirectToEdit(business.id)}
+                  onClick={() => history.push(`/editbusiness/${business.id}`)}
                 >
                   Edit Business
+                </button> */}
+                <button onClick={() => toggleButton()}>
+                  Edit Business Info
                 </button>
+                {!showEdit && (
+                  <EditBusiness bizId={business.id} setUpdate={setUpdate} />
+                )}
               </div>
             </div>
           </div>

@@ -8,17 +8,23 @@ import AddressForm from '../Forms/Address';
 import axios from 'axios';
 import '../../css/EditBusiness.css';
 
-const EditBusiness = () => {
+const EditBusiness = ({ setUpdate, bizId }) => {
   const API = getAPI();
-  const { id } = useParams();
   const { currentUser, loading } = useContext(AuthContext);
   let history = useHistory();
   const biz_name = useInput('');
-  const address = useInput('');
   const [modalShow, setModalShow] = useState(false);
   const [hours, setHours] = useState('Online Store');
-  // const [showAddress, setAddress] = useState(false);
 
+  // const [houseNum, setHouseNum] = useState(null);
+  const street = useInput('');
+  const city = useInput('');
+  const state = useInput('');
+  const zip = useInput('');
+  const website = useInput('');
+  const [showAddress, setAddress] = useState(false);
+
+  //This variable is holding "time" for storage
   let time = {
     Mon: 'close',
     Tue: 'close',
@@ -29,17 +35,30 @@ const EditBusiness = () => {
     Sun: 'close',
   };
 
+  //This fun patches new biz info to db
   const editBusinessInfo = async () => {
     try {
-      await axios.patch(`${API}/businesses/${id}`, {
+      let res = await axios.patch(`${API}/businesses/${bizId}`, {
         biz_name: biz_name.value,
         hours: hours,
       });
+      debugger
+      if (res.data.status === 'sucess') {
+        await axios.patch(`${API}/addresses/${bizId}`, {
+          street: street.value,
+          city: city.value,
+          state: state.value,
+          zip: zip.value,
+          website: website.value,
+        });
+      }
+      debugger;
     } catch (err) {
       console.log(err);
     }
   };
 
+  //Handles and sets hours input by user
   const handleHours = (e) => {
     if (e.currentTarget.selectedIndex === 0) {
       setHours(e.currentTarget.value);
@@ -48,6 +67,7 @@ const EditBusiness = () => {
     }
   };
 
+  // fun will set and show address fields
   // const handleAddress = () => {
   //   setHouseNum(null);
   //   setStreet(null);
@@ -58,22 +78,14 @@ const EditBusiness = () => {
   // };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    //No prevent default to reset biz info from edit on refresh page
     editBusinessInfo();
-    history.push(`/profile/${currentUser.uid}`);
   };
 
   return (
     <div className="editBizDiv" style={{ marginTop: '7em' }}>
-      <button
-        id="goBack"
-        className="Btn-create"
-        onClick={() => history.goBack()}
-        type="submit"
-      >
-        Return to Profile Page
-      </button>
       <h1 className="editH1 heavyFont">Edit Your Business Details</h1>
+
       <form className="editBizForm" onSubmit={handleSubmit}>
         <label>Business Name: </label>
         <input
@@ -93,10 +105,18 @@ const EditBusiness = () => {
           <option defaultValue="1">Online Store</option>
           <option defaultValue="2">Add business Hours</option>
         </select>
-        <AddressForm />
-        <button className="Btn-create" type="submit">
+        <input placeholder={'Street'} {...street} />
+        <input placeholder={'City'} {...city} />
+        <input placeholder={'State'} {...state} />
+        <input placeholder={'Zip'} {...zip} />
+        <input placeholder={'Website'} {...website} />
+        {/* handleAddress={handleAddress} */}
+        {/* <AddressForm bizId={bizId} /> */}
+
+        <button type="submit" className="Btn-create">
           Save
         </button>
+
         <div>
           <TimeTable
             show={modalShow}

@@ -13,6 +13,7 @@ import { AuthContext } from '../../providers/AuthContext';
 
 const NewBusiness = () => {
   const { currentUser } = useContext(AuthContext);
+
   const [message, setMessage] = useState('');
   const history = useHistory();
   const API = getAPI();
@@ -80,16 +81,17 @@ const NewBusiness = () => {
         biz_name: biz_name.value,
         hours: hours,
       });
+
       if (newBiz.data.status === 'success') {
         // await axios.post(`${API}/owners`, {
         //   owner_id: newBiz.data.payload.id,
         //   owner_name: owner_name.value,
         // });
-        await axios.patch(`${API}/owners/${newBiz.data.payload.id}`, {
+        debugger;
+        await axios.patch(`${API}/owners/${currentUser.uid}`, {
           owner_id: newBiz.data.payload.id,
           owner_name: owner_name.value,
         });
-
         await axios.post(`${API}/categories`, {
           biz_id: newBiz.data.payload.id,
           type_id: type_name.value,

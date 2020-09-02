@@ -1,25 +1,32 @@
-import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import { useInput } from "../../util/useInput";
+import React, { useState, useContext, useEffect } from 'react';
+import { useParams, useHistory } from 'react-router-dom';
+import { useInput } from '../../util/useInput';
+import { AuthContext } from '../../providers/AuthContext';
 import { getAPI } from "../../util/getAPI";
 import axios from "axios";
 import "../../css/ReviewsForm.css";
 import Reply from "./Reply.js"
+import VerifiedOwner from "./VerifiedOwner"
 
 const ReviewsForm = () => {
   const API = getAPI();
+  const { token,currentUser, loading } = useContext(AuthContext);
+  const [userBusinesses, setUserBusinesses] = useState([]);
   const { id } = useParams();
   const name = useInput("");
   const text = useInput("");
   const [allReviews, setAllReviews] = useState([]);
-  // const ratings = useInput("");
   const [ratings, setRating] = useState(null);
   const [hover, setHover] = useState(null);
+  // const [showEdit, setShowEdit] = useState(true);
+
+  // const toggleButton = () => {
+  //   setShowEdit(!showEdit);
+  // };
 
   const getReviews = async () => {
     try {
       let res = await axios.get(`${API}/reviews/${id}`);
-      // debugger
       setAllReviews(res.data.payload);
     } catch (err) {
       console.log(err);
@@ -57,6 +64,25 @@ const ReviewsForm = () => {
     return starsList;
   };
 
+  const fetchUserById = async () => {
+    try {
+      let res = await axios({
+        method: 'get',
+        url: `${API}/owners/${currentUser.uid}`,
+        headers: {
+          AuthToken: token,
+        },
+      });
+      setUserBusinesses(res.data.payload);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  useEffect(() => {
+    fetchUserById();
+  }, []);
+
 
   let showReviews = allReviews.map((post, i) => {
     if(post.text){
@@ -69,6 +95,7 @@ const ReviewsForm = () => {
           <p className="review"> {post.text}</p>
           <p className="reviewDT">{post.dt.substring(0,10)}</p>
           <div className="reply">
+            <verifiedOwner userBusinesses={userBusinesses}/>
             <Reply allReviews={allReviews} replyID={post.id} />
           </div>
         </div>

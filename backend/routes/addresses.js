@@ -1,14 +1,18 @@
-const addresses = require("express").Router();
+const addresses = require('express').Router();
 
-const { getSingleAddress , createAddress, editAddress, deleteAddress } = require("../queries/addresses");
+const {
+  getSingleAddress,
+  createAddress,
+  editAddress,
+  deleteAddress,
+} = require('../queries/addresses');
 
+addresses.get('/:id', getSingleAddress);
 
-addresses.get("/:id", getSingleAddress)
+addresses.post('/', createAddress);
 
-addresses.post("/", createAddress)
+addresses.patch('/:address_id', editAddress);
 
-addresses.patch("/:id", editAddress)
+addresses.delete('/:id', deleteAddress);
 
-addresses.delete("/:id", deleteAddress)
-
-module.exports = addresses
+module.exports = addresses;

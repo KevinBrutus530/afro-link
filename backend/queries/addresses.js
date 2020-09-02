@@ -64,10 +64,10 @@ const createAddress = async (req, res, next) => {
 const editAddress = async (req, res, next) => {
   try {
     let { street, city, state, zip, website } = req.body;
-    let { id } = req.params;
+    let { address_id } = req.params;
     let address = await db.one(
-      'UPDATE addresses SET street=$1, city=$2 state=$3, zip=$4, website=$5 WHERE id=$6',
-      [street, city, state, zip, website, id]
+      'UPDATE addresses SET street=$1, city=$2 state=$3, zip=$4, website=$5 WHERE address_id=$6',
+      [street, city, state, zip, website, address_id]
     );
     res.status(200).json({
       status: 'success',

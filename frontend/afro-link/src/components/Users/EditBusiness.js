@@ -42,8 +42,8 @@ const EditBusiness = ({ setUpdate, bizId }) => {
         biz_name: biz_name.value,
         hours: hours,
       });
-      debugger
-      if (res.data.status === 'sucess') {
+      debugger;
+      if (res.data.status === 'success') {
         await axios.patch(`${API}/addresses/${bizId}`, {
           street: street.value,
           city: city.value,
@@ -52,7 +52,6 @@ const EditBusiness = ({ setUpdate, bizId }) => {
           website: website.value,
         });
       }
-      debugger;
     } catch (err) {
       console.log(err);
     }
@@ -66,16 +65,6 @@ const EditBusiness = ({ setUpdate, bizId }) => {
       setModalShow(true);
     }
   };
-
-  // fun will set and show address fields
-  // const handleAddress = () => {
-  //   setHouseNum(null);
-  //   setStreet(null);
-  //   setCity(null);
-  //   setState(null);
-  //   setZip(null);
-  //   setAddress(!showAddress);
-  // };
 
   const handleSubmit = (e) => {
     //No prevent default to reset biz info from edit on refresh page

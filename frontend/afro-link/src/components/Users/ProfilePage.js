@@ -13,6 +13,8 @@ const ProfilePage = () => {
   const { token, currentUser, loading } = useContext(AuthContext);
   const [update, setUpdate] = useState(null);
 
+
+
   const fetchUserById = async () => {
     try {
       let res = await axios({
@@ -27,6 +29,8 @@ const ProfilePage = () => {
       console.log(err);
     }
   };
+
+  // {"status":"Error","message":"Error getting businesses by owner","payload":{"length":117,"name":"error","severity":"ERROR","code":"42601","position":"209","file":"scan.l","line":"1133","routine":"scanner_yyerror"}}
 
   useEffect(() => {
     fetchUserById();

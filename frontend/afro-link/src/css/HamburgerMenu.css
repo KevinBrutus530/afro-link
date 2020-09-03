@@ -69,7 +69,39 @@
   background: #191102a1;
 }
 
-#hamburgerNav {
+#logOutLink {
+  text-shadow: 1px 3px 5px #191102ff;
+  color: rgba(243, 183, 31, 0.863);
+  -webkit-text-stroke: 2px rgba(104, 17, 13, 0.842);
+  font-size: 18pt;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  align-self: center;
+}
+
+#logOutLink:hover {
+  cursor: pointer;
+  color: #0468da;
+}
+
+.menu-item {
   display: flex;
   flex-direction: column;
+  font-family: Bungee, cursive;
+  padding: 1em;
+  cursor: pointer;
+  font-weight: bolder;
+  align-content: flex-start;
+  font-weight: 570;
+  font-size: 18pt;
+  text-shadow: 1px 3px 5px #191102ff;
+  color: rgba(243, 183, 31, 0.863);
+  -webkit-text-stroke: 2px rgba(104, 17, 13, 0.842);
+}
+
+.menu-item:hover {
+  color: #0468da;
+  cursor: pointer;
+  text-align: center;
 }

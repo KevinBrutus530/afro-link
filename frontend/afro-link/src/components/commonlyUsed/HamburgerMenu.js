@@ -14,7 +14,7 @@ const HamburgerMenu = () => {
   const displayButtons = () => {
     if (currentUser) {
       return (
-        <div style={{ display: "grid"}}>
+        <div style={{ display: 'flex', flexDirection: 'column'}}>
           <button id="logOutLink" className="menu-item" onClick={logout}>
             Log Out
           </button>
@@ -25,7 +25,7 @@ const HamburgerMenu = () => {
       );
     } else {
       return (
-        <div style={{ display: "flex", flexDirection="column"}}>
+        <div style={{ display: 'flex', flexDirection: 'column'}}>
           <NavLink className="menu-item" exact to="/login">
             Log In
           </NavLink>
@@ -42,7 +42,7 @@ const HamburgerMenu = () => {
   return (
     <Menu right>
       <nav id="hamburgerNav">
-        <Link id="home" className="menu-item" to="/">
+        <Link className="menu-item" to="/">
           Home
         </Link>
         {displayButtons()}

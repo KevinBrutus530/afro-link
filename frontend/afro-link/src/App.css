@@ -98,15 +98,4 @@ input:focus::placeholder {
   padding: 1em;
 }
 
-#logOutLink {
-  color: whitesmoke;
-  font-size: large;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-}
 
-#logOutLink:hover {
-  cursor: pointer;
-  color: #0468da;
-}

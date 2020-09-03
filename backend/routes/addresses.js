@@ -7,7 +7,7 @@ const {
   deleteAddress,
 } = require('../queries/addresses');
 
-addresses.get('/:id', getSingleAddress);
+addresses.get('/:address_id', getSingleAddress);
 
 addresses.post('/', createAddress);
 

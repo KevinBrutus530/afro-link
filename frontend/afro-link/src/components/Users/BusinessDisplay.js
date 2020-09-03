@@ -10,10 +10,12 @@ const BusinessDisplay = ({ userBusinesses, setUpdate }) => {
     setShowEdit(!showEdit);
   };
 
+ 
   const showBusiness = () => {
     let biznessHours = '';
     if (userBusinesses.length) {
       let allUserBusiness = userBusinesses.map((business, i) => {
+        // debugger
         // create a function that calls the reviews from each business
         // create function in spearate component using the business id as a prop
         //fn to show each address components "blank" if null in db/
@@ -121,19 +123,22 @@ const BusinessDisplay = ({ userBusinesses, setUpdate }) => {
                   </label>
                 </ul>
 
-                {/* {<EditBusiness setUpdate={setUpdate} />}
+                {/* <EditBusiness  bizInfo={userBusinesses} setUpdate={setUpdate} /> */}
                 <button
                   className="Btn-rest BtnEdit"
-                  onClick={() => history.push(`/editbusiness/${business.id}`)}
+                  onClick={() => history.push(`/editbusiness/${business.owner_id}`)}
                 >
                   Edit Business
-                </button> */}
-                <button onClick={() => toggleButton()}>
+                </button>
+                {/* <button onClick={() => toggleButton()}>
                   Edit Business Info
                 </button>
                 {!showEdit && (
-                  <EditBusiness bizId={business.id} setUpdate={setUpdate} />
-                )}
+                  <EditBusiness
+                    bizInfo={userBusinesses}
+                    setUpdate={setUpdate}
+                  />
+                )} */}
               </div>
             </div>
           </div>

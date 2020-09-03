@@ -1,72 +1,63 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import { stack as Menu } from 'react-burger-menu';
+import { AuthContext } from '../../providers/AuthContext';
+import { logout } from '../../util/firebaseFunctions';
+
 import '../../css/HamburgerMenu.css';
 
 const HamburgerMenu = () => {
-  // NOTE: You also need to provide styles, see https://github.com/negomi/react-burger-menu#styling
+  const { currentUser, loading } = useContext(AuthContext);
 
-  // const styles = {
-  //   bmBurgerButton: {
-  //     position: 'fixed',
-  //     width: '36px',
-  //     height: '30px',
-  //     right: '36px',
-  //     top: '.5em',
-  //   },
-  //   bmBurgerBars: {
-  //     background: '#f3b71fd8',
-  //   },
-  //   bmBurgerBarsHover: {
-  //     background: '#a90000',
-  //   },
-  //   bmCrossButton: {
-  //     height: '20px',
-  //     width: '20px',
-  //   },
-  //   bmCross: {
-  //     background: '#bdc3c7',
-  //   },
-  //   bmMenuWrap: {
-  //     position: 'fixed',
-  //     height: '100%',
-  //   },
-  //   bmMenu: {
-  //     background: '#19110280',
-  //     padding: '2em 1em 0',
-  //     fontSize: '1.15em',
-  //   },
-  //   bmMorphShape: {
-  //     fill: '#f3b71fd8',
-  //   },
-  //   bmItemList: {
-  //     color: '#b8b7ad',
-  //     padding: '0.8em',
-  //   },
-  //   bmItem: {
-  //     display: 'flex',
-  //     flexDirection: 'column',
-  //     padding: '1em',
-  //     color: '#ffffff',
-  //   },
-  //   bmOverlay: {
-  //     background: 'rgba(0, 0, 0, 0.3)',
-  //   },
-  // };styles={styles}
+  // NOTE: You also need to provide styles, see https://github.com/negomi/
+
+  const displayButtons = () => {
+    if (currentUser) {
+      return (
+        <div style={{ display: "grid"}}>
+          <button id="logOutLink" className="menu-item" onClick={logout}>
+            Log Out
+          </button>
+          <NavLink className="menu-item" to={`/profile/${currentUser.uid}`}>
+            Profile
+          </NavLink>
+        </div>
+      );
+    } else {
+      return (
+        <div style={{ display: "flex", flexDirection="column"}}>
+          <NavLink className="menu-item" exact to="/login">
+            Log In
+          </NavLink>
+          <NavLink className="menu-item" exact to="/signup">
+            Sign Up
+          </NavLink>
+        </div>
+      );
+    }
+  };
+
+  if (loading) return <div>Loading...</div>;
 
   return (
     <Menu right>
-      <Link id="home" className="menu-item" to="/">
-        Home
-      </Link>
-      <Link id="about" className="menu-item" to="/login">
-        Log In
-      </Link>
-      <Link id="contact" className="menu-item" to="/signup">
-        Sign Up
-      </Link>
+      <nav id="hamburgerNav">
+        <Link id="home" className="menu-item" to="/">
+          Home
+        </Link>
+        {displayButtons()}
+      </nav>
     </Menu>
   );
 };
 
 export default HamburgerMenu;
+
+{
+  /* <Link id="about" className="menu-item" to="/login">
+  Log In
+</Link>
+<Link id="contact" className="menu-item" to="/signup">
+  Sign Up
+</Link> */
+}

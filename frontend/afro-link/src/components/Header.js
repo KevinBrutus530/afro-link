@@ -7,12 +7,6 @@ const Header = () => {
   return (
     <div>
       <nav className="headerNav">
-        {/* {" "}
-        <p>
-          <NavLink exact to="/">
-            <img className="logoHeader" src={logo} alt="logo" />
-          </NavLink>
-        </p> */}
         <div className="BLM">
           Black Lives Matter.
           <a

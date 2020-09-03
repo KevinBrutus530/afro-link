@@ -86,7 +86,6 @@ input:focus::placeholder {
   text-align: left;
 }
 
-
 .timeTableBtn {
   display: flex;
   margin: auto;
@@ -97,4 +96,17 @@ input:focus::placeholder {
   color: #0468da;
   font-weight: bold;
   padding: 1em;
+}
+
+#logOutLink {
+  color: whitesmoke;
+  font-size: large;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#logOutLink:hover {
+  cursor: pointer;
+  color: #0468da;
 }

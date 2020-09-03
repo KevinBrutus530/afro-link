@@ -409,6 +409,10 @@ h6 {
   padding: 0.5em;
   font-size: 13pt;
 }
+
+.resourcesUL li:hover {
+  text-shadow: 3px 4px 6px rgb(194, 224, 224);
+}
 .resourcesUL {
   padding: 2em;
   list-style-type: none;

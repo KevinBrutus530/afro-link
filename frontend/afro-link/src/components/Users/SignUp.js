@@ -1,19 +1,19 @@
-import React, { useState } from "react";
-import { useInput } from "../../util/useInput";
-import { Link } from "react-router-dom";
-import { getAPI } from "../../util/getAPI";
-import { useHistory } from "react-router-dom";
-import { signUp } from "../../util/firebaseFunctions";
-import Notification from "../commonlyUsed/Notification";
-import axios from "axios";
-import "../../css/SignUp.css";
+import React, { useState } from 'react';
+import { useInput } from '../../util/useInput';
+import { Link } from 'react-router-dom';
+import { getAPI } from '../../util/getAPI';
+import { useHistory } from 'react-router-dom';
+import { signUp } from '../../util/firebaseFunctions';
+import Notification from '../commonlyUsed/Notification';
+import axios from 'axios';
+import '../../css/SignUp.css';
 
 const SignUp = () => {
-  const email = useInput("");
-  const password = useInput("");
+  const email = useInput('');
+  const password = useInput('');
   const API = getAPI();
   const history = useHistory();
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState('');
 
   const handleNewUser = async (e) => {
     e.preventDefault();
@@ -23,7 +23,7 @@ const SignUp = () => {
         user_id: res.user.uid,
         email: email.value,
       });
-      setMessage("Congratulations! You have successfully signed up!")
+      setMessage('Congratulations! You have successfully signed up!');
       history.push(`/profile/${res.user.uid}`);
     } catch (err) {
       setMessage(err.message);
@@ -34,6 +34,12 @@ const SignUp = () => {
     <div className="signUpMainDiv">
       <Notification message={message} />
       <form className="signUpForm" onSubmit={handleNewUser}>
+        <h3
+          className="profileTitle"
+          style={{ margin: 'auto', padding: '1em 1em 2em 1em', justifyContent: 'center' }}
+        >
+          Business owners, sign up with Afro Link to add your business
+        </h3>
         <h1 className="heavyFont signUpHeader">Sign Up</h1>
         <div className="input">
           <label className="labelInput text-white">Email: </label>

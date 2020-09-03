@@ -70,7 +70,7 @@
 }
 
 #logOutLink {
-  text-shadow: 1px 3px 5px #191102ff;
+  text-shadow: 1px 3px 5px goldenrod;
   color: rgba(243, 183, 31, 0.863);
   -webkit-text-stroke: 2px rgba(104, 17, 13, 0.842);
   font-size: 18pt;
@@ -82,7 +82,8 @@
 
 #logOutLink:hover {
   cursor: pointer;
-  color: #0468da;
+  color: rgba(81, 14, 10, 0.75);
+  text-shadow: 1px 3px 5px gold;
 }
 
 .menu-item {
@@ -95,13 +96,15 @@
   align-content: flex-start;
   font-weight: 570;
   font-size: 18pt;
-  text-shadow: 1px 3px 5px #191102ff;
+  text-shadow: 1px 3px 5px goldenrod;
   color: rgba(243, 183, 31, 0.863);
   -webkit-text-stroke: 2px rgba(104, 17, 13, 0.842);
 }
 
 .menu-item:hover {
-  color: #0468da;
+  color: rgba(81, 14, 10, 0.75);
   cursor: pointer;
   text-align: center;
+  text-shadow: 1px 3px 5px gold;
+  text-decoration: none;
 }

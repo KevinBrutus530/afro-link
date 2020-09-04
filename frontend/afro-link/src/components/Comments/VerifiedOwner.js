@@ -14,6 +14,7 @@ const VerifiedOwner =({userBusinesses})=> {
     }else{
       return null
     }
+    
   })
 return <div>{verifiedOwner()}</div>
 

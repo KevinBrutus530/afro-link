@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
-import axios from "axios";
-import { getAPI } from "../util/getAPI";
-import BusinessImage from "./BusinessImage";
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
+import axios from 'axios';
+import { getAPI } from '../util/getAPI';
+import BusinessImage from './BusinessImage';
 
 const ResultsIndex = ({ results }) => {
   const history = useHistory();
@@ -14,13 +14,13 @@ const ResultsIndex = ({ results }) => {
   let resultDisplay = results.map((biz) => {
     let bizPic;
     let bizID = biz.biz_id;
-    let noAddress = "";
-    let noHours = "Not Available";
+    let noAddress = '';
+    let noHours = 'Not Available';
     let bizz = biz.street === null ? (biz.street = noAddress) : biz.street;
-    let hrsSub = biz.hours === "" ? (biz.hours = noHours) : biz.hours;
+    let hrsSub = biz.hours === '' ? (biz.hours = noHours) : biz.hours;
 
     return (
-      <ul key={biz.biz_id} className="resultsUl">
+      <ul key={biz.biz_id} className="resultsUl resultsPage">
         <li
           className="resultsDiv"
           value={biz.biz_id}

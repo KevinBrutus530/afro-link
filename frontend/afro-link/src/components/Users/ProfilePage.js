@@ -30,11 +30,10 @@ const ProfilePage = () => {
     }
   };
 
-  // {"status":"Error","message":"Error getting businesses by owner","payload":{"length":117,"name":"error","severity":"ERROR","code":"42601","position":"209","file":"scan.l","line":"1133","routine":"scanner_yyerror"}}
 
   useEffect(() => {
     fetchUserById();
-  }, []);
+  }, [update]);
 
   useEffect(() => {
     fetchUserById();

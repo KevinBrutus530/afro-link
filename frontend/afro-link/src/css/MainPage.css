@@ -192,6 +192,7 @@ $black-chocolate: #191102ff; */
 
 .smallerTxt {
   font-size: 10pt;
+  font-weight: bolder;
   color: rgba(81, 14, 10, 0.5);
 }
 

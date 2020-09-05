@@ -1,24 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
-import EditBusiness from './EditBusiness';
 
-const BusinessDisplay = ({ userBusinesses, setUpdate }) => {
-  const [showEdit, setShowEdit] = useState(true);
+const BusinessDisplay = ({ userBusinesses }) => {
   let history = useHistory();
-
-  const toggleButton = () => {
-    setShowEdit(!showEdit);
-  };
 
   const showBusiness = () => {
     let biznessHours = '';
     if (userBusinesses.length) {
       let allUserBusiness = userBusinesses.map((business, i) => {
-        // create a function that calls the reviews from each business
-        // create function in spearate component using the business id as a prop
-
-        // fn to show each address components "blank" if null in db/
-
         return (
           <div key={i}>
             <div id="bizName" className="ownerHeader heavyFont">

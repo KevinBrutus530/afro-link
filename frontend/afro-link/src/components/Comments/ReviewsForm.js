@@ -95,7 +95,7 @@ const ReviewsForm = () => {
           <p className="review"> {post.text}</p>
           <p className="reviewDT">{post.dt.substring(0,10)}</p>
           <div className="reply">
-            <VerifiedOwner userBusinesses={userBusinesses}/>
+            <VerifiedOwner userBusinesses={userBusinesses} post={post} getReviews={getReviews}/>
             <Reply allReviews={allReviews} replyID={post.id} />
           </div>
         </div>

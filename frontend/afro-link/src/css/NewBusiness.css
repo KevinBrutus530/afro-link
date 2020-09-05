@@ -177,3 +177,22 @@ label {
   padding: 0.5em;
   text-align: center;
 }
+
+.Btn-create-Reply {
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  color: #f3b61fff;
+  background-color: darkred;
+  border: none;
+  border-radius: 25px;
+  font-family: 'Candal', sans-serif;
+  font-weight: lighter;
+  font-size: 14pt;
+  text-shadow: 1px 2px 2px #191102ff;
+  box-shadow: 1px 3px 3px rgb(41, 28, 3);
+  height: auto;
+  width: 6em;
+  padding: 0.5em;
+  text-align: center;
+}

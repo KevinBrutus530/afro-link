@@ -1,13 +1,15 @@
-import React from "react";
-import { useHistory } from "react-router-dom";
-import "../css/DisplayBusiness.css";
+import React, { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
+import '../css/DisplayBusiness.css';
 
 const DisplayBusiness = ({ businessInfo }) => {
+  // debugger
+  const [bizNezHours, setBizNezHours] = useState('');
   const history = useHistory();
 
   const checkingSocialMedia = (url) => {
-    let fb = "facebook";
-    let ins = "instagram";
+    let fb = 'facebook';
+    let ins = 'instagram';
 
     if (!url) return null;
     if (url.includes(ins)) {
@@ -21,26 +23,43 @@ const DisplayBusiness = ({ businessInfo }) => {
 
   let owner =
     businessInfo.owner_name === null
-      ? (businessInfo.owner_name = "")
+      ? (businessInfo.owner_name = '')
       : businessInfo.owner_name;
 
   return (
     <>
-      <div className="businessDisplay" style={{ color: "white" }}>
+      <div className="businessDisplay" style={{ color: 'white' }}>
         <div className="ownerHeader">
           <h3 className="heavyFont">{owner}</h3>
-          {owner === "" ? <p className="empty"></p> : <p className="lightGrey">Owner/Operator</p>}
+          {owner === '' ? (
+            <p className="empty"></p>
+          ) : (
+            <p className="lightGrey">Owner/Operator</p>
+          )}
         </div>
         <div className="businessInfo">
-          <ul style={{ listStyleType: "none" }}>
+          <ul style={{ listStyleType: 'none' }}>
             <li>
               <img className="bizPicProfile" src={businessInfo.pictures} />
             </li>
             <li className="bizAddress">
-              {businessInfo.street} {businessInfo.city} {businessInfo.state}{" "}
+              {businessInfo.street} {businessInfo.city} {businessInfo.state}{' '}
               {businessInfo.zip}
             </li>
-            <li className="bizHours">{businessInfo.hours}</li>
+            <label className="bizLabel">
+              Business Hours:
+              <li className="bizHoursProfile">
+                {businessInfo.hours === 'Online Store' ? (
+                  <p>Online Business</p>
+                ) : (
+                  <details className="hoursDetails">
+                    <summary>Hours</summary>
+                    {businessInfo.hours}
+                  </details>
+                )}
+              </li>
+            </label>
+            {/* <li className="bizHours">{businessInfo.hours}</li> */}
 
             <li className="hyperLink">
               <a href={businessInfo.website} target="_blank">

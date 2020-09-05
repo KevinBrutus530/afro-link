@@ -18,27 +18,29 @@ const BusinessDisplay = ({ userBusinesses, setUpdate }) => {
         // debugger
         // create a function that calls the reviews from each business
         // create function in spearate component using the business id as a prop
-        //fn to show each address components "blank" if null in db/
-        // const displayAddress = () => {
-        //   return (
-        //     <div key={i} className="bizAddress">
-        //       {
-        //         (business.street ? (
-        //           business.street
-        //         ) : (
-        //           <p className="displayNone"></p>
-        //         ),
-        //         business.city ? business.city : <p className="displayNone"></p>,
-        //         business.state ? (
-        //           business.state
-        //         ) : (
-        //           <p className="displayNone"></p>
-        //         ),
-        //         business.zip ? business.zip : <p className="displayNone"></p>)
-        //       }
-        //     </div>
-        //   );
-        // };
+
+        
+        // fn to show each address components "blank" if null in db/
+        const displayAddress = () => {
+          return (
+            <div key={i} className="bizAddress">
+              {
+                (business.street ? (
+                  business.street
+                ) : (
+                  <p className="displayNone"></p>
+                ),
+                business.city ? business.city : <p className="displayNone"></p>,
+                business.state ? (
+                  business.state
+                ) : (
+                  <p className="displayNone"></p>
+                ),
+                business.zip ? business.zip : <p className="displayNone"></p>)
+              }
+            </div>
+          );
+        };
 
         return (
           <div key={i}>
@@ -51,10 +53,10 @@ const BusinessDisplay = ({ userBusinesses, setUpdate }) => {
                   <img className="bizPicProfile" src={business.pictures} />
                 </li>
                 <li className="bizAddress">
-                  {business.street} {business.city}
+                  {/* {business.street} {business.city}
                   {business.state}
-                  {business.zip}
-                  {/* {displayAddress()} */}
+                  {business.zip} */}
+                  {displayAddress()}
                 </li>
 
                 <label className="bizLabel">

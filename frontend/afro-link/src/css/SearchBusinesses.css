@@ -34,7 +34,6 @@ $black-chocolate: #191102ff; */
   height: auto;
   padding: 0.5em;
   margin-right: 10px;
-  /* color: #57110080; */
   color: #191102ff;
   font-size: 12pt;
   box-shadow: 1px 3px 6px #191102ff;
@@ -43,6 +42,20 @@ $black-chocolate: #191102ff; */
   cursor: pointer;
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
+}
+
+@media (max-width: 445px) {
+  .selectBizForm > * {
+    width: max-content;
+    margin: 1em;
+  }
+}
+
+@media (max-width: 445px) {
+  .selectBizForm > * {
+    width: 50%;
+    margin: 1em;
+  }
 }
 
 .selectBizBar > option {

@@ -18,124 +18,144 @@ const MainPage = () => {
         <Carousel>
           <Carousel.Item>
             <img
-              style={{ width: 'auto', height: '600px' }}
-              className="carouselPics"
+              className="ownerPicMain carouselPics"
               src="https://static1.squarespace.com/static/59754241414fb5f8aba62bc5/597e22d46b8f5bb6b4ee92a9/59b04b59ccc5c58e16514916/1515100594146/IMG_5280.jpg?format=1500w"
               alt="first slide"
             />
             <Carousel.Caption>
-              <h3 className="contrastBackground">Denequa Williams</h3>
-              <a target="_blank" href="https://www.litbklyn.co/meet-the-maker">
-                <p className="contrastLight">Lit Brooklyn</p>
-              </a>
+              <div className="caption">
+                <h3 className="contrastBackground">Denequa Williams</h3>
+                <a
+                  target="_blank"
+                  href="https://www.litbklyn.co/meet-the-maker"
+                >
+                  <p className="contrastLight">Lit Brooklyn</p>
+                </a>
+              </div>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
             <img
-              style={{ width: 'auto', height: '600px' }}
-              className="carouselPics"
+              // style={{ width: 'auto', height: '600px' }}
+              className="ownerPicMain carouselPics"
               src="https://pbs.twimg.com/media/EeinSt-UYAAgGlb.jpg"
               alt="second slide"
             />
             <Carousel.Caption>
-              <h3 className="contrastBackground">Charles Gabriel</h3>
-              <a
-                target="_blank"
-                href="https://www.facebook.com/charlespanfried/about/?ref=page_internal"
-              >
-                <p className="contrastLight">Charles' Pan Fried Chicken</p>
-              </a>
+              <div className="caption">
+                <h3 className="contrastBackground">Charles Gabriel</h3>
+                <a
+                  target="_blank"
+                  href="https://www.facebook.com/charlespanfried/about/?ref=page_internal"
+                >
+                  <p className="contrastLight">Charles' Pan Fried Chicken</p>
+                </a>
+              </div>
             </Carousel.Caption>
           </Carousel.Item>
 
           <Carousel.Item>
             <img
-              style={{ width: 'auto', height: '600px' }}
-              className="carouselPics"
+              // style={{ width: 'auto', height: '600px' }}
+              className="ownerPicMain carouselPics"
               src="https://cdn.shopify.com/s/files/1/0223/5181/articles/kat_in_bsas_full_size_aff1574f-a5da-4fae-93ec-ebe1e46f6bc1_2000x.jpg?v=1580418798"
               alt="third slide"
             />
             <Carousel.Caption>
-              <h3 className="contrastBackground">Katherine Theobalds</h3>
-              <a target="_blank" href="https://www.zouxou.com/aboutzx">
-                <p className="contrastLight">Zou Xou Shoes</p>
-              </a>
+              <div className="caption">
+                <h3 className="contrastBackground">Katherine Theobalds</h3>
+                <a target="_blank" href="https://www.zouxou.com/aboutzx">
+                  <p className="contrastLight">Zou Xou Shoes</p>
+                </a>
+              </div>
             </Carousel.Caption>
           </Carousel.Item>
 
           <Carousel.Item>
             <img
-              style={{ width: 'auto', height: '600px' }}
-              className="carouselPics"
+              // style={{ width: 'auto', height: '600px' }}
+              className="ownerPicMain carouselPics"
               src="https://cdn.fashionmagazine.com/wp-content/uploads/2019/06/Goodee-Pop-Up-Studio-Montreal_Celia-Spenard-Ko_20.jpg"
               alt="fourth slide"
             />
 
             <Carousel.Caption>
-              <h3 className="contrastBackground">Byron and Dexter Peart</h3>
-              <a
-                target="_blank"
-                href="https://www.goodeeworld.com/pages/about-us"
-              >
-                <p className="contrastLight">Goodee</p>
-              </a>
+              <div className="caption">
+                <h3 className="contrastBackground">Byron and Dexter Peart</h3>
+                <a
+                  target="_blank"
+                  href="https://www.goodeeworld.com/pages/about-us"
+                >
+                  <p className="contrastLight">Goodee</p>
+                </a>
+              </div>
             </Carousel.Caption>
           </Carousel.Item>
 
           <Carousel.Item>
             <img
-              style={{ width: 'auto', height: '600px' }}
-              className="carouselPics"
+              // style={{ width: 'auto', height: '600px' }}
+              className="ownerPicMain carouselPics"
               src="https://bklyner.com/wp-content/uploads/2017/07/DSC_5270.jpg"
               alt="fifth slide"
             />
 
             <Carousel.Caption>
-              <h3 className="contrastBackground">Felicia Eve</h3>
-              <a
-                target="_blank"
-                href="https://www.stringthingstudio.com/media-presence"
-              >
-                <p className="contrastLight">String Thing Studio</p>
-              </a>
+              <div className="caption">
+                <h3 className="contrastBackground">Felicia Eve</h3>
+                <a
+                  target="_blank"
+                  href="https://www.stringthingstudio.com/media-presence"
+                >
+                  <p className="contrastLight">String Thing Studio</p>
+                </a>
+              </div>
             </Carousel.Caption>
           </Carousel.Item>
 
           <Carousel.Item>
             <img
-              style={{ width: 'auto', height: '550px' }}
-              className="carouselPics"
+              // style={{ width: 'auto', height: '550px' }}
+              className="ownerPicMain carouselPics"
               src="https://bloximages.newyork1.vip.townnews.com/feastmagazine.com/content/tncms/assets/v3/editorial/9/8f/98ff9c78-f445-11e9-91ff-bf70a7b15818/5dae1c2fb80a1.image.jpg?resize=1200%2C901"
               alt="sixth slide"
             />
 
             <Carousel.Caption>
-              <h3 className="contrastBackground">André Hueston Mack</h3>
-              <a target="_blank" href="https://maisonnoirwines.com/our-story">
-                <p className="contrastLight">Mainson Noir Wines </p>
-              </a>
+              <div className="caption">
+                <h3 className="contrastBackground">André Hueston Mack</h3>
+                <a target="_blank" href="https://maisonnoirwines.com/our-story">
+                  <p className="contrastLight">Mainson Noir Wines </p>
+                </a>
+              </div>
             </Carousel.Caption>
           </Carousel.Item>
 
           <Carousel.Item>
             <img
-              style={{ width: 'auto', height: '600px' }}
-              className="carouselPics"
+              // style={{ width: 'auto', height: '600px' }}
+              className="ownerPicMain carouselPics"
               src="https://www.ft.com/__origami/service/image/v2/images/raw/http://prod-upp-image-read.ft.com/44a2ea70-1729-11ea-8d73-6303645ac406?source=next&fit=scale-down&quality=highest&width=1067"
               alt="seventh slide"
             />
 
             <Carousel.Caption>
-              <h3 className="contrastBackground">Pat McGrath</h3>
-              <a
-                target="_blank"
-                href="https://www.patmcgrath.com/pages/pat-mcgrath-biography"
-              >
-                <p className="contrastLight">Pat McGrath Labs</p>
-              </a>
+              <div className="caption">
+                <h3 className="contrastBackground">Pat McGrath</h3>
+                <a
+                  target="_blank"
+                  href="https://www.patmcgrath.com/pages/pat-mcgrath-biography"
+                >
+                  <p className="contrastLight">Pat McGrath Labs</p>
+                </a>
+              </div>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
+        <h3 className="getPersonal medium">Get to know the owners</h3>
+        <p className="getPersonal smallerTxt">
+          Click on the link to go to their about pages
+        </p>
       </div>
 
       <div className="mainPageContainer">

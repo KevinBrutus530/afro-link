@@ -69,50 +69,43 @@
   background: #191102a1;
 }
 
-/*/ const styles = {
-    //   bmBurgerButton: {
-    //     position: 'fixed',
-    //     width: '36px',
-    //     height: '30px',
-    //     right: '36px',
-    //     top: '.5em',
-    //   },
-    //   bmBurgerBars: {
-    //     background: '#f3b71fd8',
-    //   },
-    //   bmBurgerBarsHover: {
-    //     background: '#a90000',
-    //   },
-    //   bmCrossButton: {
-    //     height: '20px',
-    //     width: '20px',
-    //   },
-    //   bmCross: {
-    //     background: '#bdc3c7',
-    //   },
-    //   bmMenuWrap: {
-    //     position: 'fixed',
-    //     height: '100%',
-    //   },
-    //   bmMenu: {
-    //     background: '#19110280',
-    //     padding: '2em 1em 0',
-    //     fontSize: '1.15em',
-    //   },
-    //   bmMorphShape: {
-    //     fill: '#f3b71fd8',
-    //   },
-    //   bmItemList: {
-    //     color: '#b8b7ad',
-    //     padding: '0.8em',
-    //   },
-    //   bmItem: {
-    //     display: 'flex',
-    //     flexDirection: 'column',
-    //     padding: '1em',
-    //     color: '#ffffff',
-    //   },
-    //   bmOverlay: {
-    //     background: 'rgba(0, 0, 0, 0.3)',
-    //   },
-    // };*/
+#logOutLink {
+  /* text-shadow: 1px 3px 5px goldenrod; */
+  color: rgba(243, 183, 31, 0.863);
+  -webkit-text-stroke: 2px rgba(104, 17, 13, 0.842);
+  font-size: 18pt;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  align-self: center;
+}
+
+#logOutLink:hover {
+  cursor: pointer;
+  color: #a90000;
+  text-shadow: 1px 3px 5px #191102a1;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  font-family: Bungee, cursive;
+  padding: 1em;
+  cursor: pointer;
+  font-weight: bolder;
+  align-content: flex-start;
+  font-weight: 570;
+  font-size: 18pt;
+  /* text-shadow: 1px 3px 5px goldenrod; */
+  color: rgba(243, 183, 31, 0.863);
+  -webkit-text-stroke: 2px rgba(104, 17, 13, 0.842);
+}
+
+.menu-item:hover {
+  /* color: rgba(81, 14, 10, 0.75); */
+  cursor: pointer;
+  text-align: center;
+  color: #a90000;
+  text-shadow: 1px 3px 5px #191102a1;
+  text-decoration: none;
+}

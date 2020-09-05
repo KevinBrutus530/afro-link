@@ -24,8 +24,6 @@ html {
   overflow-y: scroll;
   overflow-x: hidden;
   background-image: url('https://www.transparenttextures.com/patterns/dark-geometric.png');
-  /* background-color: rgb(0, 0, 0)
-  ; */
   background-color: #a29f15ff;
   background-repeat: repeat;
   --PhoneInputCountryFlag-height: 10px;
@@ -34,7 +32,6 @@ html {
 a {
   color: #2d99a3;
   font-weight: bolder;
-  /* text-decoration: none; */
 }
 
 input:focus {
@@ -45,7 +42,6 @@ input:focus {
   width: 100%;
   height: auto;
   object-fit: contain;
-  /* position: static; */
   z-index: 0;
 }
 
@@ -57,10 +53,32 @@ input:focus {
   }
 }
 
+.contrastBackground {
+  display: flex;
+  margin: auto;
+  object-fit: scale-down;
+}
+
+.ownerPicMain {
+  display: flex;
+  margin: auto;
+  max-width: 890px;
+  max-height: 550px;
+  object-fit: contain;
+}
+
 .carouselPics {
   width: 100%;
   height: auto;
   filter: drop-shadow(5px rgb(240, 198, 92));
+  animation-duration: 2s;
+  animation-name: slideIn;
+  transition: transform 1s;
+  padding: 3em;
+}
+
+.carouselPics:hover {
+  transform: scale(1.05, 1.05);
 }
 
 .padDown {
@@ -69,7 +87,7 @@ input:focus {
 }
 
 img {
-  object-fit: scale-down;
+  object-fit: contain;
 }
 
 input:focus::placeholder {
@@ -85,7 +103,6 @@ input:focus::placeholder {
   width: 100%;
   text-align: left;
 }
-
 
 .timeTableBtn {
   display: flex;

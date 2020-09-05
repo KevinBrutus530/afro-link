@@ -4,7 +4,6 @@ import { useInput } from '../../util/useInput';
 import { AuthContext } from '../../providers/AuthContext';
 import { getAPI } from '../../util/getAPI';
 import TimeTable from '../../components/TimeTable';
-import AddressForm from '../Forms/Address';
 import axios from 'axios';
 import '../../css/EditBusiness.css';
 
@@ -49,7 +48,7 @@ const EditBusiness = ({ setUpdate, bizInfo }) => {
       let bizRes = await axios.get(`${API}/businesses/${id}`);
       let biz = bizRes.data.payload;
       setBizName(biz.biz_name);
-      setHours(biz.hours);
+      // setHours(biz.hours);
       setStreet(biz.street);
       setCity(biz.city);
       setState(biz.state);
@@ -71,18 +70,7 @@ const EditBusiness = ({ setUpdate, bizInfo }) => {
         hours: hours,
       });
 
-//       debugger
-//       if (res.data.status === 'success') {
-//         await axios.patch(`${API}/addresses/${bizId}`, {
-//           street: street.value,
-//           city: city.value,
-//           state: state.value,
-//           zip: zip.value,
-//           website: website.value,
-//         });
-//       }
-//       debugger;
-      //   = console.log(res)
+
       let res2 = await axios.patch(`${API}/addresses/${id}`, {
         street: street,
         city: city,
@@ -91,8 +79,6 @@ const EditBusiness = ({ setUpdate, bizInfo }) => {
         website: website,
       });
 
-      // if (res.data.status === 'success') {
-      // console.log(phone, email, social_media);
 
       let res3 = await axios.patch(`${API}/contacts/${id}`, {
         phone: phone,

@@ -1,29 +1,29 @@
-import React, { useState, useEffect } from "react";
-import { useParams, useHistory } from "react-router-dom";
-import { getAPI } from "../util/getAPI";
-import axios from "axios";
-import DisplayBusiness from "./DisplayBusiness";
-import ReviewsForm from "./Comments/ReviewsForm";
-import "../css/Business.css";
-import PinMap from "./PinMap";
-import SearchBar from "./SearchBar";
+import React, { useState, useEffect } from 'react';
+import { useParams, useHistory } from 'react-router-dom';
+import { getAPI } from '../util/getAPI';
+import axios from 'axios';
+import DisplayBusiness from './DisplayBusiness';
+import ReviewsForm from './Comments/ReviewsForm';
+import '../css/Business.css';
+import PinMap from './PinMap';
+import SearchBar from './SearchBar';
 
 const Business = () => {
   const API = getAPI();
   const [businessInfo, setBusinessInfo] = useState([]);
   const history = useHistory();
   const { id } = useParams();
-  const [igUrl, setIgUrl] = useState("");
-  const [businessName, setBusinessName] = useState("");
-  const [type, setType] = useState("");
+  const [igUrl, setIgUrl] = useState('');
+  const [businessName, setBusinessName] = useState('');
+  const [type, setType] = useState('');
 
   let location =
     businessInfo.street +
-    " " +
+    ' ' +
     businessInfo.city +
-    " " +
+    ' ' +
     businessInfo.state +
-    " " +
+    ' ' +
     businessInfo.zip;
 
   const getInfo = async () => {
@@ -33,7 +33,6 @@ const Business = () => {
       setBusinessName(res.data.payload.biz_name);
       setIgUrl(res.data.payload.social_media);
       setType(res.data.payload.type_name);
-
     } catch (err) {
       console.log(err);
     }
@@ -46,21 +45,20 @@ const Business = () => {
   return (
     <div className="businessMainDiv">
       <div className="businessHeader">
-      <button
-        id="goBack"
-        className="Btn-create"
-        onClick={() => history.goBack()}
-        type="submit"
-      >
-        Return to Results Page
-      </button>
-        </div>
-
+        <button
+          id="goBack"
+          className="Btn-create"
+          onClick={() => history.goBack()}
+          type="submit"
+        >
+          Return to Previous Page
+        </button>
+      </div>
 
       <h1 id="bizName" className="heavyFont">
         {businessName}
       </h1>
-      <h4 style={{ color: "lightGrey", padding: ".5em" }}>{type}</h4>
+      <h4 style={{ color: 'lightGrey', padding: '.5em' }}>{type}</h4>
       <div className="bizMapRevContainer">
         <div className="bizMap">
           <DisplayBusiness businessInfo={businessInfo} categoryId={id} />

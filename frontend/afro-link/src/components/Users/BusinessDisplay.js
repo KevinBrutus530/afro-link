@@ -8,7 +8,7 @@ const BusinessDisplay = ({ userBusinesses }) => {
     let biznessHours = '';
     if (userBusinesses.length) {
       let allUserBusiness = userBusinesses.map((business, i) => {
-        console.log(business.social_media);
+        console.log(business);
         return (
           <div key={i}>
             <div id="bizName" className="ownerHeader heavyFont">
@@ -93,6 +93,14 @@ const BusinessDisplay = ({ userBusinesses }) => {
                     </li>
                   </label>
                 </ul>
+                <button
+                  className="Btn-rest BtnEdit"
+                  onClick={() => {
+                    history.push(`/businesses/${business.owner_id}`);
+                  }}
+                >
+                  Visit Business
+                </button>
                 <button
                   className="Btn-rest BtnEdit"
                   onClick={() =>

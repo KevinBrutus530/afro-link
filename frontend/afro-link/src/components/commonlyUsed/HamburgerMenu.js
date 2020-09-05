@@ -14,18 +14,18 @@ const HamburgerMenu = () => {
   const displayButtons = () => {
     if (currentUser) {
       return (
-        <div style={{ display: 'flex', flexDirection: 'column'}}>
-          <button id="logOutLink" className="menu-item" onClick={logout}>
-            Log Out
-          </button>
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
           <NavLink className="menu-item" to={`/profile/${currentUser.uid}`}>
             Profile
           </NavLink>
+          <button id="logOutLink" className="menu-item" onClick={logout}>
+            Log Out
+          </button>
         </div>
       );
     } else {
       return (
-        <div style={{ display: 'flex', flexDirection: 'column'}}>
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
           <NavLink className="menu-item" exact to="/login">
             Log In
           </NavLink>

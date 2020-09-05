@@ -47,7 +47,8 @@ const getBusinessesByUser = async (req, res, next) => {
   try {
     let { id } = req.params;
     let userBusinesses = await db.any(
-      `SELECT * FROM businesses JOIN owners ON owners.owner_id = businesses.id LEFT JOIN contacts ON contacts.contact_id = businesses.id LEFT JOIN addresses ON addresses.address_id = businesses.id WHERE owners.user_id = $1`,[id]
+      `SELECT * FROM businesses JOIN owners ON owners.owner_id = businesses.id LEFT JOIN contacts ON contacts.contact_id = businesses.id LEFT JOIN addresses ON addresses.address_id = businesses.id WHERE owners.user_id=$1`,
+      [id]
     );
     res.status(200).json({
       status: 'success',

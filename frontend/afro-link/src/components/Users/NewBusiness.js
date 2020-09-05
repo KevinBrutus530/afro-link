@@ -87,7 +87,7 @@ const NewBusiness = () => {
         //   owner_id: newBiz.data.payload.id,
         //   owner_name: owner_name.value,
         // });
-        debugger;
+        
         await axios.patch(`${API}/owners/${currentUser.uid}`, {
           owner_id: newBiz.data.payload.id,
           owner_name: owner_name.value,

@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import { useInput } from '../../util/useInput';
 import { AuthContext } from '../../providers/AuthContext';
@@ -8,21 +8,30 @@ import AddressForm from '../Forms/Address';
 import axios from 'axios';
 import '../../css/EditBusiness.css';
 
-const EditBusiness = ({ setUpdate, bizId }) => {
+const EditBusiness = ({ setUpdate, bizInfo }) => {
+  const { id } = useParams();
+  // const mainId = bizInfo[0].owner_id;
+  // const addressId = bizInfo[0].address_id;
+
   const API = getAPI();
   const { currentUser, loading } = useContext(AuthContext);
   let history = useHistory();
-  const biz_name = useInput('');
+  const [bizName, setBizName] = useState('');
   const [modalShow, setModalShow] = useState(false);
   const [hours, setHours] = useState('Online Store');
 
   // const [houseNum, setHouseNum] = useState(null);
-  const street = useInput('');
-  const city = useInput('');
-  const state = useInput('');
-  const zip = useInput('');
-  const website = useInput('');
-  const [showAddress, setAddress] = useState(false);
+  const [street, setStreet] = useState('');
+  const [city, setCity] = useState('');
+  const [state, setState] = useState('');
+  const [zip, setZip] = useState('');
+  const [website, setWebsite] = useState('');
+  // const [showAddress, setAddress] = useState(false);
+
+  // console.log(mainId);
+  const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState('');
+  const [socialMedia, setSocialMedia] = useState('');
 
   //This variable is holding "time" for storage
   let time = {
@@ -35,24 +44,66 @@ const EditBusiness = ({ setUpdate, bizId }) => {
     Sun: 'close',
   };
 
+  useEffect(() => {
+    fetchBizById();
+  }, []);
+
+  const fetchBizById = async () => {
+    try {
+      let bizRes = await axios.get(`${API}/businesses/${id}`);
+      let biz = bizRes.data.payload;
+      setBizName(biz.biz_name);
+      setHours(biz.hours);
+      setStreet(biz.street);
+      setCity(biz.city);
+      setState(biz.state);
+      setZip(biz.zip);
+      setWebsite(biz.website);
+      setPhone(biz.phone);
+      setEmail(biz.email);
+      setSocialMedia(biz.social_media);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   //This fun patches new biz info to db
   const editBusinessInfo = async () => {
     try {
-      let res = await axios.patch(`${API}/businesses/${bizId}`, {
-        biz_name: biz_name.value,
+      let res = await axios.patch(`${API}/businesses/${id}`, {
+        biz_name: bizName,
         hours: hours,
       });
-      debugger
-      if (res.data.status === 'success') {
-        await axios.patch(`${API}/addresses/${bizId}`, {
-          street: street.value,
-          city: city.value,
-          state: state.value,
-          zip: zip.value,
-          website: website.value,
-        });
-      }
-      debugger;
+
+//       debugger
+//       if (res.data.status === 'success') {
+//         await axios.patch(`${API}/addresses/${bizId}`, {
+//           street: street.value,
+//           city: city.value,
+//           state: state.value,
+//           zip: zip.value,
+//           website: website.value,
+//         });
+//       }
+//       debugger;
+      //   = console.log(res)
+      let res2 = await axios.patch(`${API}/addresses/${id}`, {
+        street: street,
+        city: city,
+        state: state,
+        zip: zip,
+        website: website,
+      });
+
+      // if (res.data.status === 'success') {
+      // console.log(phone, email, social_media);
+
+      let res3 = await axios.patch(`${API}/contacts/${id}`, {
+        phone: phone,
+        email: email,
+        social_media: socialMedia,
+      });
+      // }
     } catch (err) {
       console.log(err);
     }
@@ -67,19 +118,10 @@ const EditBusiness = ({ setUpdate, bizId }) => {
     }
   };
 
-  // fun will set and show address fields
-  // const handleAddress = () => {
-  //   setHouseNum(null);
-  //   setStreet(null);
-  //   setCity(null);
-  //   setState(null);
-  //   setZip(null);
-  //   setAddress(!showAddress);
-  // };
-
   const handleSubmit = (e) => {
-    //No prevent default to reset biz info from edit on refresh page
+    e.preventDefault();
     editBusinessInfo();
+    history.push(`/profile/${currentUser.uid}`);
   };
 
   return (
@@ -91,9 +133,9 @@ const EditBusiness = ({ setUpdate, bizId }) => {
         <input
           type="text"
           placeholder="Business Name"
-          value={biz_name.value}
-          required
-          {...biz_name}
+          value={bizName}
+          // required
+          onChange={(e) => setBizName(e.currentTarget.value)}
         />
 
         <label>Hours of Service: </label>
@@ -105,13 +147,49 @@ const EditBusiness = ({ setUpdate, bizId }) => {
           <option defaultValue="1">Online Store</option>
           <option defaultValue="2">Add business Hours</option>
         </select>
-        <input placeholder={'Street'} {...street} />
-        <input placeholder={'City'} {...city} />
-        <input placeholder={'State'} {...state} />
-        <input placeholder={'Zip'} {...zip} />
-        <input placeholder={'Website'} {...website} />
-        {/* handleAddress={handleAddress} */}
+
+        <input
+          placeholder={'Street'}
+          value={street}
+          onChange={(e) => setStreet(e.currentTarget.value)}
+        />
+        <input
+          placeholder={'City'}
+          value={city}
+          onChange={(e) => setCity(e.currentTarget.value)}
+        />
+        <input
+          placeholder={'State'}
+          value={state}
+          onChange={(e) => setState(e.currentTarget.value)}
+        />
+        <input
+          placeholder={'Zip'}
+          value={zip}
+          onChange={(e) => setZip(e.currentTarget.value)}
+        />
+        <input
+          placeholder={'Website'}
+          value={website}
+          onChange={(e) => setWebsite(e.currentTarget.value)}
+        />
+
         {/* <AddressForm bizId={bizId} /> */}
+        <input
+          placeholder={'Phone'}
+          value={phone}
+          onChange={(e) => setPhone(e.currentTarget.value)}
+        />
+        <input
+          placeholder={'Email'}
+          value={email}
+          onChange={(e) => setEmail(e.currentTarget.value)}
+        />
+        <input
+          placeholder={'Social Media'}
+          value={socialMedia}
+          onChange={(e) => setSocialMedia(e.currentTarget.value)}
+        />
 
         <button type="submit" className="Btn-create">
           Save

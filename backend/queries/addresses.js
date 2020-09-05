@@ -2,9 +2,10 @@ const db = require('../db/index');
 
 const getSingleAddress = async (req, res, next) => {
   try {
-    let address = await db.one(
-      `SELECT * FROM addresses WHERE id=${req.params.id}`
-    );
+    const { address_id } = req.params;
+    let address = await db.one(`SELECT * FROM addresses WHERE address_id=$1`, [
+      address_id,
+    ]);
     res.status(200).json({
       status: 'success',
       message: 'single Address',
@@ -13,7 +14,7 @@ const getSingleAddress = async (req, res, next) => {
   } catch (err) {
     res.status(400).json({
       status: 'Error',
-      message: 'Error get single Address',
+      message: 'Error getting single Address',
       payload: err,
     });
     next();
@@ -64,10 +65,10 @@ const createAddress = async (req, res, next) => {
 const editAddress = async (req, res, next) => {
   try {
     let { street, city, state, zip, website } = req.body;
-    let { id } = req.params;
+    let { address_id } = req.params;
     let address = await db.one(
-      'UPDATE addresses SET street=$1, city=$2 state=$3, zip=$4, website=$5 WHERE id=$6',
-      [street, city, state, zip, website, id]
+      'UPDATE addresses SET street=$1, city=$2, state=$3, zip=$4, website=$5 WHERE address_id=$6 RETURNING *',
+      [street, city, state, zip, website, address_id]
     );
     res.status(200).json({
       status: 'success',

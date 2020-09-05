@@ -1,6 +1,6 @@
-import React, { useContext } from "react";
-import { Route, Redirect } from "react-router-dom";
-import { AuthContext } from "../providers/AuthContext";
+import React, { useContext } from 'react';
+import { Route, Redirect } from 'react-router-dom';
+import { AuthContext } from '../providers/AuthContext';
 
 export const AuthRoute = ({ children, ...rest }) => {
   const { currentUser } = useContext(AuthContext);
@@ -8,7 +8,11 @@ export const AuthRoute = ({ children, ...rest }) => {
     <Route
       {...rest}
       render={({ location }) => {
-        return !currentUser ? children : <Redirect to="/profile/:id" />;
+        return !currentUser ? (
+          children
+        ) : (
+          <Redirect to={`/profile/${currentUser.uid}`} />
+        );
       }}
     />
   );

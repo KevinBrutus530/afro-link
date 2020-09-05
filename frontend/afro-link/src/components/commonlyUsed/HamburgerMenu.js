@@ -55,14 +55,14 @@ const HamburgerMenu = () => {
   // };styles={styles}
 
   return (
-    <Menu right >
-      <Link id="home" className="menu-item" exact to="/">
+    <Menu right>
+      <Link id="home" className="menu-item" to="/">
         Home
       </Link>
-      <Link id="about" className="menu-item" exact to="/login">
+      <Link id="about" className="menu-item" to="/login">
         Log In
       </Link>
-      <Link id="contact" className="menu-item" exact to="/signup">
+      <Link id="contact" className="menu-item" to="/signup">
         Sign Up
       </Link>
     </Menu>

@@ -7,7 +7,7 @@ contacts.get("/:id", getSingleContact);
 
 contacts.post("/", createContact);
 
-contacts.patch("/:id", editContact);
+contacts.patch("/:contact_id", editContact);
 
 contacts.delete("/:id", deleteContact);
 

@@ -13,10 +13,9 @@ const VerifiedOwner =({userBusinesses,post, getReviews})=> {
         setShowEdit(!showEdit);
     };
     const { id } = useParams();
-    console.log(userBusinesses[0])
-    console.log(post)
     const submitReply = async (e) => {
         e.preventDefault();
+       debugger
         try {
           await axios.post(`${API}/reviews/reply/${post.id}`, {
             name: userBusinesses[0].owner_name,

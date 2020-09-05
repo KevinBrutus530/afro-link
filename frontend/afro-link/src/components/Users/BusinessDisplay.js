@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
-import EditBusiness from './EditBusiness';
 
 const BusinessDisplay = ({ userBusinesses }) => {
   let history = useHistory();

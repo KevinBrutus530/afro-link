@@ -70,6 +70,18 @@ const EditBusiness = ({ setUpdate, bizInfo }) => {
         biz_name: bizName,
         hours: hours,
       });
+
+//       debugger
+//       if (res.data.status === 'success') {
+//         await axios.patch(`${API}/addresses/${bizId}`, {
+//           street: street.value,
+//           city: city.value,
+//           state: state.value,
+//           zip: zip.value,
+//           website: website.value,
+//         });
+//       }
+//       debugger;
       //   = console.log(res)
       let res2 = await axios.patch(`${API}/addresses/${id}`, {
         street: street,

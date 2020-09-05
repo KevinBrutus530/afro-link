@@ -101,9 +101,9 @@ const EditBusiness = ({ setUpdate, bizInfo }) => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-   awaits editBusinessInfo();
+   await editBusinessInfo();
     history.push(`/profile/${currentUser.uid}`);
   };
 

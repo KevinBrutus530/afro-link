@@ -208,7 +208,7 @@ $black-chocolate: #191102ff; */
   width: 100vw;
   height: auto;
   margin-top: 2em;
-  padding: 5em 5em 1em 5em;
+  padding: 5em 5em 3em 5em;
   grid-gap: 1.5em;
 }
 @media (max-width: 1190px) {
@@ -398,6 +398,7 @@ $black-chocolate: #191102ff; */
   flex-direction: column;
   justify-content: space-evenly;
   margin: auto;
+  margin-bottom: 3em;
   padding: 5em;
   padding-top: 5.5em;
   width: 100%;

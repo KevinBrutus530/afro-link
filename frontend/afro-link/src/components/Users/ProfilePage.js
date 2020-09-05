@@ -13,8 +13,6 @@ const ProfilePage = () => {
   const { token, currentUser, loading } = useContext(AuthContext);
   const [update, setUpdate] = useState(null);
 
-
-
   const fetchUserById = async () => {
     try {
       let res = await axios({
@@ -30,10 +28,9 @@ const ProfilePage = () => {
     }
   };
 
-
   useEffect(() => {
     fetchUserById();
-  }, [update]);
+  }, []);
 
   useEffect(() => {
     fetchUserById();

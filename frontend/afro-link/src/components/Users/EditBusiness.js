@@ -10,25 +10,21 @@ import '../../css/EditBusiness.css';
 
 const EditBusiness = ({ setUpdate, bizInfo }) => {
   const { id } = useParams();
-  // const mainId = bizInfo[0].owner_id;
-  // const addressId = bizInfo[0].address_id;
 
   const API = getAPI();
   const { currentUser, loading } = useContext(AuthContext);
   let history = useHistory();
   const [bizName, setBizName] = useState('');
   const [modalShow, setModalShow] = useState(false);
+
   const [hours, setHours] = useState('Online Store');
 
-  // const [houseNum, setHouseNum] = useState(null);
   const [street, setStreet] = useState('');
   const [city, setCity] = useState('');
   const [state, setState] = useState('');
   const [zip, setZip] = useState('');
   const [website, setWebsite] = useState('');
-  // const [showAddress, setAddress] = useState(false);
 
-  // console.log(mainId);
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [socialMedia, setSocialMedia] = useState('');
@@ -113,6 +109,7 @@ const EditBusiness = ({ setUpdate, bizInfo }) => {
   const handleHours = (e) => {
     if (e.currentTarget.selectedIndex === 0) {
       setHours(e.currentTarget.value);
+    
     } else {
       setModalShow(true);
     }
@@ -134,7 +131,6 @@ const EditBusiness = ({ setUpdate, bizInfo }) => {
           type="text"
           placeholder="Business Name"
           value={bizName}
-          // required
           onChange={(e) => setBizName(e.currentTarget.value)}
         />
 
@@ -174,7 +170,6 @@ const EditBusiness = ({ setUpdate, bizInfo }) => {
           onChange={(e) => setWebsite(e.currentTarget.value)}
         />
 
-        {/* <AddressForm bizId={bizId} /> */}
         <input
           placeholder={'Phone'}
           value={phone}

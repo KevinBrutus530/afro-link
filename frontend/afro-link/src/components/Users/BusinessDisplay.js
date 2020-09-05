@@ -18,12 +18,13 @@ const BusinessDisplay = ({ userBusinesses }) => {
                 <li>
                   <img className="bizPicProfile" src={business.pictures} />
                 </li>
-                <li className="bizAddress">
-                  {business.street} {business.city}
-                  {business.state}
-                  {business.zip}
-                </li>
-
+                <label className="bizLabel">
+                  <li className="bizAddress">
+                    {business.street} {business.city}
+                    {business.state}
+                    {business.zip}
+                  </li>
+                </label>
                 <label className="bizLabel">
                   Business Hours:
                   <li className="bizHoursProfile">

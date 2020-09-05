@@ -1,9 +1,9 @@
 .footer {
   display: flex;
   flex-flow: row;
-  position: sticky;
+  position: fixed;
   bottom: 0;
-  width: 100vw;
+  width: 100%;
   text-align: center;
   justify-content: space-evenly;
   margin: auto;
@@ -25,5 +25,3 @@
   height: 3.5em;
   width: auto;
 }
-
-

@@ -2,23 +2,21 @@
   margin: auto;
   width: 100vw;
   height: auto;
-  /* margin-top: 7em; */
 }
 
 .resultsMainDiv {
   display: flex;
   flex-direction: column;
   margin: auto;
-  width: 100vw;
-  height: auto;
-  padding: 5em 0em;
+  width: 100%;
+  height: 100%;
+  padding: 4em 0em;
 }
 
 .ctgTitle {
   display: flex;
-  margin: auto;
   justify-content: center;
-  padding-top: 1em;
+  padding-top: 10px;
   padding-bottom: 5px;
   border-bottom: white 2px solid;
   width: fill;
@@ -110,9 +108,11 @@
 }
 
 .bizAddress {
+  margin: auto;
   text-transform: capitalize;
   font-size: 10pt;
   color: #191102;
-  padding: 0 1em;
+  place-items: right;
+  margin-right: 0;
 }
 

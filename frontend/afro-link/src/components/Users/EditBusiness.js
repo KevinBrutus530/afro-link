@@ -97,9 +97,9 @@ const EditBusiness = () => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    editBusinessInfo();
+   await editBusinessInfo();
     history.push(`/profile/${currentUser.uid}`);
   };
 

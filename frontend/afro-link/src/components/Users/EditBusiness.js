@@ -167,7 +167,7 @@ const EditBusiness = () => {
           value={socialMedia}
           onChange={(e) => setSocialMedia(e.currentTarget.value)}
         />
-
+        <Upload ownerId={ownerId} />
         <button type="submit" className="Btn-create">
           Save
         </button>
@@ -183,7 +183,6 @@ const EditBusiness = () => {
           />
         </div>
       </form>
-      <Upload ownerId={ownerId} />
     </div>
   );
 };

@@ -26,7 +26,6 @@ const Upload = ({ ownerId }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    debugger;
     try {
       await axios.patch(`${API}/owners/pictures/${owner_id}`, {
         pictures: pictures,
@@ -40,10 +39,13 @@ const Upload = ({ ownerId }) => {
     <div>
       <div className="uploadContainer">
         <form className="upload" onSubmit={handleSubmit}>
-          <div className="input">
-            <input type="file" onChange={(e) => uploadImg(e)} />
-            <input type="submit" className="submit" />
-          </div>
+          <label>
+            Upload Your Picture:
+            <div className="input">
+              <input type="file" onChange={(e) => uploadImg(e)} />
+              <input type="submit" className="submit" />
+            </div>
+          </label>
         </form>
       </div>
     </div>

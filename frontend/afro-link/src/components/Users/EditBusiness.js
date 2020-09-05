@@ -1,29 +1,28 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
-import { useInput } from '../../util/useInput';
 import { AuthContext } from '../../providers/AuthContext';
 import { getAPI } from '../../util/getAPI';
 import TimeTable from '../../components/TimeTable';
 import axios from 'axios';
 import '../../css/EditBusiness.css';
+import Upload from './Upload';
 
-const EditBusiness = ({ setUpdate, bizInfo }) => {
+const EditBusiness = () => {
   const { id } = useParams();
-
   const API = getAPI();
-  const { currentUser, loading } = useContext(AuthContext);
+  const { currentUser } = useContext(AuthContext);
   let history = useHistory();
   const [bizName, setBizName] = useState('');
   const [modalShow, setModalShow] = useState(false);
 
   const [hours, setHours] = useState('Online Store');
+  const [ownerId, setOwnerId] = useState('');
 
   const [street, setStreet] = useState('');
   const [city, setCity] = useState('');
   const [state, setState] = useState('');
   const [zip, setZip] = useState('');
   const [website, setWebsite] = useState('');
-
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [socialMedia, setSocialMedia] = useState('');
@@ -47,8 +46,8 @@ const EditBusiness = ({ setUpdate, bizInfo }) => {
     try {
       let bizRes = await axios.get(`${API}/businesses/${id}`);
       let biz = bizRes.data.payload;
+      setOwnerId(biz.id);
       setBizName(biz.biz_name);
-      // setHours(biz.hours);
       setStreet(biz.street);
       setCity(biz.city);
       setState(biz.state);
@@ -70,7 +69,6 @@ const EditBusiness = ({ setUpdate, bizInfo }) => {
         hours: hours,
       });
 
-
       let res2 = await axios.patch(`${API}/addresses/${id}`, {
         street: street,
         city: city,
@@ -78,7 +76,6 @@ const EditBusiness = ({ setUpdate, bizInfo }) => {
         zip: zip,
         website: website,
       });
-
 
       let res3 = await axios.patch(`${API}/contacts/${id}`, {
         phone: phone,
@@ -95,7 +92,6 @@ const EditBusiness = ({ setUpdate, bizInfo }) => {
   const handleHours = (e) => {
     if (e.currentTarget.selectedIndex === 0) {
       setHours(e.currentTarget.value);
-    
     } else {
       setModalShow(true);
     }
@@ -171,7 +167,7 @@ const EditBusiness = ({ setUpdate, bizInfo }) => {
           value={socialMedia}
           onChange={(e) => setSocialMedia(e.currentTarget.value)}
         />
-
+        <Upload ownerId={ownerId} />
         <button type="submit" className="Btn-create">
           Save
         </button>

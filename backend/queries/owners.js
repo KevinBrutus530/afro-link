@@ -127,7 +127,7 @@ const editOwner = async (req, res, next) => {
   }
 };
 
-const changeOwnerPicture = async (req, res, next) => {
+const imageUpload = async (req, res, next) => {
   try {
     let { pictures } = req.body;
     let { owner_id } = req.params;
@@ -157,5 +157,5 @@ module.exports = {
   createOwner,
   editOwner,
   deleteOwner,
-  changeOwnerPicture,
+  imageUpload,
 };

@@ -103,7 +103,7 @@ const EditBusiness = ({ setUpdate, bizInfo }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    editBusinessInfo();
+   awaits editBusinessInfo();
     history.push(`/profile/${currentUser.uid}`);
   };
 

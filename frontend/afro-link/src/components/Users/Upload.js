@@ -5,6 +5,7 @@ import { getAPI } from '../../util/getAPI';
 const Upload = ({ ownerId }) => {
   let API = getAPI();
   const [pictures, setPictures] = useState('');
+  let owner_id = ownerId;
 
   const uploadImg = async (e) => {
     const files = e.target.files;
@@ -26,11 +27,13 @@ const Upload = ({ ownerId }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     debugger;
-    // try {
-    //   await axios.post(`${API}/pictures/`)
-    // } catch(err) {
-    //   console.log(err)
-    // }
+    try {
+      await axios.patch(`${API}/owners/pictures/${owner_id}`, {
+        pictures: pictures,
+      });
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (

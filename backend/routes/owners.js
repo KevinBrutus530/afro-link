@@ -8,6 +8,7 @@ const {
   createOwner,
   editOwner,
   deleteOwner,
+  changeOwnerPicture,
 } = require('../queries/owners');
 
 owners.get('/:id', checkFirebaseToken, getBusinessesByUser);
@@ -17,6 +18,8 @@ owners.get('/:id', checkFirebaseToken, getBusinessesByUser);
 owners.post('/', createOwner);
 
 owners.patch('/:uid', editOwner);
+
+owners.patch('/pictures/:owner_id', changeOwnerPicture);
 
 owners.delete('/:id', deleteOwner);
 

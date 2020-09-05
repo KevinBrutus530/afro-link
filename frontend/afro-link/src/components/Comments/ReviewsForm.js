@@ -10,7 +10,7 @@ import VerifiedOwner from "./VerifiedOwner"
 
 const ReviewsForm = () => {
   const API = getAPI();
-  const { token,currentUser, loading } = useContext(AuthContext);
+  const { token, currentUser, loading } = useContext(AuthContext);
   const [userBusinesses, setUserBusinesses] = useState([]);
   const { id } = useParams();
   const name = useInput("");
@@ -95,7 +95,7 @@ const ReviewsForm = () => {
           <p className="review"> {post.text}</p>
           <p className="reviewDT">{post.dt.substring(0,10)}</p>
           <div className="reply">
-            <verifiedOwner userBusinesses={userBusinesses}/>
+            <VerifiedOwner userBusinesses={userBusinesses}/>
             <Reply allReviews={allReviews} replyID={post.id} />
           </div>
         </div>

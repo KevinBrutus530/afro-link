@@ -79,8 +79,6 @@ const EditBusiness = ({ setUpdate, bizInfo }) => {
         website: website,
       });
 
-      // if (res.data.status === 'success') {
-      // console.log(phone, email, social_media);
 
       let res3 = await axios.patch(`${API}/contacts/${id}`, {
         phone: phone,

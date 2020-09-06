@@ -35,7 +35,7 @@ const ReviewsForm = () => {
 
   useEffect(() => {
     getReviews();
-  }, []);
+  }, [currentUser]);
 
   const submitReviews = async (e) => {
     e.preventDefault();

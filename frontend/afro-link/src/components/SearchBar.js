@@ -36,6 +36,7 @@ const SearchBar = ({ type, setResults, setBizType }) => {
 
     if (search.length === 0) {
       history.push(`/categories/${typeId}`);
+      //else if statement for keywords search & no type with other axios call with route and query
     } else {
       try {
         let newSearch = await axios.get(

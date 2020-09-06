@@ -15,6 +15,8 @@ const EditBusiness = () => {
   const [bizName, setBizName] = useState('');
   const [modalShow, setModalShow] = useState(false);
 
+  const [ownerName, setOwnerName] = useState('');
+
   const [hours, setHours] = useState('Online Store');
   const [ownerId, setOwnerId] = useState('');
 
@@ -47,6 +49,7 @@ const EditBusiness = () => {
       let bizRes = await axios.get(`${API}/businesses/${id}`);
       let biz = bizRes.data.payload;
       setOwnerId(biz.id);
+      setOwnerName(biz.owner_name);
       setBizName(biz.biz_name);
       setStreet(biz.street);
       setCity(biz.city);
@@ -64,12 +67,14 @@ const EditBusiness = () => {
   //This fun patches new biz info to db
   const editBusinessInfo = async () => {
     try {
-      let res = await axios.patch(`${API}/businesses/${id}`, {
+      // Update business name and hours
+      await axios.patch(`${API}/businesses/${id}`, {
         biz_name: bizName,
         hours: hours,
       });
 
-      let res2 = await axios.patch(`${API}/addresses/${id}`, {
+      // Update business address and website
+      await axios.patch(`${API}/addresses/${id}`, {
         street: street,
         city: city,
         state: state,
@@ -77,12 +82,17 @@ const EditBusiness = () => {
         website: website,
       });
 
-      let res3 = await axios.patch(`${API}/contacts/${id}`, {
+      // Update business contact
+      await axios.patch(`${API}/contacts/${id}`, {
         phone: phone,
         email: email,
         social_media: socialMedia,
       });
-      // }
+
+      // Update business owner name
+      await axios.patch(`${API}/owners/user/${id}`, {
+        owner_name: ownerName,
+      });
     } catch (err) {
       console.log(err);
     }
@@ -99,7 +109,7 @@ const EditBusiness = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-   await editBusinessInfo();
+    await editBusinessInfo();
     history.push(`/profile/${currentUser.uid}`);
   };
 
@@ -116,6 +126,13 @@ const EditBusiness = () => {
           onChange={(e) => setBizName(e.currentTarget.value)}
         />
 
+        <label>Owner Name: </label>
+        <input
+          type="text"
+          placeholder="Owner Name"
+          value={ownerName}
+          onChange={(e) => setOwnerName(e.currentTarget.value)}
+        />
         <label>Hours of Service: </label>
         <select
           className="selectBizBar"

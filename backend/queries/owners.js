@@ -126,6 +126,28 @@ const editOwner = async (req, res, next) => {
     next();
   }
 };
+const editOwnerName = async (req, res, next) => {
+  try {
+    let { owner_name } = req.body;
+    let { owner_id } = req.params;
+    let ownerName = await db.one(
+      'UPDATE owners SET owner_name=$1 WHERE owner_id=$2 RETURNING *',
+      [owner_name, owner_id]
+    );
+    res.status(200).json({
+      status: 'success',
+      message: 'updated owner name',
+      payload: ownerName,
+    });
+  } catch (err) {
+    res.status(400).json({
+      status: 'Error',
+      message: 'Error edit Owner',
+      payload: err,
+    });
+    next();
+  }
+};
 
 const imageUpload = async (req, res, next) => {
   try {
@@ -152,10 +174,10 @@ const imageUpload = async (req, res, next) => {
 
 module.exports = {
   signUp,
-  getSingleOwner,
   getBusinessesByUser,
   createOwner,
   editOwner,
+  editOwnerName,
   deleteOwner,
   imageUpload,
 };

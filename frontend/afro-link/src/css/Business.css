@@ -1,12 +1,10 @@
 .businessMainDiv {
-  /* display: flex; */
   width: 100%;
   height: auto;
   margin: auto;
   margin-top: 5em;
-  padding: 3em 0em;
+  padding: 1em 0em;
   color: #191102ff;
-  /* justify-content: center; */
 }
 
 @media (max-width: 410px) {
@@ -52,7 +50,7 @@
   padding: 3em;
   border-top: 2px ridge whitesmoke;
   background-color: rgba(162, 160, 21, 0.5);
-  background-image: url("https://www.transparenttextures.com/patterns/dark-geometric.png");
+  background-image: url('https://www.transparenttextures.com/patterns/dark-geometric.png');
 }
 
 @media (max-width: 1178px) {

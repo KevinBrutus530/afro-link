@@ -17,11 +17,7 @@ $black-chocolate: #191102ff; */
   display: flex;
   flex-direction: column;
   margin: auto;
-  /* background-color: whitesmoke; */
-  /* background-color: rgba(255, 255, 255, 0.493); */
   padding: 1.5em;
-  /* margin-left: 1em;
-  margin-right: 1em; */
   border-radius: 5px;
   width: 30em;
   overflow-x: scroll;
@@ -29,6 +25,7 @@ $black-chocolate: #191102ff; */
 
 .reviewsForm > h2 {
   color: whitesmoke;
+  padding-bottom: 10px;
 }
 
 .reviewsForm > label {

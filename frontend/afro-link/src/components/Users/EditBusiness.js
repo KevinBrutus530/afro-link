@@ -64,7 +64,6 @@ const EditBusiness = ({ setUpdate, bizInfo }) => {
 
   //This fun patches new biz info to db
   const editBusinessInfo = async () => {
-    
     try {
       let res = await axios.patch(`${API}/businesses/${id}`, {
         biz_name: bizName,
@@ -78,7 +77,6 @@ const EditBusiness = ({ setUpdate, bizInfo }) => {
         zip: zip,
         website: website,
       });
-
 
       let res3 = await axios.patch(`${API}/contacts/${id}`, {
         phone: phone,
@@ -94,7 +92,7 @@ const EditBusiness = ({ setUpdate, bizInfo }) => {
   //Handles and sets hours input by user
   const handleHours = (e) => {
     if (e.currentTarget.selectedIndex === 0) {
-      setHours("Online Store");
+      setHours('Online Store');
     } else {
       setModalShow(true);
     }
@@ -105,8 +103,8 @@ const EditBusiness = ({ setUpdate, bizInfo }) => {
     editBusinessInfo();
     history.push(`/profile/${currentUser.uid}`);
   };
-  console.log(hours)
-    // console.log(time)
+  console.log(hours);
+  // console.log(time)
 
   return (
     <div className="editBizDiv" style={{ marginTop: '7em' }}>

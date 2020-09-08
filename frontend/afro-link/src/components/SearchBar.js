@@ -1,16 +1,13 @@
-import React, { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
-import { getAPI } from "../util/getAPI";
-import { useInput } from "../util/useInput";
-import axios from "axios";
+import React, { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
+import { getAPI } from '../util/getAPI';
+import { useInput } from '../util/useInput';
+import axios from 'axios';
 
-
-const SearchBar = ({type,setResults, setBizType}) => {
-
-    const history = useHistory();
-    const API = getAPI();
-    const [businessTypes, setBusinessTypes] = useState([]);
-  
+const SearchBar = ({ type, setResults, setBizType }) => {
+  const history = useHistory();
+  const API = getAPI();
+  const [businessTypes, setBusinessTypes] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -32,42 +29,47 @@ const SearchBar = ({type,setResults, setBizType}) => {
     );
   });
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     let search = e.target[0].value;
-    let typeId = e.target[1].value
-    // debugger
-    try {
-      let newSearch = await axios.get(`${API}/businesses/search/${typeId}/${search}`);
-      let res2 = await axios.get(`${API}/types/${typeId}`);
-      setResults(newSearch.data.payload)
-      setBizType(res2.data.payload[0]);
-    } catch (error) {
-      console.log(error)
-    }
+    let typeId = e.target[1].value;
 
+    if (search.length === 0) {
+      history.push(`/categories/${typeId}`);
+      //else if statement for keywords search & no type with other axios call with route and query
+    } else {
+      try {
+        let newSearch = await axios.get(
+          `${API}/businesses/search/${typeId}/${search}`
+        );
+        let res2 = await axios.get(`${API}/types/${typeId}`);
+        setResults(newSearch.data.payload);
+        setBizType(res2.data.payload[0]);
+      } catch (error) {
+        console.log(error);
+      }
+    }
   };
 
-  if (history.location.pathname != "/") {
+  if (history.location.pathname != '/') {
     return (
-
       <div className="searchBarDiv searchInformation">
-
         <form className="searchBarForm" onSubmit={handleSubmit}>
-
           {/* <label>Search:</label> */}
-          <input className='searchBizInput' type="text" placeholder="Search Businesses" />
-          <select
-            className="selectBizBar"
-            name="Type Name"
-            required
-          >
+          <input
+            className="searchBizInput"
+            type="text"
+            placeholder="Search Businesses"
+          />
+          <select className="selectBizBar" name="Type Name" required>
             <option value="" disabled>
               Select Business Type
             </option>
-                {types}
+            {types}
           </select>
-          <button className="addBizBtn" type="submit">Submit</button>
+          <button className="addBizBtn" type="submit">
+            Submit
+          </button>
         </form>
       </div>
     );

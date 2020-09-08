@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
     "bootstrap": "^4.5.2",
+    "cloudinary-react": "^1.6.6",
     "dotenv": "^8.2.0",
     "firebase": "^7.17.2",
     "google-map-react": "^1.1.7",

@@ -16,7 +16,12 @@ const BusinessDisplay = ({ userBusinesses }) => {
               <div className="heavyFont">{business.biz_name}</div>
               <div className="picDiv">
                 {business.pictures === null ? (
-                  <img id="defaultPic" className="bizPicProfile" src={logo} alt="" />
+                  <img
+                    id="defaultPic"
+                    className="bizPicProfile"
+                    src={logo}
+                    alt="default logo"
+                  />
                 ) : (
                   <img className="bizPicProfile" src={business.pictures} />
                 )}

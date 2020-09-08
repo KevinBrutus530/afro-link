@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
+import logo from '../../images/circleLogoYellow.png';
 
 const BusinessDisplay = ({ userBusinesses }) => {
   let history = useHistory();
@@ -10,18 +11,26 @@ const BusinessDisplay = ({ userBusinesses }) => {
       let allUserBusiness = userBusinesses.map((business, i) => {
         console.log(business);
         return (
-          <div key={i}>
-            <div id="bizName" className="ownerHeader heavyFont">
-              {business.biz_name}
-            </div>
-            <div className="bizProfileInfo">
-              <ul style={{ listStyleType: 'none' }}>
-                <li>
+          <div key={i} className="profileMainDiv">
+            <div id="bizName" className="ownerHeader">
+              <div className="heavyFont">{business.biz_name}</div>
+              <div className="picDiv">
+                {business.pictures === null ? (
+                  <img id="defaultPic" className="bizPicProfile" src={logo} alt="" />
+                ) : (
                   <img className="bizPicProfile" src={business.pictures} />
-                </li>
+                )}
+              </div>
+            </div>
+
+            <div className="bizProfileInfo">
+              <ul className="businessInfoUl" style={{ listStyleType: 'none' }}>
                 <label className="bizLabel">
+                  Address:
                   <li className="bizAddress">
-                    {business.street} {business.city}
+                    {business.street}
+                    <br />
+                    {business.city}
                     {business.state}
                     {business.zip}
                   </li>
@@ -95,19 +104,20 @@ const BusinessDisplay = ({ userBusinesses }) => {
                 </ul>
                 <button
                   className="Btn-rest BtnEdit"
-                  onClick={() => {
-                    history.push(`/businesses/${business.owner_id}`);
-                  }}
-                >
-                  Visit Business
-                </button>
-                <button
-                  className="Btn-rest BtnEdit"
                   onClick={() =>
                     history.push(`/editbusiness/${business.owner_id}`)
                   }
                 >
                   Edit Business
+                </button>
+                <button
+                  style={{ backgroundColor: 'rgb(1, 44, 1, .8)' }}
+                  className="Btn-rest BtnEdit"
+                  onClick={() => {
+                    history.push(`/businesses/${business.owner_id}`);
+                  }}
+                >
+                  Visit Business
                 </button>
               </div>
             </div>

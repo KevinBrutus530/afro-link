@@ -34,7 +34,7 @@ const ProfilePage = () => {
 
   useEffect(() => {
     fetchUserById();
-  }, [update]);
+  }, [update, token]);
 
   return (
     <div className="profilePageMainDiv">

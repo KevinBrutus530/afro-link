@@ -30,11 +30,11 @@ const ProfilePage = () => {
 
   useEffect(() => {
     fetchUserById();
-  }, []);
+  }, [token]);
 
   useEffect(() => {
     fetchUserById();
-  }, [update]);
+  }, [update, token]);
 
   return (
     <div className="profilePageMainDiv">

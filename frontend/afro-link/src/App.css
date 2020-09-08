@@ -30,7 +30,7 @@ html {
 }
 
 a {
-  color: #2d99a3;
+  color: #227179;
   font-weight: bolder;
 }
 
@@ -74,7 +74,7 @@ input:focus {
   animation-duration: 2s;
   animation-name: slideIn;
   transition: transform 1s;
-  padding: 3em;
+  padding: 1em;
 }
 
 .carouselPics:hover {

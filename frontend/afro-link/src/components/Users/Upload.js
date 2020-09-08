@@ -36,18 +36,16 @@ const Upload = ({ ownerId }) => {
   };
 
   return (
-    <div>
-      <div className="uploadContainer">
-        <form className="upload" onSubmit={handleSubmit}>
-          <label>
-            Upload Your Picture:
-            <div className="input">
-              <input type="file" onChange={(e) => uploadImg(e)} />
-              <input type="submit" className="submit" />
-            </div>
-          </label>
-        </form>
-      </div>
+    <div className="uploadContainer">
+      <form className="upload" onSubmit={handleSubmit}>
+        <label>
+          Upload Your Picture:
+          <div className="input">
+            <input type="file" onChange={(e) => uploadImg(e)} />
+            <input type="submit" className="submit" />
+          </div>
+        </label>
+      </form>
     </div>
   );
 };

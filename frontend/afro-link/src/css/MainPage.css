@@ -25,7 +25,7 @@ $black-chocolate: #191102ff; */
   color: #191102ff;
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
+  overflow-y: hidden;
   -ms-grid-column-align: center;
 }
 
@@ -66,21 +66,29 @@ $black-chocolate: #191102ff; */
   height: fit-content;
 }
 
-.titleH1 {
+/* .titleH1 {
   font-size: 4em;
   padding-top: 20px;
   font-weight: bold;
   text-shadow: 1px 2px 7px rgb(236, 213, 121);
+} */
+
+.landingLogo {
+  display: flex;
+  margin: auto;
+  width: 10.5em;
+  height: auto;
+  padding-top: 0.5em;
 }
 
 @media (max-height: 759px) {
-  .titleH1 {
+  .landingLogo {
     display: none;
     position: relative;
   }
 }
 @media (max-width: 655px) {
-  .titleH1 {
+  .landingLogo {
     display: none;
     position: relative;
   }
@@ -91,8 +99,7 @@ $black-chocolate: #191102ff; */
   justify-content: center;
   color: #510d0aff;
   font-weight: 600;
-  font-size: 20pt;
-  padding: 0.5em 2em;
+  font-size: 16pt;
 }
 
 @media (max-height: 1290px) {
@@ -124,9 +131,9 @@ $black-chocolate: #191102ff; */
 .afLogoMain {
   display: flex;
   background-color: transparent;
-  width: 4em;
-  height: 4em;
-  margin: 0 2em;
+  width: 2.8em;
+  height: 2.8em;
+  margin: 2px 2em 0 2em;
   position: fixed;
   filter: drop-shadow(2px 2px 4px rgb(119, 90, 17));
   z-index: 10;
@@ -135,7 +142,6 @@ $black-chocolate: #191102ff; */
 .contrastBackground {
   display: flex;
   justify-content: space-evenly;
-  background-color: rgba(25, 17, 2, 0.5);
   width: max-content;
   margin: auto;
   color: whitesmoke;
@@ -160,12 +166,11 @@ $black-chocolate: #191102ff; */
 }
 
 .contrastLight {
-  background-color: rgba(25, 17, 2, 0.5);
-  width: max-content;
+  width: inherit;
   margin: auto;
   color: white;
   letter-spacing: 2px;
-  font-size: 8pt;
+  font-size: 11pt;
   text-shadow: 0.5px 0.5px 1px rgb(57, 57, 190);
 }
 
@@ -174,7 +179,13 @@ $black-chocolate: #191102ff; */
 }
 
 .caption {
-  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  background-color: rgba(25, 17, 2, 0.5);
+  width: max-content;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
 .getPersonal {
@@ -207,9 +218,10 @@ $black-chocolate: #191102ff; */
   text-align: center;
   width: 100vw;
   height: auto;
-  margin-top: 2em;
-  padding: 5em 5em 3em 5em;
+  padding: 2em 5em 3em 5em;
   grid-gap: 1.5em;
+  background-color: #dbac2a;
+  background-image: url('https://www.transparenttextures.com/patterns/dimension.png');
 }
 @media (max-width: 1190px) {
   .mainPageContainer {
@@ -233,9 +245,11 @@ $black-chocolate: #191102ff; */
   flex-direction: row;
   margin: auto;
   justify-content: center;
-  border: 1px inset #510d0aff;
+  /* border: 1px inset #510d0aff; */
   padding: 2em;
   align-items: center;
+  background: #9e9b49c9;
+  background-image: url('https://www.transparenttextures.com/patterns/dark-geometric.png');
 }
 
 .headingMain {
@@ -387,8 +401,9 @@ $black-chocolate: #191102ff; */
   text-align: center;
   place-items: center;
   margin: auto;
-  border: 1px outset #510d0aff;
   padding: 0em;
+  background: #9e9b49c9;
+  background-image: url('https://www.transparenttextures.com/patterns/dark-geometric.png');
 }
 
 /* /////////////////////////////////////////////////////////////////////////////// */
@@ -396,24 +411,21 @@ $black-chocolate: #191102ff; */
 .ourMissionStatementDiv {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: safe;
   margin: auto;
-  margin-bottom: 3em;
-  padding: 5em;
-  padding-top: 5.5em;
+  padding: 4em;
   width: 100%;
-  height: auto;
-  background-color: #e7e7ed;
-  background-image: url('https://www.transparenttextures.com/patterns/dimension.png');
-  color: #191102ff;
+  height: 100vh;
+  place-items: center;
+  color: #eeeeee;
+  background: #9e9b49c9;
+  background-image: url('https://www.transparenttextures.com/patterns/dark-geometric.png');
 }
 
 .missionContainer {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  border: 1px outset #510d0aff;
-  padding: 1em 5em;
+  justify-content: space-around;
 }
 
 .missionContainer > * {
@@ -421,7 +433,24 @@ $black-chocolate: #191102ff; */
 }
 
 .alMission {
+  padding: 0.5em;
   font-size: 18pt;
+  margin-top: 2em;
+}
+
+.followLinks {
+  margin-top: 0;
+}
+
+#helpful {
+  font-weight: bold;
+  color: rgb(1, 44, 1);
+  text-shadow: .5px .5px 1.5px #494821c9;
+}
+
+#helpful:hover {
+  cursor: pointer;
+  color: mediumblue;
 }
 
 .resourcesUL li {
@@ -430,15 +459,12 @@ $black-chocolate: #191102ff; */
   width: 50%;
   display: flex;
   justify-content: space-evenly;
-  padding: 0.5em;
+  padding: 1em;
   font-size: 13pt;
 }
 
-.resourcesUL li:hover {
-  text-shadow: 3px 4px 6px rgb(194, 224, 224);
-}
 .resourcesUL {
-  padding: 2em;
+  padding: 1em;
   list-style-type: none;
 }
 
@@ -451,8 +477,12 @@ $black-chocolate: #191102ff; */
 }
 
 .mission {
-  padding: 0.5em;
-  /* border-bottom: 1px black solid; */
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  padding: 1em;
+  border-bottom: 1px whitesmoke solid;
+  width: 100%;
 }
 
 @media (max-width: 800px) {

@@ -11,7 +11,7 @@ const MainPage = () => {
   return (
     <div className="MainDiv">
       <div id="landingPage" className="landingMainDiv">
-        <h1 className="titleH1 heavyFont">Welcome to Afro Link</h1>
+        <img className="landingLogo" src={circleLogo} alt="afro link logo" />
         <h3 className="tagline">
           Connecting you to Black-Owned businesses throughout NYC and beyond
         </h3>
@@ -36,7 +36,6 @@ const MainPage = () => {
           </Carousel.Item>
           <Carousel.Item>
             <img
-              // style={{ width: 'auto', height: '600px' }}
               className="ownerPicMain carouselPics"
               src="https://pbs.twimg.com/media/EeinSt-UYAAgGlb.jpg"
               alt="second slide"
@@ -56,7 +55,6 @@ const MainPage = () => {
 
           <Carousel.Item>
             <img
-              // style={{ width: 'auto', height: '600px' }}
               className="ownerPicMain carouselPics"
               src="https://cdn.shopify.com/s/files/1/0223/5181/articles/kat_in_bsas_full_size_aff1574f-a5da-4fae-93ec-ebe1e46f6bc1_2000x.jpg?v=1580418798"
               alt="third slide"
@@ -73,7 +71,6 @@ const MainPage = () => {
 
           <Carousel.Item>
             <img
-              // style={{ width: 'auto', height: '600px' }}
               className="ownerPicMain carouselPics"
               src="https://cdn.fashionmagazine.com/wp-content/uploads/2019/06/Goodee-Pop-Up-Studio-Montreal_Celia-Spenard-Ko_20.jpg"
               alt="fourth slide"
@@ -94,7 +91,6 @@ const MainPage = () => {
 
           <Carousel.Item>
             <img
-              // style={{ width: 'auto', height: '600px' }}
               className="ownerPicMain carouselPics"
               src="https://bklyner.com/wp-content/uploads/2017/07/DSC_5270.jpg"
               alt="fifth slide"
@@ -115,7 +111,6 @@ const MainPage = () => {
 
           <Carousel.Item>
             <img
-              // style={{ width: 'auto', height: '550px' }}
               className="ownerPicMain carouselPics"
               src="https://bloximages.newyork1.vip.townnews.com/feastmagazine.com/content/tncms/assets/v3/editorial/9/8f/98ff9c78-f445-11e9-91ff-bf70a7b15818/5dae1c2fb80a1.image.jpg?resize=1200%2C901"
               alt="sixth slide"
@@ -133,7 +128,6 @@ const MainPage = () => {
 
           <Carousel.Item>
             <img
-              // style={{ width: 'auto', height: '600px' }}
               className="ownerPicMain carouselPics"
               src="https://www.ft.com/__origami/service/image/v2/images/raw/http://prod-upp-image-read.ft.com/44a2ea70-1729-11ea-8d73-6303645ac406?source=next&fit=scale-down&quality=highest&width=1067"
               alt="seventh slide"
@@ -201,13 +195,14 @@ const MainPage = () => {
             authentic Black owned businesses and services right in our
             community, starting from New York City and much more.
           </p>
-          <p className="alMission">
+          <p className="followLinks alMission">
             Please follow the links below for helpful resources on anti-racism,
             activism, and ways to give back.
           </p>
           <ul className="resourcesUL">
             <li>
               <a
+                id="helpful"
                 target="_blank"
                 href="https://www.ted.com/talks/bryan_stevenson_we_need_to_talk_about_an_injustice"
               >
@@ -217,6 +212,7 @@ const MainPage = () => {
             <li>
               {' '}
               <a
+                id="helpful"
                 target="_blank"
                 href="https://novareid.com/free-anti-racism-guide/"
               >
@@ -226,6 +222,7 @@ const MainPage = () => {
             <li>
               {' '}
               <a
+                id="helpful"
                 target="_blank"
                 href="https://docs.google.com/document/d/1S5uckFHCA_XZkxG0Zg5U4GQGbY_RklZARwu43fqJH0E/edit"
               >
@@ -235,6 +232,7 @@ const MainPage = () => {
             <li>
               {' '}
               <a
+                id="helpful"
                 target="_blank"
                 href="https://docs.google.com/document/d/1CjZMORRVuv-I-qo4B0YfmOTqIOa3GUS207t5iuLZmyA/mobilebasic"
               >
@@ -243,6 +241,7 @@ const MainPage = () => {
             </li>
             <li>
               <a
+                id="helpful"
                 target="_blank"
                 href="https://docs.google.com/document/d/1u1cZrJ9xEDSIG_1sYK579GR0wbBiW5Q-ygV_bvI_nAI/edit"
               >
@@ -251,6 +250,7 @@ const MainPage = () => {
             </li>
             <li>
               <a
+                id="helpful"
                 target="_blank"
                 href="https://drive.google.com/drive/u/0/folders/0Bz011IF2Pu9TUWIxVWxybGJ1Ync"
               >
@@ -259,6 +259,7 @@ const MainPage = () => {
             </li>
             <li>
               <a
+                id="helpful"
                 target="_blank"
                 href="https://www.buzzfeednews.com/article/ariannarebolini/george-floyd-amy-cooper-antiracist-books-reading-resources"
               >
@@ -267,6 +268,7 @@ const MainPage = () => {
             </li>
             <li>
               <a
+                id="helpful"
                 target="_blank"
                 href="https://www.instagram.com/p/CA04VKDAyjb/?utm_source=ig_web_copy_link"
               >

@@ -42,10 +42,28 @@
   flex-direction: column;
 }
 
+#defaultPic {
+  opacity: 0.5;
+}
+
+
 .bizPicProfile {
+  display: flex;
+  padding: 1em;
   padding-bottom: 1em;
-  width: 25em;
+  width: 12em;
   height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 1350px) {
+  .bizPicProfile {
+    display: flex;
+    margin: auto;
+    max-width: 270px;
+    height: auto;
+    object-fit: scale-down;
+  }
 }
 
 .ownerHeader {

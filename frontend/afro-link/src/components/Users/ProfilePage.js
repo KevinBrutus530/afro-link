@@ -30,7 +30,7 @@ const ProfilePage = () => {
 
   useEffect(() => {
     fetchUserById();
-  }, []);
+  }, [token]);
 
   useEffect(() => {
     fetchUserById();

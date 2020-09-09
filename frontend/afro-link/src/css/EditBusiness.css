@@ -23,6 +23,18 @@
   background-color: whitesmoke;
 }
 
+.editLabel {
+  display: flex;
+  flex-direction: row;
+  color: #191102;
+  text-align: left;
+  padding: 10px;
+  justify-content: space-evenly;
+  border-bottom: 1px solid rgb(104, 104, 104);
+  font-weight: bold;
+  color: #551100;
+}
+
 @media (max-width: 1350px) {
   .editBizForm {
     display: flex;
@@ -33,19 +45,23 @@
     justify-content: center;
   }
 
-  .bizLabel {
+  .editLabel {
     display: flex;
+    flex-direction: row;
     margin: auto;
     align-content: flex-start;
-    align-self: start;
+    align-self: flex-start;
     place-items: center;
     justify-content: flex-start;
     width: 100vw;
+    padding: 0;
+    padding-bottom: 1em;
+    padding-top: 1em;
   }
 
-  .bizLabel input {
-    justify-content: space-between;
-    align-self: right;
+  .bizLabel > input {
+    justify-content: right;
+    right: 5px;
   }
 
   .formDivider {
@@ -96,7 +112,8 @@
 
 .editH1 {
   display: flex;
-  justify-content: center;
+  align-self: start;
+  justify-content: flex-start;
   margin: auto;
   margin-top: 1em;
   padding: 1em;
@@ -113,27 +130,26 @@
   margin-top: 1em;
   align-content: center;
   background-color: whitesmoke;
-  width: max-content;
+  width: 75%;
   padding: 1em;
 }
 
 .uploadForm {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   width: 100%;
-  padding: 1em;
+  /* padding: 1em; */
 }
 
 .uploadLabel {
   display: flex;
+  flex-direction: row;
   color: #551100;
-  text-align: justify;
-  align-content: space-between;
-  justify-content: center;
+  align-content: flex-start;
+  justify-content: flex-start;
   font-weight: bold;
   border-bottom: 1px grey solid;
-  margin: auto;
 }
 
 .selectImage {

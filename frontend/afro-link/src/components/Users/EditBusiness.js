@@ -101,12 +101,25 @@ const EditBusiness = () => {
   };
   return (
     <div>
-      <h1 className="editH1 heavyFont">Edit Your Business Details</h1>
+      <div className="editH1">
+        <button
+          id="goBack"
+          className="Btn-create"
+          onClick={() => history.goBack()}
+          type="submit"
+        >
+          Return to Previous Page
+        </button>
+        <h1 className="editH1 heavyFont" style={{ border: 'none' }}>
+          {' '}
+          Edit Your Business Details{' '}
+        </h1>
+      </div>
 
       <div className="editBizDiv">
         <form className="editBizForm" onSubmit={handleSubmit}>
           <div className="formDivider">
-            <label className="bizLabel txtWhite">
+            <label className="bizLabel editLabel">
               Business Name:
               <input
                 type="text"
@@ -116,7 +129,7 @@ const EditBusiness = () => {
               />
             </label>
 
-            <label className="bizLabel txtWhite">
+            <label className="bizLabel editLabel">
               Owner Name:
               <input
                 type="text"
@@ -126,7 +139,7 @@ const EditBusiness = () => {
               />
             </label>
 
-            <label className="bizLabel txtWhite">
+            <label className="bizLabel editLabel">
               Hours of Service:
               <select
                 className="selectHours"
@@ -137,14 +150,10 @@ const EditBusiness = () => {
                 <option defaultValue="2">Add business Hours</option>
               </select>
             </label>
-
-            {/* <button type="submit" className="Btn-create">
-              Submit
-            </button> */}
           </div>
 
           <div className="formDivider">
-            <label className="bizLabel txtWhite">
+            <label className="bizLabel editLabel">
               Street
               <input
                 placeholder={'Street'}
@@ -153,7 +162,7 @@ const EditBusiness = () => {
               />
             </label>
 
-            <label className="bizLabel txtWhite">
+            <label className="bizLabel editLabel">
               City:
               <input
                 placeholder={'City'}
@@ -162,7 +171,7 @@ const EditBusiness = () => {
               />
             </label>
 
-            <label className="bizLabel txtWhite">
+            <label className="bizLabel editLabel">
               State:
               <input
                 placeholder={'State'}
@@ -171,7 +180,7 @@ const EditBusiness = () => {
               />
             </label>
 
-            <label className="bizLabel txtWhite">
+            <label className="bizLabel editLabel">
               Zip:
               <input
                 placeholder={'Zip'}
@@ -182,7 +191,7 @@ const EditBusiness = () => {
           </div>
 
           <div className="formDivider">
-            <label className="bizLabel txtWhite">
+            <label className="bizLabel editLabel">
               Website
               <input
                 placeholder={'Website'}
@@ -191,7 +200,7 @@ const EditBusiness = () => {
               />
             </label>
 
-            <label className="bizLabel txtWhite">
+            <label className="bizLabel editLabel">
               Phone:
               <input
                 placeholder={'Phone'}
@@ -200,7 +209,7 @@ const EditBusiness = () => {
               />
             </label>
 
-            <label className="bizLabel txtWhite">
+            <label className="bizLabel editLabel">
               Email:
               <input
                 placeholder={'Email'}
@@ -209,7 +218,7 @@ const EditBusiness = () => {
               />
             </label>
 
-            <label className="bizLabel txtWhite">
+            <label className="bizLabel editLabel">
               Social Media:
               <input
                 placeholder={'Social Media'}
@@ -237,7 +246,6 @@ const EditBusiness = () => {
             Save Changes
           </button>
         </div>
-        
       </div>
     </div>
   );

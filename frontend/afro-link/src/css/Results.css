@@ -110,7 +110,8 @@
 .bizAddress {
   margin: auto;
   text-transform: capitalize;
-  font-size: 12pt;
+  font-size: 10pt;
+  font-weight: bold;
   color: #191102;
   place-items: right;
   margin-right: 0;

@@ -6,7 +6,6 @@ import TimeTable from '../../components/TimeTable';
 import axios from 'axios';
 import '../../css/EditBusiness.css';
 import Upload from './Upload';
-
 const EditBusiness = () => {
   const { id } = useParams();
   const API = getAPI();
@@ -14,12 +13,9 @@ const EditBusiness = () => {
   let history = useHistory();
   const [bizName, setBizName] = useState('');
   const [modalShow, setModalShow] = useState(false);
-
   const [ownerName, setOwnerName] = useState('');
-
   const [hours, setHours] = useState('Online Store');
   const [ownerId, setOwnerId] = useState('');
-
   const [street, setStreet] = useState('');
   const [city, setCity] = useState('');
   const [state, setState] = useState('');
@@ -28,7 +24,6 @@ const EditBusiness = () => {
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [socialMedia, setSocialMedia] = useState('');
-
   //This variable is holding "time" for storage
   let time = {
     Mon: 'close',
@@ -39,11 +34,9 @@ const EditBusiness = () => {
     Sat: 'close',
     Sun: 'close',
   };
-
   useEffect(() => {
     fetchBizById();
   }, []);
-
   const fetchBizById = async () => {
     try {
       let bizRes = await axios.get(`${API}/businesses/${id}`);
@@ -63,7 +56,6 @@ const EditBusiness = () => {
       console.log(err);
     }
   };
-
   //This fun patches new biz info to db
   const editBusinessInfo = async () => {
     try {
@@ -72,7 +64,6 @@ const EditBusiness = () => {
         biz_name: bizName,
         hours: hours,
       });
-
       // Update business address and website
       await axios.patch(`${API}/addresses/${id}`, {
         street: street,
@@ -81,14 +72,12 @@ const EditBusiness = () => {
         zip: zip,
         website: website,
       });
-
       // Update business contact
       await axios.patch(`${API}/contacts/${id}`, {
         phone: phone,
         email: email,
         social_media: socialMedia,
       });
-
       // Update business owner name
       await axios.patch(`${API}/owners/user/${id}`, {
         owner_name: ownerName,
@@ -97,7 +86,6 @@ const EditBusiness = () => {
       console.log(err);
     }
   };
-
   //Handles and sets hours input by user
   const handleHours = (e) => {
     if (e.currentTarget.selectedIndex === 0) {
@@ -106,13 +94,11 @@ const EditBusiness = () => {
       setModalShow(true);
     }
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     await editBusinessInfo();
     history.push(`/profile/${currentUser.uid}`);
   };
-
   return (
     <div>
       <h1 className="editH1 heavyFont">Edit Your Business Details</h1>
@@ -125,7 +111,6 @@ const EditBusiness = () => {
             value={bizName}
             onChange={(e) => setBizName(e.currentTarget.value)}
           />
-
           <label>Owner Name: </label>
           <input
             type="text"
@@ -142,7 +127,6 @@ const EditBusiness = () => {
             <option defaultValue="1">Online Store</option>
             <option defaultValue="2">Add business Hours</option>
           </select>
-      
           <input
             placeholder={'Street'}
             value={street}
@@ -168,7 +152,6 @@ const EditBusiness = () => {
             value={website}
             onChange={(e) => setWebsite(e.currentTarget.value)}
           />
-
           <input
             placeholder={'Phone'}
             value={phone}
@@ -187,7 +170,6 @@ const EditBusiness = () => {
           <button type="submit" className="Btn-create">
             Save
           </button>
-
           <div>
             <TimeTable
               show={modalShow}
@@ -204,5 +186,4 @@ const EditBusiness = () => {
     </div>
   );
 };
-
 export default EditBusiness;

@@ -130,7 +130,7 @@
   align-content: center;
   background-color: whitesmoke;
   width: 75%;
-  padding: 1em 2em;
+  padding: 0 1em 1em 2em;
 }
 
 .uploadForm {
@@ -163,7 +163,7 @@
   font-size: 10pt;
   box-shadow: 1px 3px 6px #191102ff;
   text-shadow: 2px 1px 2px rgba(233, 201, 121, 0.746);
-  background-color: rgba(243, 183, 31, 0.753);
+  background-color: #808080af;
   cursor: pointer;
   font-family: 'Raleway', sans-serif;
   font-weight: bold;

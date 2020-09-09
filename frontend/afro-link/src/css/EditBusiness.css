@@ -19,7 +19,7 @@
   border: 1px whitesmoke solid;
   width: 75%;
   height: auto;
-  padding: 1.5em;
+  padding: 1.5em 1.5em 0 1.5em;
   background-color: whitesmoke;
 }
 
@@ -127,7 +127,6 @@
   place-items: center;
   justify-content: space-evenly;
   margin: auto;
-  margin-top: 1em;
   align-content: center;
   background-color: whitesmoke;
   width: 75%;

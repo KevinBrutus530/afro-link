@@ -30,9 +30,9 @@
   text-align: left;
   padding: 10px;
   justify-content: space-evenly;
-  border-bottom: 1px solid rgb(104, 104, 104);
+  border-bottom: 1px rgba(128, 128, 128, 0.555) solid;
   font-weight: bold;
-  color: #551100;
+  color: #8b0000;
 }
 
 @media (max-width: 1350px) {
@@ -81,7 +81,7 @@
 
 .txtWhite {
   text-align: left;
-  color: #551100;
+  color: #8b0000;
   font-weight: bold;
 }
 
@@ -131,7 +131,7 @@
   align-content: center;
   background-color: whitesmoke;
   width: 75%;
-  padding: 1em;
+  padding: 1em 2em;
 }
 
 .uploadForm {
@@ -139,17 +139,16 @@
   flex-direction: column;
   justify-content: flex-start;
   width: 100%;
-  /* padding: 1em; */
 }
 
 .uploadLabel {
   display: flex;
   flex-direction: row;
-  color: #551100;
+  color: #8b0000;
   align-content: flex-start;
   justify-content: flex-start;
   font-weight: bold;
-  border-bottom: 1px grey solid;
+  border-bottom: 1px rgba(128, 128, 128, 0.555) solid;
 }
 
 .selectImage {

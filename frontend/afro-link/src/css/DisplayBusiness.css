@@ -44,11 +44,18 @@ summary {
 
 .bizPicProfile {
   display: flex;
-  padding: 1em;
   padding-bottom: 1em;
-  width: 12em;
+  width: 100%;
   height: auto;
   object-fit: contain;
+  filter: drop-shadow(5px rgb(240, 198, 92));
+  animation-duration: 2s;
+  animation-name: slideIn;
+  transition: transform 1s;
+}
+
+.bizPicProfile:hover {
+  transform: scale(1.05, 1.05);
 }
 
 @media (max-width: 1350px) {

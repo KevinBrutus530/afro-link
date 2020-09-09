@@ -4,7 +4,7 @@ import { getAPI } from '../util/getAPI';
 import { useInput } from '../util/useInput';
 import axios from 'axios';
 
-const SearchBar = ({ type, setResults, setBizType, bizType }) => {
+const SearchBar = ({ type, setResults, setBizType }) => {
   const history = useHistory();
   const API = getAPI();
   const [businessTypes, setBusinessTypes] = useState([]);
@@ -55,14 +55,13 @@ const SearchBar = ({ type, setResults, setBizType, bizType }) => {
     return (
       <div className="searchBarDiv searchInformation">
         <form className="searchBarForm" onSubmit={handleSubmit}>
-          {/* <label>Search:</label> */}
           <input
             className="searchBizInput"
             type="text"
             placeholder="Search Businesses"
           />
           <select className="selectBizBar" name="Type Name" required>
-            <option value={bizType} disabled>
+            <option selected default disabled>
               Select Business Type
             </option>
             {types}

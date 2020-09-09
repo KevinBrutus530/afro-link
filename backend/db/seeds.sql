@@ -914,9 +914,9 @@ INSERT INTO addresses(address_id,street,city,state,zip,website) VALUES
 
 INSERT INTO reviews(review_id, name, text, ratings) VALUES
 (1, 'kong', 'love this Candle shop', 5);
-
 INSERT INTO reviews(review_id, reply_id, name, reply_text) VALUES
 (1, 1, 'owner/operator', 'Weclome to the shop');
 
-UPDATE reviews SET reply=2 WHERE id = 1
+UPDATE reviews SET reply=2 WHERE id = 1;
 -- UPDATE reviews SET reply=1 WHERE review.reply_id = 1;
+UPDATE owners SET pictures='https://trello-attachments.s3.amazonaws.com/5ef8bcf3775f24613fe56eb7/5ef8bfd9edb57a1eb08bbe57/9306e0b1aa785ac7b6df7e1b16eff0f1/circleLogoYellow.png' WHERE pictures IS NULL

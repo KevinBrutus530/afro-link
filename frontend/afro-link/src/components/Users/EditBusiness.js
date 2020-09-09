@@ -138,9 +138,9 @@ const EditBusiness = () => {
               </select>
             </label>
 
-            <button type="submit" className="Btn-create">
+            {/* <button type="submit" className="Btn-create">
               Submit
-            </button>
+            </button> */}
           </div>
 
           <div className="formDivider">
@@ -229,12 +229,15 @@ const EditBusiness = () => {
               time={time}
             />
           </div>
-          
         </form>
 
         <div className="uploadDiv">
           <Upload ownerId={ownerId} />
+          <button type="submit" className="Btn-saveInfo">
+            Save Changes
+          </button>
         </div>
+        
       </div>
     </div>
   );

@@ -23,6 +23,42 @@
   background-color: whitesmoke;
 }
 
+@media (max-width: 1350px) {
+  .editBizForm {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 1em;
+    width: fill;
+    justify-content: center;
+  }
+
+  .bizLabel {
+    display: flex;
+    margin: auto;
+    align-content: flex-start;
+    align-self: start;
+    place-items: center;
+    justify-content: flex-start;
+    width: 100vw;
+  }
+
+  .bizLabel input {
+    justify-content: space-between;
+    align-self: right;
+  }
+
+  .formDivider {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: space-between;
+    align-content: center;
+    padding: 0;
+    margin: 0;
+  }
+}
+
 .formDivider {
   width: 40%;
 }
@@ -30,9 +66,7 @@
 .txtWhite {
   text-align: left;
   color: #551100;
-  /* color: whitesmoke; */
   font-weight: bold;
-  /* border-color: #191102ff; */
 }
 
 .selectHours {
@@ -76,13 +110,17 @@
   place-items: center;
   justify-content: space-evenly;
   margin: auto;
-  margin-top: 2em;
+  margin-top: 1em;
   align-content: center;
   background-color: whitesmoke;
+  width: max-content;
+  padding: 1em;
 }
 
 .uploadForm {
-  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
   padding: 1em;
 }
@@ -90,11 +128,12 @@
 .uploadLabel {
   display: flex;
   color: #551100;
-  text-align: left;
-  padding: 10px;
-  justify-content: space-between;
+  text-align: justify;
+  align-content: space-between;
+  justify-content: center;
   font-weight: bold;
   border-bottom: 1px grey solid;
+  margin: auto;
 }
 
 .selectImage {
@@ -110,7 +149,7 @@
   font-size: 10pt;
   box-shadow: 1px 3px 6px #191102ff;
   text-shadow: 2px 1px 2px rgba(233, 201, 121, 0.746);
-  background-color: rgba(243, 183, 31, 0.849);
+  background-color: rgba(243, 183, 31, 0.753);
   cursor: pointer;
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
@@ -134,4 +173,40 @@
   width: 10em;
   padding: 0.5em;
   text-align: center;
+  place-items: center;
+}
+
+.Btn-saveInfo {
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  margin-top: 2.25em;
+  color: #f3b61fff;
+  background-color: darkred;
+  border: none;
+  border-radius: 25px;
+  font-family: 'Candal', sans-serif;
+  font-weight: lighter;
+  font-size: 14pt;
+  text-shadow: 1px 2px 2px #191102ff;
+  box-shadow: 1px 3px 3px rgb(41, 28, 3);
+  height: auto;
+  width: 15em;
+  padding: 0.5em;
+  text-align-last: center;
+}
+
+@media (max-width: 1350px) {
+  .uploadDiv {
+    display: flex;
+    flex-direction: column;
+    width: fill;
+    margin: auto;
+    justify-content: center;
+    padding: 1em;
+  }
+
+  .Btn-save {
+    margin-top: 1em;
+  }
 }

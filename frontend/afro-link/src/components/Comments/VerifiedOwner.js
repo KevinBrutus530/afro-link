@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState,useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { useInput } from '../../util/useInput';
 import axios from 'axios';
+import { AuthContext } from '../../providers/AuthContext';
 import { getAPI } from '../../util/getAPI';
 
 const VerifiedOwner = ({ userBusinesses, post, getReviews }) => {
+  const { currentUser } = useContext(AuthContext);
   const API = getAPI();
   const text = useInput('');
   const [showEdit, setShowEdit] = useState(true);
@@ -12,8 +14,8 @@ const VerifiedOwner = ({ userBusinesses, post, getReviews }) => {
     setShowEdit(!showEdit);
   };
   const { id } = useParams();
-  console.log(userBusinesses[0]);
-  console.log(post);
+  // console.log(userBusinesses[0]);
+  // console.log(post);
   const submitReply = async (e) => {
     e.preventDefault();
     try {
@@ -28,7 +30,7 @@ const VerifiedOwner = ({ userBusinesses, post, getReviews }) => {
     }
   };
   let verifiedOwner = userBusinesses.map((el) => {
-    if (el.owner_id == id) {
+    if (el.owner_id == id && currentUser) {
       return (
         <div>
           <button className="Btn-create-Reply" onClick={() => toggleButton()}>

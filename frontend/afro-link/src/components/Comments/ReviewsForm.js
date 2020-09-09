@@ -35,7 +35,7 @@ const ReviewsForm = () => {
 
   useEffect(() => {
     getReviews();
-  }, [currentUser]);
+  }, []);
 
   const submitReviews = async (e) => {
     e.preventDefault();
@@ -47,6 +47,7 @@ const ReviewsForm = () => {
         text: text.value,
         ratings: ratings,
       });
+      debugger
       getReviews();
     } catch (err) {
       console.log(err);
@@ -102,7 +103,8 @@ const ReviewsForm = () => {
       );
     }
   });
- 
+ console.log(name)
+ console.log(text)
 
   return (
     <div className="reviewsForm">
@@ -116,6 +118,7 @@ const ReviewsForm = () => {
             placeholder="Leave your name..."
             name="name"
             {...name}
+            value={name.value}
             required
           />
         </div>
@@ -123,9 +126,10 @@ const ReviewsForm = () => {
           <label className="labelInput">Review:</label>
           <textarea
             type="text"
-            placeholder="Comments..."
+            placeholder="Whats on your mind..."
             name="comment"
             {...text}
+            value={text.value}
             required
           />
         </div>

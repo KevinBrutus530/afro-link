@@ -1,6 +1,6 @@
 .editBizDiv {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
   place-items: center;
   width: 100%;
@@ -11,15 +11,45 @@
 
 .editBizForm {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin: auto;
   margin-top: 2em;
-  justify-content: center;
+  justify-content: space-between;
   align-content: center;
   border: 1px whitesmoke solid;
-  width: 35%;
+  width: 75%;
   height: auto;
-  padding: 2em;
+  padding: 1em;
+}
+
+.formDivider {
+  width: 35%;
+}
+
+.txtWhite {
+  color: whitesmoke;
+  font-weight: bold;
+  border-color: whitesmoke;
+}
+
+.selectHours {
+  display: flex;
+  justify-content: center;
+  text-align-last: center;
+  border: none;
+  border-radius: 7px;
+  width: 12em;
+  height: 2.25em;
+  padding: 0.5em;
+  margin-left: 10px;
+  color: #191102ff;
+  font-size: 10pt;
+  box-shadow: 1px 3px 6px #191102ff;
+  text-shadow: 2px 1px 2px rgba(233, 201, 121, 0.746);
+  background-color: rgba(243, 183, 31, 0.849);
+  cursor: pointer;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
 }
 
 .editBizForm > * {

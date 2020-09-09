@@ -42,7 +42,7 @@ const Upload = ({ ownerId }) => {
           Upload Your Picture:
           <div className="input">
             <input type="file" onChange={(e) => uploadImg(e)} />
-            <input type="submit" className="submit" />
+            <button className="submit">Save</button>
           </div>
         </label>
       </form>

@@ -4,7 +4,7 @@ import { getAPI } from '../util/getAPI';
 import { useInput } from '../util/useInput';
 import axios from 'axios';
 
-const SearchBar = ({ type, setResults, setBizType }) => {
+const SearchBar = ({ type, setResults, setBizType, bizType }) => {
   const history = useHistory();
   const API = getAPI();
   const [businessTypes, setBusinessTypes] = useState([]);
@@ -62,7 +62,7 @@ const SearchBar = ({ type, setResults, setBizType }) => {
             placeholder="Search Businesses"
           />
           <select className="selectBizBar" name="Type Name" required>
-            <option value="" disabled>
+            <option value={bizType} disabled>
               Select Business Type
             </option>
             {types}

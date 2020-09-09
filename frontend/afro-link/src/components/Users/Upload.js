@@ -38,28 +38,26 @@ const Upload = ({ ownerId }) => {
   return (
     // <div className="uploadContainer">
     <form className="uploadForm" onSubmit={handleSubmit}>
-      <label className="txtWhite">
-        Upload Your Picture:
-        <div className="input">
-          <input
-            className="selectImage"
-            type="file"
-            onChange={(e) => uploadImg(e)}
-          />
-          <button
-            style={{
-              margin: '0',
-              marginLeft: '10px',
-              width: 'fitContent',
-              height: '2em',
-              placeItems: 'center'
-            }}
-            className="Btn-rest"
-          >
-            Save
-          </button>
-        </div>
-      </label>
+      <label className="uploadLabel">Upload Your Picture:</label>
+      <div className="uploadDiv">
+        <input
+          className="selectImage"
+          type="file"
+          onChange={(e) => uploadImg(e)}
+        />
+        <button
+          style={{
+            margin: '0',
+            marginLeft: '10px',
+            width: 'fitContent',
+            height: '2em',
+            placeItems: 'center',
+          }}
+          className="Btn-save"
+        >
+          Save
+        </button>
+      </div>
     </form>
     // </div>
   );

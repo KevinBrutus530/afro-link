@@ -20,6 +20,7 @@
   width: 75%;
   height: auto;
   padding: 1.5em;
+  background-color: whitesmoke;
 }
 
 .formDivider {
@@ -28,9 +29,10 @@
 
 .txtWhite {
   text-align: left;
-  color: whitesmoke;
+  color: #551100;
+  /* color: whitesmoke; */
   font-weight: bold;
-  border-color: whitesmoke;
+  /* border-color: #191102ff; */
 }
 
 .selectHours {
@@ -69,24 +71,39 @@
 }
 
 .uploadDiv {
-  margin-top: 1em;
-}
-
-.input {
   display: flex;
   flex-direction: row;
+  place-items: center;
   justify-content: space-evenly;
   margin: auto;
+  margin-top: 2em;
   align-content: center;
+  background-color: whitesmoke;
+}
+
+.uploadForm {
+  justify-content: space-around;
+  width: 100%;
+  padding: 1em;
+}
+
+.uploadLabel {
+  display: flex;
+  color: #551100;
+  text-align: left;
+  padding: 10px;
+  justify-content: space-between;
+  font-weight: bold;
+  border-bottom: 1px grey solid;
 }
 
 .selectImage {
   display: flex;
-  justify-content: center;
+  margin: auto;
   place-items: center;
   border: none;
   border-radius: 7px;
-  width: 15em;
+  width: 18em;
   height: 3em;
   padding: 1em;
   color: #191102ff;
@@ -97,8 +114,24 @@
   cursor: pointer;
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
+  margin-left: 5px;
 }
 
-.submit {
-  margin: 0;
+.Btn-save {
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  color: #f3b61fff;
+  background-color: gray;
+  border: none;
+  border-radius: 25px;
+  font-family: 'Candal', sans-serif;
+  font-weight: lighter;
+  font-size: 14pt;
+  text-shadow: 1px 2px 2px #191102ff;
+  box-shadow: 1px 3px 3px rgb(41, 28, 3);
+  height: auto;
+  width: 10em;
+  padding: 0.5em;
+  text-align: center;
 }

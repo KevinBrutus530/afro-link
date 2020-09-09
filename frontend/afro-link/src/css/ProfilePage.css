@@ -10,9 +10,11 @@
   display: grid;
   grid-template-columns: 50% 50%;
   place-items: center;
-  justify-content: center;
+  justify-content: space-between;
   align-content: center;
   grid-gap: 1em;
+  margin-left: 5em;
+  margin-right: 5em;
 }
 
 @media (max-width: 1350px) {
@@ -57,11 +59,11 @@
   flex-direction: column;
   background-color: whitesmoke;
   justify-items: center;
-  margin-top: 6em;
+  margin-top: 2em;
   margin-right: 3em;
   margin-left: 1em;
   text-align-last: center;
-  padding: 1em;
+  padding: 1.5em;
   width: max-content;
   height: auto;
 }

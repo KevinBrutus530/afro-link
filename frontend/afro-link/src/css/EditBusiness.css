@@ -19,14 +19,15 @@
   border: 1px whitesmoke solid;
   width: 75%;
   height: auto;
-  padding: 1em;
+  padding: 1.5em;
 }
 
 .formDivider {
-  width: 35%;
+  width: 40%;
 }
 
 .txtWhite {
+  text-align: left;
   color: whitesmoke;
   font-weight: bold;
   border-color: whitesmoke;
@@ -65,4 +66,39 @@
   padding: 1em;
   color: whitesmoke;
   border-bottom: 1px solid whitesmoke;
+}
+
+.uploadDiv {
+  margin-top: 1em;
+}
+
+.input {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: auto;
+  align-content: center;
+}
+
+.selectImage {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  border: none;
+  border-radius: 7px;
+  width: 15em;
+  height: 3em;
+  padding: 1em;
+  color: #191102ff;
+  font-size: 10pt;
+  box-shadow: 1px 3px 6px #191102ff;
+  text-shadow: 2px 1px 2px rgba(233, 201, 121, 0.746);
+  background-color: rgba(243, 183, 31, 0.849);
+  cursor: pointer;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+}
+
+.submit {
+  margin: 0;
 }

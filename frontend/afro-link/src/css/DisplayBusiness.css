@@ -29,13 +29,9 @@
   height: auto;
 }
 
-/* .bizHours {
-  display: table-column-group;
-  max-width: 15em;
-  margin-right: 5em;
-  width: 15em;
-  padding: 10px 1em;
-} */
+summary {
+  color: #191102;
+}
 
 .bizHoursProfile {
   display: flex;
@@ -45,7 +41,6 @@
 #defaultPic {
   opacity: 0.5;
 }
-
 
 .bizPicProfile {
   display: flex;

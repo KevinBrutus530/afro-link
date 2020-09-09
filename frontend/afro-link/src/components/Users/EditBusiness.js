@@ -229,8 +229,12 @@ const EditBusiness = () => {
               time={time}
             />
           </div>
+          
         </form>
-        <Upload ownerId={ownerId} />
+
+        <div className="uploadDiv">
+          <Upload ownerId={ownerId} />
+        </div>
       </div>
     </div>
   );

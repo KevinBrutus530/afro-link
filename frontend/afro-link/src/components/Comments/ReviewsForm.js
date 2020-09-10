@@ -2,19 +2,19 @@ import React, { useState, useContext, useEffect } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import { useInput } from '../../util/useInput';
 import { AuthContext } from '../../providers/AuthContext';
-import { getAPI } from "../../util/getAPI";
-import axios from "axios";
-import "../../css/ReviewsForm.css";
-import Reply from "./Reply.js"
-import VerifiedOwner from "./VerifiedOwner"
+import { getAPI } from '../../util/getAPI';
+import axios from 'axios';
+import '../../css/ReviewsForm.css';
+import Reply from './Reply.js';
+import VerifiedOwner from './VerifiedOwner';
 
 const ReviewsForm = () => {
   const API = getAPI();
   const { token, currentUser, loading } = useContext(AuthContext);
   const [userBusinesses, setUserBusinesses] = useState([]);
   const { id } = useParams();
-  const name = useInput("");
-  const text = useInput("");
+  const name = useInput('');
+  const text = useInput('');
   const [allReviews, setAllReviews] = useState([]);
   const [ratings, setRating] = useState(null);
   const [hover, setHover] = useState(null);
@@ -47,7 +47,7 @@ const ReviewsForm = () => {
         text: text.value,
         ratings: ratings,
       });
-      debugger
+      debugger;
       getReviews();
     } catch (err) {
       console.log(err);
@@ -84,34 +84,37 @@ const ReviewsForm = () => {
     fetchUserById();
   }, []);
 
-
   let showReviews = allReviews.map((post, i) => {
-    if(post.text){
+    if (post.text) {
       return (
-        <div style={{ color: "white" }} key={post.id} className="ReviewSect">
+        <div style={{ color: 'white' }} key={post.id} className="ReviewSect">
           <div className="ratings">
             <h5 className="reviewerName">{post.name.toUpperCase()}</h5>
             {starsShow(post.ratings)}
+            <p className="reviewDT">{post.dt.substring(0, 10)}</p>
           </div>
-          <p className="review"> {post.text}</p>
-          <p className="reviewDT">{post.dt.substring(0,10)}</p>
+            <p className="review"> {post.text}</p>
           <div className="reply">
-            <VerifiedOwner userBusinesses={userBusinesses} post={post} getReviews={getReviews}/>
+            <VerifiedOwner
+              userBusinesses={userBusinesses}
+              post={post}
+              getReviews={getReviews}
+            />
             <Reply allReviews={allReviews} replyID={post.id} />
           </div>
         </div>
       );
     }
   });
- console.log(name)
- console.log(text)
+  console.log(name);
+  console.log(text);
 
   return (
     <div className="reviewsForm">
       <h2 className="heavyFont">Reviews</h2>
       <form className="reviewsInputs" onSubmit={submitReviews}>
         <div className="labelInput">
-          {" "}
+          {' '}
           <label className="labelInput">Name: </label>
           <input
             type="text"
@@ -150,14 +153,13 @@ const ReviewsForm = () => {
                 <span
                   className="fa fa-star-o"
                   style={
-                    ratingValue <= (hover||ratings)
-                      ? { color: "red" }
-                      : { color: "#background-color: #1911026b" }
+                    ratingValue <= (hover || ratings)
+                      ? { color: 'red' }
+                      : { color: '#background-color: #1911026b' }
                   }
-                  onMouseEnter={()=>setHover(ratingValue)}
-                onMouseLeave={()=>setHover(1)}
-                onClick={() => setRating(ratingValue)}
-                  
+                  onMouseEnter={() => setHover(ratingValue)}
+                  onMouseLeave={() => setHover(1)}
+                  onClick={() => setRating(ratingValue)}
                 ></span>
               </label>
             );

@@ -68,11 +68,11 @@
   margin: auto;
   justify-content: space-evenly;
   background-color: whitesmoke;
-  background-image: url("https://www.transparenttextures.com/patterns/dimension.png");
+  background-image: url('https://www.transparenttextures.com/patterns/dimension.png');
   box-shadow: 1px 1px 7px #d5f5cda2;
   height: 20em;
-  width: 15em;
-  padding: .5em;
+  width: 15.25em;
+  padding: 1em;
   text-align: center;
   cursor: pointer;
   border-radius: 5px;
@@ -117,4 +117,3 @@
   margin-right: 0;
   word-spacing: 3px;
 }
-

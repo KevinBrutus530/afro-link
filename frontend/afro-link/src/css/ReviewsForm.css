@@ -10,7 +10,6 @@ $black-chocolate: #191102ff; */
   width: 8em;
   font-size: medium;
   margin-top: 1em;
-  /* margin-bottom: 1em; */
 }
 
 .reviewsForm {
@@ -30,11 +29,9 @@ $black-chocolate: #191102ff; */
 
 .reviewsForm > label {
   color: #f2f2f2;
-  /* color: #191102; */
 }
 .reviewsInputs > label {
   color: #f2f2f2;
-  /* color: #191102; */
 }
 
 .labelInput {
@@ -107,7 +104,8 @@ $black-chocolate: #191102ff; */
 
 .ratings {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: flex-start;
   width: 100%;
 }
 
@@ -142,9 +140,8 @@ span {
 
 .review {
   display: flex;
-  /* margin-left: 2em; */
   font-size: 1rem;
-  /* padding: .5em; */
+  border-bottom: 1px solid rgba(211, 211, 211, 0.555);
 }
 
 .ratingRadio {
@@ -161,4 +158,9 @@ span {
   padding: 5px;
   font-weight: 700;
   margin: 0;
+}
+
+.reviewDT {
+  font-size: 13pt;
+  padding: 0 1em;
 }

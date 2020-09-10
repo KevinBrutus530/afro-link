@@ -442,8 +442,9 @@ $black-chocolate: #191102ff; */
 }
 
 #helpful {
-  font-weight: bold;
-  color: rgb(1, 44, 1);
+  font-size: 1em;
+  font-weight: bolder;
+  color: #cec8c8;
   text-shadow: .5px .5px 1.5px #494821c9;
 }
 

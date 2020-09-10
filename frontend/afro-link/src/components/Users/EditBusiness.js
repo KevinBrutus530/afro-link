@@ -110,10 +110,7 @@ const EditBusiness = () => {
         >
           Return to Previous Page
         </button>
-        <h1 className="editH1 heavyFont" style={{ border: 'none' }}>
-          {' '}
-          Edit Your Business Details{' '}
-        </h1>
+        <h1 className="editH1 heavyFont" style={{textDecoration: 'none'}}> Edit Your Business Details </h1>
       </div>
 
       <div className="editBizDiv">
@@ -238,7 +235,6 @@ const EditBusiness = () => {
               time={time}
             />
           </div>
-        </form>
 
         <div className="uploadDiv">
           <Upload ownerId={ownerId} />
@@ -246,6 +242,8 @@ const EditBusiness = () => {
             Save Changes
           </button>
         </div>
+        </form>
+
       </div>
     </div>
   );

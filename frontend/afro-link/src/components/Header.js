@@ -8,7 +8,7 @@ const Header = () => {
     <div>
       <nav className="headerNav">
         <div className="BLM">
-          Black Lives Matter.
+          <p className="BLMmessage">Black Lives Matter.</p>
           <a
             target="_blank"
             href="https://support.eji.org/give/153413/#!/donation/checkout"

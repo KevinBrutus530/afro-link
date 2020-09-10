@@ -20,7 +20,7 @@
   height: auto;
   border-radius: 5px;
   font-weight: bold;
-  /* padding: 1em; */
+  padding: 0 1em;
 }
 
 .businessInfo > * {

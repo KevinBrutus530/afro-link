@@ -83,16 +83,17 @@ $black-chocolate: #191102ff; */
   }
 }
 
+/*////////////////////////////////////Reviews////////////////////////////////////////*/
+
 .ReviewSect {
   display: flex;
   flex-direction: column;
-  vertical-align: middle;
   width: 100%;
   min-height: auto;
-  margin-top: 5px 10px;
-  margin-bottom: 0em;
+  margin-bottom: 1em;
   font-size: 0.9rem;
-  border-bottom: 2px outset #f2f2f2;
+  border: 1px solid #f2f2f2;
+  padding: 1em;
 }
 
 .ReviewSect > h5 {
@@ -163,4 +164,23 @@ span {
 .reviewDT {
   font-size: 13pt;
   padding: 0 1em;
+}
+
+/*/////////////////////////////////OWNER RESPONSE CSS////////////////////////////////*/
+
+.ownerReplyContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.reply_Name {
+  text-align: left;
+  font-size: 12pt;
+}
+
+.reply_Text {
+  display: flex;
+  text-align: left;
 }

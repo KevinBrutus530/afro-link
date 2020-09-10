@@ -104,146 +104,149 @@ const EditBusiness = () => {
       <div className="editH1">
         <button
           id="goBack"
-          className="Btn-create"
+          className="Btn-create editPrevBtn"
           onClick={() => history.goBack()}
           type="submit"
         >
           Return to Previous Page
         </button>
-        <h1 className="editH1 heavyFont" style={{textDecoration: 'none'}}> Edit Your Business Details </h1>
+        <h1 className="heavyFont" style={{ textDecoration: 'none' }}>
+          {' '}
+          Edit Your Business Details{' '}
+        </h1>
       </div>
 
       <div className="editBizDiv">
         <form className="editBizForm" onSubmit={handleSubmit}>
-          <div className="formDivider">
-            <label className="bizLabel editLabel">
-              Business Name:
-              <input
-                type="text"
-                placeholder="Business Name"
-                value={bizName}
-                onChange={(e) => setBizName(e.currentTarget.value)}
-              />
-            </label>
+          <div className="formContainerDiv">
+            <div className="formDivider">
+              <label className="bizLabel editLabel">
+                Business Name:
+                <input
+                  type="text"
+                  placeholder="Business Name"
+                  value={bizName}
+                  onChange={(e) => setBizName(e.currentTarget.value)}
+                />
+              </label>
 
-            <label className="bizLabel editLabel">
-              Owner Name:
-              <input
-                type="text"
-                placeholder="Owner Name"
-                value={ownerName}
-                onChange={(e) => setOwnerName(e.currentTarget.value)}
-              />
-            </label>
+              <label className="bizLabel editLabel">
+                Owner Name:
+                <input
+                  type="text"
+                  placeholder="Owner Name"
+                  value={ownerName}
+                  onChange={(e) => setOwnerName(e.currentTarget.value)}
+                />
+              </label>
 
-            <label className="bizLabel editLabel">
-              Hours of Service:
-              <select
-                className="selectHours"
-                onChange={(e) => handleHours(e)}
-                required
-              >
-                <option defaultValue="1">Online Store</option>
-                <option defaultValue="2">Add business Hours</option>
-              </select>
-            </label>
+              <label className="bizLabel editLabel">
+                Hours of Service:
+                <select
+                  className="selectHours"
+                  onChange={(e) => handleHours(e)}
+                  required
+                >
+                  <option defaultValue="1">Online Store</option>
+                  <option defaultValue="2">Add business Hours</option>
+                </select>
+              </label>
+            </div>
+
+            <div className="formDivider">
+              <label className="bizLabel editLabel">
+                Street
+                <input
+                  placeholder={'Street'}
+                  value={street}
+                  onChange={(e) => setStreet(e.currentTarget.value)}
+                />
+              </label>
+
+              <label className="bizLabel editLabel">
+                City:
+                <input
+                  placeholder={'City'}
+                  value={city}
+                  onChange={(e) => setCity(e.currentTarget.value)}
+                />
+              </label>
+
+              <label className="bizLabel editLabel">
+                State:
+                <input
+                  placeholder={'State'}
+                  value={state}
+                  onChange={(e) => setState(e.currentTarget.value)}
+                />
+              </label>
+
+              <label className="bizLabel editLabel">
+                Zip:
+                <input
+                  placeholder={'Zip'}
+                  value={zip}
+                  onChange={(e) => setZip(e.currentTarget.value)}
+                />
+              </label>
+            </div>
+
+            <div className="formDivider">
+              <label className="bizLabel editLabel">
+                Website
+                <input
+                  placeholder={'Website'}
+                  value={website}
+                  onChange={(e) => setWebsite(e.currentTarget.value)}
+                />
+              </label>
+
+              <label className="bizLabel editLabel">
+                Phone:
+                <input
+                  placeholder={'Phone'}
+                  value={phone}
+                  onChange={(e) => setPhone(e.currentTarget.value)}
+                />
+              </label>
+
+              <label className="bizLabel editLabel">
+                Email:
+                <input
+                  placeholder={'Email'}
+                  value={email}
+                  onChange={(e) => setEmail(e.currentTarget.value)}
+                />
+              </label>
+
+              <label className="bizLabel editLabel">
+                Social Media:
+                <input
+                  placeholder={'Social Media'}
+                  value={socialMedia}
+                  onChange={(e) => setSocialMedia(e.currentTarget.value)}
+                />
+              </label>
+            </div>
+
+            <div>
+              <TimeTable
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+                setTime={() => {
+                  setHours(time);
+                }}
+                time={time}
+              />
+            </div>
           </div>
-
-          <div className="formDivider">
-            <label className="bizLabel editLabel">
-              Street
-              <input
-                placeholder={'Street'}
-                value={street}
-                onChange={(e) => setStreet(e.currentTarget.value)}
-              />
-            </label>
-
-            <label className="bizLabel editLabel">
-              City:
-              <input
-                placeholder={'City'}
-                value={city}
-                onChange={(e) => setCity(e.currentTarget.value)}
-              />
-            </label>
-
-            <label className="bizLabel editLabel">
-              State:
-              <input
-                placeholder={'State'}
-                value={state}
-                onChange={(e) => setState(e.currentTarget.value)}
-              />
-            </label>
-
-            <label className="bizLabel editLabel">
-              Zip:
-              <input
-                placeholder={'Zip'}
-                value={zip}
-                onChange={(e) => setZip(e.currentTarget.value)}
-              />
-            </label>
+          <div className="uploadDiv">
+            <Upload ownerId={ownerId} />
+            <button type="submit" className="Btn-saveInfo">
+              Save Changes
+            </button>
           </div>
-
-          <div className="formDivider">
-            <label className="bizLabel editLabel">
-              Website
-              <input
-                placeholder={'Website'}
-                value={website}
-                onChange={(e) => setWebsite(e.currentTarget.value)}
-              />
-            </label>
-
-            <label className="bizLabel editLabel">
-              Phone:
-              <input
-                placeholder={'Phone'}
-                value={phone}
-                onChange={(e) => setPhone(e.currentTarget.value)}
-              />
-            </label>
-
-            <label className="bizLabel editLabel">
-              Email:
-              <input
-                placeholder={'Email'}
-                value={email}
-                onChange={(e) => setEmail(e.currentTarget.value)}
-              />
-            </label>
-
-            <label className="bizLabel editLabel">
-              Social Media:
-              <input
-                placeholder={'Social Media'}
-                value={socialMedia}
-                onChange={(e) => setSocialMedia(e.currentTarget.value)}
-              />
-            </label>
-          </div>
-
-          <div>
-            <TimeTable
-              show={modalShow}
-              onHide={() => setModalShow(false)}
-              setTime={() => {
-                setHours(time);
-              }}
-              time={time}
-            />
-          </div>
-
-        <div className="uploadDiv">
-          <Upload ownerId={ownerId} />
-          <button type="submit" className="Btn-saveInfo">
-            Save Changes
-          </button>
-        </div>
         </form>
-
       </div>
     </div>
   );

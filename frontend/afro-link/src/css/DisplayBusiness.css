@@ -75,6 +75,10 @@ summary {
   /* place-items: center; */
 }
 
+.hyperLink {
+  color: #00838f;
+}
+
 .hyperLink > a {
   color: #00838f;
   padding: 10px;
@@ -107,7 +111,7 @@ summary {
   text-align: left;
   padding: 10px;
   justify-content: space-between;
-  border-bottom: 1px solid rgb(104, 104, 104);
+  border-bottom: 1px solid rgba(243, 183, 31, 0.5);
 }
 
 .BtnEdit {

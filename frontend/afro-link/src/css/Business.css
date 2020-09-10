@@ -73,3 +73,15 @@
   /* justify-content: ; */
   /* align-content: space-between; */
 }
+
+.smallertxt {
+  font-size: 10pt;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  width: fill;
+  justify-content: space-between;
+  padding: 1em;
+}

@@ -1,7 +1,9 @@
 .businessMainDiv {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
   width: 100%;
   height: auto;
-  margin: auto;
   margin-top: 5em;
   padding: 1em 0em;
   color: #191102ff;
@@ -43,9 +45,9 @@
 }
 
 .bizMapRevContainer {
-  display: inline-grid;
+  display: grid;
   grid-template-columns: 1fr 1fr;
-  justify-content: space-around;
+  /* justify-content: center; */
   margin: auto;
   padding: 3em;
   border-top: 2px ridge whitesmoke;

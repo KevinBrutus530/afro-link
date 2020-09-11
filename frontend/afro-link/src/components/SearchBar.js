@@ -8,6 +8,8 @@ const SearchBar = ({ type, setResults, setBizType }) => {
   const history = useHistory();
   const API = getAPI();
   const [businessTypes, setBusinessTypes] = useState([]);
+  const [defaulType, setDefaultType] = useState('');
+  const [current, setCurrent] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -19,7 +21,8 @@ const SearchBar = ({ type, setResults, setBizType }) => {
       }
     };
     fetchData();
-  }, []);
+    setDefaultType(type);
+  }, [type]);
 
   const types = businessTypes.map((type) => {
     return (
@@ -28,6 +31,10 @@ const SearchBar = ({ type, setResults, setBizType }) => {
       </option>
     );
   });
+
+  const handleChange = (e) => {
+    setCurrent(e.target.value);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -60,9 +67,15 @@ const SearchBar = ({ type, setResults, setBizType }) => {
             type="text"
             placeholder="Search Businesses"
           />
-          <select className="selectBizBar" name="Type Name" required>
-            <option selected default disabled>
-              Select Business Type
+          <select
+            onChange={handleChange}
+            className="selectBizBar"
+            name="Type Name"
+            defaultValue={defaulType}
+            required
+          >
+            <option selected value={current}>
+              {defaulType}
             </option>
             {types}
           </select>

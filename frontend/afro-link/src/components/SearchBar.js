@@ -32,6 +32,8 @@ const SearchBar = ({ type, setResults, setBizType }) => {
     );
   });
 
+  console.log(types)
+
   const handleChange = (e) => {
     setCurrent(e.target.value);
   };

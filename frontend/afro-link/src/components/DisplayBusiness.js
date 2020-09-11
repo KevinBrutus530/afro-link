@@ -105,7 +105,7 @@ const DisplayBusiness = ({ businessInfo }) => {
                 alt={'phone icon'}
                 style={{ width: '30px', height: '30px' }}
               />
-              {businessInfo.phone !== (null || 'n/a' || '') ? (
+              {businessInfo.phone !== (null || '') ? (
                 <li>{businessInfo.phone}</li>
               ) : (
                 <li>None Available</li>
@@ -147,9 +147,12 @@ const DisplayBusiness = ({ businessInfo }) => {
               <label className="bizLabel">
                 {checkingSocialMedia(businessInfo.social_media)}
                 <li className="hyperLink smallertxt">
-                  <a href={businessInfo.social_media} target="_blank">
-                    {businessInfo.social_media}
-                  </a>
+                  <details>
+                    <summary className={'hyperLink'}>Link</summary>
+                    <a href={businessInfo.social_media} target="_blank">
+                      {businessInfo.social_media}
+                    </a>
+                  </details>
                 </li>
               </label>
             ) : (

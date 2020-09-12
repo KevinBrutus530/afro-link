@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import { getAPI } from '../util/getAPI';
 import { useInput } from '../util/useInput';
 import axios from 'axios';
 
-const SearchBar = ({ type, setResults, setBizType }) => {
+const SearchBar = ({ setResults, setBizType }) => {
+  // debugger;
+  const { id } = useParams(); 
   const history = useHistory();
   const API = getAPI();
   const [businessTypes, setBusinessTypes] = useState([]);
-  const [defaulType, setDefaultType] = useState('');
-  const [current, setCurrent] = useState('');
+  // const [defaultType, setDefaultType] = useState('');
+  const [current, setCurrent] = useState(id);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -21,8 +23,8 @@ const SearchBar = ({ type, setResults, setBizType }) => {
       }
     };
     fetchData();
-    setDefaultType(type);
-  }, [type]);
+    // setDefaultType(type);
+  }, [id]);
 
   const types = businessTypes.map((type) => {
     return (
@@ -31,8 +33,6 @@ const SearchBar = ({ type, setResults, setBizType }) => {
       </option>
     );
   });
-
-  console.log(types)
 
   const handleChange = (e) => {
     setCurrent(e.target.value);
@@ -73,12 +73,13 @@ const SearchBar = ({ type, setResults, setBizType }) => {
             onChange={handleChange}
             className="selectBizBar"
             name="Type Name"
-            defaultValue={defaulType}
+            // defaultValue={defaultType}
+            value={current}
             required
           >
-            <option selected value={current}>
-              {defaulType}
-            </option>
+            {/* <option selected defaultValue={current}>
+              {defaultType}
+            </option> */}
             {types}
           </select>
           <button className="addBizBtn" type="submit">

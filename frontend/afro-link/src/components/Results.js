@@ -41,7 +41,7 @@ const Results = () => {
     // <div className="resultsPage">
     <div className="resultsMainDiv" style={{ color: 'white' }}>
       <SearchBar
-        type={bizType.type_name}
+        type={bizType.id}
         setResults={setResults}
         setBizType={setBizType}
       />

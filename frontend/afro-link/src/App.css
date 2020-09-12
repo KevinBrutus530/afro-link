@@ -119,8 +119,7 @@ input:focus::placeholder {
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   height: auto;
-  width: 1000px;
-  background-color: #551100;
+  width: 10px;
   background-size: 100%, 100%;
   padding: 1.5em;
   border-radius: 30%;

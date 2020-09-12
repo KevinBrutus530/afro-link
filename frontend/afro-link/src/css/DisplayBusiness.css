@@ -94,6 +94,8 @@ summary {
 
 .lightGrey {
   color: lightgrey;
+  font-weight: bolder;
+  font-size: 1.5em;
 }
 
 .noneProvided {

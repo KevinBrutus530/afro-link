@@ -148,6 +148,8 @@ $black-chocolate: #191102ff; */
   font-weight: 900;
   letter-spacing: 2px;
   object-fit: scale-down;
+  font-size: 2em;
+  padding-bottom: 5px;
 }
 
 @media (max-width: 575px) {
@@ -243,7 +245,6 @@ $black-chocolate: #191102ff; */
 .searchBizDiv {
   display: flex;
   flex-direction: row;
-  margin: auto;
   justify-content: center;
   padding: 2em;
   align-items: center;
@@ -511,4 +512,8 @@ $black-chocolate: #191102ff; */
     display: none;
     position: relative;
   }
+}
+
+.heavyFont{
+  font-size: 2em;
 }

@@ -136,7 +136,7 @@ const DisplayBusiness = ({ businessInfo }) => {
                 />
               </a>
               {businessInfo.website !== (null || '') ? (
-                <a className="hyperLink smallertxt" href={businessInfo.website} target="_blank">{businessInfo.website}</a>
+                <a className="hyperLink smallertxt" href={`${businessInfo.website}`} target="_blank">{businessInfo.website}</a>
               ) : (
                   <li>None Available</li>
                 )}
@@ -149,7 +149,7 @@ const DisplayBusiness = ({ businessInfo }) => {
                 <li className="hyperLink smallertxt">
                   <details>
                     <summary className={'hyperLink'}>Link</summary>
-                    <a href={businessInfo.social_media} target="_blank">
+                    <a href={`${businessInfo.social_media}`} target="_blank">
                       {businessInfo.social_media}
                     </a>
                   </details>

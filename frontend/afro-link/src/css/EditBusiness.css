@@ -1,6 +1,6 @@
 .editBizDiv {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
   place-items: center;
   width: 100%;
@@ -12,27 +12,236 @@
 .editBizForm {
   display: flex;
   flex-direction: column;
-  margin: auto;
+  width: 80%;
+  height: auto;
+}
+
+.formContainerDiv {
+  display: flex;
+  flex-direction: row;
   margin-top: 2em;
-  justify-content: center;
+  justify-content: space-between;
   align-content: center;
   border: 1px whitesmoke solid;
-  width: 35%;
+  width: 100%;
   height: auto;
-  padding: 2em;
+  padding: 2em 2em 0 2em;
+  background-color: whitesmoke;
+}
+
+.editLabel {
+  display: flex;
+  flex-direction: row;
+  color: #191102;
+  text-align: left;
+  padding: 12px;
+  justify-content: space-between;
+  border-bottom: 1px rgba(128, 128, 128, 0.555) solid;
+  font-weight: bold;
+  color: #8b0000;
+}
+
+.formDivider {
+  width: 100%;
+}
+
+@media (max-width: 1350px) {
+  .formContainerDiv {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 1em;
+    width: fill;
+    justify-content: center;
+  }
+
+  .editLabel {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    align-content: flex-start;
+    align-self: flex-start;
+    place-items: center;
+    justify-content: flex-start;
+    width: 100vw;
+    padding: 0;
+    padding-bottom: 1em;
+    padding-top: 1em;
+  }
+
+  .bizLabel > input {
+    justify-content: right;
+    right: 5px;
+  }
+
+  .formDivider {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: space-between;
+    align-content: center;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.txtWhite {
+  text-align: left;
+  color: #8b0000;
+  font-weight: bold;
+}
+
+.selectHours {
+  display: flex;
+  justify-content: center;
+  text-align-last: center;
+  border: none;
+  border-radius: 7px;
+  width: 12em;
+  height: 2.25em;
+  padding: 0.5em;
+  margin-left: 10px;
+  color: #191102ff;
+  font-size: 10pt;
+  box-shadow: 1px 3px 6px #191102ff;
+  text-shadow: 2px 1px 2px rgba(233, 201, 121, 0.746);
+  background-color: rgba(243, 183, 31, 0.849);
+  cursor: pointer;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
 }
 
 .editBizForm > * {
-  margin-bottom: 1em;
   text-align: left;
+}
+
+.editPrevBtn {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: auto;
+  height: 2.5em;
 }
 
 .editH1 {
   display: flex;
-  justify-content: center;
-  margin: auto;
-  margin-top: 1em;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 4em;
   padding: 1em;
   color: whitesmoke;
   border-bottom: 1px solid whitesmoke;
+}
+
+.uploadDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: auto;
+  align-content: center;
+  background-color: whitesmoke;
+  width: 100%;
+  padding: 0 2em 2em 2em;
+}
+
+.uploadForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* width: 100%; */
+  padding: 1em;
+}
+
+.uploadLabel {
+  display: flex;
+  color: #551100;
+  text-align: start;
+  align-content: space-between;
+  justify-content: center;
+  font-weight: bold;
+  border-bottom: 1px grey solid;
+  margin: auto;
+  flex-direction: row;
+  color: #8b0000;
+  align-content: flex-start;
+  justify-content: flex-start;
+  font-weight: bold;
+  border-bottom: 1px rgba(128, 128, 128, 0.555) solid;
+  width: 100%;
+}
+
+.selectImage {
+  display: flex;
+  margin: auto;
+  place-items: center;
+  border: none;
+  border-radius: 7px;
+  width: 18em;
+  height: 3em;
+  padding: 1em;
+  color: #191102ff;
+  font-size: 10pt;
+  box-shadow: 1px 3px 6px #191102ff;
+  text-shadow: 2px 1px 2px rgba(233, 201, 121, 0.746);
+  background-color: #808080af;
+  cursor: pointer;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.Btn-save {
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  color: #f3b61fff;
+  background-color: gray;
+  border: none;
+  border-radius: 25px;
+  font-family: 'Candal', sans-serif;
+  font-weight: lighter;
+  font-size: 14pt;
+  text-shadow: 1px 2px 2px #191102ff;
+  box-shadow: 1px 3px 3px rgb(41, 28, 3);
+  height: auto;
+  width: 10em;
+  padding: 0.5em;
+  text-align: center;
+  place-items: center;
+}
+
+.Btn-saveInfo {
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  margin-top: 2.25em;
+  color: #f3b61fff;
+  background-color: darkred;
+  border: none;
+  border-radius: 25px;
+  font-family: 'Candal', sans-serif;
+  font-weight: lighter;
+  font-size: 14pt;
+  text-shadow: 1px 2px 2px #191102ff;
+  box-shadow: 1px 3px 3px rgb(41, 28, 3);
+  height: auto;
+  width: 15em;
+  padding: 0.5em;
+  text-align-last: center;
+}
+
+@media (max-width: 1350px) {
+  .uploadDiv {
+    display: flex;
+    flex-direction: column;
+    width: fill;
+    margin: auto;
+    justify-content: center;
+    padding: 1em;
+  }
+
+  .Btn-save {
+    margin-top: 1em;
+  }
 }

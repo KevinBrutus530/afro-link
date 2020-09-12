@@ -146,7 +146,7 @@ const MainPage = () => {
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
-        <h3 className="getPersonal medium">Get to know the owners</h3>
+        <h3 className="getPersonal medium">Get to know our featured business owners</h3>
         <p className="getPersonal smallerTxt">
           Click on the link to go to their about pages
         </p>

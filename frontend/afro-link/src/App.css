@@ -115,3 +115,28 @@ input:focus::placeholder {
   font-weight: bold;
   padding: 1em;
 }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: auto;
+  width: 1000px;
+  background-color: #551100;
+  background-size: 100%, 100%;
+  padding: 1.5em;
+  border-radius: 30%;
+  border: 3px solid #e5e5e5;
+}
+
+/*to create your own arrows in carousels*/
+/* .carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color: red;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: red;
+} */

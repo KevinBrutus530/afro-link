@@ -13,7 +13,7 @@ const DisplayBusiness = ({ businessInfo }) => {
   const [bizNezHours, setBizNezHours] = useState('');
   const history = useHistory();
 
-  console.log(businessInfo);
+  // console.log(businessInfo);
 
   const checkingSocialMedia = (url) => {
     //fn replaces word link with icon link for social media

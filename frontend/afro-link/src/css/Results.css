@@ -10,13 +10,13 @@
   margin: auto;
   width: 100%;
   height: 100%;
-  padding: 4em 0em;
+  padding: 5em 0em;
 }
 
 .ctgTitle {
   display: flex;
   justify-content: center;
-  padding-top: 10px;
+  padding-top: 1em;
   padding-bottom: 5px;
   border-bottom: white 2px solid;
   width: fill;
@@ -66,18 +66,18 @@
   display: flex;
   flex-direction: column;
   margin: auto;
-  justify-content: space-between;
-  background-color: white;
-  background-image: url("https://www.transparenttextures.com/patterns/dimension.png");
+  justify-content: space-evenly;
+  background-color: whitesmoke;
+  background-image: url('https://www.transparenttextures.com/patterns/dimension.png');
   box-shadow: 1px 1px 7px #d5f5cda2;
-  height: 22em;
-  width: 17em;
-  padding: .5em;
+  height: 20em;
+  width: 15.25em;
+  padding: 1em;
   text-align: center;
   cursor: pointer;
   border-radius: 5px;
   color: #191102;
-  font-weight: bold;
+  font-weight: 550;
 }
 
 @media (max-width: 410px) {
@@ -102,17 +102,18 @@
 }
 
 .bizTitle {
-  /* border-bottom: solid #191102 1px; */
-  font-size: 1.06em;
-  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 1.08em;
+  font-weight: 900;
 }
 
 .bizAddress {
   margin: auto;
   text-transform: capitalize;
   font-size: 10pt;
+  font-weight: bold;
   color: #191102;
   place-items: right;
   margin-right: 0;
+  word-spacing: 3px;
 }
-

@@ -20,7 +20,7 @@
   height: auto;
   border-radius: 5px;
   font-weight: bold;
-  /* padding: 1em; */
+  padding: 0 1em;
 }
 
 .businessInfo > * {
@@ -29,13 +29,9 @@
   height: auto;
 }
 
-/* .bizHours {
-  display: table-column-group;
-  max-width: 15em;
-  margin-right: 5em;
-  width: 15em;
-  padding: 10px 1em;
-} */
+summary {
+  color: #191102;
+}
 
 .bizHoursProfile {
   display: flex;
@@ -46,14 +42,20 @@
   opacity: 0.5;
 }
 
-
 .bizPicProfile {
   display: flex;
-  padding: 1em;
   padding-bottom: 1em;
-  width: 12em;
+  width: 100%;
   height: auto;
   object-fit: contain;
+  filter: drop-shadow(5px rgb(240, 198, 92));
+  animation-duration: 2s;
+  animation-name: slideIn;
+  transition: transform 1s;
+}
+
+.bizPicProfile:hover {
+  transform: scale(1.05, 1.05);
 }
 
 @media (max-width: 1350px) {
@@ -71,6 +73,10 @@
   flex-direction: column;
   margin: auto;
   /* place-items: center; */
+}
+
+.hyperLink {
+  color: #00838f;
 }
 
 .hyperLink > a {
@@ -105,7 +111,7 @@
   text-align: left;
   padding: 10px;
   justify-content: space-between;
-  border-bottom: 1px solid rgb(104, 104, 104);
+  border-bottom: 1px solid rgba(243, 183, 31, 0.5);
 }
 
 .BtnEdit {

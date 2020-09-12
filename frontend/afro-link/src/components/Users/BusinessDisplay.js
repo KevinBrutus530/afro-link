@@ -22,8 +22,8 @@ const BusinessDisplay = ({ userBusinesses }) => {
                     alt="default logo"
                   />
                 ) : (
-                    <img className="bizPicProfile" src={business.pictures} />
-                  )}
+                  <img className="bizPicProfile" src={business.pictures} />
+                )}
               </div>
             </div>
 
@@ -32,7 +32,9 @@ const BusinessDisplay = ({ userBusinesses }) => {
                 <label className="bizLabel">
                   Address:
                   <li className="bizAddress">
-                    {(business.street === "null null") ? "Address Not Available" : business.street}
+                    {business.street === 'null null'
+                      ? 'Address Not Available'
+                      : business.street}
                     <br />
                     {business.city}
                     {business.state}
@@ -45,16 +47,16 @@ const BusinessDisplay = ({ userBusinesses }) => {
                     {business.hours === 'Online Store' ? (
                       <p>Online Business</p>
                     ) : (
-                        <details className="hoursDetails">
-                          <summary>Hours</summary>
-                          {
-                            (biznessHours = business.hours.replace(
-                              /[^\w\s]/g,
-                              ''
-                            ))
-                          }
-                        </details>
-                      )}
+                      <details className="hoursDetails">
+                        <summary>Hours</summary>
+                        {
+                          (biznessHours = business.hours.replace(
+                            /[^\w\s]/g,
+                            ''
+                          ))
+                        }
+                      </details>
+                    )}
                   </li>
                 </label>
 
@@ -66,64 +68,61 @@ const BusinessDisplay = ({ userBusinesses }) => {
                         Visit Website
                       </a>
                     ) : (
-                        <p className="noneProvided">None Provided</p>
-                      )}
+                      <p className="noneProvided">None Provided</p>
+                    )}
+                  </li>
+                </label>
+
+                <label className="bizLabel">
+                  Phone:
+                  <li>
+                    {!business.phone || business.phone === 'n/a' ? (
+                      <p className="noneProvided">None Provided</p>
+                    ) : (
+                      business.phone
+                    )}
+                  </li>
+                </label>
+                <label className="bizLabel">
+                  Email:
+                  <li>
+                    {business.email ? (
+                      business.email
+                    ) : (
+                      <p className="noneProvided">None Provided</p>
+                    )}
+                  </li>
+                </label>
+                <label className="bizLabel">
+                  Social Media Page:
+                  <li className="hyperLink">
+                    {business.social_media ? (
+                      <a href={business.social_media} target="_blank">
+                        {business.social_media}
+                      </a>
+                    ) : (
+                      <p className="noneProvided">None Provided</p>
+                    )}
                   </li>
                 </label>
               </ul>
-              <div className="contactInfo">
-                <ul>
-                  <label className="bizLabel">
-                    Phone:
-                    <li>
-                      {!business.phone || business.phone === 'n/a' ? (
-                        <p className="noneProvided">None Provided</p>
-                      ) : (
-                          business.phone
-                        )}
-                    </li>
-                  </label>
-                  <label className="bizLabel">
-                    Email:
-                    <li>
-                      {business.email ? (
-                        business.email
-                      ) : (
-                          <p className="noneProvided">None Provided</p>
-                        )}
-                    </li>
-                  </label>
-                  <label className="bizLabel">
-                    Social Media Page:
-                    <li className="hyperLink">
-                      {business.social_media ? (
-                        <a href={business.social_media} target="_blank">
-                          {business.social_media}
-                        </a>
-                      ) : (
-                          <p className="noneProvided">None Provided</p>
-                        )}
-                    </li>
-                  </label>
-                </ul>
-                <button
-                  className="Btn-rest BtnEdit"
-                  onClick={() =>
-                    history.push(`/editbusiness/${business.owner_id}`)
-                  }
-                >
-                  Edit Business
-                </button>
-                <button
-                  style={{ backgroundColor: 'rgb(1, 44, 1, .8)' }}
-                  className="Btn-rest BtnEdit"
-                  onClick={() => {
-                    history.push(`/businesses/${business.owner_id}`);
-                  }}
-                >
-                  Visit Business
-                </button>
-              </div>
+              <button
+                className="Btn-rest BtnEdit"
+                onClick={() =>
+                  history.push(`/editbusiness/${business.owner_id}`)
+                }
+              >
+                Edit Business
+              </button>
+              <button
+                style={{ backgroundColor: 'rgb(1, 44, 1, .8)' }}
+                className="Btn-rest BtnEdit"
+                onClick={() => {
+                  history.push(`/businesses/${business.owner_id}`);
+                }}
+              >
+                Visit Business
+              </button>
             </div>
           </div>
         );

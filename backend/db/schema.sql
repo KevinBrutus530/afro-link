@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS afro_link;
-CREATE DATABASE afro_link;
-\c afro_link;
+-- DROP DATABASE IF EXISTS afro_link;
+-- CREATE DATABASE afro_link;
+-- \c afro_link;
 DROP TABLE IF EXISTS categories;
 DROP TABLE IF EXISTS contacts;
 DROP TABLE IF EXISTS addresses;

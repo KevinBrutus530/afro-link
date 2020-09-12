@@ -1,4 +1,4 @@
-\c afro_link;
+-- \c afro_link;
 
 INSERT INTO types(type_name) VALUES
  ('Home Decor'),

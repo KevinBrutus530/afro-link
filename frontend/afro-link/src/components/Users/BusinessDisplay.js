@@ -22,8 +22,8 @@ const BusinessDisplay = ({ userBusinesses }) => {
                     alt="default logo"
                   />
                 ) : (
-                  <img className="bizPicProfile" src={business.pictures} />
-                )}
+                    <img className="bizPicProfile" src={business.pictures} />
+                  )}
               </div>
             </div>
 
@@ -47,16 +47,16 @@ const BusinessDisplay = ({ userBusinesses }) => {
                     {business.hours === 'Online Store' ? (
                       <p>Online Business</p>
                     ) : (
-                      <details className="hoursDetails">
-                        <summary>Hours</summary>
-                        {
-                          (biznessHours = business.hours.replace(
-                            /[^\w\s]/g,
-                            ''
-                          ))
-                        }
-                      </details>
-                    )}
+                        <details className="hoursDetails">
+                          <summary>Hours</summary>
+                          {
+                            (biznessHours = business.hours.replace(
+                              /[^\w\s]/g,
+                              ''
+                            ))
+                          }
+                        </details>
+                      )}
                   </li>
                 </label>
 
@@ -64,12 +64,12 @@ const BusinessDisplay = ({ userBusinesses }) => {
                   Website:
                   <li className="hyperLink">
                     {business.website ? (
-                      <a href={business.website} target="_blank">
+                      <a href={`${business.website}`} target="_blank">
                         Visit Website
                       </a>
                     ) : (
-                      <p className="noneProvided">None Provided</p>
-                    )}
+                        <p className="noneProvided">None Provided</p>
+                      )}
                   </li>
                 </label>
 
@@ -79,8 +79,8 @@ const BusinessDisplay = ({ userBusinesses }) => {
                     {!business.phone || business.phone === 'n/a' ? (
                       <p className="noneProvided">None Provided</p>
                     ) : (
-                      business.phone
-                    )}
+                        business.phone
+                      )}
                   </li>
                 </label>
                 <label className="bizLabel">
@@ -89,20 +89,20 @@ const BusinessDisplay = ({ userBusinesses }) => {
                     {business.email ? (
                       business.email
                     ) : (
-                      <p className="noneProvided">None Provided</p>
-                    )}
+                        <p className="noneProvided">None Provided</p>
+                      )}
                   </li>
                 </label>
                 <label className="bizLabel">
                   Social Media Page:
                   <li className="hyperLink">
                     {business.social_media ? (
-                      <a href={business.social_media} target="_blank">
+                      <a href={`${business.social_media}`} target="_blank">
                         {business.social_media}
                       </a>
                     ) : (
-                      <p className="noneProvided">None Provided</p>
-                    )}
+                        <p className="noneProvided">None Provided</p>
+                      )}
                   </li>
                 </label>
               </ul>

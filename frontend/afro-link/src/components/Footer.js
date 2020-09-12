@@ -11,19 +11,19 @@ const Footer = () => {
           {/* we still have to deploy to put actual site address in "link" */}
           <p>Share: </p>
           <Twitter
-            link=""
+            link="https://afro-link.netlify.app/"
             title="Connect to Authentic Black Owned Businesses throughout NYC and beyond"
           />
           <Linkedin
-            link=""
+            link="https://afro-link.netlify.app/"
             title="Connect to Authentic Black Owned Businesses throughout NYC and beyond"
           />
           <Whatsapp
-            link=""
+            link="https://afro-link.netlify.app/"
             title="Connect to Authentic Black Owned Businesses throughout NYC and beyond"
           />
           <Facebook
-            link=""
+            link="https://afro-link.netlify.app/"
             quote="Connect to Authentic Black Owned Businesses throughout NYC and beyond"
           />
         </div>

@@ -69,8 +69,8 @@ const DisplayBusiness = ({ businessInfo }) => {
         {owner === '' ? (
           <p className="empty"></p>
         ) : (
-          <p className="lightGrey">Owner/Operator</p>
-        )}
+            <p className="lightGrey">Owner/Operator</p>
+          )}
       </div>
       <div className="businessInfo">
         <ul>
@@ -90,11 +90,11 @@ const DisplayBusiness = ({ businessInfo }) => {
                 {businessInfo.hours === 'Online Store' ? (
                   <p>Online Business</p>
                 ) : (
-                  <details className="hoursDetails">
-                    <summary>Hours</summary>
-                    {businessInfo.hours}
-                  </details>
-                )}
+                    <details className="hoursDetails">
+                      <summary>Hours</summary>
+                      {businessInfo.hours}
+                    </details>
+                  )}
               </li>
             </label>
 
@@ -108,8 +108,8 @@ const DisplayBusiness = ({ businessInfo }) => {
               {businessInfo.phone !== (null || '') ? (
                 <li>{businessInfo.phone}</li>
               ) : (
-                <li>None Available</li>
-              )}
+                  <li>None Available</li>
+                )}
             </label>
 
             {/* if no email */}
@@ -122,8 +122,8 @@ const DisplayBusiness = ({ businessInfo }) => {
               {businessInfo.email !== (null || '') ? (
                 <li>{businessInfo.email}</li>
               ) : (
-                <li>None Available</li>
-              )}
+                  <li>None Available</li>
+                )}
             </label>
 
             {/* if no website avaiable */}
@@ -136,10 +136,10 @@ const DisplayBusiness = ({ businessInfo }) => {
                 />
               </a>
               {businessInfo.website !== (null || '') ? (
-                <li className="hyperLink smallertxt">{businessInfo.website}</li>
+                <a className="hyperLink smallertxt" href={businessInfo.website} target="_blank">{businessInfo.website}</a>
               ) : (
-                <li>None Available</li>
-              )}
+                  <li>None Available</li>
+                )}
             </label>
 
             {/* if no social media */}
@@ -156,8 +156,8 @@ const DisplayBusiness = ({ businessInfo }) => {
                 </li>
               </label>
             ) : (
-              ''
-            )}
+                ''
+              )}
           </div>
         </ul>
       </div>

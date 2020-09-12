@@ -13,16 +13,11 @@ const ReviewsForm = () => {
   const { token, currentUser, loading } = useContext(AuthContext);
   const [userBusinesses, setUserBusinesses] = useState([]);
   const { id } = useParams();
-  const name = useInput('');
-  const text = useInput('');
+  const [name, setName] = useState('');
+  const [text, setText] = useState('');
   const [allReviews, setAllReviews] = useState([]);
   const [ratings, setRating] = useState(null);
   const [hover, setHover] = useState(null);
-  // const [showEdit, setShowEdit] = useState(true);
-
-  // const toggleButton = () => {
-  //   setShowEdit(!showEdit);
-  // };
 
   const getReviews = async () => {
     try {
@@ -37,18 +32,23 @@ const ReviewsForm = () => {
     getReviews();
   }, []);
 
+  const handleInput = (e, setValue) => {
+    e.preventDefault();
+    setValue(e.target.value)
+  };
+
   const submitReviews = async (e) => {
     e.preventDefault();
-    // debugger;
     try {
       await axios.post(`${API}/reviews`, {
         review_id: id,
-        name: name.value,
-        text: text.value,
+        name: name,
+        text: text,
         ratings: ratings,
       });
-      debugger;
-      getReviews();
+      getReviews()
+      setName("")
+      setText("")
     } catch (err) {
       console.log(err);
     }
@@ -93,7 +93,7 @@ const ReviewsForm = () => {
             {starsShow(post.ratings)}
             <p className="reviewDT">{post.dt.substring(0, 10)}</p>
           </div>
-            <p className="review"> {post.text}</p>
+          <p className="review"> {post.text}</p>
           <div className="reply">
             <VerifiedOwner
               userBusinesses={userBusinesses}
@@ -106,8 +106,6 @@ const ReviewsForm = () => {
       );
     }
   });
-  console.log(name);
-  console.log(text);
 
   return (
     <div className="reviewsForm">
@@ -120,8 +118,8 @@ const ReviewsForm = () => {
             type="text"
             placeholder="Leave your name..."
             name="name"
-            {...name}
-            value={name.value}
+            onChange={(e) => handleInput(e, setName)}
+            value={name}
             required
           />
         </div>
@@ -130,9 +128,9 @@ const ReviewsForm = () => {
           <textarea
             type="text"
             placeholder="Whats on your mind..."
-            name="comment"
-            {...text}
-            value={text.value}
+            name="text"
+            onChange={(e) => handleInput(e, setText)}
+            value={text}
             required
           />
         </div>

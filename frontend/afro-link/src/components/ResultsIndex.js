@@ -16,7 +16,11 @@ const ResultsIndex = ({ results }) => {
     let bizID = biz.biz_id;
     let noAddress = '';
     let noHours = 'Not Available';
-    let bizz = biz.street === null ? (biz.street = noAddress) : biz.street;
+
+    let bizz =
+      biz.street === (null || 'null null')
+        ? (biz.street = noAddress)
+        : biz.street;
     let hrsSub = biz.hours === '' ? (biz.hours = noHours) : biz.hours;
 
     return (
@@ -30,7 +34,7 @@ const ResultsIndex = ({ results }) => {
             <BusinessImage bizID={bizID} />
             <div>
               <h3 className="heavyFont bizTitle">{biz.biz_name}</h3>
-              {/* <li>Hours: {hrsSub}</li> */}
+
               <p className="bizAddress">
                 {bizz} <br />
                 {biz.city} {biz.state} {biz.zip}

@@ -59,11 +59,9 @@
   background-color: whitesmoke;
   justify-items: center;
   margin-top: 2em;
-  margin-right: 3em;
-  margin-left: 1em;
   text-align-last: center;
   padding: 1.5em;
-  width: max-content;
+  width: 40em;
   height: auto;
 }
 
@@ -74,4 +72,13 @@
 
 .bizProfileTitle {
   font-size: 1.5em;
+}
+
+#bizImage {
+  width: 500px;
+  height: 500px;
+}
+
+.businessInfoUl > * {
+  height: 3em;
 }

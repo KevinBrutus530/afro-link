@@ -12,18 +12,15 @@ const BusinessDisplay = ({ userBusinesses }) => {
         return (
           <div key={i} className="profileMainDiv">
             <div id="bizName" className="ownerHeader">
-              <div className="heavyFont bizProfileTitle">{business.biz_name}</div>
+              <div className="heavyFont bizProfileTitle">
+                {business.biz_name}
+              </div>
               <div className="picDiv">
-                {business.pictures === null ? (
-                  <img
-                    id="defaultPic"
-                    className="bizPicProfile"
-                    src={logo}
-                    alt="default logo"
-                  />
-                ) : (
-                  <img className="bizPicProfile" src={business.pictures} />
-                )}
+                <img
+                  id="bizImage"
+                  className="bizPicProfile"
+                  src={business.pictures}
+                />
               </div>
             </div>
 
@@ -31,10 +28,12 @@ const BusinessDisplay = ({ userBusinesses }) => {
               <ul className="businessInfoUl" style={{ listStyleType: 'none' }}>
                 <label className="bizLabel">
                   Address:
-                  <li className="bizAddress">
-                    {business.street === 'null null'
-                      ? 'Not Available'
-                      : business.street}
+                  <li >
+                    {business.street === 'null null' ? (
+                      <p className="noneProvided">Not Available</p>
+                    ) : (
+                      business.street
+                    )}
                     <br />
                     {business.city}
                     {business.state}
@@ -94,7 +93,7 @@ const BusinessDisplay = ({ userBusinesses }) => {
                   </li>
                 </label>
                 <label className="bizLabel">
-                  Social Media Page:
+                  Social Media:
                   <li className="hyperLink">
                     {business.social_media ? (
                       <a href={`${business.social_media}`} target="_blank">

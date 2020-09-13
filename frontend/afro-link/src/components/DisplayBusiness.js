@@ -172,7 +172,7 @@ const DisplayBusiness = ({ businessInfo }) => {
                   {businessInfo.website}
                 </a>
               ) : (
-                <li>None Available</li>
+                <li>Not Available</li>
               )}
             </label>
 

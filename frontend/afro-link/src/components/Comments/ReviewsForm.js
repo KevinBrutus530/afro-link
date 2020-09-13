@@ -34,7 +34,7 @@ const ReviewsForm = () => {
 
   const handleInput = (e, setValue) => {
     e.preventDefault();
-    setValue(e.target.value)
+    setValue(e.target.value);
   };
 
   const submitReviews = async (e) => {
@@ -46,9 +46,10 @@ const ReviewsForm = () => {
         text: text,
         ratings: ratings,
       });
-      getReviews()
-      setName("")
-      setText("")
+      getReviews();
+      setName('');
+      setText('');
+      setRating(1);
     } catch (err) {
       console.log(err);
     }
@@ -159,7 +160,6 @@ const ReviewsForm = () => {
                   onMouseEnter={() => setRating(ratingValue)}
                   onMouseLeave={() => setHover(null)}
                   required
-
                 ></span>
               </label>
             );

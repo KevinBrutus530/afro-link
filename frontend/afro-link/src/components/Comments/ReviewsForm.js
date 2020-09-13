@@ -155,7 +155,7 @@ const ReviewsForm = () => {
                       ? { color: 'red' }
                       : { color: 'black' }
                   }
-                  onMouseOver={() => setHover(ratingValue)}
+                  onMouseEnter={() => setRating(ratingValue)}
                   onMouseLeave={() => setHover(null)}
                   required
 

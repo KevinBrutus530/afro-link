@@ -248,10 +248,10 @@ const EditBusiness = () => {
           </div>
           <div className="uploadDiv">
             <Upload ownerId={ownerId} />
-            <button type="submit" className="Btn-saveInfo">
-              Save Changes
-            </button>
           </div>
+          <button type="submit" className="Btn-saveInfo">
+            Save Changes
+          </button>
         </form>
       </div>
     </div>

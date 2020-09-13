@@ -21,7 +21,7 @@
   .profileMainDiv {
     display: flex;
     flex-direction: column;
-    width:fill;
+    width: fill;
     object-fit: scale-down;
     margin: auto;
   }
@@ -30,7 +30,6 @@
     width: fill;
     margin: auto;
   }
-  
 }
 
 .profileHeader {
@@ -60,15 +59,26 @@
   background-color: whitesmoke;
   justify-items: center;
   margin-top: 2em;
-  margin-right: 3em;
-  margin-left: 1em;
   text-align-last: center;
   padding: 1.5em;
-  width: max-content;
+  width: 40em;
   height: auto;
 }
 
 .bizProfileInfo label {
   color: darkred;
   font-weight: bolder;
+}
+
+.bizProfileTitle {
+  font-size: 1.5em;
+}
+
+#bizImage {
+  width: 500px;
+  height: 500px;
+}
+
+.businessInfoUl > * {
+  height: 3em;
 }

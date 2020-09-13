@@ -44,6 +44,9 @@ const EditBusiness = () => {
       let bizSite = biz.website.includes('https://' || 'http://')
         ? biz.website
         : `https://${biz.website}`;
+      let bizSocial = biz.social_media.includes('https://' || 'http://')
+        ? biz.social_media
+        : `https://${biz.social_media}`;
       setOwnerId(biz.id);
       setOwnerName(biz.owner_name);
       setBizName(biz.biz_name);
@@ -54,7 +57,7 @@ const EditBusiness = () => {
       setWebsite(bizSite);
       setPhone(biz.phone);
       setEmail(biz.email);
-      setSocialMedia(biz.social_media);
+      setSocialMedia(bizSocial);
     } catch (err) {
       console.log(err);
     }

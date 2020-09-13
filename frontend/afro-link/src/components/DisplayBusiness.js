@@ -105,14 +105,21 @@ const DisplayBusiness = ({ businessInfo }) => {
           </li>
 
           <li className="bizAddress">
-            {businessInfo.street} {businessInfo.city} {businessInfo.state}{' '}
+            {businessInfo.street === 'null null'
+              ? 'Address Not Available'
+              : businessInfo.street}
+            <br />
+            {businessInfo.city}
+            {businessInfo.state}
             {businessInfo.zip}
           </li>
 
           <div className="contactInfo">
             <label className="bizLabel">
               Business Hours:
+
               <li className="bizHoursProfile">{checkBusinessHours()}</li>
+
             </label>
 
             {/* if no phone number */}
@@ -122,10 +129,12 @@ const DisplayBusiness = ({ businessInfo }) => {
                 alt={'phone icon'}
                 style={{ width: '30px', height: '30px' }}
               />
+
               {businessInfo.phone !== (null || '' || 'n/a') ? (
                 <li>{businessInfo.phone}</li>
               ) : (
                 <li>Not Available</li>
+
               )}
             </label>
 
@@ -139,7 +148,9 @@ const DisplayBusiness = ({ businessInfo }) => {
               {businessInfo.email === null ? (
                 <li>Not Available</li>
               ) : (
+
                 <li>{businessInfo.email}</li>
+
               )}
             </label>
 

@@ -46,13 +46,13 @@ $black-chocolate: #191102ff; */
 
 .rateStarsDiv {
   display: flex;
-  flex-direction: row;
-  background-color: whitesmoke;
-  justify-content: center;
-  padding: 0.5rem;
-  text-align-last: center;
-  width: max-content;
-  margin: auto;
+    flex-direction: row;
+    background-color: whitesmoke;
+    justify-content: center;
+    text-align-last: center;
+    width: max-content;
+    margin: auto;
+    padding-top: 10px;
 }
 
 .reviewsInputs {
@@ -163,7 +163,10 @@ span {
   font-size: 13pt;
   padding: 0 1em;
 }
-
+#ratingStars{
+  margin:0;
+  font-size: 25px;
+}
 /*/////////////////////////////////OWNER RESPONSE CSS////////////////////////////////*/
 
 .ownerReplyContainer {

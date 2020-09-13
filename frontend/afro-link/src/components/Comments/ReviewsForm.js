@@ -149,11 +149,12 @@ const ReviewsForm = () => {
                   required
                 />
                 <span
-                  className="fa fa-star-o"
+                  className="fa fa-star"
+                  id="ratingStars"
                   style={
                     ratingValue <= (hover || ratings)
-                      ? { color: 'red' }
-                      : { color: 'black' }
+                      ? { color: '#FFA500' }
+                      : { color: '#747338' }
                   }
                   onMouseEnter={() => setRating(ratingValue)}
                   onMouseLeave={() => setHover(null)}

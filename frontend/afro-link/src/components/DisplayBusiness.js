@@ -8,6 +8,7 @@ import locationIcon from '../images/locationIcon.png';
 import phoneIcon from '../images/phoneIcon.png';
 import twitterIcon from '../images/twitterIcon.png';
 import igIcon from '../images/instagramIcon.png';
+import elseIcon from "../images/elseIcon.png"
 
 const DisplayBusiness = ({ businessInfo }) => {
   const [bizNezHours, setBizNezHours] = useState('');
@@ -53,7 +54,16 @@ const DisplayBusiness = ({ businessInfo }) => {
         </a>
       );
     } else {
-      return <p>{url}</p>;
+      return (
+        <a href={businessInfo.social_media} target="_blank">
+          <img
+            style={{ width: '30px', height: '30px' }}
+            src={elseIcon}
+            alt={'else icon'}
+          />
+        </a>
+    
+      );
     }
   };
 
@@ -105,7 +115,7 @@ const DisplayBusiness = ({ businessInfo }) => {
                 alt={'phone icon'}
                 style={{ width: '30px', height: '30px' }}
               />
-              {businessInfo.phone !== (null || '') ? (
+              {businessInfo.phone !== (null || (''||null)) ? (
                 <li>{businessInfo.phone}</li>
               ) : (
                   <li>None Available</li>
@@ -150,6 +160,7 @@ const DisplayBusiness = ({ businessInfo }) => {
                   <details>
                     <summary className={'hyperLink'}>Link</summary>
                     <a href={`${businessInfo.social_media}`} target="_blank">
+                      {/* Social Media */}
                       {businessInfo.social_media}
                     </a>
                   </details>

@@ -12,7 +12,7 @@ const BusinessDisplay = ({ userBusinesses }) => {
         return (
           <div key={i} className="profileMainDiv">
             <div id="bizName" className="ownerHeader">
-              <div className="heavyFont">{business.biz_name}</div>
+              <div className="heavyFont bizProfileTitle">{business.biz_name}</div>
               <div className="picDiv">
                 {business.pictures === null ? (
                   <img

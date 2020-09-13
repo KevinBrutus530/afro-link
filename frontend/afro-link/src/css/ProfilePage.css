@@ -21,7 +21,7 @@
   .profileMainDiv {
     display: flex;
     flex-direction: column;
-    width:fill;
+    width: fill;
     object-fit: scale-down;
     margin: auto;
   }
@@ -30,7 +30,6 @@
     width: fill;
     margin: auto;
   }
-  
 }
 
 .profileHeader {
@@ -71,4 +70,8 @@
 .bizProfileInfo label {
   color: darkred;
   font-weight: bolder;
+}
+
+.bizProfileTitle {
+  font-size: 1.5em;
 }

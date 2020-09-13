@@ -41,6 +41,9 @@ const EditBusiness = () => {
     try {
       let bizRes = await axios.get(`${API}/businesses/${id}`);
       let biz = bizRes.data.payload;
+      let bizSite = biz.website.includes('https://' || 'http://')
+        ? biz.website
+        : `https://${biz.website}`;
       setOwnerId(biz.id);
       setOwnerName(biz.owner_name);
       setBizName(biz.biz_name);
@@ -48,7 +51,7 @@ const EditBusiness = () => {
       setCity(biz.city);
       setState(biz.state);
       setZip(biz.zip);
-      setWebsite(biz.website);
+      setWebsite(bizSite);
       setPhone(biz.phone);
       setEmail(biz.email);
       setSocialMedia(biz.social_media);
@@ -70,13 +73,13 @@ const EditBusiness = () => {
         city: city,
         state: state,
         zip: zip,
-        website: `https://${website}`,
+        website: website,
       });
       // Update business contact
       await axios.patch(`${API}/contacts/${id}`, {
         phone: phone,
         email: email,
-        social_media: `https://${socialMedia}`,
+        social_media: socialMedia,
       });
       // Update business owner name
       await axios.patch(`${API}/owners/user/${id}`, {

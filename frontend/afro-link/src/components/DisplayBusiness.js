@@ -8,7 +8,7 @@ import locationIcon from '../images/locationIcon.png';
 import phoneIcon from '../images/phoneIcon.png';
 import twitterIcon from '../images/twitterIcon.png';
 import igIcon from '../images/instagramIcon.png';
-import elseIcon from "../images/elseIcon.png"
+import elseIcon from '../images/elseIcon.png';
 
 const DisplayBusiness = ({ businessInfo }) => {
   const [bizNezHours, setBizNezHours] = useState('');
@@ -62,7 +62,6 @@ const DisplayBusiness = ({ businessInfo }) => {
             alt={'else icon'}
           />
         </a>
-    
       );
     }
   };
@@ -79,8 +78,8 @@ const DisplayBusiness = ({ businessInfo }) => {
         {owner === '' ? (
           <p className="empty"></p>
         ) : (
-            <p className="lightGrey">Owner/Operator</p>
-          )}
+          <p className="lightGrey">Owner/Operator</p>
+        )}
       </div>
       <div className="businessInfo">
         <ul>
@@ -89,7 +88,12 @@ const DisplayBusiness = ({ businessInfo }) => {
           </li>
 
           <li className="bizAddress">
-            {businessInfo.street} {businessInfo.city} {businessInfo.state}{' '}
+            {businessInfo.street === 'null null'
+              ? 'Address Not Available'
+              : businessInfo.street}
+            <br />
+            {businessInfo.city}
+            {businessInfo.state}
             {businessInfo.zip}
           </li>
 
@@ -100,11 +104,11 @@ const DisplayBusiness = ({ businessInfo }) => {
                 {businessInfo.hours === 'Online Store' ? (
                   <p>Online Business</p>
                 ) : (
-                    <details className="hoursDetails">
-                      <summary>Hours</summary>
-                      {businessInfo.hours}
-                    </details>
-                  )}
+                  <details className="hoursDetails">
+                    <summary>Hours</summary>
+                    {businessInfo.hours}
+                  </details>
+                )}
               </li>
             </label>
 
@@ -115,11 +119,11 @@ const DisplayBusiness = ({ businessInfo }) => {
                 alt={'phone icon'}
                 style={{ width: '30px', height: '30px' }}
               />
-              {businessInfo.phone !== (null || (''||null)) ? (
+              {businessInfo.phone !== (null || '' || null) ? (
                 <li>{businessInfo.phone}</li>
               ) : (
-                  <li>None Available</li>
-                )}
+                <li>None Available</li>
+              )}
             </label>
 
             {/* if no email */}
@@ -132,8 +136,8 @@ const DisplayBusiness = ({ businessInfo }) => {
               {businessInfo.email !== (null || '') ? (
                 <li>{businessInfo.email}</li>
               ) : (
-                  <li>None Available</li>
-                )}
+                <li>None Available</li>
+              )}
             </label>
 
             {/* if no website avaiable */}
@@ -146,10 +150,16 @@ const DisplayBusiness = ({ businessInfo }) => {
                 />
               </a>
               {businessInfo.website !== (null || '') ? (
-                <a className="hyperLink smallertxt" href={`${businessInfo.website}`} target="_blank">{businessInfo.website}</a>
+                <a
+                  className="hyperLink smallertxt"
+                  href={`${businessInfo.website}`}
+                  target="_blank"
+                >
+                  {businessInfo.website}
+                </a>
               ) : (
-                  <li>None Available</li>
-                )}
+                <li>None Available</li>
+              )}
             </label>
 
             {/* if no social media */}
@@ -167,8 +177,8 @@ const DisplayBusiness = ({ businessInfo }) => {
                 </li>
               </label>
             ) : (
-                ''
-              )}
+              ''
+            )}
           </div>
         </ul>
       </div>

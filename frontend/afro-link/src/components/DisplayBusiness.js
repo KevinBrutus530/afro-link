@@ -62,7 +62,7 @@ const DisplayBusiness = ({ businessInfo }) => {
             alt={'else icon'}
           />
         </a>
-    
+
       );
     }
   };
@@ -115,7 +115,7 @@ const DisplayBusiness = ({ businessInfo }) => {
                 alt={'phone icon'}
                 style={{ width: '30px', height: '30px' }}
               />
-              {businessInfo.phone !== (null || (''||null)) ? (
+              {businessInfo.phone !== (null || ('' || null)) ? (
                 <li>{businessInfo.phone}</li>
               ) : (
                   <li>None Available</li>

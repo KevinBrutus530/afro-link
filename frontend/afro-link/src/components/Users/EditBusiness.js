@@ -70,13 +70,13 @@ const EditBusiness = () => {
         city: city,
         state: state,
         zip: zip,
-        website: website,
+        website: `https://${website}`,
       });
       // Update business contact
       await axios.patch(`${API}/contacts/${id}`, {
         phone: phone,
         email: email,
-        social_media: socialMedia,
+        social_media: `https://${socialMedia}`,
       });
       // Update business owner name
       await axios.patch(`${API}/owners/user/${id}`, {

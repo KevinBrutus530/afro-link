@@ -32,7 +32,6 @@ const NewBusiness = () => {
   };
   const owner_name = useInput('');
   const type_name = useInput(''); //add  new function let owner/user create one
-  // const phone = useInput("");
   const [phone, setPhone] = useState('');
   const email = useInput('');
   const social_media = useInput('');
@@ -55,7 +54,6 @@ const NewBusiness = () => {
     const fetchData = async () => {
       try {
         let res = await axios.get(`${API}/categories/`);
-        // debugger
         setBusinessTypes(res.data.payload);
       } catch (err) {
         console.log(err);
@@ -66,7 +64,6 @@ const NewBusiness = () => {
   }, []);
 
   const types = businessTypes.map((type, i) => {
-    // debugger
     return (
       <option value={type.id} key={i}>
         {type.type_name}
@@ -83,11 +80,7 @@ const NewBusiness = () => {
       });
 
       if (newBiz.data.status === 'success') {
-        // await axios.post(`${API}/owners`, {
-        //   owner_id: newBiz.data.payload.id,
-        //   owner_name: owner_name.value,
-        // });
-        
+
         await axios.patch(`${API}/owners/${currentUser.uid}`, {
           owner_id: newBiz.data.payload.id,
           owner_name: owner_name.value,
@@ -101,7 +94,7 @@ const NewBusiness = () => {
           contact_id: newBiz.data.payload.id,
           phone: phone,
           email: email.value,
-          social_media: social_media.value,
+          social_media: `https://${social_media.value}`,
         });
         await axios.post(`${API}/addresses`, {
           address_id: newBiz.data.payload.id,
@@ -109,7 +102,7 @@ const NewBusiness = () => {
           city: city,
           state: state,
           zip: zip,
-          website: website.value,
+          website: `https://${website.value}`,
         });
       }
       history.push(`/profile/${currentUser.uid}`);

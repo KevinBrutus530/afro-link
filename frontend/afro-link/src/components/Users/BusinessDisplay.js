@@ -22,8 +22,8 @@ const BusinessDisplay = ({ userBusinesses }) => {
                     alt="default logo"
                   />
                 ) : (
-                    <img className="bizPicProfile" src={business.pictures} />
-                  )}
+                  <img className="bizPicProfile" src={business.pictures} />
+                )}
               </div>
             </div>
 
@@ -33,7 +33,7 @@ const BusinessDisplay = ({ userBusinesses }) => {
                   Address:
                   <li className="bizAddress">
                     {business.street === 'null null'
-                      ? 'Address Not Available'
+                      ? 'Not Available'
                       : business.street}
                     <br />
                     {business.city}
@@ -47,16 +47,16 @@ const BusinessDisplay = ({ userBusinesses }) => {
                     {business.hours === 'Online Store' ? (
                       <p>Online Business</p>
                     ) : (
-                        <details className="hoursDetails">
-                          <summary>Hours</summary>
-                          {
-                            (biznessHours = business.hours.replace(
-                              /[^\w\s]/g,
-                              ''
-                            ))
-                          }
-                        </details>
-                      )}
+                      <details className="hoursDetails">
+                        <summary>Hours</summary>
+                        {
+                          (biznessHours = business.hours.replace(
+                            /[^\w\s]/g,
+                            ''
+                          ))
+                        }
+                      </details>
+                    )}
                   </li>
                 </label>
 
@@ -68,8 +68,8 @@ const BusinessDisplay = ({ userBusinesses }) => {
                         Visit Website
                       </a>
                     ) : (
-                        <p className="noneProvided">None Provided</p>
-                      )}
+                      <p className="noneProvided">Not Available</p>
+                    )}
                   </li>
                 </label>
 
@@ -77,10 +77,10 @@ const BusinessDisplay = ({ userBusinesses }) => {
                   Phone:
                   <li>
                     {!business.phone || business.phone === 'n/a' ? (
-                      <p className="noneProvided">None Provided</p>
+                      <p className="noneProvided">Not Available</p>
                     ) : (
-                        business.phone
-                      )}
+                      business.phone
+                    )}
                   </li>
                 </label>
                 <label className="bizLabel">
@@ -89,8 +89,8 @@ const BusinessDisplay = ({ userBusinesses }) => {
                     {business.email ? (
                       business.email
                     ) : (
-                        <p className="noneProvided">None Provided</p>
-                      )}
+                      <p className="noneProvided">Not Available</p>
+                    )}
                   </li>
                 </label>
                 <label className="bizLabel">
@@ -101,8 +101,8 @@ const BusinessDisplay = ({ userBusinesses }) => {
                         {business.social_media}
                       </a>
                     ) : (
-                        <p className="noneProvided">None Provided</p>
-                      )}
+                      <p className="noneProvided">Not Available</p>
+                    )}
                   </li>
                 </label>
               </ul>

@@ -93,7 +93,10 @@ $black-chocolate: #191102ff; */
   margin-bottom: 1em;
   font-size: 0.9rem;
   border: 1px solid #f2f2f2;
-  padding: 1em;
+  /* padding: 1em; */
+}
+.ReviewSect>* {
+  padding: 0.5em;
 }
 
 .ReviewSect > h5 {

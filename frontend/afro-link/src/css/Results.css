@@ -111,9 +111,9 @@
   margin: auto;
   text-transform: capitalize;
   font-size: 10pt;
-  font-weight: bold;
+  font-weight: 700;
   color: #191102;
+  line-height: 15px;
   place-items: right;
-  margin-right: 0;
   word-spacing: 3px;
 }

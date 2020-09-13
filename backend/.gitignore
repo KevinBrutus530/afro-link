@@ -1,4 +1,5 @@
 node_modules/
+# remove ignore on .env when pushing to Heroku
 .env
 .env/
 backend/.env

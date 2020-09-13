@@ -65,7 +65,24 @@ const DisplayBusiness = ({ businessInfo }) => {
       );
     }
   };
-
+  const checkBusinessHours = () => {
+    if (businessInfo.hours === '') {
+      return <p>Not Available</p>;
+    } else if (
+      businessInfo.hours === 'Online Store' ||
+      businessInfo.hours === 'online store' ||
+      businessInfo.hours === 'online business'
+    ) {
+      return <p>Online Business</p>;
+    } else {
+      return (
+        <details className="hoursDetails">
+          <summary>Hours</summary>
+          {businessInfo.hours}
+        </details>
+      );
+    }
+  };
   let owner =
     businessInfo.owner_name === null
       ? (businessInfo.owner_name = '')
@@ -83,7 +100,7 @@ const DisplayBusiness = ({ businessInfo }) => {
       </div>
       <div className="businessInfo">
         <ul>
-          <li>
+          <li style={{ marginTop: '0.5em' }}>
             <img className="bizPicProfile" src={businessInfo.pictures} />
           </li>
 
@@ -100,16 +117,9 @@ const DisplayBusiness = ({ businessInfo }) => {
           <div className="contactInfo">
             <label className="bizLabel">
               Business Hours:
-              <li className="bizHoursProfile">
-                {businessInfo.hours === 'Online Store' ? (
-                  <p>Online Business</p>
-                ) : (
-                  <details className="hoursDetails">
-                    <summary>Hours</summary>
-                    {businessInfo.hours}
-                  </details>
-                )}
-              </li>
+
+              <li className="bizHoursProfile">{checkBusinessHours()}</li>
+
             </label>
 
             {/* if no phone number */}
@@ -119,10 +129,12 @@ const DisplayBusiness = ({ businessInfo }) => {
                 alt={'phone icon'}
                 style={{ width: '30px', height: '30px' }}
               />
-              {businessInfo.phone !== (null || '' || null) ? (
+
+              {businessInfo.phone !== (null || '' || 'n/a') ? (
                 <li>{businessInfo.phone}</li>
               ) : (
-                <li>None Available</li>
+                <li>Not Available</li>
+
               )}
             </label>
 
@@ -133,10 +145,12 @@ const DisplayBusiness = ({ businessInfo }) => {
                 alt={'email icon'}
                 style={{ width: '30px', height: '30px' }}
               />
-              {businessInfo.email !== (null || '') ? (
-                <li>{businessInfo.email}</li>
+              {businessInfo.email === null ? (
+                <li>Not Available</li>
               ) : (
-                <li>None Available</li>
+
+                <li>{businessInfo.email}</li>
+
               )}
             </label>
 

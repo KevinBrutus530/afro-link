@@ -10,6 +10,7 @@ import Login from './components/Users/Login';
 import ProfilePage from './components/Users/ProfilePage';
 import AuthProvider from './providers/AuthContext';
 import EditBusiness from './components/Users/EditBusiness';
+import Error from './components/commonlyUsed/Error'
 import Footer from './components/Footer.js';
 import { AuthRoute, ProtectedRoute } from './util/routesUtil';
 import circleLogo from './images/circleLogoYellow.png';
@@ -43,6 +44,7 @@ function App() {
           <Route exact path="/" component={MainPage} />
           <Route path="/categories/:id" component={Results} />
           <Route path="/businesses/:id" component={Business} />
+          <Route path="/*" component={Error} />
         </Switch>
         <Footer />
       </AuthProvider>

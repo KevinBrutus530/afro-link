@@ -44,7 +44,7 @@ summary {
 
 .bizPicProfile {
   display: flex;
-  margin-top: .5em;
+  margin-top: -0.5em;
   padding-bottom: 1em;
   width: 100%;
   height: auto;

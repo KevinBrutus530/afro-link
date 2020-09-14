@@ -18,13 +18,13 @@ $black-chocolate: #191102ff; */
   margin: auto;
   padding: 1.5em;
   border-radius: 5px;
-  width: 30em;
+  width: 28em;
   overflow-x: scroll;
 }
 
 .reviewsForm > h2 {
   color: whitesmoke;
-  padding-bottom: 10px;
+  padding-bottom: 0.9em;
 }
 
 .reviewsForm > label {
@@ -39,20 +39,21 @@ $black-chocolate: #191102ff; */
   display: flex;
   flex-direction: column;
   text-align: left;
-  color: whitesmoke;
+  /* color: whitesmoke; */
+  color: #191102;
   padding: 5px;
   font-size: 1em;
 }
 
 .rateStarsDiv {
   display: flex;
-    flex-direction: row;
-    background-color: whitesmoke;
-    justify-content: center;
-    text-align-last: center;
-    width: max-content;
-    margin: auto;
-    padding-top: 10px;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: whitesmoke;
+  place-items: left;
+  width: max-content;
+  margin-left: 10px;
+  font-weight: bold;
 }
 
 .reviewsInputs {
@@ -64,6 +65,7 @@ $black-chocolate: #191102ff; */
   width: 100%;
   height: auto;
   border: 1px solid #f2f2f2;
+  background-color: whitesmoke;
 }
 
 @media (max-width: 1190px) {
@@ -92,10 +94,11 @@ $black-chocolate: #191102ff; */
   min-height: auto;
   margin-bottom: 1em;
   font-size: 0.9rem;
-  border: 1px solid #f2f2f2;
+  background-color: whitesmoke;
+  /* border: 1px solid #f2f2f2; */
   /* padding: 1em; */
 }
-.ReviewSect>* {
+.ReviewSect > * {
   padding: 0.5em;
 }
 
@@ -115,6 +118,8 @@ $black-chocolate: #191102ff; */
 
 .reviewerName {
   padding-right: 1em;
+  color: #191102;
+  font-weight: bold;
 }
 
 span {
@@ -135,7 +140,7 @@ span {
 
 .reviewUL {
   list-style: 'none';
-  padding: 2em;
+  margin-top: 1em;
 }
 
 .reviewUL > * {
@@ -145,7 +150,10 @@ span {
 .review {
   display: flex;
   font-size: 1rem;
-  border-bottom: 1px solid rgba(211, 211, 211, 0.555);
+  border-bottom: 1px solid rgba(243, 183, 31, 0.5);
+  /* border-bottom: 1px solid rgba(211, 211, 211, 0.555); */
+  color: #191102;
+  text-align: left;
 }
 
 .ratingRadio {
@@ -159,15 +167,18 @@ span {
 .rateLabel {
   color: #191102;
   padding-top: 0px;
-  margin: 0px;
+  margin: 0;
+  padding-right: 10px;
 }
 
 .reviewDT {
   font-size: 13pt;
   padding: 0 1em;
+  color: #191102;
+  font-weight: bold;
 }
-#ratingStars{
-  margin:0;
+#ratingStars {
+  margin: 0;
   font-size: 25px;
 }
 /*/////////////////////////////////OWNER RESPONSE CSS////////////////////////////////*/
@@ -182,9 +193,14 @@ span {
 .reply_Name {
   text-align: left;
   font-size: 12pt;
+  color: #191102;
+  font-weight: bold;
 }
 
 .reply_Text {
   display: flex;
   text-align: left;
+  color: #191102;
+  text-align: left;
+  padding-left: 2em;
 }

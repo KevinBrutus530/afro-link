@@ -128,7 +128,7 @@ const ReviewsForm = () => {
           <label className="labelInput">Review:</label>
           <textarea
             type="text"
-            placeholder="Whats on your mind..."
+            placeholder="What's on your mind..."
             name="text"
             onChange={(e) => handleInput(e, setText)}
             value={text}

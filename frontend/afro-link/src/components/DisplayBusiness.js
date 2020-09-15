@@ -22,7 +22,17 @@ const DisplayBusiness = ({ businessInfo }) => {
     let ins = 'instagram';
     let tw = 'twitter';
 
-    if (!url) return '';
+    if (!url)
+      return (
+        <a id="socialLabel">
+          <img
+            style={{ width: '30px', height: '30px' }}
+            src={elseIcon}
+            alt={'else icon'}
+          />
+         <p id="socialNA">Not Available</p> 
+        </a>
+      );
     if (url.includes(ins)) {
       return (
         <a href={businessInfo.social_media} target="_blank">
@@ -65,6 +75,7 @@ const DisplayBusiness = ({ businessInfo }) => {
       );
     }
   };
+
   const checkBusinessHours = () => {
     if (businessInfo.hours === '') {
       return <p>Not Available</p>;
@@ -117,9 +128,7 @@ const DisplayBusiness = ({ businessInfo }) => {
           <div className="contactInfo">
             <label className="bizLabel">
               Business Hours:
-
               <li className="bizHoursProfile">{checkBusinessHours()}</li>
-
             </label>
 
             {/* if no phone number */}
@@ -134,7 +143,6 @@ const DisplayBusiness = ({ businessInfo }) => {
                 <li>{businessInfo.phone}</li>
               ) : (
                 <li>Not Available</li>
-
               )}
             </label>
 
@@ -148,9 +156,7 @@ const DisplayBusiness = ({ businessInfo }) => {
               {businessInfo.email === null ? (
                 <li>Not Available</li>
               ) : (
-
                 <li>{businessInfo.email}</li>
-
               )}
             </label>
 
@@ -177,17 +183,15 @@ const DisplayBusiness = ({ businessInfo }) => {
             </label>
 
             {/* if no social media */}
-            {businessInfo.social_media !== null || 'n/a' || '' ? (
+            {businessInfo.social_media !== null ||
+            businessInfo.social_media !== 'n/a' ||
+            businessInfo.social_media !== '' ? (
               <label className="bizLabel">
                 {checkingSocialMedia(businessInfo.social_media)}
                 <li className="hyperLink smallertxt">
-                  <details>
-                    <summary className={'hyperLink'}>Link</summary>
-                    <a href={`${businessInfo.social_media}`} target="_blank">
-                      {/* Social Media */}
-                      {businessInfo.social_media}
-                    </a>
-                  </details>
+                  <a href={`${businessInfo.social_media}`} target="_blank">
+                    {businessInfo.social_media}
+                  </a>
                 </li>
               </label>
             ) : (

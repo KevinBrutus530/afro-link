@@ -126,3 +126,13 @@ summary {
   background-color: whitesmoke;
   width: 100%;
 }
+
+#socialLabel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#socialNA {
+  margin-right: -22em;
+}

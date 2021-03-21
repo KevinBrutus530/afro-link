@@ -1,5 +1,5 @@
 const db = require('../db/index');
-const { as } = require('pg-promise');
+// const { as } = require('pg-promise');
 
 const signUp = async (req, res, next) => {
   let { user_id, email } = req.body;

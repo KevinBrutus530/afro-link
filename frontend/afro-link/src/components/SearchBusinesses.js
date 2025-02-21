@@ -16,8 +16,9 @@ const SearchBusinessForm = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        let res = await axios.get(`${API}/categories/`);
         // debugger;
+        let res = await axios.get(`${API}/categories/`);
+        // let res = await axios.get(`${API}/`);
         setBusinessTypes(res.data.payload);
       } catch (err) {
         console.log(err);

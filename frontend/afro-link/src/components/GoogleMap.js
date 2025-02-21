@@ -3,7 +3,7 @@ import React from 'react';
 import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
 import 'react-google-places-autocomplete/dist/index.min.css';
 import axios from "axios";
-require("dotenv").config()
+// require("dotenv").config()
  
 const GoogleMap = ({setCity,setHouseNum,setStreet,setState, setZip}) => {
 

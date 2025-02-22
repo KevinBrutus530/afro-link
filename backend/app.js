@@ -17,7 +17,6 @@ const ownersRouter = require('./routes/owners');
 const reviewsRouter = require('./routes/reviews');
 const typeRouter = require('./routes/types');
 
-
 app.use('/addresses', addressesRouter);
 app.use('/businesses', businessesRouter);
 app.use('/categories', categoriesRouter);

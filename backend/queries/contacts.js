@@ -26,7 +26,7 @@ const deleteContact = async (req, res, next) => {
     let contact = await db.none('DELETE FROM contact WHERE id = $1', [id]);
     res.status(200).json({
       status: 'success',
-      message: 'deleted contact',
+      message: 'deleted contact',
       payload: contact,
     });
   } catch (err) {

@@ -27,7 +27,7 @@ const deleteAddress = async (req, res, next) => {
     let address = await db.none('DELETE FROM addresses WHERE id =$1', id);
     res.status(200).json({
       status: 'success',
-      message: 'deleted address',
+      message: 'deleted address',
       payload: address,
     });
   } catch (err) {

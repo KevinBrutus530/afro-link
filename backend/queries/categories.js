@@ -11,7 +11,7 @@ const getAllCategories = async (req, res, next) => {
   } catch (err) {
     res.status(400).json({
       status: 'Error',
-      message: "Couldn't get categories",
+      message: "Couldn't get categories",
       payload: err,
     });
     next();
@@ -53,7 +53,7 @@ const createCategory = async (req, res, next) => {
     );
     res.status(200).json({
       status: 'success',
-      message: 'created categories',
+      message: 'created categories',
       payload: categories,
     });
   } catch (err) {

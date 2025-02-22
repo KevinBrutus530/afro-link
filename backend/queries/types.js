@@ -24,7 +24,7 @@ const createType = async (req, res, next) => {
     let categories = await db.one("INSERT INTO types (type_name) VALUES ($1) RETURNING *", [type_name]);
     res.status(200).json({
       status: "success",
-      message: "created categories",
+      message: "created categories",
       payload: categories
     });
   } catch (err) {

@@ -1,10 +1,7 @@
-const pgp = require('pg-promise')({});
+const pgp = require('pg-promise')({
+    // ssl: { rejectUnauthorized: false },
+});
 require("dotenv").config();
 // const db = pgp(process.env.DATABASE_URL);
-const db = pgp({
-    connectionString: process.env.DATABASE_URL,
-    ssl: {
-      rejectUnauthorized: false, // Required for Heroku Postgres
-    },
-  });
+const db = pgp(process.env.DATABASE_URL);
 module.exports = db;

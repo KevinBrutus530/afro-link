@@ -3,6 +3,7 @@ const db = require('../db/index');
 const getAllCategories = async (req, res, next) => {
   try {
     let category = await db.any('SELECT * FROM types');
+    console.log(category);
     res.status(200).json({
       status: 'success',
       message: 'recieved all categories',

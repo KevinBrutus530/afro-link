@@ -5,7 +5,10 @@ const app = express();
 require('dotenv').config();
 
 const port = process.env.PORT || 3005;
-app.use(cors());
+app.use(cors({
+    origin: 'https://afro-link.netlify.app', // Update with your actual Netlify URL
+    credentials: true,
+}));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
